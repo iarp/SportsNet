@@ -1,18 +1,23 @@
 SportsNet
 =========
 
-Participants
-    - Loaded from HCR Participants report
+[![Coverage Status](https://coveralls.io/repos/github/iarp/SportsNet/badge.svg?branch=master)](https://coveralls.io/github/iarp/SportsNet?branch=master)
+[![Django CI](https://github.com/iarp/SportsNet/actions/workflows/django.yml/badge.svg)](https://github.com/iarp/SportsNet/actions)
 
-Player - from Participants
-Parent - From Father/Mother columns on players row in Participants report
 
-Season
-League
-Division
-SubDivision
+The primary repository for the SK to SportsNet conversion.
 
-Team - Self made
+Current goals:
 
-    Staff - links to Participants table
-    Roster - links to Players table
+- Merge SK Desktop into SportsNet:
+  - Move tables from SK tables into django models
+  - Remove all use of MSSQL in favor of django models
+  - Setup new views and templates for what the desktop version did
+- Merge SK Web into SportsNet:
+  - Copy existing tables into new project
+  - Relink all tables to newly merged SKDesktop tables in django models
+
+Future Goals:
+
+- Merge tryout portal into SportsNet Web
+- Setup drafting system
