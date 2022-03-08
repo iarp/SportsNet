@@ -175,4 +175,4 @@ def generate_test_fixture_data(write_file=True, verbose=True):
     if write_file:
         os.makedirs("core/fixtures/", exist_ok=True)
         with open("core/fixtures/test_fixtures.json", "w") as f:
-            call_command("dumpdata", "core", stdout=f)
+            call_command("dumpdata", "core", "--indent", "4", stdout=f)

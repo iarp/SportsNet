@@ -70,11 +70,11 @@ def add_override_permission(user, obj, permission_name, value, assigned_by=None)
     elif isinstance(obj, League):
         data = {"season": obj.season, "league": obj}
     elif isinstance(obj, Division):
-        data = {"season": obj.league.season, "league": obj.league, "division": obj}
+        data = {"season": obj.season, "league": obj.league, "division": obj}
     elif isinstance(obj, SubDivision):
         data = {
-            "season": obj.division.league.season,
-            "league": obj.division.league,
+            "season": obj.season,
+            "league": obj.league,
             "division": obj.division,
             "subdivision": obj,
         }

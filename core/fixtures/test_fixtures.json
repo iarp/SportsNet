@@ -1,1 +1,3178 @@
-[{"model": "core.user", "pk": 1, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.122Z", "username": "2022-2023 Admin", "email": "2022-2023 Admin", "inserted": "2022-03-08T15:35:03.122Z", "updated": "2022-03-08T15:35:03.122Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 2, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.168Z", "username": "2022-2023 HL VP", "email": "2022-2023 HL VP", "inserted": "2022-03-08T15:35:03.168Z", "updated": "2022-03-08T15:35:03.168Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 3, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.209Z", "username": "2022-2023 HL U10 Division", "email": "2022-2023 HL U10 Division", "inserted": "2022-03-08T15:35:03.209Z", "updated": "2022-03-08T15:35:03.209Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 4, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.252Z", "username": "2022-2023 - HL - U10 - Blue - SubDivision", "email": "2022-2023 - HL - U10 - Blue - SubDivision", "inserted": "2022-03-08T15:35:03.252Z", "updated": "2022-03-08T15:35:03.252Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 5, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.295Z", "username": "2022-2023 - HL - U10 - Blue - Graham - Coach", "email": "2022-2023 - HL - U10 - Blue - Graham - Coach", "inserted": "2022-03-08T15:35:03.295Z", "updated": "2022-03-08T15:35:03.295Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 6, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.337Z", "username": "2022-2023 - HL - U10 - Blue - Henry - Coach", "email": "2022-2023 - HL - U10 - Blue - Henry - Coach", "inserted": "2022-03-08T15:35:03.337Z", "updated": "2022-03-08T15:35:03.337Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 7, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.379Z", "username": "2022-2023 - HL - U10 - White - SubDivision", "email": "2022-2023 - HL - U10 - White - SubDivision", "inserted": "2022-03-08T15:35:03.379Z", "updated": "2022-03-08T15:35:03.379Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 8, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.421Z", "username": "2022-2023 - HL - U10 - White - Graham - Coach", "email": "2022-2023 - HL - U10 - White - Graham - Coach", "inserted": "2022-03-08T15:35:03.422Z", "updated": "2022-03-08T15:35:03.422Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 9, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.463Z", "username": "2022-2023 - HL - U10 - White - Henry - Coach", "email": "2022-2023 - HL - U10 - White - Henry - Coach", "inserted": "2022-03-08T15:35:03.463Z", "updated": "2022-03-08T15:35:03.463Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 10, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.504Z", "username": "2022-2023 HL U11 Division", "email": "2022-2023 HL U11 Division", "inserted": "2022-03-08T15:35:03.505Z", "updated": "2022-03-08T15:35:03.505Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 11, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.547Z", "username": "2022-2023 - HL - U11 - Blue - SubDivision", "email": "2022-2023 - HL - U11 - Blue - SubDivision", "inserted": "2022-03-08T15:35:03.547Z", "updated": "2022-03-08T15:35:03.547Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 12, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.595Z", "username": "2022-2023 - HL - U11 - Blue - Graham - Coach", "email": "2022-2023 - HL - U11 - Blue - Graham - Coach", "inserted": "2022-03-08T15:35:03.596Z", "updated": "2022-03-08T15:35:03.596Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 13, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.644Z", "username": "2022-2023 - HL - U11 - Blue - Henry - Coach", "email": "2022-2023 - HL - U11 - Blue - Henry - Coach", "inserted": "2022-03-08T15:35:03.644Z", "updated": "2022-03-08T15:35:03.644Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 14, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.686Z", "username": "2022-2023 - HL - U11 - White - SubDivision", "email": "2022-2023 - HL - U11 - White - SubDivision", "inserted": "2022-03-08T15:35:03.686Z", "updated": "2022-03-08T15:35:03.686Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 15, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.726Z", "username": "2022-2023 - HL - U11 - White - Graham - Coach", "email": "2022-2023 - HL - U11 - White - Graham - Coach", "inserted": "2022-03-08T15:35:03.727Z", "updated": "2022-03-08T15:35:03.727Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 16, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.767Z", "username": "2022-2023 - HL - U11 - White - Henry - Coach", "email": "2022-2023 - HL - U11 - White - Henry - Coach", "inserted": "2022-03-08T15:35:03.768Z", "updated": "2022-03-08T15:35:03.768Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 17, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.804Z", "username": "2022-2023 REP VP", "email": "2022-2023 REP VP", "inserted": "2022-03-08T15:35:03.805Z", "updated": "2022-03-08T15:35:03.805Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 18, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.837Z", "username": "2022-2023 REP U10 Division", "email": "2022-2023 REP U10 Division", "inserted": "2022-03-08T15:35:03.837Z", "updated": "2022-03-08T15:35:03.837Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 19, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.857Z", "username": "2022-2023 - REP - U10 - A - SubDivision", "email": "2022-2023 - REP - U10 - A - SubDivision", "inserted": "2022-03-08T15:35:03.858Z", "updated": "2022-03-08T15:35:03.858Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 20, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.875Z", "username": "2022-2023 - REP - U10 - A - Graham - Coach", "email": "2022-2023 - REP - U10 - A - Graham - Coach", "inserted": "2022-03-08T15:35:03.875Z", "updated": "2022-03-08T15:35:03.875Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 21, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.927Z", "username": "2022-2023 - REP - U10 - A - Henry - Coach", "email": "2022-2023 - REP - U10 - A - Henry - Coach", "inserted": "2022-03-08T15:35:03.927Z", "updated": "2022-03-08T15:35:03.927Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 22, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:03.981Z", "username": "2022-2023 - REP - U10 - AA - SubDivision", "email": "2022-2023 - REP - U10 - AA - SubDivision", "inserted": "2022-03-08T15:35:03.981Z", "updated": "2022-03-08T15:35:03.981Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 23, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.024Z", "username": "2022-2023 - REP - U10 - AA - Graham - Coach", "email": "2022-2023 - REP - U10 - AA - Graham - Coach", "inserted": "2022-03-08T15:35:04.024Z", "updated": "2022-03-08T15:35:04.024Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 24, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.070Z", "username": "2022-2023 - REP - U10 - AA - Henry - Coach", "email": "2022-2023 - REP - U10 - AA - Henry - Coach", "inserted": "2022-03-08T15:35:04.070Z", "updated": "2022-03-08T15:35:04.070Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 25, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.117Z", "username": "2022-2023 REP U11 Division", "email": "2022-2023 REP U11 Division", "inserted": "2022-03-08T15:35:04.118Z", "updated": "2022-03-08T15:35:04.118Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 26, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.161Z", "username": "2022-2023 - REP - U11 - A - SubDivision", "email": "2022-2023 - REP - U11 - A - SubDivision", "inserted": "2022-03-08T15:35:04.161Z", "updated": "2022-03-08T15:35:04.161Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 27, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.205Z", "username": "2022-2023 - REP - U11 - A - Graham - Coach", "email": "2022-2023 - REP - U11 - A - Graham - Coach", "inserted": "2022-03-08T15:35:04.206Z", "updated": "2022-03-08T15:35:04.206Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 28, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.249Z", "username": "2022-2023 - REP - U11 - A - Henry - Coach", "email": "2022-2023 - REP - U11 - A - Henry - Coach", "inserted": "2022-03-08T15:35:04.249Z", "updated": "2022-03-08T15:35:04.249Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 29, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.292Z", "username": "2022-2023 - REP - U11 - AA - SubDivision", "email": "2022-2023 - REP - U11 - AA - SubDivision", "inserted": "2022-03-08T15:35:04.292Z", "updated": "2022-03-08T15:35:04.292Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 30, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.338Z", "username": "2022-2023 - REP - U11 - AA - Graham - Coach", "email": "2022-2023 - REP - U11 - AA - Graham - Coach", "inserted": "2022-03-08T15:35:04.338Z", "updated": "2022-03-08T15:35:04.338Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 31, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.381Z", "username": "2022-2023 - REP - U11 - AA - Henry - Coach", "email": "2022-2023 - REP - U11 - AA - Henry - Coach", "inserted": "2022-03-08T15:35:04.382Z", "updated": "2022-03-08T15:35:04.382Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 32, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.429Z", "username": "2023-2024 Admin", "email": "2023-2024 Admin", "inserted": "2022-03-08T15:35:04.429Z", "updated": "2022-03-08T15:35:04.429Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 33, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.473Z", "username": "2023-2024 HL VP", "email": "2023-2024 HL VP", "inserted": "2022-03-08T15:35:04.473Z", "updated": "2022-03-08T15:35:04.473Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 34, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.515Z", "username": "2023-2024 HL U10 Division", "email": "2023-2024 HL U10 Division", "inserted": "2022-03-08T15:35:04.516Z", "updated": "2022-03-08T15:35:04.516Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 35, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.558Z", "username": "2023-2024 - HL - U10 - Blue - SubDivision", "email": "2023-2024 - HL - U10 - Blue - SubDivision", "inserted": "2022-03-08T15:35:04.558Z", "updated": "2022-03-08T15:35:04.558Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 36, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.602Z", "username": "2023-2024 - HL - U10 - Blue - Graham - Coach", "email": "2023-2024 - HL - U10 - Blue - Graham - Coach", "inserted": "2022-03-08T15:35:04.602Z", "updated": "2022-03-08T15:35:04.602Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 37, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.645Z", "username": "2023-2024 - HL - U10 - Blue - Henry - Coach", "email": "2023-2024 - HL - U10 - Blue - Henry - Coach", "inserted": "2022-03-08T15:35:04.645Z", "updated": "2022-03-08T15:35:04.645Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 38, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.689Z", "username": "2023-2024 - HL - U10 - White - SubDivision", "email": "2023-2024 - HL - U10 - White - SubDivision", "inserted": "2022-03-08T15:35:04.689Z", "updated": "2022-03-08T15:35:04.689Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 39, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.739Z", "username": "2023-2024 - HL - U10 - White - Graham - Coach", "email": "2023-2024 - HL - U10 - White - Graham - Coach", "inserted": "2022-03-08T15:35:04.739Z", "updated": "2022-03-08T15:35:04.739Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 40, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.782Z", "username": "2023-2024 - HL - U10 - White - Henry - Coach", "email": "2023-2024 - HL - U10 - White - Henry - Coach", "inserted": "2022-03-08T15:35:04.782Z", "updated": "2022-03-08T15:35:04.782Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 41, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.826Z", "username": "2023-2024 HL U11 Division", "email": "2023-2024 HL U11 Division", "inserted": "2022-03-08T15:35:04.826Z", "updated": "2022-03-08T15:35:04.826Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 42, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.869Z", "username": "2023-2024 - HL - U11 - Blue - SubDivision", "email": "2023-2024 - HL - U11 - Blue - SubDivision", "inserted": "2022-03-08T15:35:04.870Z", "updated": "2022-03-08T15:35:04.870Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 43, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.913Z", "username": "2023-2024 - HL - U11 - Blue - Graham - Coach", "email": "2023-2024 - HL - U11 - Blue - Graham - Coach", "inserted": "2022-03-08T15:35:04.913Z", "updated": "2022-03-08T15:35:04.913Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 44, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.956Z", "username": "2023-2024 - HL - U11 - Blue - Henry - Coach", "email": "2023-2024 - HL - U11 - Blue - Henry - Coach", "inserted": "2022-03-08T15:35:04.957Z", "updated": "2022-03-08T15:35:04.957Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 45, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:04.999Z", "username": "2023-2024 - HL - U11 - White - SubDivision", "email": "2023-2024 - HL - U11 - White - SubDivision", "inserted": "2022-03-08T15:35:04.999Z", "updated": "2022-03-08T15:35:04.999Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 46, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:05.043Z", "username": "2023-2024 - HL - U11 - White - Graham - Coach", "email": "2023-2024 - HL - U11 - White - Graham - Coach", "inserted": "2022-03-08T15:35:05.043Z", "updated": "2022-03-08T15:35:05.043Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 47, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:05.087Z", "username": "2023-2024 - HL - U11 - White - Henry - Coach", "email": "2023-2024 - HL - U11 - White - Henry - Coach", "inserted": "2022-03-08T15:35:05.088Z", "updated": "2022-03-08T15:35:05.088Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 48, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:05.135Z", "username": "2023-2024 REP VP", "email": "2023-2024 REP VP", "inserted": "2022-03-08T15:35:05.135Z", "updated": "2022-03-08T15:35:05.135Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 49, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:05.178Z", "username": "2023-2024 REP U10 Division", "email": "2023-2024 REP U10 Division", "inserted": "2022-03-08T15:35:05.178Z", "updated": "2022-03-08T15:35:05.178Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 50, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:05.220Z", "username": "2023-2024 - REP - U10 - A - SubDivision", "email": "2023-2024 - REP - U10 - A - SubDivision", "inserted": "2022-03-08T15:35:05.220Z", "updated": "2022-03-08T15:35:05.220Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 51, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:05.264Z", "username": "2023-2024 - REP - U10 - A - Graham - Coach", "email": "2023-2024 - REP - U10 - A - Graham - Coach", "inserted": "2022-03-08T15:35:05.264Z", "updated": "2022-03-08T15:35:05.264Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 52, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:05.308Z", "username": "2023-2024 - REP - U10 - A - Henry - Coach", "email": "2023-2024 - REP - U10 - A - Henry - Coach", "inserted": "2022-03-08T15:35:05.308Z", "updated": "2022-03-08T15:35:05.308Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 53, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:05.351Z", "username": "2023-2024 - REP - U10 - AA - SubDivision", "email": "2023-2024 - REP - U10 - AA - SubDivision", "inserted": "2022-03-08T15:35:05.351Z", "updated": "2022-03-08T15:35:05.351Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 54, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:05.393Z", "username": "2023-2024 - REP - U10 - AA - Graham - Coach", "email": "2023-2024 - REP - U10 - AA - Graham - Coach", "inserted": "2022-03-08T15:35:05.394Z", "updated": "2022-03-08T15:35:05.394Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 55, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:05.438Z", "username": "2023-2024 - REP - U10 - AA - Henry - Coach", "email": "2023-2024 - REP - U10 - AA - Henry - Coach", "inserted": "2022-03-08T15:35:05.438Z", "updated": "2022-03-08T15:35:05.438Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 56, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:05.481Z", "username": "2023-2024 REP U11 Division", "email": "2023-2024 REP U11 Division", "inserted": "2022-03-08T15:35:05.481Z", "updated": "2022-03-08T15:35:05.481Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 57, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:05.523Z", "username": "2023-2024 - REP - U11 - A - SubDivision", "email": "2023-2024 - REP - U11 - A - SubDivision", "inserted": "2022-03-08T15:35:05.524Z", "updated": "2022-03-08T15:35:05.524Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 58, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:05.565Z", "username": "2023-2024 - REP - U11 - A - Graham - Coach", "email": "2023-2024 - REP - U11 - A - Graham - Coach", "inserted": "2022-03-08T15:35:05.566Z", "updated": "2022-03-08T15:35:05.566Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 59, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:05.611Z", "username": "2023-2024 - REP - U11 - A - Henry - Coach", "email": "2023-2024 - REP - U11 - A - Henry - Coach", "inserted": "2022-03-08T15:35:05.611Z", "updated": "2022-03-08T15:35:05.611Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 60, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:05.653Z", "username": "2023-2024 - REP - U11 - AA - SubDivision", "email": "2023-2024 - REP - U11 - AA - SubDivision", "inserted": "2022-03-08T15:35:05.654Z", "updated": "2022-03-08T15:35:05.654Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 61, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:05.697Z", "username": "2023-2024 - REP - U11 - AA - Graham - Coach", "email": "2023-2024 - REP - U11 - AA - Graham - Coach", "inserted": "2022-03-08T15:35:05.697Z", "updated": "2022-03-08T15:35:05.697Z", "groups": [], "user_permissions": []}}, {"model": "core.user", "pk": 62, "fields": {"password": "", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2022-03-08T15:35:05.741Z", "username": "2023-2024 - REP - U11 - AA - Henry - Coach", "email": "2023-2024 - REP - U11 - AA - Henry - Coach", "inserted": "2022-03-08T15:35:05.741Z", "updated": "2022-03-08T15:35:05.741Z", "groups": [], "user_permissions": []}}, {"model": "core.season", "pk": 1, "fields": {"inserted": "2022-03-08T15:35:03.109Z", "updated": "2022-03-08T15:35:03.109Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "name": "2022-2023", "start": "2022-09-01", "end": "2023-08-31", "mbs_id": 0, "gsi_id": 0}}, {"model": "core.season", "pk": 2, "fields": {"inserted": "2022-03-08T15:35:04.415Z", "updated": "2022-03-08T15:35:04.415Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "name": "2023-2024", "start": "2023-09-01", "end": "2024-08-31", "mbs_id": 0, "gsi_id": 0}}, {"model": "core.league", "pk": 1, "fields": {"inserted": "2022-03-08T15:35:03.151Z", "updated": "2022-03-08T15:35:03.151Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "name": "HL", "weight": 0}}, {"model": "core.league", "pk": 2, "fields": {"inserted": "2022-03-08T15:35:03.792Z", "updated": "2022-03-08T15:35:03.792Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "name": "REP", "weight": 1}}, {"model": "core.league", "pk": 3, "fields": {"inserted": "2022-03-08T15:35:04.457Z", "updated": "2022-03-08T15:35:04.457Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "name": "HL", "weight": 0}}, {"model": "core.league", "pk": 4, "fields": {"inserted": "2022-03-08T15:35:05.120Z", "updated": "2022-03-08T15:35:05.120Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "name": "REP", "weight": 1}}, {"model": "core.division", "pk": 1, "fields": {"inserted": "2022-03-08T15:35:03.195Z", "updated": "2022-03-08T15:35:03.195Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 1, "name": "U10", "age_from": 0, "age_to": 0, "weight": 0}}, {"model": "core.division", "pk": 2, "fields": {"inserted": "2022-03-08T15:35:03.490Z", "updated": "2022-03-08T15:35:03.490Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 1, "name": "U11", "age_from": 0, "age_to": 0, "weight": 1}}, {"model": "core.division", "pk": 3, "fields": {"inserted": "2022-03-08T15:35:03.829Z", "updated": "2022-03-08T15:35:03.829Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 2, "name": "U10", "age_from": 0, "age_to": 0, "weight": 2}}, {"model": "core.division", "pk": 4, "fields": {"inserted": "2022-03-08T15:35:04.103Z", "updated": "2022-03-08T15:35:04.103Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 2, "name": "U11", "age_from": 0, "age_to": 0, "weight": 3}}, {"model": "core.division", "pk": 5, "fields": {"inserted": "2022-03-08T15:35:04.501Z", "updated": "2022-03-08T15:35:04.501Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 3, "name": "U10", "age_from": 0, "age_to": 0, "weight": 0}}, {"model": "core.division", "pk": 6, "fields": {"inserted": "2022-03-08T15:35:04.810Z", "updated": "2022-03-08T15:35:04.810Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 3, "name": "U11", "age_from": 0, "age_to": 0, "weight": 1}}, {"model": "core.division", "pk": 7, "fields": {"inserted": "2022-03-08T15:35:05.164Z", "updated": "2022-03-08T15:35:05.164Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 4, "name": "U10", "age_from": 0, "age_to": 0, "weight": 2}}, {"model": "core.division", "pk": 8, "fields": {"inserted": "2022-03-08T15:35:05.466Z", "updated": "2022-03-08T15:35:05.466Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 4, "name": "U11", "age_from": 0, "age_to": 0, "weight": 3}}, {"model": "core.subdivision", "pk": 1, "fields": {"inserted": "2022-03-08T15:35:03.237Z", "updated": "2022-03-08T15:35:03.237Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 1, "division": 1, "name": "Blue", "weight": 0}}, {"model": "core.subdivision", "pk": 2, "fields": {"inserted": "2022-03-08T15:35:03.365Z", "updated": "2022-03-08T15:35:03.365Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 1, "division": 1, "name": "White", "weight": 1}}, {"model": "core.subdivision", "pk": 3, "fields": {"inserted": "2022-03-08T15:35:03.532Z", "updated": "2022-03-08T15:35:03.532Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 1, "division": 2, "name": "Blue", "weight": 2}}, {"model": "core.subdivision", "pk": 4, "fields": {"inserted": "2022-03-08T15:35:03.671Z", "updated": "2022-03-08T15:35:03.671Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 1, "division": 2, "name": "White", "weight": 3}}, {"model": "core.subdivision", "pk": 5, "fields": {"inserted": "2022-03-08T15:35:03.850Z", "updated": "2022-03-08T15:35:03.850Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 2, "division": 3, "name": "A", "weight": 4}}, {"model": "core.subdivision", "pk": 6, "fields": {"inserted": "2022-03-08T15:35:03.966Z", "updated": "2022-03-08T15:35:03.966Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 2, "division": 3, "name": "AA", "weight": 5}}, {"model": "core.subdivision", "pk": 7, "fields": {"inserted": "2022-03-08T15:35:04.146Z", "updated": "2022-03-08T15:35:04.146Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 2, "division": 4, "name": "A", "weight": 6}}, {"model": "core.subdivision", "pk": 8, "fields": {"inserted": "2022-03-08T15:35:04.277Z", "updated": "2022-03-08T15:35:04.277Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 2, "division": 4, "name": "AA", "weight": 7}}, {"model": "core.subdivision", "pk": 9, "fields": {"inserted": "2022-03-08T15:35:04.544Z", "updated": "2022-03-08T15:35:04.544Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 3, "division": 5, "name": "Blue", "weight": 0}}, {"model": "core.subdivision", "pk": 10, "fields": {"inserted": "2022-03-08T15:35:04.674Z", "updated": "2022-03-08T15:35:04.674Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 3, "division": 5, "name": "White", "weight": 1}}, {"model": "core.subdivision", "pk": 11, "fields": {"inserted": "2022-03-08T15:35:04.854Z", "updated": "2022-03-08T15:35:04.854Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 3, "division": 6, "name": "Blue", "weight": 2}}, {"model": "core.subdivision", "pk": 12, "fields": {"inserted": "2022-03-08T15:35:04.984Z", "updated": "2022-03-08T15:35:04.984Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 3, "division": 6, "name": "White", "weight": 3}}, {"model": "core.subdivision", "pk": 13, "fields": {"inserted": "2022-03-08T15:35:05.205Z", "updated": "2022-03-08T15:35:05.205Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 4, "division": 7, "name": "A", "weight": 4}}, {"model": "core.subdivision", "pk": 14, "fields": {"inserted": "2022-03-08T15:35:05.336Z", "updated": "2022-03-08T15:35:05.336Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 4, "division": 7, "name": "AA", "weight": 5}}, {"model": "core.subdivision", "pk": 15, "fields": {"inserted": "2022-03-08T15:35:05.508Z", "updated": "2022-03-08T15:35:05.509Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 4, "division": 8, "name": "A", "weight": 6}}, {"model": "core.subdivision", "pk": 16, "fields": {"inserted": "2022-03-08T15:35:05.639Z", "updated": "2022-03-08T15:35:05.639Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 4, "division": 8, "name": "AA", "weight": 7}}, {"model": "core.team", "pk": 1, "fields": {"inserted": "2022-03-08T15:35:03.280Z", "updated": "2022-03-08T15:35:03.280Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 1, "division": 1, "subdivision": 1, "name": "Graham", "weight": 0}}, {"model": "core.team", "pk": 2, "fields": {"inserted": "2022-03-08T15:35:03.322Z", "updated": "2022-03-08T15:35:03.322Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 1, "division": 1, "subdivision": 1, "name": "Henry", "weight": 1}}, {"model": "core.team", "pk": 3, "fields": {"inserted": "2022-03-08T15:35:03.407Z", "updated": "2022-03-08T15:35:03.407Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 1, "division": 1, "subdivision": 2, "name": "Graham", "weight": 2}}, {"model": "core.team", "pk": 4, "fields": {"inserted": "2022-03-08T15:35:03.448Z", "updated": "2022-03-08T15:35:03.449Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 1, "division": 1, "subdivision": 2, "name": "Henry", "weight": 3}}, {"model": "core.team", "pk": 5, "fields": {"inserted": "2022-03-08T15:35:03.574Z", "updated": "2022-03-08T15:35:03.575Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 1, "division": 2, "subdivision": 3, "name": "Graham", "weight": 4}}, {"model": "core.team", "pk": 6, "fields": {"inserted": "2022-03-08T15:35:03.629Z", "updated": "2022-03-08T15:35:03.630Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 1, "division": 2, "subdivision": 3, "name": "Henry", "weight": 5}}, {"model": "core.team", "pk": 7, "fields": {"inserted": "2022-03-08T15:35:03.713Z", "updated": "2022-03-08T15:35:03.713Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 1, "division": 2, "subdivision": 4, "name": "Graham", "weight": 6}}, {"model": "core.team", "pk": 8, "fields": {"inserted": "2022-03-08T15:35:03.753Z", "updated": "2022-03-08T15:35:03.753Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 1, "division": 2, "subdivision": 4, "name": "Henry", "weight": 7}}, {"model": "core.team", "pk": 9, "fields": {"inserted": "2022-03-08T15:35:03.869Z", "updated": "2022-03-08T15:35:03.869Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 2, "division": 3, "subdivision": 5, "name": "Graham", "weight": 8}}, {"model": "core.team", "pk": 10, "fields": {"inserted": "2022-03-08T15:35:03.911Z", "updated": "2022-03-08T15:35:03.911Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 2, "division": 3, "subdivision": 5, "name": "Henry", "weight": 9}}, {"model": "core.team", "pk": 11, "fields": {"inserted": "2022-03-08T15:35:04.009Z", "updated": "2022-03-08T15:35:04.009Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 2, "division": 3, "subdivision": 6, "name": "Graham", "weight": 10}}, {"model": "core.team", "pk": 12, "fields": {"inserted": "2022-03-08T15:35:04.054Z", "updated": "2022-03-08T15:35:04.054Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 2, "division": 3, "subdivision": 6, "name": "Henry", "weight": 11}}, {"model": "core.team", "pk": 13, "fields": {"inserted": "2022-03-08T15:35:04.190Z", "updated": "2022-03-08T15:35:04.190Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 2, "division": 4, "subdivision": 7, "name": "Graham", "weight": 12}}, {"model": "core.team", "pk": 14, "fields": {"inserted": "2022-03-08T15:35:04.234Z", "updated": "2022-03-08T15:35:04.234Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 2, "division": 4, "subdivision": 7, "name": "Henry", "weight": 13}}, {"model": "core.team", "pk": 15, "fields": {"inserted": "2022-03-08T15:35:04.321Z", "updated": "2022-03-08T15:35:04.321Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 2, "division": 4, "subdivision": 8, "name": "Graham", "weight": 14}}, {"model": "core.team", "pk": 16, "fields": {"inserted": "2022-03-08T15:35:04.367Z", "updated": "2022-03-08T15:35:04.367Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 1, "league": 2, "division": 4, "subdivision": 8, "name": "Henry", "weight": 15}}, {"model": "core.team", "pk": 17, "fields": {"inserted": "2022-03-08T15:35:04.587Z", "updated": "2022-03-08T15:35:04.587Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 3, "division": 5, "subdivision": 9, "name": "Graham", "weight": 0}}, {"model": "core.team", "pk": 18, "fields": {"inserted": "2022-03-08T15:35:04.630Z", "updated": "2022-03-08T15:35:04.630Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 3, "division": 5, "subdivision": 9, "name": "Henry", "weight": 1}}, {"model": "core.team", "pk": 19, "fields": {"inserted": "2022-03-08T15:35:04.723Z", "updated": "2022-03-08T15:35:04.724Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 3, "division": 5, "subdivision": 10, "name": "Graham", "weight": 2}}, {"model": "core.team", "pk": 20, "fields": {"inserted": "2022-03-08T15:35:04.767Z", "updated": "2022-03-08T15:35:04.767Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 3, "division": 5, "subdivision": 10, "name": "Henry", "weight": 3}}, {"model": "core.team", "pk": 21, "fields": {"inserted": "2022-03-08T15:35:04.898Z", "updated": "2022-03-08T15:35:04.898Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 3, "division": 6, "subdivision": 11, "name": "Graham", "weight": 4}}, {"model": "core.team", "pk": 22, "fields": {"inserted": "2022-03-08T15:35:04.942Z", "updated": "2022-03-08T15:35:04.942Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 3, "division": 6, "subdivision": 11, "name": "Henry", "weight": 5}}, {"model": "core.team", "pk": 23, "fields": {"inserted": "2022-03-08T15:35:05.028Z", "updated": "2022-03-08T15:35:05.028Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 3, "division": 6, "subdivision": 12, "name": "Graham", "weight": 6}}, {"model": "core.team", "pk": 24, "fields": {"inserted": "2022-03-08T15:35:05.072Z", "updated": "2022-03-08T15:35:05.072Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 3, "division": 6, "subdivision": 12, "name": "Henry", "weight": 7}}, {"model": "core.team", "pk": 25, "fields": {"inserted": "2022-03-08T15:35:05.249Z", "updated": "2022-03-08T15:35:05.249Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 4, "division": 7, "subdivision": 13, "name": "Graham", "weight": 8}}, {"model": "core.team", "pk": 26, "fields": {"inserted": "2022-03-08T15:35:05.292Z", "updated": "2022-03-08T15:35:05.292Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 4, "division": 7, "subdivision": 13, "name": "Henry", "weight": 9}}, {"model": "core.team", "pk": 27, "fields": {"inserted": "2022-03-08T15:35:05.378Z", "updated": "2022-03-08T15:35:05.379Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 4, "division": 7, "subdivision": 14, "name": "Graham", "weight": 10}}, {"model": "core.team", "pk": 28, "fields": {"inserted": "2022-03-08T15:35:05.422Z", "updated": "2022-03-08T15:35:05.422Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 4, "division": 7, "subdivision": 14, "name": "Henry", "weight": 11}}, {"model": "core.team", "pk": 29, "fields": {"inserted": "2022-03-08T15:35:05.551Z", "updated": "2022-03-08T15:35:05.551Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 4, "division": 8, "subdivision": 15, "name": "Graham", "weight": 12}}, {"model": "core.team", "pk": 30, "fields": {"inserted": "2022-03-08T15:35:05.596Z", "updated": "2022-03-08T15:35:05.596Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 4, "division": 8, "subdivision": 15, "name": "Henry", "weight": 13}}, {"model": "core.team", "pk": 31, "fields": {"inserted": "2022-03-08T15:35:05.682Z", "updated": "2022-03-08T15:35:05.682Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 4, "division": 8, "subdivision": 16, "name": "Graham", "weight": 14}}, {"model": "core.team", "pk": 32, "fields": {"inserted": "2022-03-08T15:35:05.725Z", "updated": "2022-03-08T15:35:05.725Z", "hockey_canada_id": null, "hockey_canada_system_id": null, "season": 2, "league": 4, "division": 8, "subdivision": 16, "name": "Henry", "weight": 15}}, {"model": "core.teamstafftype", "pk": 1, "fields": {"inserted": "2022-03-08T15:35:03.050Z", "updated": "2022-03-08T15:35:03.050Z", "team_can_edit": true, "team_can_vote": false, "name": "Coach"}}, {"model": "core.teamstafftype", "pk": 2, "fields": {"inserted": "2022-03-08T15:35:03.064Z", "updated": "2022-03-08T15:35:03.064Z", "team_can_edit": true, "team_can_vote": false, "name": "Convenor"}}, {"model": "core.teamstafftype", "pk": 3, "fields": {"inserted": "2022-03-08T15:35:03.079Z", "updated": "2022-03-08T15:35:03.079Z", "team_can_edit": true, "team_can_vote": false, "name": "VP"}}, {"model": "core.teamstafftype", "pk": 4, "fields": {"inserted": "2022-03-08T15:35:03.094Z", "updated": "2022-03-08T15:35:03.094Z", "team_can_edit": true, "team_can_vote": false, "name": "Admin"}}, {"model": "core.teamstaff", "pk": 1, "fields": {"inserted": "2022-03-08T15:35:03.136Z", "updated": "2022-03-08T15:35:03.136Z", "season": 1, "league": null, "division": null, "subdivision": null, "team": null, "user": 1, "type": 4}}, {"model": "core.teamstaff", "pk": 2, "fields": {"inserted": "2022-03-08T15:35:03.181Z", "updated": "2022-03-08T15:35:03.181Z", "season": 1, "league": 1, "division": null, "subdivision": null, "team": null, "user": 2, "type": 3}}, {"model": "core.teamstaff", "pk": 3, "fields": {"inserted": "2022-03-08T15:35:03.222Z", "updated": "2022-03-08T15:35:03.222Z", "season": 1, "league": 1, "division": 1, "subdivision": null, "team": null, "user": 3, "type": 3}}, {"model": "core.teamstaff", "pk": 4, "fields": {"inserted": "2022-03-08T15:35:03.266Z", "updated": "2022-03-08T15:35:03.266Z", "season": 1, "league": 1, "division": 1, "subdivision": 1, "team": null, "user": 4, "type": 2}}, {"model": "core.teamstaff", "pk": 5, "fields": {"inserted": "2022-03-08T15:35:03.309Z", "updated": "2022-03-08T15:35:03.309Z", "season": 1, "league": 1, "division": 1, "subdivision": 1, "team": 1, "user": 5, "type": 1}}, {"model": "core.teamstaff", "pk": 6, "fields": {"inserted": "2022-03-08T15:35:03.351Z", "updated": "2022-03-08T15:35:03.351Z", "season": 1, "league": 1, "division": 1, "subdivision": 1, "team": 2, "user": 6, "type": 1}}, {"model": "core.teamstaff", "pk": 7, "fields": {"inserted": "2022-03-08T15:35:03.393Z", "updated": "2022-03-08T15:35:03.393Z", "season": 1, "league": 1, "division": 1, "subdivision": 2, "team": null, "user": 7, "type": 2}}, {"model": "core.teamstaff", "pk": 8, "fields": {"inserted": "2022-03-08T15:35:03.435Z", "updated": "2022-03-08T15:35:03.435Z", "season": 1, "league": 1, "division": 1, "subdivision": 2, "team": 3, "user": 8, "type": 1}}, {"model": "core.teamstaff", "pk": 9, "fields": {"inserted": "2022-03-08T15:35:03.476Z", "updated": "2022-03-08T15:35:03.476Z", "season": 1, "league": 1, "division": 1, "subdivision": 2, "team": 4, "user": 9, "type": 1}}, {"model": "core.teamstaff", "pk": 10, "fields": {"inserted": "2022-03-08T15:35:03.518Z", "updated": "2022-03-08T15:35:03.518Z", "season": 1, "league": 1, "division": 2, "subdivision": null, "team": null, "user": 10, "type": 3}}, {"model": "core.teamstaff", "pk": 11, "fields": {"inserted": "2022-03-08T15:35:03.561Z", "updated": "2022-03-08T15:35:03.561Z", "season": 1, "league": 1, "division": 2, "subdivision": 3, "team": null, "user": 11, "type": 2}}, {"model": "core.teamstaff", "pk": 12, "fields": {"inserted": "2022-03-08T15:35:03.615Z", "updated": "2022-03-08T15:35:03.615Z", "season": 1, "league": 1, "division": 2, "subdivision": 3, "team": 5, "user": 12, "type": 1}}, {"model": "core.teamstaff", "pk": 13, "fields": {"inserted": "2022-03-08T15:35:03.657Z", "updated": "2022-03-08T15:35:03.658Z", "season": 1, "league": 1, "division": 2, "subdivision": 3, "team": 6, "user": 13, "type": 1}}, {"model": "core.teamstaff", "pk": 14, "fields": {"inserted": "2022-03-08T15:35:03.699Z", "updated": "2022-03-08T15:35:03.699Z", "season": 1, "league": 1, "division": 2, "subdivision": 4, "team": null, "user": 14, "type": 2}}, {"model": "core.teamstaff", "pk": 15, "fields": {"inserted": "2022-03-08T15:35:03.739Z", "updated": "2022-03-08T15:35:03.739Z", "season": 1, "league": 1, "division": 2, "subdivision": 4, "team": 7, "user": 15, "type": 1}}, {"model": "core.teamstaff", "pk": 16, "fields": {"inserted": "2022-03-08T15:35:03.780Z", "updated": "2022-03-08T15:35:03.780Z", "season": 1, "league": 1, "division": 2, "subdivision": 4, "team": 8, "user": 16, "type": 1}}, {"model": "core.teamstaff", "pk": 17, "fields": {"inserted": "2022-03-08T15:35:03.815Z", "updated": "2022-03-08T15:35:03.815Z", "season": 1, "league": 2, "division": null, "subdivision": null, "team": null, "user": 17, "type": 3}}, {"model": "core.teamstaff", "pk": 18, "fields": {"inserted": "2022-03-08T15:35:03.844Z", "updated": "2022-03-08T15:35:03.844Z", "season": 1, "league": 2, "division": 3, "subdivision": null, "team": null, "user": 18, "type": 3}}, {"model": "core.teamstaff", "pk": 19, "fields": {"inserted": "2022-03-08T15:35:03.863Z", "updated": "2022-03-08T15:35:03.863Z", "season": 1, "league": 2, "division": 3, "subdivision": 5, "team": null, "user": 19, "type": 2}}, {"model": "core.teamstaff", "pk": 20, "fields": {"inserted": "2022-03-08T15:35:03.896Z", "updated": "2022-03-08T15:35:03.896Z", "season": 1, "league": 2, "division": 3, "subdivision": 5, "team": 9, "user": 20, "type": 1}}, {"model": "core.teamstaff", "pk": 21, "fields": {"inserted": "2022-03-08T15:35:03.952Z", "updated": "2022-03-08T15:35:03.952Z", "season": 1, "league": 2, "division": 3, "subdivision": 5, "team": 10, "user": 21, "type": 1}}, {"model": "core.teamstaff", "pk": 22, "fields": {"inserted": "2022-03-08T15:35:03.995Z", "updated": "2022-03-08T15:35:03.995Z", "season": 1, "league": 2, "division": 3, "subdivision": 6, "team": null, "user": 22, "type": 2}}, {"model": "core.teamstaff", "pk": 23, "fields": {"inserted": "2022-03-08T15:35:04.039Z", "updated": "2022-03-08T15:35:04.039Z", "season": 1, "league": 2, "division": 3, "subdivision": 6, "team": 11, "user": 23, "type": 1}}, {"model": "core.teamstaff", "pk": 24, "fields": {"inserted": "2022-03-08T15:35:04.088Z", "updated": "2022-03-08T15:35:04.088Z", "season": 1, "league": 2, "division": 3, "subdivision": 6, "team": 12, "user": 24, "type": 1}}, {"model": "core.teamstaff", "pk": 25, "fields": {"inserted": "2022-03-08T15:35:04.131Z", "updated": "2022-03-08T15:35:04.132Z", "season": 1, "league": 2, "division": 4, "subdivision": null, "team": null, "user": 25, "type": 3}}, {"model": "core.teamstaff", "pk": 26, "fields": {"inserted": "2022-03-08T15:35:04.175Z", "updated": "2022-03-08T15:35:04.175Z", "season": 1, "league": 2, "division": 4, "subdivision": 7, "team": null, "user": 26, "type": 2}}, {"model": "core.teamstaff", "pk": 27, "fields": {"inserted": "2022-03-08T15:35:04.219Z", "updated": "2022-03-08T15:35:04.219Z", "season": 1, "league": 2, "division": 4, "subdivision": 7, "team": 13, "user": 27, "type": 1}}, {"model": "core.teamstaff", "pk": 28, "fields": {"inserted": "2022-03-08T15:35:04.263Z", "updated": "2022-03-08T15:35:04.263Z", "season": 1, "league": 2, "division": 4, "subdivision": 7, "team": 14, "user": 28, "type": 1}}, {"model": "core.teamstaff", "pk": 29, "fields": {"inserted": "2022-03-08T15:35:04.306Z", "updated": "2022-03-08T15:35:04.307Z", "season": 1, "league": 2, "division": 4, "subdivision": 8, "team": null, "user": 29, "type": 2}}, {"model": "core.teamstaff", "pk": 30, "fields": {"inserted": "2022-03-08T15:35:04.352Z", "updated": "2022-03-08T15:35:04.352Z", "season": 1, "league": 2, "division": 4, "subdivision": 8, "team": 15, "user": 30, "type": 1}}, {"model": "core.teamstaff", "pk": 31, "fields": {"inserted": "2022-03-08T15:35:04.396Z", "updated": "2022-03-08T15:35:04.396Z", "season": 1, "league": 2, "division": 4, "subdivision": 8, "team": 16, "user": 31, "type": 1}}, {"model": "core.teamstaff", "pk": 32, "fields": {"inserted": "2022-03-08T15:35:04.443Z", "updated": "2022-03-08T15:35:04.443Z", "season": 2, "league": null, "division": null, "subdivision": null, "team": null, "user": 32, "type": 4}}, {"model": "core.teamstaff", "pk": 33, "fields": {"inserted": "2022-03-08T15:35:04.487Z", "updated": "2022-03-08T15:35:04.487Z", "season": 2, "league": 3, "division": null, "subdivision": null, "team": null, "user": 33, "type": 3}}, {"model": "core.teamstaff", "pk": 34, "fields": {"inserted": "2022-03-08T15:35:04.530Z", "updated": "2022-03-08T15:35:04.530Z", "season": 2, "league": 3, "division": 5, "subdivision": null, "team": null, "user": 34, "type": 3}}, {"model": "core.teamstaff", "pk": 35, "fields": {"inserted": "2022-03-08T15:35:04.572Z", "updated": "2022-03-08T15:35:04.572Z", "season": 2, "league": 3, "division": 5, "subdivision": 9, "team": null, "user": 35, "type": 2}}, {"model": "core.teamstaff", "pk": 36, "fields": {"inserted": "2022-03-08T15:35:04.616Z", "updated": "2022-03-08T15:35:04.616Z", "season": 2, "league": 3, "division": 5, "subdivision": 9, "team": 17, "user": 36, "type": 1}}, {"model": "core.teamstaff", "pk": 37, "fields": {"inserted": "2022-03-08T15:35:04.660Z", "updated": "2022-03-08T15:35:04.660Z", "season": 2, "league": 3, "division": 5, "subdivision": 9, "team": 18, "user": 37, "type": 1}}, {"model": "core.teamstaff", "pk": 38, "fields": {"inserted": "2022-03-08T15:35:04.709Z", "updated": "2022-03-08T15:35:04.709Z", "season": 2, "league": 3, "division": 5, "subdivision": 10, "team": null, "user": 38, "type": 2}}, {"model": "core.teamstaff", "pk": 39, "fields": {"inserted": "2022-03-08T15:35:04.753Z", "updated": "2022-03-08T15:35:04.753Z", "season": 2, "league": 3, "division": 5, "subdivision": 10, "team": 19, "user": 39, "type": 1}}, {"model": "core.teamstaff", "pk": 40, "fields": {"inserted": "2022-03-08T15:35:04.796Z", "updated": "2022-03-08T15:35:04.796Z", "season": 2, "league": 3, "division": 5, "subdivision": 10, "team": 20, "user": 40, "type": 1}}, {"model": "core.teamstaff", "pk": 41, "fields": {"inserted": "2022-03-08T15:35:04.840Z", "updated": "2022-03-08T15:35:04.840Z", "season": 2, "league": 3, "division": 6, "subdivision": null, "team": null, "user": 41, "type": 3}}, {"model": "core.teamstaff", "pk": 42, "fields": {"inserted": "2022-03-08T15:35:04.883Z", "updated": "2022-03-08T15:35:04.884Z", "season": 2, "league": 3, "division": 6, "subdivision": 11, "team": null, "user": 42, "type": 2}}, {"model": "core.teamstaff", "pk": 43, "fields": {"inserted": "2022-03-08T15:35:04.927Z", "updated": "2022-03-08T15:35:04.927Z", "season": 2, "league": 3, "division": 6, "subdivision": 11, "team": 21, "user": 43, "type": 1}}, {"model": "core.teamstaff", "pk": 44, "fields": {"inserted": "2022-03-08T15:35:04.970Z", "updated": "2022-03-08T15:35:04.970Z", "season": 2, "league": 3, "division": 6, "subdivision": 11, "team": 22, "user": 44, "type": 1}}, {"model": "core.teamstaff", "pk": 45, "fields": {"inserted": "2022-03-08T15:35:05.014Z", "updated": "2022-03-08T15:35:05.014Z", "season": 2, "league": 3, "division": 6, "subdivision": 12, "team": null, "user": 45, "type": 2}}, {"model": "core.teamstaff", "pk": 46, "fields": {"inserted": "2022-03-08T15:35:05.057Z", "updated": "2022-03-08T15:35:05.057Z", "season": 2, "league": 3, "division": 6, "subdivision": 12, "team": 23, "user": 46, "type": 1}}, {"model": "core.teamstaff", "pk": 47, "fields": {"inserted": "2022-03-08T15:35:05.105Z", "updated": "2022-03-08T15:35:05.105Z", "season": 2, "league": 3, "division": 6, "subdivision": 12, "team": 24, "user": 47, "type": 1}}, {"model": "core.teamstaff", "pk": 48, "fields": {"inserted": "2022-03-08T15:35:05.149Z", "updated": "2022-03-08T15:35:05.149Z", "season": 2, "league": 4, "division": null, "subdivision": null, "team": null, "user": 48, "type": 3}}, {"model": "core.teamstaff", "pk": 49, "fields": {"inserted": "2022-03-08T15:35:05.191Z", "updated": "2022-03-08T15:35:05.192Z", "season": 2, "league": 4, "division": 7, "subdivision": null, "team": null, "user": 49, "type": 3}}, {"model": "core.teamstaff", "pk": 50, "fields": {"inserted": "2022-03-08T15:35:05.235Z", "updated": "2022-03-08T15:35:05.235Z", "season": 2, "league": 4, "division": 7, "subdivision": 13, "team": null, "user": 50, "type": 2}}, {"model": "core.teamstaff", "pk": 51, "fields": {"inserted": "2022-03-08T15:35:05.278Z", "updated": "2022-03-08T15:35:05.278Z", "season": 2, "league": 4, "division": 7, "subdivision": 13, "team": 25, "user": 51, "type": 1}}, {"model": "core.teamstaff", "pk": 52, "fields": {"inserted": "2022-03-08T15:35:05.322Z", "updated": "2022-03-08T15:35:05.322Z", "season": 2, "league": 4, "division": 7, "subdivision": 13, "team": 26, "user": 52, "type": 1}}, {"model": "core.teamstaff", "pk": 53, "fields": {"inserted": "2022-03-08T15:35:05.364Z", "updated": "2022-03-08T15:35:05.365Z", "season": 2, "league": 4, "division": 7, "subdivision": 14, "team": null, "user": 53, "type": 2}}, {"model": "core.teamstaff", "pk": 54, "fields": {"inserted": "2022-03-08T15:35:05.408Z", "updated": "2022-03-08T15:35:05.408Z", "season": 2, "league": 4, "division": 7, "subdivision": 14, "team": 27, "user": 54, "type": 1}}, {"model": "core.teamstaff", "pk": 55, "fields": {"inserted": "2022-03-08T15:35:05.452Z", "updated": "2022-03-08T15:35:05.452Z", "season": 2, "league": 4, "division": 7, "subdivision": 14, "team": 28, "user": 55, "type": 1}}, {"model": "core.teamstaff", "pk": 56, "fields": {"inserted": "2022-03-08T15:35:05.495Z", "updated": "2022-03-08T15:35:05.495Z", "season": 2, "league": 4, "division": 8, "subdivision": null, "team": null, "user": 56, "type": 3}}, {"model": "core.teamstaff", "pk": 57, "fields": {"inserted": "2022-03-08T15:35:05.537Z", "updated": "2022-03-08T15:35:05.537Z", "season": 2, "league": 4, "division": 8, "subdivision": 15, "team": null, "user": 57, "type": 2}}, {"model": "core.teamstaff", "pk": 58, "fields": {"inserted": "2022-03-08T15:35:05.579Z", "updated": "2022-03-08T15:35:05.579Z", "season": 2, "league": 4, "division": 8, "subdivision": 15, "team": 29, "user": 58, "type": 1}}, {"model": "core.teamstaff", "pk": 59, "fields": {"inserted": "2022-03-08T15:35:05.624Z", "updated": "2022-03-08T15:35:05.624Z", "season": 2, "league": 4, "division": 8, "subdivision": 15, "team": 30, "user": 59, "type": 1}}, {"model": "core.teamstaff", "pk": 60, "fields": {"inserted": "2022-03-08T15:35:05.668Z", "updated": "2022-03-08T15:35:05.668Z", "season": 2, "league": 4, "division": 8, "subdivision": 16, "team": null, "user": 60, "type": 2}}, {"model": "core.teamstaff", "pk": 61, "fields": {"inserted": "2022-03-08T15:35:05.711Z", "updated": "2022-03-08T15:35:05.711Z", "season": 2, "league": 4, "division": 8, "subdivision": 16, "team": 31, "user": 61, "type": 1}}, {"model": "core.teamstaff", "pk": 62, "fields": {"inserted": "2022-03-08T15:35:05.755Z", "updated": "2022-03-08T15:35:05.755Z", "season": 2, "league": 4, "division": 8, "subdivision": 16, "team": 32, "user": 62, "type": 1}}]
+[
+{
+    "model": "core.user",
+    "pk": 1,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.629Z",
+        "username": "2022-2023 Admin",
+        "email": "2022-2023 Admin",
+        "inserted": "2022-03-08T18:32:10.630Z",
+        "updated": "2022-03-08T18:32:10.630Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 2,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.640Z",
+        "username": "2022-2023 HL VP",
+        "email": "2022-2023 HL VP",
+        "inserted": "2022-03-08T18:32:10.640Z",
+        "updated": "2022-03-08T18:32:10.640Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 3,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.649Z",
+        "username": "2022-2023 HL U10 Division",
+        "email": "2022-2023 HL U10 Division",
+        "inserted": "2022-03-08T18:32:10.650Z",
+        "updated": "2022-03-08T18:32:10.650Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 4,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.659Z",
+        "username": "2022-2023 - HL - U10 - Blue - SubDivision",
+        "email": "2022-2023 - HL - U10 - Blue - SubDivision",
+        "inserted": "2022-03-08T18:32:10.659Z",
+        "updated": "2022-03-08T18:32:10.659Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 5,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.669Z",
+        "username": "2022-2023 - HL - U10 - Blue - Graham - Coach",
+        "email": "2022-2023 - HL - U10 - Blue - Graham - Coach",
+        "inserted": "2022-03-08T18:32:10.669Z",
+        "updated": "2022-03-08T18:32:10.669Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 6,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.678Z",
+        "username": "2022-2023 - HL - U10 - Blue - Henry - Coach",
+        "email": "2022-2023 - HL - U10 - Blue - Henry - Coach",
+        "inserted": "2022-03-08T18:32:10.679Z",
+        "updated": "2022-03-08T18:32:10.679Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 7,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.688Z",
+        "username": "2022-2023 - HL - U10 - White - SubDivision",
+        "email": "2022-2023 - HL - U10 - White - SubDivision",
+        "inserted": "2022-03-08T18:32:10.688Z",
+        "updated": "2022-03-08T18:32:10.688Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 8,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.696Z",
+        "username": "2022-2023 - HL - U10 - White - Graham - Coach",
+        "email": "2022-2023 - HL - U10 - White - Graham - Coach",
+        "inserted": "2022-03-08T18:32:10.697Z",
+        "updated": "2022-03-08T18:32:10.697Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 9,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.707Z",
+        "username": "2022-2023 - HL - U10 - White - Henry - Coach",
+        "email": "2022-2023 - HL - U10 - White - Henry - Coach",
+        "inserted": "2022-03-08T18:32:10.707Z",
+        "updated": "2022-03-08T18:32:10.707Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 10,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.716Z",
+        "username": "2022-2023 HL U11 Division",
+        "email": "2022-2023 HL U11 Division",
+        "inserted": "2022-03-08T18:32:10.716Z",
+        "updated": "2022-03-08T18:32:10.716Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 11,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.725Z",
+        "username": "2022-2023 - HL - U11 - Blue - SubDivision",
+        "email": "2022-2023 - HL - U11 - Blue - SubDivision",
+        "inserted": "2022-03-08T18:32:10.726Z",
+        "updated": "2022-03-08T18:32:10.726Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 12,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.735Z",
+        "username": "2022-2023 - HL - U11 - Blue - Graham - Coach",
+        "email": "2022-2023 - HL - U11 - Blue - Graham - Coach",
+        "inserted": "2022-03-08T18:32:10.735Z",
+        "updated": "2022-03-08T18:32:10.735Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 13,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.744Z",
+        "username": "2022-2023 - HL - U11 - Blue - Henry - Coach",
+        "email": "2022-2023 - HL - U11 - Blue - Henry - Coach",
+        "inserted": "2022-03-08T18:32:10.744Z",
+        "updated": "2022-03-08T18:32:10.744Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 14,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.754Z",
+        "username": "2022-2023 - HL - U11 - White - SubDivision",
+        "email": "2022-2023 - HL - U11 - White - SubDivision",
+        "inserted": "2022-03-08T18:32:10.755Z",
+        "updated": "2022-03-08T18:32:10.755Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 15,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.764Z",
+        "username": "2022-2023 - HL - U11 - White - Graham - Coach",
+        "email": "2022-2023 - HL - U11 - White - Graham - Coach",
+        "inserted": "2022-03-08T18:32:10.765Z",
+        "updated": "2022-03-08T18:32:10.765Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 16,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.773Z",
+        "username": "2022-2023 - HL - U11 - White - Henry - Coach",
+        "email": "2022-2023 - HL - U11 - White - Henry - Coach",
+        "inserted": "2022-03-08T18:32:10.773Z",
+        "updated": "2022-03-08T18:32:10.773Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 17,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.782Z",
+        "username": "2022-2023 REP VP",
+        "email": "2022-2023 REP VP",
+        "inserted": "2022-03-08T18:32:10.782Z",
+        "updated": "2022-03-08T18:32:10.782Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 18,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.790Z",
+        "username": "2022-2023 REP U10 Division",
+        "email": "2022-2023 REP U10 Division",
+        "inserted": "2022-03-08T18:32:10.791Z",
+        "updated": "2022-03-08T18:32:10.791Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 19,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.799Z",
+        "username": "2022-2023 - REP - U10 - A - SubDivision",
+        "email": "2022-2023 - REP - U10 - A - SubDivision",
+        "inserted": "2022-03-08T18:32:10.799Z",
+        "updated": "2022-03-08T18:32:10.799Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 20,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.807Z",
+        "username": "2022-2023 - REP - U10 - A - Graham - Coach",
+        "email": "2022-2023 - REP - U10 - A - Graham - Coach",
+        "inserted": "2022-03-08T18:32:10.807Z",
+        "updated": "2022-03-08T18:32:10.807Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 21,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.815Z",
+        "username": "2022-2023 - REP - U10 - A - Henry - Coach",
+        "email": "2022-2023 - REP - U10 - A - Henry - Coach",
+        "inserted": "2022-03-08T18:32:10.816Z",
+        "updated": "2022-03-08T18:32:10.816Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 22,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.824Z",
+        "username": "2022-2023 - REP - U10 - AA - SubDivision",
+        "email": "2022-2023 - REP - U10 - AA - SubDivision",
+        "inserted": "2022-03-08T18:32:10.825Z",
+        "updated": "2022-03-08T18:32:10.825Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 23,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.833Z",
+        "username": "2022-2023 - REP - U10 - AA - Graham - Coach",
+        "email": "2022-2023 - REP - U10 - AA - Graham - Coach",
+        "inserted": "2022-03-08T18:32:10.833Z",
+        "updated": "2022-03-08T18:32:10.833Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 24,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.841Z",
+        "username": "2022-2023 - REP - U10 - AA - Henry - Coach",
+        "email": "2022-2023 - REP - U10 - AA - Henry - Coach",
+        "inserted": "2022-03-08T18:32:10.842Z",
+        "updated": "2022-03-08T18:32:10.842Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 25,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.850Z",
+        "username": "2022-2023 REP U11 Division",
+        "email": "2022-2023 REP U11 Division",
+        "inserted": "2022-03-08T18:32:10.851Z",
+        "updated": "2022-03-08T18:32:10.851Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 26,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.859Z",
+        "username": "2022-2023 - REP - U11 - A - SubDivision",
+        "email": "2022-2023 - REP - U11 - A - SubDivision",
+        "inserted": "2022-03-08T18:32:10.859Z",
+        "updated": "2022-03-08T18:32:10.859Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 27,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.867Z",
+        "username": "2022-2023 - REP - U11 - A - Graham - Coach",
+        "email": "2022-2023 - REP - U11 - A - Graham - Coach",
+        "inserted": "2022-03-08T18:32:10.867Z",
+        "updated": "2022-03-08T18:32:10.867Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 28,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.875Z",
+        "username": "2022-2023 - REP - U11 - A - Henry - Coach",
+        "email": "2022-2023 - REP - U11 - A - Henry - Coach",
+        "inserted": "2022-03-08T18:32:10.876Z",
+        "updated": "2022-03-08T18:32:10.876Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 29,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.884Z",
+        "username": "2022-2023 - REP - U11 - AA - SubDivision",
+        "email": "2022-2023 - REP - U11 - AA - SubDivision",
+        "inserted": "2022-03-08T18:32:10.885Z",
+        "updated": "2022-03-08T18:32:10.885Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 30,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.893Z",
+        "username": "2022-2023 - REP - U11 - AA - Graham - Coach",
+        "email": "2022-2023 - REP - U11 - AA - Graham - Coach",
+        "inserted": "2022-03-08T18:32:10.893Z",
+        "updated": "2022-03-08T18:32:10.893Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 31,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.902Z",
+        "username": "2022-2023 - REP - U11 - AA - Henry - Coach",
+        "email": "2022-2023 - REP - U11 - AA - Henry - Coach",
+        "inserted": "2022-03-08T18:32:10.902Z",
+        "updated": "2022-03-08T18:32:10.902Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 32,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.919Z",
+        "username": "2023-2024 Admin",
+        "email": "2023-2024 Admin",
+        "inserted": "2022-03-08T18:32:10.919Z",
+        "updated": "2022-03-08T18:32:10.919Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 33,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.927Z",
+        "username": "2023-2024 HL VP",
+        "email": "2023-2024 HL VP",
+        "inserted": "2022-03-08T18:32:10.928Z",
+        "updated": "2022-03-08T18:32:10.928Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 34,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.936Z",
+        "username": "2023-2024 HL U10 Division",
+        "email": "2023-2024 HL U10 Division",
+        "inserted": "2022-03-08T18:32:10.936Z",
+        "updated": "2022-03-08T18:32:10.936Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 35,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.944Z",
+        "username": "2023-2024 - HL - U10 - Blue - SubDivision",
+        "email": "2023-2024 - HL - U10 - Blue - SubDivision",
+        "inserted": "2022-03-08T18:32:10.944Z",
+        "updated": "2022-03-08T18:32:10.944Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 36,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.953Z",
+        "username": "2023-2024 - HL - U10 - Blue - Graham - Coach",
+        "email": "2023-2024 - HL - U10 - Blue - Graham - Coach",
+        "inserted": "2022-03-08T18:32:10.954Z",
+        "updated": "2022-03-08T18:32:10.954Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 37,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.963Z",
+        "username": "2023-2024 - HL - U10 - Blue - Henry - Coach",
+        "email": "2023-2024 - HL - U10 - Blue - Henry - Coach",
+        "inserted": "2022-03-08T18:32:10.963Z",
+        "updated": "2022-03-08T18:32:10.963Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 38,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.972Z",
+        "username": "2023-2024 - HL - U10 - White - SubDivision",
+        "email": "2023-2024 - HL - U10 - White - SubDivision",
+        "inserted": "2022-03-08T18:32:10.972Z",
+        "updated": "2022-03-08T18:32:10.972Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 39,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.980Z",
+        "username": "2023-2024 - HL - U10 - White - Graham - Coach",
+        "email": "2023-2024 - HL - U10 - White - Graham - Coach",
+        "inserted": "2022-03-08T18:32:10.981Z",
+        "updated": "2022-03-08T18:32:10.981Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 40,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:10.991Z",
+        "username": "2023-2024 - HL - U10 - White - Henry - Coach",
+        "email": "2023-2024 - HL - U10 - White - Henry - Coach",
+        "inserted": "2022-03-08T18:32:10.991Z",
+        "updated": "2022-03-08T18:32:10.991Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 41,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.002Z",
+        "username": "2023-2024 HL U11 Division",
+        "email": "2023-2024 HL U11 Division",
+        "inserted": "2022-03-08T18:32:11.002Z",
+        "updated": "2022-03-08T18:32:11.002Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 42,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.010Z",
+        "username": "2023-2024 - HL - U11 - Blue - SubDivision",
+        "email": "2023-2024 - HL - U11 - Blue - SubDivision",
+        "inserted": "2022-03-08T18:32:11.010Z",
+        "updated": "2022-03-08T18:32:11.010Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 43,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.021Z",
+        "username": "2023-2024 - HL - U11 - Blue - Graham - Coach",
+        "email": "2023-2024 - HL - U11 - Blue - Graham - Coach",
+        "inserted": "2022-03-08T18:32:11.021Z",
+        "updated": "2022-03-08T18:32:11.021Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 44,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.031Z",
+        "username": "2023-2024 - HL - U11 - Blue - Henry - Coach",
+        "email": "2023-2024 - HL - U11 - Blue - Henry - Coach",
+        "inserted": "2022-03-08T18:32:11.031Z",
+        "updated": "2022-03-08T18:32:11.031Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 45,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.040Z",
+        "username": "2023-2024 - HL - U11 - White - SubDivision",
+        "email": "2023-2024 - HL - U11 - White - SubDivision",
+        "inserted": "2022-03-08T18:32:11.040Z",
+        "updated": "2022-03-08T18:32:11.040Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 46,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.048Z",
+        "username": "2023-2024 - HL - U11 - White - Graham - Coach",
+        "email": "2023-2024 - HL - U11 - White - Graham - Coach",
+        "inserted": "2022-03-08T18:32:11.048Z",
+        "updated": "2022-03-08T18:32:11.048Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 47,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.057Z",
+        "username": "2023-2024 - HL - U11 - White - Henry - Coach",
+        "email": "2023-2024 - HL - U11 - White - Henry - Coach",
+        "inserted": "2022-03-08T18:32:11.057Z",
+        "updated": "2022-03-08T18:32:11.057Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 48,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.065Z",
+        "username": "2023-2024 REP VP",
+        "email": "2023-2024 REP VP",
+        "inserted": "2022-03-08T18:32:11.065Z",
+        "updated": "2022-03-08T18:32:11.065Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 49,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.073Z",
+        "username": "2023-2024 REP U10 Division",
+        "email": "2023-2024 REP U10 Division",
+        "inserted": "2022-03-08T18:32:11.073Z",
+        "updated": "2022-03-08T18:32:11.073Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 50,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.081Z",
+        "username": "2023-2024 - REP - U10 - A - SubDivision",
+        "email": "2023-2024 - REP - U10 - A - SubDivision",
+        "inserted": "2022-03-08T18:32:11.082Z",
+        "updated": "2022-03-08T18:32:11.082Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 51,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.091Z",
+        "username": "2023-2024 - REP - U10 - A - Graham - Coach",
+        "email": "2023-2024 - REP - U10 - A - Graham - Coach",
+        "inserted": "2022-03-08T18:32:11.091Z",
+        "updated": "2022-03-08T18:32:11.091Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 52,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.099Z",
+        "username": "2023-2024 - REP - U10 - A - Henry - Coach",
+        "email": "2023-2024 - REP - U10 - A - Henry - Coach",
+        "inserted": "2022-03-08T18:32:11.099Z",
+        "updated": "2022-03-08T18:32:11.099Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 53,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.108Z",
+        "username": "2023-2024 - REP - U10 - AA - SubDivision",
+        "email": "2023-2024 - REP - U10 - AA - SubDivision",
+        "inserted": "2022-03-08T18:32:11.108Z",
+        "updated": "2022-03-08T18:32:11.108Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 54,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.117Z",
+        "username": "2023-2024 - REP - U10 - AA - Graham - Coach",
+        "email": "2023-2024 - REP - U10 - AA - Graham - Coach",
+        "inserted": "2022-03-08T18:32:11.117Z",
+        "updated": "2022-03-08T18:32:11.117Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 55,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.125Z",
+        "username": "2023-2024 - REP - U10 - AA - Henry - Coach",
+        "email": "2023-2024 - REP - U10 - AA - Henry - Coach",
+        "inserted": "2022-03-08T18:32:11.126Z",
+        "updated": "2022-03-08T18:32:11.126Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 56,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.134Z",
+        "username": "2023-2024 REP U11 Division",
+        "email": "2023-2024 REP U11 Division",
+        "inserted": "2022-03-08T18:32:11.134Z",
+        "updated": "2022-03-08T18:32:11.134Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 57,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.143Z",
+        "username": "2023-2024 - REP - U11 - A - SubDivision",
+        "email": "2023-2024 - REP - U11 - A - SubDivision",
+        "inserted": "2022-03-08T18:32:11.143Z",
+        "updated": "2022-03-08T18:32:11.143Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 58,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.151Z",
+        "username": "2023-2024 - REP - U11 - A - Graham - Coach",
+        "email": "2023-2024 - REP - U11 - A - Graham - Coach",
+        "inserted": "2022-03-08T18:32:11.152Z",
+        "updated": "2022-03-08T18:32:11.152Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 59,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.159Z",
+        "username": "2023-2024 - REP - U11 - A - Henry - Coach",
+        "email": "2023-2024 - REP - U11 - A - Henry - Coach",
+        "inserted": "2022-03-08T18:32:11.160Z",
+        "updated": "2022-03-08T18:32:11.160Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 60,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.168Z",
+        "username": "2023-2024 - REP - U11 - AA - SubDivision",
+        "email": "2023-2024 - REP - U11 - AA - SubDivision",
+        "inserted": "2022-03-08T18:32:11.168Z",
+        "updated": "2022-03-08T18:32:11.168Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 61,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.176Z",
+        "username": "2023-2024 - REP - U11 - AA - Graham - Coach",
+        "email": "2023-2024 - REP - U11 - AA - Graham - Coach",
+        "inserted": "2022-03-08T18:32:11.176Z",
+        "updated": "2022-03-08T18:32:11.176Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 62,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-03-08T18:32:11.185Z",
+        "username": "2023-2024 - REP - U11 - AA - Henry - Coach",
+        "email": "2023-2024 - REP - U11 - AA - Henry - Coach",
+        "inserted": "2022-03-08T18:32:11.185Z",
+        "updated": "2022-03-08T18:32:11.185Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.season",
+    "pk": 1,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.627Z",
+        "updated": "2022-03-08T18:32:10.627Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "name": "2022-2023",
+        "start": "2022-09-01",
+        "end": "2023-08-31",
+        "mbs_id": 0,
+        "gsi_id": 0
+    }
+},
+{
+    "model": "core.season",
+    "pk": 2,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.917Z",
+        "updated": "2022-03-08T18:32:10.917Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "name": "2023-2024",
+        "start": "2023-09-01",
+        "end": "2024-08-31",
+        "mbs_id": 0,
+        "gsi_id": 0
+    }
+},
+{
+    "model": "core.league",
+    "pk": 1,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.636Z",
+        "updated": "2022-03-08T18:32:10.636Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "name": "HL",
+        "weight": 0
+    }
+},
+{
+    "model": "core.league",
+    "pk": 2,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.778Z",
+        "updated": "2022-03-08T18:32:10.778Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "name": "REP",
+        "weight": 1
+    }
+},
+{
+    "model": "core.league",
+    "pk": 3,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.924Z",
+        "updated": "2022-03-08T18:32:10.924Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "name": "HL",
+        "weight": 0
+    }
+},
+{
+    "model": "core.league",
+    "pk": 4,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.061Z",
+        "updated": "2022-03-08T18:32:11.061Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "name": "REP",
+        "weight": 1
+    }
+},
+{
+    "model": "core.division",
+    "pk": 1,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.645Z",
+        "updated": "2022-03-08T18:32:10.645Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "name": "U10",
+        "age_from": 0,
+        "age_to": 0,
+        "weight": 0
+    }
+},
+{
+    "model": "core.division",
+    "pk": 2,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.711Z",
+        "updated": "2022-03-08T18:32:10.711Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "name": "U11",
+        "age_from": 0,
+        "age_to": 0,
+        "weight": 1
+    }
+},
+{
+    "model": "core.division",
+    "pk": 3,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.787Z",
+        "updated": "2022-03-08T18:32:10.787Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "name": "U10",
+        "age_from": 0,
+        "age_to": 0,
+        "weight": 2
+    }
+},
+{
+    "model": "core.division",
+    "pk": 4,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.846Z",
+        "updated": "2022-03-08T18:32:10.846Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "name": "U11",
+        "age_from": 0,
+        "age_to": 0,
+        "weight": 3
+    }
+},
+{
+    "model": "core.division",
+    "pk": 5,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.933Z",
+        "updated": "2022-03-08T18:32:10.933Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "name": "U10",
+        "age_from": 0,
+        "age_to": 0,
+        "weight": 0
+    }
+},
+{
+    "model": "core.division",
+    "pk": 6,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.996Z",
+        "updated": "2022-03-08T18:32:10.996Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "name": "U11",
+        "age_from": 0,
+        "age_to": 0,
+        "weight": 1
+    }
+},
+{
+    "model": "core.division",
+    "pk": 7,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.070Z",
+        "updated": "2022-03-08T18:32:11.070Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "name": "U10",
+        "age_from": 0,
+        "age_to": 0,
+        "weight": 2
+    }
+},
+{
+    "model": "core.division",
+    "pk": 8,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.130Z",
+        "updated": "2022-03-08T18:32:11.130Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "name": "U11",
+        "age_from": 0,
+        "age_to": 0,
+        "weight": 3
+    }
+},
+{
+    "model": "core.subdivision",
+    "pk": 1,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.655Z",
+        "updated": "2022-03-08T18:32:10.655Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "name": "Blue",
+        "weight": 0
+    }
+},
+{
+    "model": "core.subdivision",
+    "pk": 2,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.684Z",
+        "updated": "2022-03-08T18:32:10.684Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "name": "White",
+        "weight": 1
+    }
+},
+{
+    "model": "core.subdivision",
+    "pk": 3,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.722Z",
+        "updated": "2022-03-08T18:32:10.722Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "name": "Blue",
+        "weight": 2
+    }
+},
+{
+    "model": "core.subdivision",
+    "pk": 4,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.749Z",
+        "updated": "2022-03-08T18:32:10.749Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "name": "White",
+        "weight": 3
+    }
+},
+{
+    "model": "core.subdivision",
+    "pk": 5,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.795Z",
+        "updated": "2022-03-08T18:32:10.795Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "name": "A",
+        "weight": 4
+    }
+},
+{
+    "model": "core.subdivision",
+    "pk": 6,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.821Z",
+        "updated": "2022-03-08T18:32:10.821Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "name": "AA",
+        "weight": 5
+    }
+},
+{
+    "model": "core.subdivision",
+    "pk": 7,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.855Z",
+        "updated": "2022-03-08T18:32:10.856Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "name": "A",
+        "weight": 6
+    }
+},
+{
+    "model": "core.subdivision",
+    "pk": 8,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.880Z",
+        "updated": "2022-03-08T18:32:10.880Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "name": "AA",
+        "weight": 7
+    }
+},
+{
+    "model": "core.subdivision",
+    "pk": 9,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.941Z",
+        "updated": "2022-03-08T18:32:10.941Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "name": "Blue",
+        "weight": 0
+    }
+},
+{
+    "model": "core.subdivision",
+    "pk": 10,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.968Z",
+        "updated": "2022-03-08T18:32:10.968Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "name": "White",
+        "weight": 1
+    }
+},
+{
+    "model": "core.subdivision",
+    "pk": 11,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.007Z",
+        "updated": "2022-03-08T18:32:11.007Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "name": "Blue",
+        "weight": 2
+    }
+},
+{
+    "model": "core.subdivision",
+    "pk": 12,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.036Z",
+        "updated": "2022-03-08T18:32:11.036Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "name": "White",
+        "weight": 3
+    }
+},
+{
+    "model": "core.subdivision",
+    "pk": 13,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.078Z",
+        "updated": "2022-03-08T18:32:11.078Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "name": "A",
+        "weight": 4
+    }
+},
+{
+    "model": "core.subdivision",
+    "pk": 14,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.104Z",
+        "updated": "2022-03-08T18:32:11.104Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "name": "AA",
+        "weight": 5
+    }
+},
+{
+    "model": "core.subdivision",
+    "pk": 15,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.139Z",
+        "updated": "2022-03-08T18:32:11.139Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "name": "A",
+        "weight": 6
+    }
+},
+{
+    "model": "core.subdivision",
+    "pk": 16,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.164Z",
+        "updated": "2022-03-08T18:32:11.164Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "name": "AA",
+        "weight": 7
+    }
+},
+{
+    "model": "core.team",
+    "pk": 1,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.664Z",
+        "updated": "2022-03-08T18:32:10.664Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": 1,
+        "name": "Graham",
+        "weight": 0
+    }
+},
+{
+    "model": "core.team",
+    "pk": 2,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.674Z",
+        "updated": "2022-03-08T18:32:10.674Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": 1,
+        "name": "Henry",
+        "weight": 1
+    }
+},
+{
+    "model": "core.team",
+    "pk": 3,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.693Z",
+        "updated": "2022-03-08T18:32:10.693Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": 2,
+        "name": "Graham",
+        "weight": 2
+    }
+},
+{
+    "model": "core.team",
+    "pk": 4,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.702Z",
+        "updated": "2022-03-08T18:32:10.702Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": 2,
+        "name": "Henry",
+        "weight": 3
+    }
+},
+{
+    "model": "core.team",
+    "pk": 5,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.730Z",
+        "updated": "2022-03-08T18:32:10.730Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": 3,
+        "name": "Graham",
+        "weight": 4
+    }
+},
+{
+    "model": "core.team",
+    "pk": 6,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.740Z",
+        "updated": "2022-03-08T18:32:10.740Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": 3,
+        "name": "Henry",
+        "weight": 5
+    }
+},
+{
+    "model": "core.team",
+    "pk": 7,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.760Z",
+        "updated": "2022-03-08T18:32:10.760Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": 4,
+        "name": "Graham",
+        "weight": 6
+    }
+},
+{
+    "model": "core.team",
+    "pk": 8,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.770Z",
+        "updated": "2022-03-08T18:32:10.770Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": 4,
+        "name": "Henry",
+        "weight": 7
+    }
+},
+{
+    "model": "core.team",
+    "pk": 9,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.804Z",
+        "updated": "2022-03-08T18:32:10.804Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": 5,
+        "name": "Graham",
+        "weight": 8
+    }
+},
+{
+    "model": "core.team",
+    "pk": 10,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.812Z",
+        "updated": "2022-03-08T18:32:10.812Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": 5,
+        "name": "Henry",
+        "weight": 9
+    }
+},
+{
+    "model": "core.team",
+    "pk": 11,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.829Z",
+        "updated": "2022-03-08T18:32:10.829Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": 6,
+        "name": "Graham",
+        "weight": 10
+    }
+},
+{
+    "model": "core.team",
+    "pk": 12,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.838Z",
+        "updated": "2022-03-08T18:32:10.838Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": 6,
+        "name": "Henry",
+        "weight": 11
+    }
+},
+{
+    "model": "core.team",
+    "pk": 13,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.864Z",
+        "updated": "2022-03-08T18:32:10.864Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": 7,
+        "name": "Graham",
+        "weight": 12
+    }
+},
+{
+    "model": "core.team",
+    "pk": 14,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.872Z",
+        "updated": "2022-03-08T18:32:10.872Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": 7,
+        "name": "Henry",
+        "weight": 13
+    }
+},
+{
+    "model": "core.team",
+    "pk": 15,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.889Z",
+        "updated": "2022-03-08T18:32:10.889Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": 8,
+        "name": "Graham",
+        "weight": 14
+    }
+},
+{
+    "model": "core.team",
+    "pk": 16,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.898Z",
+        "updated": "2022-03-08T18:32:10.898Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": 8,
+        "name": "Henry",
+        "weight": 15
+    }
+},
+{
+    "model": "core.team",
+    "pk": 17,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.949Z",
+        "updated": "2022-03-08T18:32:10.949Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": 9,
+        "name": "Graham",
+        "weight": 0
+    }
+},
+{
+    "model": "core.team",
+    "pk": 18,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.959Z",
+        "updated": "2022-03-08T18:32:10.959Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": 9,
+        "name": "Henry",
+        "weight": 1
+    }
+},
+{
+    "model": "core.team",
+    "pk": 19,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.977Z",
+        "updated": "2022-03-08T18:32:10.977Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": 10,
+        "name": "Graham",
+        "weight": 2
+    }
+},
+{
+    "model": "core.team",
+    "pk": 20,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.987Z",
+        "updated": "2022-03-08T18:32:10.987Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": 10,
+        "name": "Henry",
+        "weight": 3
+    }
+},
+{
+    "model": "core.team",
+    "pk": 21,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.016Z",
+        "updated": "2022-03-08T18:32:11.016Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": 11,
+        "name": "Graham",
+        "weight": 4
+    }
+},
+{
+    "model": "core.team",
+    "pk": 22,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.027Z",
+        "updated": "2022-03-08T18:32:11.027Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": 11,
+        "name": "Henry",
+        "weight": 5
+    }
+},
+{
+    "model": "core.team",
+    "pk": 23,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.045Z",
+        "updated": "2022-03-08T18:32:11.045Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": 12,
+        "name": "Graham",
+        "weight": 6
+    }
+},
+{
+    "model": "core.team",
+    "pk": 24,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.053Z",
+        "updated": "2022-03-08T18:32:11.053Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": 12,
+        "name": "Henry",
+        "weight": 7
+    }
+},
+{
+    "model": "core.team",
+    "pk": 25,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.087Z",
+        "updated": "2022-03-08T18:32:11.087Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": 13,
+        "name": "Graham",
+        "weight": 8
+    }
+},
+{
+    "model": "core.team",
+    "pk": 26,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.096Z",
+        "updated": "2022-03-08T18:32:11.096Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": 13,
+        "name": "Henry",
+        "weight": 9
+    }
+},
+{
+    "model": "core.team",
+    "pk": 27,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.113Z",
+        "updated": "2022-03-08T18:32:11.113Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": 14,
+        "name": "Graham",
+        "weight": 10
+    }
+},
+{
+    "model": "core.team",
+    "pk": 28,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.122Z",
+        "updated": "2022-03-08T18:32:11.122Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": 14,
+        "name": "Henry",
+        "weight": 11
+    }
+},
+{
+    "model": "core.team",
+    "pk": 29,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.147Z",
+        "updated": "2022-03-08T18:32:11.148Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": 15,
+        "name": "Graham",
+        "weight": 12
+    }
+},
+{
+    "model": "core.team",
+    "pk": 30,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.156Z",
+        "updated": "2022-03-08T18:32:11.156Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": 15,
+        "name": "Henry",
+        "weight": 13
+    }
+},
+{
+    "model": "core.team",
+    "pk": 31,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.172Z",
+        "updated": "2022-03-08T18:32:11.172Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": 16,
+        "name": "Graham",
+        "weight": 14
+    }
+},
+{
+    "model": "core.team",
+    "pk": 32,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.181Z",
+        "updated": "2022-03-08T18:32:11.181Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": 16,
+        "name": "Henry",
+        "weight": 15
+    }
+},
+{
+    "model": "core.teamstafftype",
+    "pk": 1,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.609Z",
+        "updated": "2022-03-08T18:32:10.609Z",
+        "team_can_edit": true,
+        "team_can_vote": false,
+        "name": "Coach"
+    }
+},
+{
+    "model": "core.teamstafftype",
+    "pk": 2,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.614Z",
+        "updated": "2022-03-08T18:32:10.614Z",
+        "team_can_edit": true,
+        "team_can_vote": false,
+        "name": "Convenor"
+    }
+},
+{
+    "model": "core.teamstafftype",
+    "pk": 3,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.619Z",
+        "updated": "2022-03-08T18:32:10.619Z",
+        "team_can_edit": true,
+        "team_can_vote": false,
+        "name": "VP"
+    }
+},
+{
+    "model": "core.teamstafftype",
+    "pk": 4,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.623Z",
+        "updated": "2022-03-08T18:32:10.623Z",
+        "team_can_edit": true,
+        "team_can_vote": false,
+        "name": "Admin"
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 1,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.633Z",
+        "updated": "2022-03-08T18:32:10.633Z",
+        "season": 1,
+        "league": null,
+        "division": null,
+        "subdivision": null,
+        "team": null,
+        "user": 1,
+        "type": 4
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 2,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.642Z",
+        "updated": "2022-03-08T18:32:10.642Z",
+        "season": 1,
+        "league": 1,
+        "division": null,
+        "subdivision": null,
+        "team": null,
+        "user": 2,
+        "type": 3
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 3,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.652Z",
+        "updated": "2022-03-08T18:32:10.652Z",
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": null,
+        "team": null,
+        "user": 3,
+        "type": 3
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 4,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.661Z",
+        "updated": "2022-03-08T18:32:10.661Z",
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": 1,
+        "team": null,
+        "user": 4,
+        "type": 2
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 5,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.672Z",
+        "updated": "2022-03-08T18:32:10.672Z",
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": 1,
+        "team": 1,
+        "user": 5,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 6,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.681Z",
+        "updated": "2022-03-08T18:32:10.681Z",
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": 1,
+        "team": 2,
+        "user": 6,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 7,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.690Z",
+        "updated": "2022-03-08T18:32:10.690Z",
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": 2,
+        "team": null,
+        "user": 7,
+        "type": 2
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 8,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.699Z",
+        "updated": "2022-03-08T18:32:10.699Z",
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": 2,
+        "team": 3,
+        "user": 8,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 9,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.709Z",
+        "updated": "2022-03-08T18:32:10.709Z",
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": 2,
+        "team": 4,
+        "user": 9,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 10,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.719Z",
+        "updated": "2022-03-08T18:32:10.719Z",
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": null,
+        "team": null,
+        "user": 10,
+        "type": 3
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 11,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.728Z",
+        "updated": "2022-03-08T18:32:10.728Z",
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": 3,
+        "team": null,
+        "user": 11,
+        "type": 2
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 12,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.737Z",
+        "updated": "2022-03-08T18:32:10.737Z",
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": 3,
+        "team": 5,
+        "user": 12,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 13,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.746Z",
+        "updated": "2022-03-08T18:32:10.746Z",
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": 3,
+        "team": 6,
+        "user": 13,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 14,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.757Z",
+        "updated": "2022-03-08T18:32:10.757Z",
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": 4,
+        "team": null,
+        "user": 14,
+        "type": 2
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 15,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.767Z",
+        "updated": "2022-03-08T18:32:10.767Z",
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": 4,
+        "team": 7,
+        "user": 15,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 16,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.776Z",
+        "updated": "2022-03-08T18:32:10.776Z",
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": 4,
+        "team": 8,
+        "user": 16,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 17,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.784Z",
+        "updated": "2022-03-08T18:32:10.784Z",
+        "season": 1,
+        "league": 2,
+        "division": null,
+        "subdivision": null,
+        "team": null,
+        "user": 17,
+        "type": 3
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 18,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.793Z",
+        "updated": "2022-03-08T18:32:10.793Z",
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": null,
+        "team": null,
+        "user": 18,
+        "type": 3
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 19,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.802Z",
+        "updated": "2022-03-08T18:32:10.802Z",
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": 5,
+        "team": null,
+        "user": 19,
+        "type": 2
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 20,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.809Z",
+        "updated": "2022-03-08T18:32:10.809Z",
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": 5,
+        "team": 9,
+        "user": 20,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 21,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.818Z",
+        "updated": "2022-03-08T18:32:10.818Z",
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": 5,
+        "team": 10,
+        "user": 21,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 22,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.827Z",
+        "updated": "2022-03-08T18:32:10.827Z",
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": 6,
+        "team": null,
+        "user": 22,
+        "type": 2
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 23,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.836Z",
+        "updated": "2022-03-08T18:32:10.836Z",
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": 6,
+        "team": 11,
+        "user": 23,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 24,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.844Z",
+        "updated": "2022-03-08T18:32:10.844Z",
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": 6,
+        "team": 12,
+        "user": 24,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 25,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.853Z",
+        "updated": "2022-03-08T18:32:10.853Z",
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": null,
+        "team": null,
+        "user": 25,
+        "type": 3
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 26,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.861Z",
+        "updated": "2022-03-08T18:32:10.861Z",
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": 7,
+        "team": null,
+        "user": 26,
+        "type": 2
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 27,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.870Z",
+        "updated": "2022-03-08T18:32:10.870Z",
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": 7,
+        "team": 13,
+        "user": 27,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 28,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.878Z",
+        "updated": "2022-03-08T18:32:10.878Z",
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": 7,
+        "team": 14,
+        "user": 28,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 29,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.887Z",
+        "updated": "2022-03-08T18:32:10.887Z",
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": 8,
+        "team": null,
+        "user": 29,
+        "type": 2
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 30,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.895Z",
+        "updated": "2022-03-08T18:32:10.895Z",
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": 8,
+        "team": 15,
+        "user": 30,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 31,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.905Z",
+        "updated": "2022-03-08T18:32:10.905Z",
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": 8,
+        "team": 16,
+        "user": 31,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 32,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.922Z",
+        "updated": "2022-03-08T18:32:10.922Z",
+        "season": 2,
+        "league": null,
+        "division": null,
+        "subdivision": null,
+        "team": null,
+        "user": 32,
+        "type": 4
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 33,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.930Z",
+        "updated": "2022-03-08T18:32:10.930Z",
+        "season": 2,
+        "league": 3,
+        "division": null,
+        "subdivision": null,
+        "team": null,
+        "user": 33,
+        "type": 3
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 34,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.938Z",
+        "updated": "2022-03-08T18:32:10.938Z",
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": null,
+        "team": null,
+        "user": 34,
+        "type": 3
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 35,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.947Z",
+        "updated": "2022-03-08T18:32:10.947Z",
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": 9,
+        "team": null,
+        "user": 35,
+        "type": 2
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 36,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.956Z",
+        "updated": "2022-03-08T18:32:10.956Z",
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": 9,
+        "team": 17,
+        "user": 36,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 37,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.966Z",
+        "updated": "2022-03-08T18:32:10.966Z",
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": 9,
+        "team": 18,
+        "user": 37,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 38,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.974Z",
+        "updated": "2022-03-08T18:32:10.974Z",
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": 10,
+        "team": null,
+        "user": 38,
+        "type": 2
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 39,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.984Z",
+        "updated": "2022-03-08T18:32:10.984Z",
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": 10,
+        "team": 19,
+        "user": 39,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 40,
+    "fields": {
+        "inserted": "2022-03-08T18:32:10.993Z",
+        "updated": "2022-03-08T18:32:10.993Z",
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": 10,
+        "team": 20,
+        "user": 40,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 41,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.004Z",
+        "updated": "2022-03-08T18:32:11.004Z",
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": null,
+        "team": null,
+        "user": 41,
+        "type": 3
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 42,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.013Z",
+        "updated": "2022-03-08T18:32:11.013Z",
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": 11,
+        "team": null,
+        "user": 42,
+        "type": 2
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 43,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.024Z",
+        "updated": "2022-03-08T18:32:11.024Z",
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": 11,
+        "team": 21,
+        "user": 43,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 44,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.034Z",
+        "updated": "2022-03-08T18:32:11.034Z",
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": 11,
+        "team": 22,
+        "user": 44,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 45,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.042Z",
+        "updated": "2022-03-08T18:32:11.042Z",
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": 12,
+        "team": null,
+        "user": 45,
+        "type": 2
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 46,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.051Z",
+        "updated": "2022-03-08T18:32:11.051Z",
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": 12,
+        "team": 23,
+        "user": 46,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 47,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.059Z",
+        "updated": "2022-03-08T18:32:11.059Z",
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": 12,
+        "team": 24,
+        "user": 47,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 48,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.068Z",
+        "updated": "2022-03-08T18:32:11.068Z",
+        "season": 2,
+        "league": 4,
+        "division": null,
+        "subdivision": null,
+        "team": null,
+        "user": 48,
+        "type": 3
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 49,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.075Z",
+        "updated": "2022-03-08T18:32:11.075Z",
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": null,
+        "team": null,
+        "user": 49,
+        "type": 3
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 50,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.084Z",
+        "updated": "2022-03-08T18:32:11.085Z",
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": 13,
+        "team": null,
+        "user": 50,
+        "type": 2
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 51,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.093Z",
+        "updated": "2022-03-08T18:32:11.093Z",
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": 13,
+        "team": 25,
+        "user": 51,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 52,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.102Z",
+        "updated": "2022-03-08T18:32:11.102Z",
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": 13,
+        "team": 26,
+        "user": 52,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 53,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.110Z",
+        "updated": "2022-03-08T18:32:11.110Z",
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": 14,
+        "team": null,
+        "user": 53,
+        "type": 2
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 54,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.119Z",
+        "updated": "2022-03-08T18:32:11.119Z",
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": 14,
+        "team": 27,
+        "user": 54,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 55,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.128Z",
+        "updated": "2022-03-08T18:32:11.128Z",
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": 14,
+        "team": 28,
+        "user": 55,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 56,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.137Z",
+        "updated": "2022-03-08T18:32:11.137Z",
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": null,
+        "team": null,
+        "user": 56,
+        "type": 3
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 57,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.145Z",
+        "updated": "2022-03-08T18:32:11.145Z",
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": 15,
+        "team": null,
+        "user": 57,
+        "type": 2
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 58,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.154Z",
+        "updated": "2022-03-08T18:32:11.154Z",
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": 15,
+        "team": 29,
+        "user": 58,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 59,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.162Z",
+        "updated": "2022-03-08T18:32:11.162Z",
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": 15,
+        "team": 30,
+        "user": 59,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 60,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.170Z",
+        "updated": "2022-03-08T18:32:11.170Z",
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": 16,
+        "team": null,
+        "user": 60,
+        "type": 2
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 61,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.178Z",
+        "updated": "2022-03-08T18:32:11.178Z",
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": 16,
+        "team": 31,
+        "user": 61,
+        "type": 1
+    }
+},
+{
+    "model": "core.teamstaff",
+    "pk": 62,
+    "fields": {
+        "inserted": "2022-03-08T18:32:11.188Z",
+        "updated": "2022-03-08T18:32:11.188Z",
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": 16,
+        "team": 32,
+        "user": 62,
+        "type": 1
+    }
+}
+]
