@@ -1,0 +1,10 @@
+django
+django-allauth
+django-crispy-forms
+django-environ
+django-positions
+
+loguru
+psycopg2-binary
+requests
+sentry-sdk

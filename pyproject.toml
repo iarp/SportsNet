@@ -1,0 +1,13 @@
+[tool.black]
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
+extend_skip = "temp.py"
+
+[tool.coverage.run]
+omit = [
+    "manage.py", 
+    ".venv/*", 
+    "**/tests.py",
+]
