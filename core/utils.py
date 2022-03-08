@@ -47,11 +47,6 @@ def generate_test_fixture_data(write_file=True, verbose=True):
         ):
             sys.exit()
 
-    type_coach, _ = TeamStaffType.objects.get_or_create(name="Coach")
-    type_convenor, _ = TeamStaffType.objects.get_or_create(name="Convenor")
-    type_vp, _ = TeamStaffType.objects.get_or_create(name="VP")
-    type_admin, _ = TeamStaffType.objects.get_or_create(name="Admin")
-
     TeamStaff.objects.all().delete()
     TeamStaffType.objects.all().delete()
     Team.objects.all().delete()
@@ -60,6 +55,11 @@ def generate_test_fixture_data(write_file=True, verbose=True):
     League.objects.all().delete()
     Season.objects.all().delete()
     User.objects.all().delete()
+
+    type_coach, _ = TeamStaffType.objects.get_or_create(name="Coach")
+    type_convenor, _ = TeamStaffType.objects.get_or_create(name="Convenor")
+    type_vp, _ = TeamStaffType.objects.get_or_create(name="VP")
+    type_admin, _ = TeamStaffType.objects.get_or_create(name="Admin")
 
     current_year = timezone.now().year
     for s in range(current_year, current_year + 2):

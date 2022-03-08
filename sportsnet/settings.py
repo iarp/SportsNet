@@ -87,12 +87,8 @@ WSGI_APPLICATION = "sportsnet.wsgi.application"
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 DATABASES = {
     "default": env.db(default=f"sqlite:///{BASE_DIR}/db.sqlite3"),
-    # "default": {
-    #     "ENGINE": "django.db.backends.sqlite3",
-    #     "NAME": BASE_DIR / "db.sqlite3",
-    # },
 }
-if env.str("GITHUB_WORKFLOW", default=None):
+if env.str("GITHUB_WORKFLOW", default=None):  # pragma: no cover
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql",
@@ -103,7 +99,6 @@ if env.str("GITHUB_WORKFLOW", default=None):
             "PORT": "5432",
         }
     }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -124,8 +119,6 @@ LANGUAGE_CODE = "en-us"
 TIME_ZONE = "America/New_York"
 
 USE_I18N = True
-
-USE_L10N = True
 
 USE_TZ = True
 
