@@ -1,10 +1,9 @@
 from django.conf import settings
 from django.db import models
-from django.utils.functional import cached_property
 from positions.fields import PositionField
 
-from core.models import Season, League, Division, SubDivision
 from core.model_helpers import _BaseModel, _BaseModelWithCommonIDs, _BasePermissions
+from core.models import Division, League, Season, SubDivision
 from core.perms import add_override_permission, has_perm
 
 
@@ -65,11 +64,13 @@ class Team(_BaseModelWithCommonIDs):
     def can_vote(self, target_user):
         return has_perm(target_user, self, "team_can_vote")
 
+    @property
     def is_approved(self):
-        return self.hockey_canada_id and self.status.lower() in [
-            "approved",
-            "resubmitted",
-        ]
+        return self.hockey_canada_id and self.status.considered_approved
+        # return self.hockey_canada_id and self.status.lower() in [
+        #     "approved",
+        #     "resubmitted",
+        # ]
 
 
 class StaffType(_BasePermissions):
@@ -159,8 +160,7 @@ class _StaffObjectsManagerWithDetails(models.Manager):
         return self.filter(*args, **extras, **kwargs)
 
     def emails(self, *args, **kwargs):
-        qs = self.filter(*args, **kwargs)
-        return qs.values_list("user__email", flat=True)
+        return self.filter(*args, **kwargs).values_list("user__email", flat=True)
 
 
 class Staff(_BaseModel):
@@ -236,6 +236,13 @@ class TeamStatus(_BaseModel):
     weight = PositionField(default=0)
 
     include_in_roster_export = models.BooleanField(default=True)
+
+    # NOTE: Used in Team.is_approved mainly for roster downloader
+    considered_approved = models.BooleanField(
+        default=False,
+        help_text="If a team is assigned this status, are they "
+        "technically considered approved in hockey canada?",
+    )
 
     # NOTE: Was in the table, all entries False. Unknown usage.
     ClrChgdStfPlyrSts = models.BooleanField(default=False)

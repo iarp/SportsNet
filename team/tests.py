@@ -385,6 +385,18 @@ class StaffManagerTests(FixtureBasedTestCase):
             SubDivision.objects.first().staff.head_coach,
         )
 
+    def test_staff_emails_returns_correctly(self):
+        base_data = {
+            Season: 31,
+            League: 15,
+            Division: 7,
+            SubDivision: 3,
+            Team: 1,
+        }
+        for model, count in base_data.items():
+            obj = model.objects.first()
+            self.assertEqual(count, obj.staff.emails().count())
+
     def test_confirm_staff_relationships_return_correct_counts(self):
         base_data = {
             Season: 31,
@@ -466,3 +478,14 @@ class StaffManagerTests(FixtureBasedTestCase):
             ).count(),
             team.staff.count(),
         )
+
+
+class TeamTests(FixtureBasedTestCase):
+    def test_team_is_approved_with_hcid_and_status_approved(self):
+        team = Team.objects.first()
+        self.assertEqual("APPROVED", team.status.name)
+        self.assertFalse(team.is_approved)
+        team.hockey_canada_id = 12345
+        self.assertFalse(team.is_approved)
+        team.status.considered_approved = True
+        self.assertTrue(team.is_approved)
