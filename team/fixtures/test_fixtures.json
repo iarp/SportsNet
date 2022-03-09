@@ -4,8 +4,8 @@
     "pk": 1,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.383Z",
-        "updated": "2022-03-09T02:43:06.383Z",
+        "inserted": "2022-03-09T19:06:48.366Z",
+        "updated": "2022-03-09T19:06:48.366Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 1,
@@ -31,8 +31,8 @@
     "pk": 2,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.393Z",
-        "updated": "2022-03-09T02:43:06.393Z",
+        "inserted": "2022-03-09T19:06:48.378Z",
+        "updated": "2022-03-09T19:06:48.378Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 1,
@@ -58,8 +58,8 @@
     "pk": 3,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.412Z",
-        "updated": "2022-03-09T02:43:06.412Z",
+        "inserted": "2022-03-09T19:06:48.397Z",
+        "updated": "2022-03-09T19:06:48.397Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 1,
@@ -85,8 +85,8 @@
     "pk": 4,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.421Z",
-        "updated": "2022-03-09T02:43:06.421Z",
+        "inserted": "2022-03-09T19:06:48.407Z",
+        "updated": "2022-03-09T19:06:48.407Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 1,
@@ -112,8 +112,8 @@
     "pk": 5,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.447Z",
-        "updated": "2022-03-09T02:43:06.447Z",
+        "inserted": "2022-03-09T19:06:48.435Z",
+        "updated": "2022-03-09T19:06:48.435Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 1,
@@ -139,8 +139,8 @@
     "pk": 6,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.458Z",
-        "updated": "2022-03-09T02:43:06.458Z",
+        "inserted": "2022-03-09T19:06:48.444Z",
+        "updated": "2022-03-09T19:06:48.444Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 1,
@@ -166,8 +166,8 @@
     "pk": 7,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.476Z",
-        "updated": "2022-03-09T02:43:06.476Z",
+        "inserted": "2022-03-09T19:06:48.463Z",
+        "updated": "2022-03-09T19:06:48.463Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 1,
@@ -193,8 +193,8 @@
     "pk": 8,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.484Z",
-        "updated": "2022-03-09T02:43:06.484Z",
+        "inserted": "2022-03-09T19:06:48.472Z",
+        "updated": "2022-03-09T19:06:48.472Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 1,
@@ -220,8 +220,8 @@
     "pk": 9,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.516Z",
-        "updated": "2022-03-09T02:43:06.516Z",
+        "inserted": "2022-03-09T19:06:48.507Z",
+        "updated": "2022-03-09T19:06:48.507Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 1,
@@ -247,8 +247,8 @@
     "pk": 10,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.526Z",
-        "updated": "2022-03-09T02:43:06.526Z",
+        "inserted": "2022-03-09T19:06:48.516Z",
+        "updated": "2022-03-09T19:06:48.516Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 1,
@@ -274,8 +274,8 @@
     "pk": 11,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.543Z",
-        "updated": "2022-03-09T02:43:06.543Z",
+        "inserted": "2022-03-09T19:06:48.534Z",
+        "updated": "2022-03-09T19:06:48.534Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 1,
@@ -301,8 +301,8 @@
     "pk": 12,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.551Z",
-        "updated": "2022-03-09T02:43:06.551Z",
+        "inserted": "2022-03-09T19:06:48.542Z",
+        "updated": "2022-03-09T19:06:48.542Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 1,
@@ -328,8 +328,8 @@
     "pk": 13,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.576Z",
-        "updated": "2022-03-09T02:43:06.576Z",
+        "inserted": "2022-03-09T19:06:48.569Z",
+        "updated": "2022-03-09T19:06:48.569Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 1,
@@ -355,8 +355,8 @@
     "pk": 14,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.584Z",
-        "updated": "2022-03-09T02:43:06.584Z",
+        "inserted": "2022-03-09T19:06:48.577Z",
+        "updated": "2022-03-09T19:06:48.577Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 1,
@@ -382,8 +382,8 @@
     "pk": 15,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.600Z",
-        "updated": "2022-03-09T02:43:06.600Z",
+        "inserted": "2022-03-09T19:06:48.594Z",
+        "updated": "2022-03-09T19:06:48.594Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 1,
@@ -409,8 +409,8 @@
     "pk": 16,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.608Z",
-        "updated": "2022-03-09T02:43:06.608Z",
+        "inserted": "2022-03-09T19:06:48.603Z",
+        "updated": "2022-03-09T19:06:48.603Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 1,
@@ -436,8 +436,8 @@
     "pk": 17,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.648Z",
-        "updated": "2022-03-09T02:43:06.648Z",
+        "inserted": "2022-03-09T19:06:48.645Z",
+        "updated": "2022-03-09T19:06:48.645Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 2,
@@ -463,8 +463,8 @@
     "pk": 18,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.656Z",
-        "updated": "2022-03-09T02:43:06.656Z",
+        "inserted": "2022-03-09T19:06:48.654Z",
+        "updated": "2022-03-09T19:06:48.654Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 2,
@@ -490,8 +490,8 @@
     "pk": 19,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.672Z",
-        "updated": "2022-03-09T02:43:06.672Z",
+        "inserted": "2022-03-09T19:06:48.670Z",
+        "updated": "2022-03-09T19:06:48.670Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 2,
@@ -517,8 +517,8 @@
     "pk": 20,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.680Z",
-        "updated": "2022-03-09T02:43:06.680Z",
+        "inserted": "2022-03-09T19:06:48.678Z",
+        "updated": "2022-03-09T19:06:48.678Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 2,
@@ -544,8 +544,8 @@
     "pk": 21,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.704Z",
-        "updated": "2022-03-09T02:43:06.704Z",
+        "inserted": "2022-03-09T19:06:48.704Z",
+        "updated": "2022-03-09T19:06:48.704Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 2,
@@ -571,8 +571,8 @@
     "pk": 22,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.712Z",
-        "updated": "2022-03-09T02:43:06.712Z",
+        "inserted": "2022-03-09T19:06:48.712Z",
+        "updated": "2022-03-09T19:06:48.712Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 2,
@@ -598,8 +598,8 @@
     "pk": 23,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.727Z",
-        "updated": "2022-03-09T02:43:06.727Z",
+        "inserted": "2022-03-09T19:06:48.730Z",
+        "updated": "2022-03-09T19:06:48.730Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 2,
@@ -625,8 +625,8 @@
     "pk": 24,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.735Z",
-        "updated": "2022-03-09T02:43:06.735Z",
+        "inserted": "2022-03-09T19:06:48.739Z",
+        "updated": "2022-03-09T19:06:48.739Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 2,
@@ -652,8 +652,8 @@
     "pk": 25,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.768Z",
-        "updated": "2022-03-09T02:43:06.768Z",
+        "inserted": "2022-03-09T19:06:48.774Z",
+        "updated": "2022-03-09T19:06:48.774Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 2,
@@ -679,8 +679,8 @@
     "pk": 26,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.777Z",
-        "updated": "2022-03-09T02:43:06.777Z",
+        "inserted": "2022-03-09T19:06:48.783Z",
+        "updated": "2022-03-09T19:06:48.783Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 2,
@@ -706,8 +706,8 @@
     "pk": 27,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.794Z",
-        "updated": "2022-03-09T02:43:06.794Z",
+        "inserted": "2022-03-09T19:06:48.801Z",
+        "updated": "2022-03-09T19:06:48.801Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 2,
@@ -733,8 +733,8 @@
     "pk": 28,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.803Z",
-        "updated": "2022-03-09T02:43:06.803Z",
+        "inserted": "2022-03-09T19:06:48.810Z",
+        "updated": "2022-03-09T19:06:48.810Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 2,
@@ -760,8 +760,8 @@
     "pk": 29,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.829Z",
-        "updated": "2022-03-09T02:43:06.829Z",
+        "inserted": "2022-03-09T19:06:48.836Z",
+        "updated": "2022-03-09T19:06:48.836Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 2,
@@ -787,8 +787,8 @@
     "pk": 30,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.837Z",
-        "updated": "2022-03-09T02:43:06.837Z",
+        "inserted": "2022-03-09T19:06:48.845Z",
+        "updated": "2022-03-09T19:06:48.845Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 2,
@@ -814,8 +814,8 @@
     "pk": 31,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.854Z",
-        "updated": "2022-03-09T02:43:06.854Z",
+        "inserted": "2022-03-09T19:06:48.864Z",
+        "updated": "2022-03-09T19:06:48.864Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 2,
@@ -841,8 +841,8 @@
     "pk": 32,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.863Z",
-        "updated": "2022-03-09T02:43:06.863Z",
+        "inserted": "2022-03-09T19:06:48.874Z",
+        "updated": "2022-03-09T19:06:48.874Z",
         "hockey_canada_id": null,
         "hockey_canada_system_id": null,
         "season": 2,
@@ -868,8 +868,8 @@
     "pk": 21,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.314Z",
-        "updated": "2022-03-09T02:43:06.314Z",
+        "inserted": "2022-03-09T19:06:48.295Z",
+        "updated": "2022-03-09T19:06:48.295Z",
         "team_can_edit": true,
         "team_can_vote": false,
         "name": "Coach",
@@ -883,8 +883,8 @@
     "pk": 22,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.320Z",
-        "updated": "2022-03-09T02:43:06.320Z",
+        "inserted": "2022-03-09T19:06:48.301Z",
+        "updated": "2022-03-09T19:06:48.301Z",
         "team_can_edit": true,
         "team_can_vote": false,
         "name": "Convenor",
@@ -898,8 +898,8 @@
     "pk": 23,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.325Z",
-        "updated": "2022-03-09T02:43:06.325Z",
+        "inserted": "2022-03-09T19:06:48.306Z",
+        "updated": "2022-03-09T19:06:48.306Z",
         "team_can_edit": true,
         "team_can_vote": false,
         "name": "VP",
@@ -913,8 +913,8 @@
     "pk": 24,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.331Z",
-        "updated": "2022-03-09T02:43:06.331Z",
+        "inserted": "2022-03-09T19:06:48.312Z",
+        "updated": "2022-03-09T19:06:48.312Z",
         "team_can_edit": true,
         "team_can_vote": false,
         "name": "Admin",
@@ -929,7 +929,7 @@
     "fields": {
         "old_sk_id": 9,
         "inserted": "2014-09-24T20:52:56Z",
-        "updated": "2022-03-09T02:43:05.372Z",
+        "updated": "2022-03-09T19:06:47.316Z",
         "name": "NEW",
         "weight": 0,
         "include_in_roster_export": true
@@ -941,7 +941,7 @@
     "fields": {
         "old_sk_id": 1,
         "inserted": "2012-07-03T09:54:05.640Z",
-        "updated": "2022-03-09T02:43:05.380Z",
+        "updated": "2022-03-09T19:06:47.325Z",
         "name": "INPROGRESS",
         "weight": 1,
         "include_in_roster_export": true
@@ -953,7 +953,7 @@
     "fields": {
         "old_sk_id": 6,
         "inserted": "2012-10-01T21:21:22Z",
-        "updated": "2022-03-09T02:43:05.388Z",
+        "updated": "2022-03-09T19:06:47.334Z",
         "name": "TRANSFER REQUIRED",
         "weight": 2,
         "include_in_roster_export": true
@@ -965,7 +965,7 @@
     "fields": {
         "old_sk_id": 7,
         "inserted": "2013-09-08T22:15:50Z",
-        "updated": "2022-03-09T02:43:05.396Z",
+        "updated": "2022-03-09T19:06:47.342Z",
         "name": "AWAITING CERTIFICATIONS",
         "weight": 3,
         "include_in_roster_export": true
@@ -977,7 +977,7 @@
     "fields": {
         "old_sk_id": 8,
         "inserted": "2013-09-08T22:17:40Z",
-        "updated": "2022-03-09T02:43:05.405Z",
+        "updated": "2022-03-09T19:06:47.352Z",
         "name": "CHECK CERTIFICATIONS",
         "weight": 4,
         "include_in_roster_export": true
@@ -989,7 +989,7 @@
     "fields": {
         "old_sk_id": 10,
         "inserted": "2014-10-06T19:11:42Z",
-        "updated": "2022-03-09T02:43:05.414Z",
+        "updated": "2022-03-09T19:06:47.361Z",
         "name": "DECLARATION REQUIRED",
         "weight": 5,
         "include_in_roster_export": true
@@ -1001,7 +1001,7 @@
     "fields": {
         "old_sk_id": 11,
         "inserted": "2015-03-05T20:32:35Z",
-        "updated": "2022-03-09T02:43:05.423Z",
+        "updated": "2022-03-09T19:06:47.370Z",
         "name": "PC REQUIRED",
         "weight": 6,
         "include_in_roster_export": true
@@ -1013,7 +1013,7 @@
     "fields": {
         "old_sk_id": 2,
         "inserted": "2012-07-03T09:54:05.640Z",
-        "updated": "2022-03-09T02:43:05.432Z",
+        "updated": "2022-03-09T19:06:47.379Z",
         "name": "READY TO SUBMIT",
         "weight": 7,
         "include_in_roster_export": true
@@ -1025,7 +1025,7 @@
     "fields": {
         "old_sk_id": 3,
         "inserted": "2012-07-03T09:54:05.640Z",
-        "updated": "2022-03-09T02:43:05.442Z",
+        "updated": "2022-03-09T19:06:47.387Z",
         "name": "SUBMITTED",
         "weight": 8,
         "include_in_roster_export": true
@@ -1037,7 +1037,7 @@
     "fields": {
         "old_sk_id": 4,
         "inserted": "2012-07-03T09:54:05.640Z",
-        "updated": "2022-03-09T02:43:05.452Z",
+        "updated": "2022-03-09T19:06:47.396Z",
         "name": "APPROVED",
         "weight": 9,
         "include_in_roster_export": true
@@ -1049,7 +1049,7 @@
     "fields": {
         "old_sk_id": 5,
         "inserted": "2012-07-03T09:54:05.640Z",
-        "updated": "2022-03-09T02:43:05.460Z",
+        "updated": "2022-03-09T19:06:47.405Z",
         "name": "REJECTED",
         "weight": 10,
         "include_in_roster_export": true
@@ -1061,7 +1061,7 @@
     "fields": {
         "old_sk_id": 1,
         "inserted": "2012-07-21T21:38:29.157Z",
-        "updated": "2022-03-09T02:43:05.471Z",
+        "updated": "2022-03-09T19:06:47.415Z",
         "name": "OK",
         "weight": 0
     }
@@ -1072,7 +1072,7 @@
     "fields": {
         "old_sk_id": 2,
         "inserted": "2012-07-21T21:38:29.157Z",
-        "updated": "2022-03-09T02:43:05.480Z",
+        "updated": "2022-03-09T19:06:47.423Z",
         "name": "CERTIFICATIONS REQUIRED",
         "weight": 1
     }
@@ -1082,8 +1082,8 @@
     "pk": 1,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.346Z",
-        "updated": "2022-03-09T02:43:06.346Z",
+        "inserted": "2022-03-09T19:06:48.330Z",
+        "updated": "2022-03-09T19:06:48.330Z",
         "season": 1,
         "league": null,
         "division": null,
@@ -1104,8 +1104,8 @@
     "pk": 2,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.356Z",
-        "updated": "2022-03-09T02:43:06.356Z",
+        "inserted": "2022-03-09T19:06:48.340Z",
+        "updated": "2022-03-09T19:06:48.340Z",
         "season": 1,
         "league": 1,
         "division": null,
@@ -1126,8 +1126,8 @@
     "pk": 3,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.368Z",
-        "updated": "2022-03-09T02:43:06.368Z",
+        "inserted": "2022-03-09T19:06:48.352Z",
+        "updated": "2022-03-09T19:06:48.352Z",
         "season": 1,
         "league": 1,
         "division": 1,
@@ -1148,8 +1148,8 @@
     "pk": 4,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.379Z",
-        "updated": "2022-03-09T02:43:06.379Z",
+        "inserted": "2022-03-09T19:06:48.362Z",
+        "updated": "2022-03-09T19:06:48.362Z",
         "season": 1,
         "league": 1,
         "division": 1,
@@ -1170,8 +1170,8 @@
     "pk": 5,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.390Z",
-        "updated": "2022-03-09T02:43:06.390Z",
+        "inserted": "2022-03-09T19:06:48.374Z",
+        "updated": "2022-03-09T19:06:48.374Z",
         "season": 1,
         "league": 1,
         "division": 1,
@@ -1192,8 +1192,8 @@
     "pk": 6,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.399Z",
-        "updated": "2022-03-09T02:43:06.399Z",
+        "inserted": "2022-03-09T19:06:48.385Z",
+        "updated": "2022-03-09T19:06:48.385Z",
         "season": 1,
         "league": 1,
         "division": 1,
@@ -1214,8 +1214,8 @@
     "pk": 7,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.409Z",
-        "updated": "2022-03-09T02:43:06.409Z",
+        "inserted": "2022-03-09T19:06:48.394Z",
+        "updated": "2022-03-09T19:06:48.394Z",
         "season": 1,
         "league": 1,
         "division": 1,
@@ -1236,8 +1236,8 @@
     "pk": 8,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.418Z",
-        "updated": "2022-03-09T02:43:06.418Z",
+        "inserted": "2022-03-09T19:06:48.404Z",
+        "updated": "2022-03-09T19:06:48.404Z",
         "season": 1,
         "league": 1,
         "division": 1,
@@ -1258,8 +1258,8 @@
     "pk": 9,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.428Z",
-        "updated": "2022-03-09T02:43:06.428Z",
+        "inserted": "2022-03-09T19:06:48.414Z",
+        "updated": "2022-03-09T19:06:48.414Z",
         "season": 1,
         "league": 1,
         "division": 1,
@@ -1280,8 +1280,8 @@
     "pk": 10,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.436Z",
-        "updated": "2022-03-09T02:43:06.436Z",
+        "inserted": "2022-03-09T19:06:48.423Z",
+        "updated": "2022-03-09T19:06:48.423Z",
         "season": 1,
         "league": 1,
         "division": 2,
@@ -1302,8 +1302,8 @@
     "pk": 11,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.445Z",
-        "updated": "2022-03-09T02:43:06.445Z",
+        "inserted": "2022-03-09T19:06:48.432Z",
+        "updated": "2022-03-09T19:06:48.432Z",
         "season": 1,
         "league": 1,
         "division": 2,
@@ -1324,8 +1324,8 @@
     "pk": 12,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.455Z",
-        "updated": "2022-03-09T02:43:06.455Z",
+        "inserted": "2022-03-09T19:06:48.441Z",
+        "updated": "2022-03-09T19:06:48.441Z",
         "season": 1,
         "league": 1,
         "division": 2,
@@ -1346,8 +1346,8 @@
     "pk": 13,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.465Z",
-        "updated": "2022-03-09T02:43:06.465Z",
+        "inserted": "2022-03-09T19:06:48.451Z",
+        "updated": "2022-03-09T19:06:48.451Z",
         "season": 1,
         "league": 1,
         "division": 2,
@@ -1368,8 +1368,8 @@
     "pk": 14,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.474Z",
-        "updated": "2022-03-09T02:43:06.474Z",
+        "inserted": "2022-03-09T19:06:48.460Z",
+        "updated": "2022-03-09T19:06:48.460Z",
         "season": 1,
         "league": 1,
         "division": 2,
@@ -1390,8 +1390,8 @@
     "pk": 15,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.481Z",
-        "updated": "2022-03-09T02:43:06.481Z",
+        "inserted": "2022-03-09T19:06:48.469Z",
+        "updated": "2022-03-09T19:06:48.469Z",
         "season": 1,
         "league": 1,
         "division": 2,
@@ -1412,8 +1412,8 @@
     "pk": 16,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.490Z",
-        "updated": "2022-03-09T02:43:06.490Z",
+        "inserted": "2022-03-09T19:06:48.478Z",
+        "updated": "2022-03-09T19:06:48.478Z",
         "season": 1,
         "league": 1,
         "division": 2,
@@ -1434,8 +1434,8 @@
     "pk": 17,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.498Z",
-        "updated": "2022-03-09T02:43:06.498Z",
+        "inserted": "2022-03-09T19:06:48.487Z",
+        "updated": "2022-03-09T19:06:48.487Z",
         "season": 1,
         "league": 2,
         "division": null,
@@ -1456,8 +1456,8 @@
     "pk": 18,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.506Z",
-        "updated": "2022-03-09T02:43:06.506Z",
+        "inserted": "2022-03-09T19:06:48.496Z",
+        "updated": "2022-03-09T19:06:48.496Z",
         "season": 1,
         "league": 2,
         "division": 3,
@@ -1478,8 +1478,8 @@
     "pk": 19,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.513Z",
-        "updated": "2022-03-09T02:43:06.514Z",
+        "inserted": "2022-03-09T19:06:48.505Z",
+        "updated": "2022-03-09T19:06:48.505Z",
         "season": 1,
         "league": 2,
         "division": 3,
@@ -1500,8 +1500,8 @@
     "pk": 20,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.523Z",
-        "updated": "2022-03-09T02:43:06.523Z",
+        "inserted": "2022-03-09T19:06:48.513Z",
+        "updated": "2022-03-09T19:06:48.513Z",
         "season": 1,
         "league": 2,
         "division": 3,
@@ -1522,8 +1522,8 @@
     "pk": 21,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.532Z",
-        "updated": "2022-03-09T02:43:06.532Z",
+        "inserted": "2022-03-09T19:06:48.522Z",
+        "updated": "2022-03-09T19:06:48.522Z",
         "season": 1,
         "league": 2,
         "division": 3,
@@ -1544,8 +1544,8 @@
     "pk": 22,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.540Z",
-        "updated": "2022-03-09T02:43:06.540Z",
+        "inserted": "2022-03-09T19:06:48.531Z",
+        "updated": "2022-03-09T19:06:48.531Z",
         "season": 1,
         "league": 2,
         "division": 3,
@@ -1566,8 +1566,8 @@
     "pk": 23,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.548Z",
-        "updated": "2022-03-09T02:43:06.548Z",
+        "inserted": "2022-03-09T19:06:48.539Z",
+        "updated": "2022-03-09T19:06:48.539Z",
         "season": 1,
         "league": 2,
         "division": 3,
@@ -1588,8 +1588,8 @@
     "pk": 24,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.557Z",
-        "updated": "2022-03-09T02:43:06.557Z",
+        "inserted": "2022-03-09T19:06:48.548Z",
+        "updated": "2022-03-09T19:06:48.548Z",
         "season": 1,
         "league": 2,
         "division": 3,
@@ -1610,8 +1610,8 @@
     "pk": 25,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.566Z",
-        "updated": "2022-03-09T02:43:06.566Z",
+        "inserted": "2022-03-09T19:06:48.558Z",
+        "updated": "2022-03-09T19:06:48.558Z",
         "season": 1,
         "league": 2,
         "division": 4,
@@ -1632,8 +1632,8 @@
     "pk": 26,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.573Z",
-        "updated": "2022-03-09T02:43:06.573Z",
+        "inserted": "2022-03-09T19:06:48.567Z",
+        "updated": "2022-03-09T19:06:48.567Z",
         "season": 1,
         "league": 2,
         "division": 4,
@@ -1654,8 +1654,8 @@
     "pk": 27,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.582Z",
-        "updated": "2022-03-09T02:43:06.582Z",
+        "inserted": "2022-03-09T19:06:48.574Z",
+        "updated": "2022-03-09T19:06:48.574Z",
         "season": 1,
         "league": 2,
         "division": 4,
@@ -1676,8 +1676,8 @@
     "pk": 28,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.590Z",
-        "updated": "2022-03-09T02:43:06.590Z",
+        "inserted": "2022-03-09T19:06:48.583Z",
+        "updated": "2022-03-09T19:06:48.583Z",
         "season": 1,
         "league": 2,
         "division": 4,
@@ -1698,8 +1698,8 @@
     "pk": 29,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.598Z",
-        "updated": "2022-03-09T02:43:06.598Z",
+        "inserted": "2022-03-09T19:06:48.592Z",
+        "updated": "2022-03-09T19:06:48.592Z",
         "season": 1,
         "league": 2,
         "division": 4,
@@ -1720,8 +1720,8 @@
     "pk": 30,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.606Z",
-        "updated": "2022-03-09T02:43:06.606Z",
+        "inserted": "2022-03-09T19:06:48.601Z",
+        "updated": "2022-03-09T19:06:48.601Z",
         "season": 1,
         "league": 2,
         "division": 4,
@@ -1742,8 +1742,8 @@
     "pk": 31,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.614Z",
-        "updated": "2022-03-09T02:43:06.614Z",
+        "inserted": "2022-03-09T19:06:48.609Z",
+        "updated": "2022-03-09T19:06:48.609Z",
         "season": 1,
         "league": 2,
         "division": 4,
@@ -1764,8 +1764,8 @@
     "pk": 32,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.622Z",
-        "updated": "2022-03-09T02:43:06.622Z",
+        "inserted": "2022-03-09T19:06:48.617Z",
+        "updated": "2022-03-09T19:06:48.617Z",
         "season": 2,
         "league": null,
         "division": null,
@@ -1786,8 +1786,8 @@
     "pk": 33,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.629Z",
-        "updated": "2022-03-09T02:43:06.629Z",
+        "inserted": "2022-03-09T19:06:48.625Z",
+        "updated": "2022-03-09T19:06:48.625Z",
         "season": 2,
         "league": 3,
         "division": null,
@@ -1808,8 +1808,8 @@
     "pk": 34,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.637Z",
-        "updated": "2022-03-09T02:43:06.637Z",
+        "inserted": "2022-03-09T19:06:48.634Z",
+        "updated": "2022-03-09T19:06:48.634Z",
         "season": 2,
         "league": 3,
         "division": 5,
@@ -1830,8 +1830,8 @@
     "pk": 35,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.645Z",
-        "updated": "2022-03-09T02:43:06.645Z",
+        "inserted": "2022-03-09T19:06:48.643Z",
+        "updated": "2022-03-09T19:06:48.643Z",
         "season": 2,
         "league": 3,
         "division": 5,
@@ -1852,8 +1852,8 @@
     "pk": 36,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.653Z",
-        "updated": "2022-03-09T02:43:06.653Z",
+        "inserted": "2022-03-09T19:06:48.651Z",
+        "updated": "2022-03-09T19:06:48.652Z",
         "season": 2,
         "league": 3,
         "division": 5,
@@ -1874,8 +1874,8 @@
     "pk": 37,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.662Z",
-        "updated": "2022-03-09T02:43:06.662Z",
+        "inserted": "2022-03-09T19:06:48.660Z",
+        "updated": "2022-03-09T19:06:48.660Z",
         "season": 2,
         "league": 3,
         "division": 5,
@@ -1896,8 +1896,8 @@
     "pk": 38,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.670Z",
-        "updated": "2022-03-09T02:43:06.670Z",
+        "inserted": "2022-03-09T19:06:48.668Z",
+        "updated": "2022-03-09T19:06:48.668Z",
         "season": 2,
         "league": 3,
         "division": 5,
@@ -1918,8 +1918,8 @@
     "pk": 39,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.678Z",
-        "updated": "2022-03-09T02:43:06.678Z",
+        "inserted": "2022-03-09T19:06:48.676Z",
+        "updated": "2022-03-09T19:06:48.676Z",
         "season": 2,
         "league": 3,
         "division": 5,
@@ -1940,8 +1940,8 @@
     "pk": 40,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.686Z",
-        "updated": "2022-03-09T02:43:06.686Z",
+        "inserted": "2022-03-09T19:06:48.685Z",
+        "updated": "2022-03-09T19:06:48.685Z",
         "season": 2,
         "league": 3,
         "division": 5,
@@ -1962,8 +1962,8 @@
     "pk": 41,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.694Z",
-        "updated": "2022-03-09T02:43:06.694Z",
+        "inserted": "2022-03-09T19:06:48.692Z",
+        "updated": "2022-03-09T19:06:48.692Z",
         "season": 2,
         "league": 3,
         "division": 6,
@@ -1984,8 +1984,8 @@
     "pk": 42,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.702Z",
-        "updated": "2022-03-09T02:43:06.702Z",
+        "inserted": "2022-03-09T19:06:48.702Z",
+        "updated": "2022-03-09T19:06:48.702Z",
         "season": 2,
         "league": 3,
         "division": 6,
@@ -2006,8 +2006,8 @@
     "pk": 43,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.709Z",
-        "updated": "2022-03-09T02:43:06.709Z",
+        "inserted": "2022-03-09T19:06:48.710Z",
+        "updated": "2022-03-09T19:06:48.710Z",
         "season": 2,
         "league": 3,
         "division": 6,
@@ -2028,8 +2028,8 @@
     "pk": 44,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.717Z",
-        "updated": "2022-03-09T02:43:06.717Z",
+        "inserted": "2022-03-09T19:06:48.719Z",
+        "updated": "2022-03-09T19:06:48.719Z",
         "season": 2,
         "league": 3,
         "division": 6,
@@ -2050,8 +2050,8 @@
     "pk": 45,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.725Z",
-        "updated": "2022-03-09T02:43:06.725Z",
+        "inserted": "2022-03-09T19:06:48.727Z",
+        "updated": "2022-03-09T19:06:48.727Z",
         "season": 2,
         "league": 3,
         "division": 6,
@@ -2072,8 +2072,8 @@
     "pk": 46,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.733Z",
-        "updated": "2022-03-09T02:43:06.733Z",
+        "inserted": "2022-03-09T19:06:48.736Z",
+        "updated": "2022-03-09T19:06:48.736Z",
         "season": 2,
         "league": 3,
         "division": 6,
@@ -2094,8 +2094,8 @@
     "pk": 47,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.742Z",
-        "updated": "2022-03-09T02:43:06.742Z",
+        "inserted": "2022-03-09T19:06:48.745Z",
+        "updated": "2022-03-09T19:06:48.745Z",
         "season": 2,
         "league": 3,
         "division": 6,
@@ -2116,8 +2116,8 @@
     "pk": 48,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.749Z",
-        "updated": "2022-03-09T02:43:06.749Z",
+        "inserted": "2022-03-09T19:06:48.754Z",
+        "updated": "2022-03-09T19:06:48.754Z",
         "season": 2,
         "league": 4,
         "division": null,
@@ -2138,8 +2138,8 @@
     "pk": 49,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.758Z",
-        "updated": "2022-03-09T02:43:06.758Z",
+        "inserted": "2022-03-09T19:06:48.762Z",
+        "updated": "2022-03-09T19:06:48.762Z",
         "season": 2,
         "league": 4,
         "division": 7,
@@ -2160,8 +2160,8 @@
     "pk": 50,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.765Z",
-        "updated": "2022-03-09T02:43:06.765Z",
+        "inserted": "2022-03-09T19:06:48.771Z",
+        "updated": "2022-03-09T19:06:48.771Z",
         "season": 2,
         "league": 4,
         "division": 7,
@@ -2182,8 +2182,8 @@
     "pk": 51,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.775Z",
-        "updated": "2022-03-09T02:43:06.775Z",
+        "inserted": "2022-03-09T19:06:48.780Z",
+        "updated": "2022-03-09T19:06:48.780Z",
         "season": 2,
         "league": 4,
         "division": 7,
@@ -2204,8 +2204,8 @@
     "pk": 52,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.783Z",
-        "updated": "2022-03-09T02:43:06.783Z",
+        "inserted": "2022-03-09T19:06:48.789Z",
+        "updated": "2022-03-09T19:06:48.789Z",
         "season": 2,
         "league": 4,
         "division": 7,
@@ -2226,8 +2226,8 @@
     "pk": 53,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.792Z",
-        "updated": "2022-03-09T02:43:06.792Z",
+        "inserted": "2022-03-09T19:06:48.798Z",
+        "updated": "2022-03-09T19:06:48.798Z",
         "season": 2,
         "league": 4,
         "division": 7,
@@ -2248,8 +2248,8 @@
     "pk": 54,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.800Z",
-        "updated": "2022-03-09T02:43:06.800Z",
+        "inserted": "2022-03-09T19:06:48.807Z",
+        "updated": "2022-03-09T19:06:48.807Z",
         "season": 2,
         "league": 4,
         "division": 7,
@@ -2270,8 +2270,8 @@
     "pk": 55,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.808Z",
-        "updated": "2022-03-09T02:43:06.808Z",
+        "inserted": "2022-03-09T19:06:48.816Z",
+        "updated": "2022-03-09T19:06:48.816Z",
         "season": 2,
         "league": 4,
         "division": 7,
@@ -2292,8 +2292,8 @@
     "pk": 56,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.817Z",
-        "updated": "2022-03-09T02:43:06.817Z",
+        "inserted": "2022-03-09T19:06:48.824Z",
+        "updated": "2022-03-09T19:06:48.824Z",
         "season": 2,
         "league": 4,
         "division": 8,
@@ -2314,8 +2314,8 @@
     "pk": 57,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.826Z",
-        "updated": "2022-03-09T02:43:06.826Z",
+        "inserted": "2022-03-09T19:06:48.833Z",
+        "updated": "2022-03-09T19:06:48.833Z",
         "season": 2,
         "league": 4,
         "division": 8,
@@ -2336,8 +2336,8 @@
     "pk": 58,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.835Z",
-        "updated": "2022-03-09T02:43:06.835Z",
+        "inserted": "2022-03-09T19:06:48.842Z",
+        "updated": "2022-03-09T19:06:48.842Z",
         "season": 2,
         "league": 4,
         "division": 8,
@@ -2358,8 +2358,8 @@
     "pk": 59,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.843Z",
-        "updated": "2022-03-09T02:43:06.843Z",
+        "inserted": "2022-03-09T19:06:48.852Z",
+        "updated": "2022-03-09T19:06:48.852Z",
         "season": 2,
         "league": 4,
         "division": 8,
@@ -2380,8 +2380,8 @@
     "pk": 60,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.851Z",
-        "updated": "2022-03-09T02:43:06.851Z",
+        "inserted": "2022-03-09T19:06:48.861Z",
+        "updated": "2022-03-09T19:06:48.861Z",
         "season": 2,
         "league": 4,
         "division": 8,
@@ -2402,8 +2402,8 @@
     "pk": 61,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.860Z",
-        "updated": "2022-03-09T02:43:06.860Z",
+        "inserted": "2022-03-09T19:06:48.871Z",
+        "updated": "2022-03-09T19:06:48.871Z",
         "season": 2,
         "league": 4,
         "division": 8,
@@ -2424,8 +2424,8 @@
     "pk": 62,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-09T02:43:06.868Z",
-        "updated": "2022-03-09T02:43:06.869Z",
+        "inserted": "2022-03-09T19:06:48.880Z",
+        "updated": "2022-03-09T19:06:48.880Z",
         "season": 2,
         "league": 4,
         "division": 8,
@@ -2447,10 +2447,11 @@
     "fields": {
         "old_sk_id": 22,
         "inserted": "2012-09-26T19:56:39Z",
-        "updated": "2022-03-09T02:43:05.663Z",
+        "updated": "2022-03-09T19:06:47.644Z",
         "name": "ENTERED IN HCR",
         "weight": 0,
         "include_in_roster_export": true,
+        "considered_approved": false,
         "ClrChgdStfPlyrSts": false
     }
 },
@@ -2460,10 +2461,11 @@
     "fields": {
         "old_sk_id": 23,
         "inserted": "2012-09-26T19:57:22Z",
-        "updated": "2022-03-09T02:43:05.671Z",
+        "updated": "2022-03-09T19:06:47.652Z",
         "name": "HCR ISSUES",
         "weight": 1,
         "include_in_roster_export": true,
+        "considered_approved": false,
         "ClrChgdStfPlyrSts": false
     }
 },
@@ -2473,10 +2475,11 @@
     "fields": {
         "old_sk_id": 24,
         "inserted": "2012-10-01T19:57:48Z",
-        "updated": "2022-03-09T02:43:05.679Z",
+        "updated": "2022-03-09T19:06:47.661Z",
         "name": "PLAYERS READY FOR HC",
         "weight": 2,
         "include_in_roster_export": true,
+        "considered_approved": false,
         "ClrChgdStfPlyrSts": false
     }
 },
@@ -2486,10 +2489,11 @@
     "fields": {
         "old_sk_id": 25,
         "inserted": "2012-11-01T12:23:20Z",
-        "updated": "2022-03-09T02:43:05.689Z",
+        "updated": "2022-03-09T19:06:47.670Z",
         "name": "WAITING FOR STAFF",
         "weight": 3,
         "include_in_roster_export": true,
+        "considered_approved": false,
         "ClrChgdStfPlyrSts": false
     }
 },
@@ -2499,10 +2503,11 @@
     "fields": {
         "old_sk_id": 26,
         "inserted": "2012-11-01T14:46:14Z",
-        "updated": "2022-03-09T02:43:05.697Z",
+        "updated": "2022-03-09T19:06:47.679Z",
         "name": "APPROVAL NOT REQUIRED",
         "weight": 4,
         "include_in_roster_export": true,
+        "considered_approved": false,
         "ClrChgdStfPlyrSts": false
     }
 },
@@ -2512,10 +2517,11 @@
     "fields": {
         "old_sk_id": 27,
         "inserted": "2012-11-06T18:49:49Z",
-        "updated": "2022-03-09T02:43:05.706Z",
+        "updated": "2022-03-09T19:06:47.688Z",
         "name": "RESUBMITTED FOR APPROVAL",
         "weight": 5,
         "include_in_roster_export": true,
+        "considered_approved": false,
         "ClrChgdStfPlyrSts": false
     }
 },
@@ -2525,10 +2531,11 @@
     "fields": {
         "old_sk_id": 29,
         "inserted": "2013-09-08T21:46:52Z",
-        "updated": "2022-03-09T02:43:05.715Z",
+        "updated": "2022-03-09T19:06:47.697Z",
         "name": "WAITING ON COACH",
         "weight": 6,
         "include_in_roster_export": true,
+        "considered_approved": false,
         "ClrChgdStfPlyrSts": false
     }
 },
@@ -2538,10 +2545,11 @@
     "fields": {
         "old_sk_id": 30,
         "inserted": "2013-10-30T14:15:26Z",
-        "updated": "2022-03-09T02:43:05.724Z",
+        "updated": "2022-03-09T19:06:47.706Z",
         "name": "SUBMIT WHEN BALANCED",
         "weight": 7,
         "include_in_roster_export": true,
+        "considered_approved": false,
         "ClrChgdStfPlyrSts": false
     }
 },
@@ -2551,10 +2559,11 @@
     "fields": {
         "old_sk_id": 31,
         "inserted": "2013-11-21T19:09:25Z",
-        "updated": "2022-03-09T02:43:05.733Z",
+        "updated": "2022-03-09T19:06:47.715Z",
         "name": "APPROVED PLAYERS",
         "weight": 8,
         "include_in_roster_export": true,
+        "considered_approved": false,
         "ClrChgdStfPlyrSts": false
     }
 },
@@ -2564,10 +2573,11 @@
     "fields": {
         "old_sk_id": 32,
         "inserted": "2014-10-06T19:22:36Z",
-        "updated": "2022-03-09T02:43:05.744Z",
+        "updated": "2022-03-09T19:06:47.724Z",
         "name": "IN DRAFT PROCESS",
         "weight": 9,
         "include_in_roster_export": false,
+        "considered_approved": false,
         "ClrChgdStfPlyrSts": false
     }
 },
@@ -2577,10 +2587,11 @@
     "fields": {
         "old_sk_id": 33,
         "inserted": "2014-10-06T19:27:52Z",
-        "updated": "2022-03-09T02:43:05.754Z",
+        "updated": "2022-03-09T19:06:47.732Z",
         "name": "WAITING FOR A COACH",
         "weight": 10,
         "include_in_roster_export": true,
+        "considered_approved": false,
         "ClrChgdStfPlyrSts": false
     }
 },
@@ -2590,10 +2601,11 @@
     "fields": {
         "old_sk_id": 34,
         "inserted": "2014-10-21T18:42:05Z",
-        "updated": "2022-03-09T02:43:05.763Z",
+        "updated": "2022-03-09T19:06:47.741Z",
         "name": "PLAYER ISSUES",
         "weight": 11,
         "include_in_roster_export": true,
+        "considered_approved": false,
         "ClrChgdStfPlyrSts": false
     }
 },
@@ -2603,10 +2615,11 @@
     "fields": {
         "old_sk_id": 35,
         "inserted": "2014-11-28T14:53:58Z",
-        "updated": "2022-03-09T02:43:05.773Z",
+        "updated": "2022-03-09T19:06:47.749Z",
         "name": "PLAYERS SUBMITTED",
         "weight": 12,
         "include_in_roster_export": true,
+        "considered_approved": false,
         "ClrChgdStfPlyrSts": false
     }
 },
@@ -2616,10 +2629,11 @@
     "fields": {
         "old_sk_id": 38,
         "inserted": "2018-06-18T17:49:11Z",
-        "updated": "2022-03-09T02:43:05.783Z",
+        "updated": "2022-03-09T19:06:47.757Z",
         "name": "STAFF READY NEED PLAYERS",
         "weight": 13,
         "include_in_roster_export": false,
+        "considered_approved": false,
         "ClrChgdStfPlyrSts": false
     }
 },
@@ -2629,10 +2643,11 @@
     "fields": {
         "old_sk_id": 16,
         "inserted": "2012-07-21T20:43:33.150Z",
-        "updated": "2022-03-09T02:43:05.791Z",
+        "updated": "2022-03-09T19:06:47.766Z",
         "name": "INPROGRESS",
         "weight": 14,
         "include_in_roster_export": true,
+        "considered_approved": false,
         "ClrChgdStfPlyrSts": false
     }
 },
@@ -2642,10 +2657,11 @@
     "fields": {
         "old_sk_id": 21,
         "inserted": "2012-09-15T04:21:49.637Z",
-        "updated": "2022-03-09T02:43:05.800Z",
+        "updated": "2022-03-09T19:06:47.775Z",
         "name": "DRAFTMODE",
         "weight": 15,
         "include_in_roster_export": true,
+        "considered_approved": false,
         "ClrChgdStfPlyrSts": false
     }
 },
@@ -2655,10 +2671,11 @@
     "fields": {
         "old_sk_id": 17,
         "inserted": "2012-07-21T20:43:33.150Z",
-        "updated": "2022-03-09T02:43:05.810Z",
+        "updated": "2022-03-09T19:06:47.782Z",
         "name": "READY TO SUBMIT",
         "weight": 16,
         "include_in_roster_export": true,
+        "considered_approved": false,
         "ClrChgdStfPlyrSts": false
     }
 },
@@ -2668,10 +2685,11 @@
     "fields": {
         "old_sk_id": 18,
         "inserted": "2012-07-21T20:43:33Z",
-        "updated": "2022-03-09T02:43:05.819Z",
+        "updated": "2022-03-09T19:06:47.790Z",
         "name": "SUBMITTED",
         "weight": 17,
         "include_in_roster_export": true,
+        "considered_approved": false,
         "ClrChgdStfPlyrSts": true
     }
 },
@@ -2681,10 +2699,11 @@
     "fields": {
         "old_sk_id": 19,
         "inserted": "2012-07-21T20:43:33Z",
-        "updated": "2022-03-09T02:43:05.827Z",
+        "updated": "2022-03-09T19:06:47.799Z",
         "name": "APPROVED",
         "weight": 18,
         "include_in_roster_export": true,
+        "considered_approved": false,
         "ClrChgdStfPlyrSts": false
     }
 },
@@ -2694,10 +2713,11 @@
     "fields": {
         "old_sk_id": 20,
         "inserted": "2012-07-21T20:43:33.150Z",
-        "updated": "2022-03-09T02:43:05.834Z",
+        "updated": "2022-03-09T19:06:47.806Z",
         "name": "REJECTED",
         "weight": 19,
         "include_in_roster_export": true,
+        "considered_approved": false,
         "ClrChgdStfPlyrSts": false
     }
 },
@@ -2707,7 +2727,7 @@
     "fields": {
         "old_sk_id": 6,
         "inserted": "2012-09-26T20:00:05Z",
-        "updated": "2022-03-09T02:43:05.848Z",
+        "updated": "2022-03-09T19:06:47.818Z",
         "name": "STAFF NOT IN HCR",
         "status": 2,
         "weight": 0
@@ -2719,7 +2739,7 @@
     "fields": {
         "old_sk_id": 7,
         "inserted": "2012-09-26T20:00:26Z",
-        "updated": "2022-03-09T02:43:05.857Z",
+        "updated": "2022-03-09T19:06:47.828Z",
         "name": "STAFF NOT QUALIFIED",
         "status": 2,
         "weight": 1
@@ -2731,7 +2751,7 @@
     "fields": {
         "old_sk_id": 8,
         "inserted": "2012-09-26T20:01:18Z",
-        "updated": "2022-03-09T02:43:05.866Z",
+        "updated": "2022-03-09T19:06:47.837Z",
         "name": "STAFF NEEDS CONVERSION",
         "status": 2,
         "weight": 2
@@ -2743,7 +2763,7 @@
     "fields": {
         "old_sk_id": 9,
         "inserted": "2012-09-26T20:03:00Z",
-        "updated": "2022-03-09T02:43:05.877Z",
+        "updated": "2022-03-09T19:06:47.847Z",
         "name": "STAFF NAME NOT MATCHING",
         "status": 2,
         "weight": 3
@@ -2755,7 +2775,7 @@
     "fields": {
         "old_sk_id": 10,
         "inserted": "2012-09-26T20:05:01Z",
-        "updated": "2022-03-09T02:43:05.886Z",
+        "updated": "2022-03-09T19:06:47.857Z",
         "name": "STAFF MERGE REQUIRED",
         "status": 2,
         "weight": 4
@@ -2767,7 +2787,7 @@
     "fields": {
         "old_sk_id": 12,
         "inserted": "2012-09-26T20:08:06Z",
-        "updated": "2022-03-09T02:43:05.895Z",
+        "updated": "2022-03-09T19:06:47.868Z",
         "name": "STAFF NOT IN SK IS IN HCR",
         "status": 2,
         "weight": 5
@@ -2779,7 +2799,7 @@
     "fields": {
         "old_sk_id": 13,
         "inserted": "2012-10-01T20:31:39Z",
-        "updated": "2022-03-09T02:43:05.904Z",
+        "updated": "2022-03-09T19:06:47.877Z",
         "name": "N/A",
         "status": 16,
         "weight": 6
@@ -2791,7 +2811,7 @@
     "fields": {
         "old_sk_id": 14,
         "inserted": "2012-10-01T20:39:29Z",
-        "updated": "2022-03-09T02:43:05.913Z",
+        "updated": "2022-03-09T19:06:47.887Z",
         "name": "N/A",
         "status": 1,
         "weight": 7
@@ -2803,7 +2823,7 @@
     "fields": {
         "old_sk_id": 15,
         "inserted": "2012-10-01T20:39:56Z",
-        "updated": "2022-03-09T02:43:05.922Z",
+        "updated": "2022-03-09T19:06:47.897Z",
         "name": "N/A",
         "status": 3,
         "weight": 8
@@ -2815,7 +2835,7 @@
     "fields": {
         "old_sk_id": 16,
         "inserted": "2012-11-01T12:26:18Z",
-        "updated": "2022-03-09T02:43:05.931Z",
+        "updated": "2022-03-09T19:06:47.909Z",
         "name": "PLAYERS IN HCR",
         "status": 4,
         "weight": 9
@@ -2827,7 +2847,7 @@
     "fields": {
         "old_sk_id": 17,
         "inserted": "2012-11-01T14:46:51Z",
-        "updated": "2022-03-09T02:43:05.942Z",
+        "updated": "2022-03-09T19:06:47.919Z",
         "name": "NO ROSTER NEEDED",
         "status": 5,
         "weight": 10
@@ -2839,7 +2859,7 @@
     "fields": {
         "old_sk_id": 18,
         "inserted": "2012-11-06T18:50:36Z",
-        "updated": "2022-03-09T02:43:05.952Z",
+        "updated": "2022-03-09T19:06:47.929Z",
         "name": "ROSTER UPDATED",
         "status": 6,
         "weight": 11
@@ -2851,7 +2871,7 @@
     "fields": {
         "old_sk_id": 19,
         "inserted": "2013-09-08T17:55:34Z",
-        "updated": "2022-03-09T02:43:05.961Z",
+        "updated": "2022-03-09T19:06:47.939Z",
         "name": "MISSING STAFF",
         "status": 20,
         "weight": 12
@@ -2863,7 +2883,7 @@
     "fields": {
         "old_sk_id": 20,
         "inserted": "2013-09-08T21:48:13Z",
-        "updated": "2022-03-09T02:43:05.971Z",
+        "updated": "2022-03-09T19:06:47.948Z",
         "name": "REQUIRES PLYRS AND STF",
         "status": 7,
         "weight": 13
@@ -2875,7 +2895,7 @@
     "fields": {
         "old_sk_id": 21,
         "inserted": "2013-09-08T21:49:20Z",
-        "updated": "2022-03-09T02:43:05.981Z",
+        "updated": "2022-03-09T19:06:47.959Z",
         "name": "REQUIRES BENCH STAFF",
         "status": 7,
         "weight": 14
@@ -2887,7 +2907,7 @@
     "fields": {
         "old_sk_id": 22,
         "inserted": "2013-09-08T21:50:23Z",
-        "updated": "2022-03-09T02:43:05.990Z",
+        "updated": "2022-03-09T19:06:47.970Z",
         "name": "REQUIRE STF CERTIFICTN",
         "status": 7,
         "weight": 15
@@ -2899,7 +2919,7 @@
     "fields": {
         "old_sk_id": 23,
         "inserted": "2013-10-31T19:01:32Z",
-        "updated": "2022-03-09T02:43:05.999Z",
+        "updated": "2022-03-09T19:06:47.980Z",
         "name": "REJECTED",
         "status": 20,
         "weight": 16
@@ -2911,7 +2931,7 @@
     "fields": {
         "old_sk_id": 24,
         "inserted": "2013-11-21T19:15:27Z",
-        "updated": "2022-03-09T02:43:06.009Z",
+        "updated": "2022-03-09T19:06:47.989Z",
         "name": "MISSING STAFF",
         "status": 9,
         "weight": 17
@@ -2923,7 +2943,7 @@
     "fields": {
         "old_sk_id": 25,
         "inserted": "2013-11-21T19:59:41Z",
-        "updated": "2022-03-09T02:43:06.019Z",
+        "updated": "2022-03-09T19:06:47.999Z",
         "name": "PLAYERS OK-MISSING STAFF",
         "status": 19,
         "weight": 18
@@ -2935,7 +2955,7 @@
     "fields": {
         "old_sk_id": 26,
         "inserted": "2013-11-27T14:35:40Z",
-        "updated": "2022-03-09T02:43:06.028Z",
+        "updated": "2022-03-09T19:06:48.009Z",
         "name": "STAFF CHGS REQU'D",
         "status": 19,
         "weight": 19
@@ -2947,7 +2967,7 @@
     "fields": {
         "old_sk_id": 27,
         "inserted": "2014-10-06T19:23:33Z",
-        "updated": "2022-03-09T02:43:06.038Z",
+        "updated": "2022-03-09T19:06:48.020Z",
         "name": "IN PROGRESS",
         "status": 10,
         "weight": 20
@@ -2959,7 +2979,7 @@
     "fields": {
         "old_sk_id": 28,
         "inserted": "2014-10-06T19:28:10Z",
-        "updated": "2022-03-09T02:43:06.048Z",
+        "updated": "2022-03-09T19:06:48.030Z",
         "name": "IN PROGRESS",
         "status": 11,
         "weight": 21
@@ -2971,7 +2991,7 @@
     "fields": {
         "old_sk_id": 31,
         "inserted": "2014-11-28T15:01:31Z",
-        "updated": "2022-03-09T02:43:06.057Z",
+        "updated": "2022-03-09T19:06:48.040Z",
         "name": "STAFF WILL BE REJECTED",
         "status": 17,
         "weight": 22
@@ -2983,7 +3003,7 @@
     "fields": {
         "old_sk_id": 34,
         "inserted": "2014-12-01T21:17:34Z",
-        "updated": "2022-03-09T02:43:06.068Z",
+        "updated": "2022-03-09T19:06:48.050Z",
         "name": "REQUIRES DECLARATIONS",
         "status": 7,
         "weight": 23
@@ -2995,7 +3015,7 @@
     "fields": {
         "old_sk_id": 35,
         "inserted": "2014-12-02T21:28:40Z",
-        "updated": "2022-03-09T02:43:06.078Z",
+        "updated": "2022-03-09T19:06:48.061Z",
         "name": "STAFF WILL BE REJECTED",
         "status": 18,
         "weight": 24
@@ -3007,7 +3027,7 @@
     "fields": {
         "old_sk_id": 36,
         "inserted": "2015-06-10T15:26:36Z",
-        "updated": "2022-03-09T02:43:06.087Z",
+        "updated": "2022-03-09T19:06:48.073Z",
         "name": "WAITING ON PLAYERS",
         "status": 17,
         "weight": 25
@@ -3019,7 +3039,7 @@
     "fields": {
         "old_sk_id": 37,
         "inserted": "2015-07-07T13:20:41Z",
-        "updated": "2022-03-09T02:43:06.095Z",
+        "updated": "2022-03-09T19:06:48.084Z",
         "name": "MISSING PLAYER(S)",
         "status": 19,
         "weight": 26
@@ -3031,7 +3051,7 @@
     "fields": {
         "old_sk_id": 38,
         "inserted": "2015-10-19T16:16:01Z",
-        "updated": "2022-03-09T02:43:06.104Z",
+        "updated": "2022-03-09T19:06:48.094Z",
         "name": "STAFF REJECTED",
         "status": 9,
         "weight": 27
@@ -3043,7 +3063,7 @@
     "fields": {
         "old_sk_id": 39,
         "inserted": "2015-10-19T16:29:48Z",
-        "updated": "2022-03-09T02:43:06.112Z",
+        "updated": "2022-03-09T19:06:48.104Z",
         "name": "NO GOALIE",
         "status": 20,
         "weight": 28
@@ -3055,7 +3075,7 @@
     "fields": {
         "old_sk_id": 40,
         "inserted": "2015-10-28T19:33:43Z",
-        "updated": "2022-03-09T02:43:06.122Z",
+        "updated": "2022-03-09T19:06:48.113Z",
         "name": "NO GOALIE",
         "status": 19,
         "weight": 29
@@ -3067,7 +3087,7 @@
     "fields": {
         "old_sk_id": 41,
         "inserted": "2015-11-17T16:02:55Z",
-        "updated": "2022-03-09T02:43:06.131Z",
+        "updated": "2022-03-09T19:06:48.123Z",
         "name": "ON-ICE VOLUNTEER(S)",
         "status": 19,
         "weight": 30
@@ -3079,7 +3099,7 @@
     "fields": {
         "old_sk_id": 42,
         "inserted": "2015-11-24T17:59:55Z",
-        "updated": "2022-03-09T02:43:06.142Z",
+        "updated": "2022-03-09T19:06:48.133Z",
         "name": "TEAM & ON-ICE VOL'S",
         "status": 19,
         "weight": 31
@@ -3091,7 +3111,7 @@
     "fields": {
         "old_sk_id": 43,
         "inserted": "2015-12-09T19:40:16Z",
-        "updated": "2022-03-09T02:43:06.152Z",
+        "updated": "2022-03-09T19:06:48.143Z",
         "name": "PLAYERS ONLY",
         "status": 18,
         "weight": 32
@@ -3103,7 +3123,7 @@
     "fields": {
         "old_sk_id": 44,
         "inserted": "2021-04-26T13:14:48Z",
-        "updated": "2022-03-09T02:43:06.162Z",
+        "updated": "2022-03-09T19:06:48.152Z",
         "name": "REQUIRES POLICE CLEARANCE",
         "status": 7,
         "weight": 33
@@ -3115,7 +3135,7 @@
     "fields": {
         "old_sk_id": 1,
         "inserted": "2012-07-21T20:43:42.760Z",
-        "updated": "2022-03-09T02:43:06.172Z",
+        "updated": "2022-03-09T19:06:48.162Z",
         "name": "N/A",
         "status": 15,
         "weight": 34
@@ -3127,7 +3147,7 @@
     "fields": {
         "old_sk_id": 2,
         "inserted": "2012-07-21T20:43:42.760Z",
-        "updated": "2022-03-09T02:43:06.186Z",
+        "updated": "2022-03-09T19:06:48.172Z",
         "name": "N/A",
         "status": 17,
         "weight": 35
@@ -3139,7 +3159,7 @@
     "fields": {
         "old_sk_id": 3,
         "inserted": "2012-07-21T20:43:42.760Z",
-        "updated": "2022-03-09T02:43:06.197Z",
+        "updated": "2022-03-09T19:06:48.183Z",
         "name": "N/A",
         "status": 18,
         "weight": 36
@@ -3151,7 +3171,7 @@
     "fields": {
         "old_sk_id": 4,
         "inserted": "2012-07-21T20:43:42.760Z",
-        "updated": "2022-03-09T02:43:06.209Z",
+        "updated": "2022-03-09T19:06:48.193Z",
         "name": "N/A",
         "status": 19,
         "weight": 37
@@ -3163,7 +3183,7 @@
     "fields": {
         "old_sk_id": 5,
         "inserted": "2012-07-21T20:43:42.760Z",
-        "updated": "2022-03-09T02:43:06.222Z",
+        "updated": "2022-03-09T19:06:48.202Z",
         "name": "CERTIFICATIONS REQUIRED",
         "status": 20,
         "weight": 38

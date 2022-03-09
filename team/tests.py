@@ -4,7 +4,15 @@ from core.models import Division, League, PermissionOverrides, Season, SubDivisi
 from core.perms import add_override_permission
 from core.test_helpers import FixtureBasedTestCase
 
-from .models import Staff, StaffStatus, StaffType, Team, TeamStatus, TeamStatusReason
+from .models import (
+    Staff,
+    StaffStatus,
+    StaffType,
+    Team,
+    TeamStatus,
+    TeamStatusLog,
+    TeamStatusReason,
+)
 
 
 class StaffAccessTests(FixtureBasedTestCase):
@@ -262,9 +270,9 @@ class TeamSignalsTests(TestCase):
             name="SubDivision 1",
         )
 
-        team_status_approved = TeamStatus.objects.create(name="APPROVED")
-        team_status_reason = TeamStatusReason.objects.create(
-            name="N/A", status=team_status_approved
+        self.team_status_approved = TeamStatus.objects.create(name="APPROVED")
+        self.team_status_reason = TeamStatusReason.objects.create(
+            name="N/A", status=self.team_status_approved
         )
 
         self.team = Team.objects.create(
@@ -273,8 +281,8 @@ class TeamSignalsTests(TestCase):
             division=self.division,
             subdivision=self.subdivision,
             name="Team 1",
-            status=team_status_approved,
-            status_reason=team_status_reason,
+            status=self.team_status_approved,
+            status_reason=self.team_status_reason,
         )
         self.stafftype = StaffType.objects.create(name="staff type")
         self.staffstatus = StaffStatus.objects.create(name="staff status")
@@ -333,6 +341,28 @@ class TeamSignalsTests(TestCase):
         self.assertEqual(self.division.pk, obj.division_id)
         self.assertEqual(self.subdivision.pk, obj.subdivision_id)
         self.assertEqual(self.team.pk, obj.team_id)
+
+    def test_teamstatuslog_entry_is_create(self):
+        team_status = TeamStatus.objects.create(name="REJECTED")
+        team_status_reason = TeamStatusReason.objects.create(
+            name="N/A", status=team_status
+        )
+
+        self.assertEqual(0, TeamStatusLog.objects.count())
+
+        self.team.status = team_status
+        self.team.status_reason = team_status_reason
+        self.team.save()
+
+        self.assertEqual(1, TeamStatusLog.objects.count())
+
+        log = TeamStatusLog.objects.first()
+
+        self.assertEqual(self.team_status_approved, log.old_status)
+        self.assertEqual(self.team_status_reason, log.old_status_reason)
+
+        self.assertEqual(team_status, log.new_status)
+        self.assertEqual(team_status_reason, log.new_status_reason)
 
 
 class StaffManagerTests(FixtureBasedTestCase):

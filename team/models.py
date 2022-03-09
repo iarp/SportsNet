@@ -262,10 +262,10 @@ class TeamStatusLog(_BaseModel):
 
     team = models.ForeignKey("team.Team", on_delete=models.CASCADE)
 
-    old_status_id = models.ForeignKey(
+    old_status = models.ForeignKey(
         TeamStatus, on_delete=models.DO_NOTHING, null=True, blank=True, related_name="+"
     )
-    old_status_reason_id = models.ForeignKey(
+    old_status_reason = models.ForeignKey(
         TeamStatusReason,
         on_delete=models.DO_NOTHING,
         null=True,
@@ -273,10 +273,10 @@ class TeamStatusLog(_BaseModel):
         related_name="+",
     )
 
-    new_status_id = models.ForeignKey(
+    new_status = models.ForeignKey(
         TeamStatus, on_delete=models.DO_NOTHING, null=True, blank=True, related_name="+"
     )
-    new_status_reason_id = models.ForeignKey(
+    new_status_reason = models.ForeignKey(
         TeamStatusReason,
         on_delete=models.DO_NOTHING,
         null=True,
