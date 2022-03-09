@@ -12,10 +12,6 @@ class StaffAccessTests(FixtureBasedTestCase):
         ts = Staff.objects.first()
         self.assertEqual(str(ts.user), str(ts))
 
-    def test_season_staff_returns_one_entry(self):
-        season1 = Season.objects.first()
-        self.assertEqual(1, season1.staff.count())
-
     def test_seasonal_admins_can_edit_teams(self):
         season1 = Season.objects.first()
         season2 = Season.objects.exclude(pk=season1.pk).first()
@@ -337,3 +333,106 @@ class TeamSignalsTests(TestCase):
         self.assertEqual(self.division.pk, obj.division_id)
         self.assertEqual(self.subdivision.pk, obj.subdivision_id)
         self.assertEqual(self.team.pk, obj.team_id)
+
+
+class StaffManagerTests(FixtureBasedTestCase):
+    def test_staff_objects_head_coach_raises_on_all_but_team_model(self):
+        team = Team.objects.first()
+        self.assertIsInstance(team.staff.head_coach(), Staff)
+        self.assertRaisesMessage(
+            TypeError,
+            "head_coach is available on the Team instance.",
+            League.objects.first().staff.head_coach,
+        )
+        self.assertRaisesMessage(
+            TypeError,
+            "head_coach is available on the Team instance.",
+            Division.objects.first().staff.head_coach,
+        )
+        self.assertRaisesMessage(
+            TypeError,
+            "head_coach is available on the Team instance.",
+            SubDivision.objects.first().staff.head_coach,
+        )
+
+    def test_confirm_staff_relationships_return_correct_counts(self):
+        base_data = {
+            Season: 31,
+            League: 15,
+            Division: 7,
+            SubDivision: 3,
+            Team: 1,
+        }
+        for model, count in base_data.items():
+            obj = model.objects.first()
+
+            # Should return user assigned to that object PLUS all
+            # staff members assigned to related items below it.
+            self.assertEqual(
+                count, obj.staff.count(), f"{model} mismatch on staff all counter"
+            )
+
+            # Should only return the specific objects assigned users and no others
+            self.assertEqual(
+                1, obj.staff.own().count(), f"{model} mismatch on staff own counter"
+            )
+
+    def test_season_staff_returns_all_staff_entries(self):
+        season = Season.objects.first()
+        self.assertEqual(
+            Staff.objects.filter(season=season).count(),
+            season.staff.count(),
+        )
+
+    def test_season_staff_filter_type_coach_returns_correct_number(self):
+        season = Season.objects.first()
+        self.assertEqual(16, season.staff.filter(type__name="Coach").count())
+
+    def test_league_staff_returns_all_staff_entries(self):
+        season = Season.objects.first()
+        league = season.leagues.first()
+        self.assertEqual(
+            Staff.objects.filter(season=season, league=league).count(),
+            league.staff.count(),
+        )
+
+    def test_division_staff_returns_all_staff_entries(self):
+        season = Season.objects.first()
+        league = season.leagues.first()
+        division = league.divisions.first()
+        self.assertEqual(
+            Staff.objects.filter(
+                season=season, league=league, division=division
+            ).count(),
+            division.staff.count(),
+        )
+
+    def test_subdivision_staff_returns_all_staff_entries(self):
+        season = Season.objects.first()
+        league = season.leagues.first()
+        division = league.divisions.first()
+        subdivision = division.subdivisions.first()
+        self.assertEqual(
+            Staff.objects.filter(
+                season=season, league=league, division=division, subdivision=subdivision
+            ).count(),
+            subdivision.staff.count(),
+        )
+
+    def test_team_staff_returns_all_staff_entries(self):
+        season = Season.objects.first()
+        league = season.leagues.first()
+        division = league.divisions.first()
+        subdivision = division.subdivisions.first()
+        team = subdivision.teams.first()
+
+        self.assertEqual(
+            Staff.objects.filter(
+                season=season,
+                league=league,
+                division=division,
+                subdivision=subdivision,
+                team=team,
+            ).count(),
+            team.staff.count(),
+        )

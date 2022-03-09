@@ -3,6 +3,7 @@ from django.db import models
 from django.utils.functional import cached_property
 from positions.fields import PositionField
 
+from core.models import Season, League, Division, SubDivision
 from core.model_helpers import _BaseModel, _BaseModelWithCommonIDs, _BasePermissions
 from core.perms import add_override_permission, has_perm
 
@@ -63,10 +64,6 @@ class Team(_BaseModelWithCommonIDs):
 
     def can_vote(self, target_user):
         return has_perm(target_user, self, "team_can_vote")
-
-    @cached_property
-    def staff(self):
-        return self.staff_direct.all()
 
     def is_approved(self):
         return self.hockey_canada_id and self.status.lower() in [
@@ -129,39 +126,78 @@ class StaffStatusReason(_BaseModel):
     weight = PositionField(default=0)
 
 
+class _StaffObjectsManagerWithDetails(models.Manager):
+    def head_coach(self, *args, **kwargs):
+        if isinstance(self.instance, Team):
+            return self.filter(*args, type__name="Coach", **kwargs).first()
+        raise TypeError("head_coach is available on the Team instance.")
+
+    def own(self, *args, **kwargs):
+        extras = {}
+        if isinstance(self.instance, Season):
+            extras = {
+                "league_id__isnull": True,
+                "division_id__isnull": True,
+                "subdivision_id__isnull": True,
+                "team_id__isnull": True,
+            }
+        elif isinstance(self.instance, League):
+            extras = {
+                "division_id__isnull": True,
+                "subdivision_id__isnull": True,
+                "team_id__isnull": True,
+            }
+        elif isinstance(self.instance, Division):
+            extras = {
+                "subdivision_id__isnull": True,
+                "team_id__isnull": True,
+            }
+        elif isinstance(self.instance, SubDivision):
+            extras = {
+                "team_id__isnull": True,
+            }
+        return self.filter(*args, **extras, **kwargs)
+
+    def emails(self, *args, **kwargs):
+        qs = self.filter(*args, **kwargs)
+        return qs.values_list("user__email", flat=True)
+
+
 class Staff(_BaseModel):
     class Meta:
         verbose_name = "Team Staff"
         verbose_name_plural = "Team Staff"
 
+    objects = _StaffObjectsManagerWithDetails()
+
     season = models.ForeignKey(
-        "core.Season", on_delete=models.CASCADE, related_name="staff_direct"
+        "core.Season", on_delete=models.CASCADE, related_name="staff"
     )
     league = models.ForeignKey(
         "core.League",
         on_delete=models.CASCADE,
-        related_name="staff_direct",
+        related_name="staff",
         null=True,
         blank=True,
     )
     division = models.ForeignKey(
         "core.Division",
         on_delete=models.CASCADE,
-        related_name="staff_direct",
+        related_name="staff",
         null=True,
         blank=True,
     )
     subdivision = models.ForeignKey(
         "core.SubDivision",
         on_delete=models.CASCADE,
-        related_name="staff_direct",
+        related_name="staff",
         null=True,
         blank=True,
     )
     team = models.ForeignKey(
         "team.Team",
         on_delete=models.CASCADE,
-        related_name="staff_direct",
+        related_name="staff",
         null=True,
         blank=True,
     )

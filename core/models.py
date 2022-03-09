@@ -93,15 +93,6 @@ class Season(_BaseModelWithCommonIDs):
             logger.critical("No season is set as current!")
             raise
 
-    @cached_property
-    def staff(self):
-        return self.staff_direct.filter(
-            league_id__isnull=True,
-            division_id__isnull=True,
-            subdivision_id__isnull=True,
-            team_id__isnull=True,
-        )
-
     def save(self, *args, **kwargs):
 
         qs = Season.objects.all()
@@ -132,14 +123,6 @@ class League(_BaseModelWithCommonIDs):
 
     weight = PositionField(collection="season")
 
-    @cached_property
-    def staff(self):
-        return self.staff_direct.filter(
-            division_id__isnull=True,
-            subdivision_id__isnull=True,
-            team_id__isnull=True,
-        )
-
 
 class Division(_BaseModelWithCommonIDs):
     class Meta:
@@ -157,13 +140,6 @@ class Division(_BaseModelWithCommonIDs):
     age_to = models.PositiveIntegerField(default=0)
     weight = PositionField(collection=["season"])
 
-    @cached_property
-    def staff(self):
-        return self.staff_direct.filter(
-            subdivision_id__isnull=True,
-            team_id__isnull=True,
-        )
-
 
 class SubDivision(_BaseModelWithCommonIDs):
     season = models.ForeignKey(
@@ -179,12 +155,6 @@ class SubDivision(_BaseModelWithCommonIDs):
 
     weight = PositionField(collection="season")
     body_checking = models.BooleanField(default=False)
-
-    @cached_property
-    def staff(self):
-        return self.staff_direct.filter(
-            team_id__isnull=True,
-        )
 
 
 class PermissionOverrides(_BasePermissions):

@@ -10,83 +10,11 @@ from django.utils import timezone
 
 from team.models import Staff, Team
 
-from .models import Division, League, PermissionOverrides, Season, SubDivision
+from .models import PermissionOverrides, Season
 from .perms import add_override_permission, has_perm
 from .test_helpers import FixtureBasedTestCase
 
 User = get_user_model()
-
-
-class CoreModelStaffCountsTests(FixtureBasedTestCase):
-    def test_confirm_staff_relationships_return_correct_counts(self):
-        base_data = {
-            Season: 1,
-            League: 1,
-            Division: 1,
-            SubDivision: 1,
-            Team: 1,
-        }
-        for model, count in base_data.items():
-            obj = model.objects.first()
-            self.assertEqual(
-                count, obj.staff.count(), f"{model} mismatch on staff counter"
-            )
-
-    def test_season_staff_direct_returns_all_staff_entries(self):
-        season = Season.objects.first()
-        self.assertEqual(
-            Staff.objects.filter(season=season).count(),
-            season.staff_direct.count(),
-        )
-
-    def test_league_staff_direct_returns_all_staff_entries(self):
-        season = Season.objects.first()
-        league = season.leagues.first()
-        self.assertEqual(
-            Staff.objects.filter(season=season, league=league).count(),
-            league.staff_direct.count(),
-        )
-
-    def test_division_staff_direct_returns_all_staff_entries(self):
-        season = Season.objects.first()
-        league = season.leagues.first()
-        division = league.divisions.first()
-        self.assertEqual(
-            Staff.objects.filter(
-                season=season, league=league, division=division
-            ).count(),
-            division.staff_direct.count(),
-        )
-
-    def test_subdivision_staff_direct_returns_all_staff_entries(self):
-        season = Season.objects.first()
-        league = season.leagues.first()
-        division = league.divisions.first()
-        subdivision = division.subdivisions.first()
-        self.assertEqual(
-            Staff.objects.filter(
-                season=season, league=league, division=division, subdivision=subdivision
-            ).count(),
-            subdivision.staff_direct.count(),
-        )
-
-    def test_team_staff_direct_returns_all_staff_entries(self):
-        season = Season.objects.first()
-        league = season.leagues.first()
-        division = league.divisions.first()
-        subdivision = division.subdivisions.first()
-        team = subdivision.teams.first()
-
-        self.assertEqual(
-            Staff.objects.filter(
-                season=season,
-                league=league,
-                division=division,
-                subdivision=subdivision,
-                team=team,
-            ).count(),
-            team.staff.count(),
-        )
 
 
 class PermissionOverrideTests(FixtureBasedTestCase):
