@@ -245,7 +245,8 @@ def generate_email_address(data):
 
 
 def create_user(data):
-    return User.objects.create(email=generate_email_address(data))
+    data = generate_email_address(data)
+    return User.objects.create_user(username=data, email=data, password="12345")
 
 
 current_year = timezone.now().year
@@ -344,7 +345,7 @@ for s in range(current_year, current_year + 2):
                     )
 
                     coach_user = create_user(
-                        f"{season} - {league} - {division} - {subdivision} - {team} - Coach"
+                        f"{season} - {league} - {division} - {subdivision} - {team.name} - Coach"
                     )
 
                     Staff.objects.create(

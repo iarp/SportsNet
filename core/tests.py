@@ -7,8 +7,9 @@ from django.contrib.auth import get_user_model
 from django.db.utils import IntegrityError
 from django.test import TestCase
 from django.utils import timezone
+from django.urls import reverse
 
-from team.models import Staff, Team
+from team.models import Staff, StaffType, Team
 
 from .models import PermissionOverrides, Season
 from .perms import add_override_permission, has_perm
@@ -317,11 +318,50 @@ class SeasonTests(TestCase):
         )
 
 
-class CoreUserTests(TestCase):
+class CoreUserTests(FixtureBasedTestCase):
     def test_user_username_always_matches_email(self):
-        user = User.objects.create(email="test@domain.com")
+        user = User.objects.first()
         self.assertEqual(user.email, user.username)
 
         user.username = "test"
         user.save()
         self.assertEqual(user.email, user.username)
+
+    def test_user_can_login_with_web_access_true_on_staff_type(self):
+
+        StaffType.objects.filter(name="Coach").update(web_access=True)
+
+        user = User.objects.filter(staff_assignments__type__web_access=True).first()
+
+        response = self.client.post(
+            reverse("account_login"),
+            {"login": user.email, "password": "12345"},
+            follow=True,
+        )
+        self.assertEqual(user.pk, response.context["user"].pk)
+
+    def test_user_cannot_login_with_web_access_false_on_staff_type(self):
+
+        user = User.objects.all().first()
+
+        self.assertIs(
+            False, user.staff_assignments.filter(type__web_access=True).exists()
+        )
+
+        response = self.client.post(
+            reverse("account_login"),
+            {"login": user.email, "password": "12345"},
+            follow=True,
+        )
+        self.assertIsNone(response.context["user"].pk)
+
+    def test_login_does_not_throw_error_if_password_is_incorrect(self):
+
+        user = User.objects.all().first()
+
+        response = self.client.post(
+            reverse("account_login"),
+            {"login": user.email, "password": "invalid password"},
+            follow=True,
+        )
+        self.assertIsNone(response.context["user"].pk)

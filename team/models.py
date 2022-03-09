@@ -203,7 +203,11 @@ class Staff(_BaseModel):
         blank=True,
     )
 
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="staff_assignments",
+    )
 
     # TODO: Where is persons being stored?
     # person = models.ForeignKey()
