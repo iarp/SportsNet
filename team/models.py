@@ -86,6 +86,10 @@ class StaffType(_BasePermissions):
 
     required = models.BooleanField(default=False)
 
+    web_access = models.BooleanField(
+        default=False, help_text="Can a member at this level login to the website?"
+    )
+
     # WebAccess bit,
     # EditEvalAsgndAllowed bit,
     # EditEvalAvailAllowed bit,
