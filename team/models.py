@@ -29,9 +29,10 @@ class Team(_BaseModelWithCommonIDs):
     # NOTE: These were on the original table, unknown
     # RegStatus = models.BooleanField(default=False)
     # ApprovalRequired = models.BooleanField(default=False)  # all records are false in current table
-    # ChgdPlayers = models.BooleanField(default=False)
-    # ChgdStaff = models.BooleanField(default=False)
     # Comments = models.TextField(blank=True)
+
+    players_has_changed_flag = models.BooleanField(default=False)
+    staff_has_changed_flag = models.BooleanField(default=False)
 
     jersey_home = models.CharField(max_length=255, blank=True)
     jersey_away = models.CharField(max_length=255, blank=True)
@@ -245,7 +246,7 @@ class TeamStatus(_BaseModel):
     )
 
     # NOTE: Was in the table, all entries False. Unknown usage.
-    ClrChgdStfPlyrSts = models.BooleanField(default=False)
+    clear_changed_staff_players_flag = models.BooleanField(default=False)
 
 
 class TeamStatusReason(_BaseModel):

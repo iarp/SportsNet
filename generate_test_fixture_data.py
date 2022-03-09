@@ -172,7 +172,7 @@ if RESET_DB_MIGRATIONS:
                 name=data["Name"],
                 weight=data["weight"],
                 include_in_roster_export=data["IncludeInExportRoster"],
-                ClrChgdStfPlyrSts=data["ClrChgdStfPlyrSts"],
+                clear_changed_staff_players_flag=data["ClrChgdStfPlyrSts"],
             )
             item.inserted = timezone.make_aware(
                 datetime.datetime.fromisoformat(data["InsertDateTime"]),
