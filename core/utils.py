@@ -4,15 +4,14 @@ import sys
 from django.core.management import call_command
 from django.utils import timezone
 
-from core.models import (
-    Division,
-    League,
-    Season,
-    SubDivision,
+from core.models import Division, League, Season, SubDivision, User
+from team.models import (
+    Staff,
+    StaffStatus,
+    StaffType,
     Team,
-    TeamStaff,
-    TeamStaffType,
-    User,
+    TeamStatus,
+    TeamStatusReason,
 )
 
 
@@ -47,8 +46,8 @@ def generate_test_fixture_data(write_file=True, verbose=True):
         ):
             sys.exit()
 
-    TeamStaff.objects.all().delete()
-    TeamStaffType.objects.all().delete()
+    Staff.objects.all().delete()
+    StaffType.objects.all().delete()
     Team.objects.all().delete()
     SubDivision.objects.all().delete()
     Division.objects.all().delete()
@@ -56,10 +55,14 @@ def generate_test_fixture_data(write_file=True, verbose=True):
     Season.objects.all().delete()
     User.objects.all().delete()
 
-    type_coach, _ = TeamStaffType.objects.get_or_create(name="Coach")
-    type_convenor, _ = TeamStaffType.objects.get_or_create(name="Convenor")
-    type_vp, _ = TeamStaffType.objects.get_or_create(name="VP")
-    type_admin, _ = TeamStaffType.objects.get_or_create(name="Admin")
+    type_coach, _ = StaffType.objects.get_or_create(name="Coach")
+    type_convenor, _ = StaffType.objects.get_or_create(name="Convenor")
+    type_vp, _ = StaffType.objects.get_or_create(name="VP")
+    type_admin, _ = StaffType.objects.get_or_create(name="Admin")
+
+    staff_status_approved, _ = StaffStatus.objects.get_or_create(name="APPROVED")
+    team_status_approved, _ = TeamStatus.objects.get_or_create(name="APPROVED")
+    team_status_reason, _ = TeamStatusReason.objects.get_or_create(old_sk_id=4)
 
     current_year = timezone.now().year
     for s in range(current_year, current_year + 2):
@@ -70,7 +73,12 @@ def generate_test_fixture_data(write_file=True, verbose=True):
         )
 
         admin_user = User.objects.create(email=f"{season} Admin")
-        TeamStaff.objects.create(season=season, type=type_admin, user=admin_user)
+        Staff.objects.create(
+            season=season,
+            type=type_admin,
+            user=admin_user,
+            status=staff_status_approved,
+        )
 
         if verbose:
             print(season)
@@ -83,11 +91,12 @@ def generate_test_fixture_data(write_file=True, verbose=True):
 
             vp_user = User.objects.create(email=f"{season} {league} VP")
 
-            TeamStaff.objects.create(
+            Staff.objects.create(
                 type=type_vp,
                 season=season,
                 league=league,
                 user=vp_user,
+                status=staff_status_approved,
             )
 
             subdivision_listing = ["Blue", "White"]
@@ -104,12 +113,13 @@ def generate_test_fixture_data(write_file=True, verbose=True):
                     email=f"{season} {league} {division} Division"
                 )
 
-                TeamStaff.objects.create(
+                Staff.objects.create(
                     type=type_vp,
                     season=season,
                     league=league,
                     division=division,
                     user=division_user,
+                    status=staff_status_approved,
                 )
 
                 if verbose:
@@ -130,13 +140,14 @@ def generate_test_fixture_data(write_file=True, verbose=True):
                     if verbose:
                         print("\t\t\t", subdivision, subdivision_user, sep=" / ")
 
-                    TeamStaff.objects.create(
+                    Staff.objects.create(
                         type=type_convenor,
                         season=season,
                         league=league,
                         division=division,
                         subdivision=subdivision,
                         user=subdivision_user,
+                        status=staff_status_approved,
                     )
 
                     for team in ["Graham", "Henry"]:
@@ -146,13 +157,15 @@ def generate_test_fixture_data(write_file=True, verbose=True):
                             division=division,
                             subdivision=subdivision,
                             name=team,
+                            status=team_status_approved,
+                            status_reason=team_status_reason,
                         )
 
                         coach_user = User.objects.create(
                             email=f"{season} - {league} - {division} - {subdivision} - {team} - Coach"
                         )
 
-                        TeamStaff.objects.create(
+                        Staff.objects.create(
                             type=type_coach,
                             season=season,
                             league=league,
@@ -160,19 +173,22 @@ def generate_test_fixture_data(write_file=True, verbose=True):
                             subdivision=subdivision,
                             team=team,
                             user=coach_user,
+                            status=staff_status_approved,
                         )
 
                         if verbose:
                             print("\t\t\t\t", team, coach_user, sep=" - ")
 
-        print("Seasons Generated:", Season.objects.count())
-        print("Leagues Generated:", League.objects.count())
-        print("Divisions Generated:", Division.objects.count())
-        print("SubDivisions Generated:", SubDivision.objects.count())
-        print("Teams Generated:", Team.objects.count())
-        print("Users Generated:", User.objects.count())
+    print("Seasons Generated:", Season.objects.count())
+    print("Leagues Generated:", League.objects.count())
+    print("Divisions Generated:", Division.objects.count())
+    print("SubDivisions Generated:", SubDivision.objects.count())
+    print("Teams Generated:", Team.objects.count())
+    print("Users Generated:", User.objects.count())
 
     if write_file:
         os.makedirs("core/fixtures/", exist_ok=True)
         with open("core/fixtures/test_fixtures.json", "w") as f:
             call_command("dumpdata", "core", "--indent", "4", stdout=f)
+        with open("team/fixtures/test_fixtures.json", "w") as f:
+            call_command("dumpdata", "team", "--indent", "4", stdout=f)

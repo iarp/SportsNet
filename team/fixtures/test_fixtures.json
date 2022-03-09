@@ -1,0 +1,3168 @@
+[
+{
+    "model": "team.team",
+    "pk": 1,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:56.940Z",
+        "updated": "2022-03-09T01:32:56.940Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": 1,
+        "name": "Graham",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 0
+    }
+},
+{
+    "model": "team.team",
+    "pk": 2,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:56.992Z",
+        "updated": "2022-03-09T01:32:56.992Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": 1,
+        "name": "Henry",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 1
+    }
+},
+{
+    "model": "team.team",
+    "pk": 3,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.092Z",
+        "updated": "2022-03-09T01:32:57.092Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": 2,
+        "name": "Graham",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 2
+    }
+},
+{
+    "model": "team.team",
+    "pk": 4,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.143Z",
+        "updated": "2022-03-09T01:32:57.143Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": 2,
+        "name": "Henry",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 3
+    }
+},
+{
+    "model": "team.team",
+    "pk": 5,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.294Z",
+        "updated": "2022-03-09T01:32:57.294Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": 3,
+        "name": "Graham",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 4
+    }
+},
+{
+    "model": "team.team",
+    "pk": 6,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.344Z",
+        "updated": "2022-03-09T01:32:57.344Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": 3,
+        "name": "Henry",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 5
+    }
+},
+{
+    "model": "team.team",
+    "pk": 7,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.447Z",
+        "updated": "2022-03-09T01:32:57.447Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": 4,
+        "name": "Graham",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 6
+    }
+},
+{
+    "model": "team.team",
+    "pk": 8,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.501Z",
+        "updated": "2022-03-09T01:32:57.501Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": 4,
+        "name": "Henry",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 7
+    }
+},
+{
+    "model": "team.team",
+    "pk": 9,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.712Z",
+        "updated": "2022-03-09T01:32:57.712Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": 5,
+        "name": "Graham",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 8
+    }
+},
+{
+    "model": "team.team",
+    "pk": 10,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.761Z",
+        "updated": "2022-03-09T01:32:57.761Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": 5,
+        "name": "Henry",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 9
+    }
+},
+{
+    "model": "team.team",
+    "pk": 11,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.864Z",
+        "updated": "2022-03-09T01:32:57.864Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": 6,
+        "name": "Graham",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 10
+    }
+},
+{
+    "model": "team.team",
+    "pk": 12,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.914Z",
+        "updated": "2022-03-09T01:32:57.914Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": 6,
+        "name": "Henry",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 11
+    }
+},
+{
+    "model": "team.team",
+    "pk": 13,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.062Z",
+        "updated": "2022-03-09T01:32:58.062Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": 7,
+        "name": "Graham",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 12
+    }
+},
+{
+    "model": "team.team",
+    "pk": 14,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.110Z",
+        "updated": "2022-03-09T01:32:58.110Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": 7,
+        "name": "Henry",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 13
+    }
+},
+{
+    "model": "team.team",
+    "pk": 15,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.212Z",
+        "updated": "2022-03-09T01:32:58.212Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": 8,
+        "name": "Graham",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 14
+    }
+},
+{
+    "model": "team.team",
+    "pk": 16,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.262Z",
+        "updated": "2022-03-09T01:32:58.262Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": 8,
+        "name": "Henry",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 15
+    }
+},
+{
+    "model": "team.team",
+    "pk": 17,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.513Z",
+        "updated": "2022-03-09T01:32:58.513Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": 9,
+        "name": "Graham",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 0
+    }
+},
+{
+    "model": "team.team",
+    "pk": 18,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.562Z",
+        "updated": "2022-03-09T01:32:58.562Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": 9,
+        "name": "Henry",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 1
+    }
+},
+{
+    "model": "team.team",
+    "pk": 19,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.664Z",
+        "updated": "2022-03-09T01:32:58.664Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": 10,
+        "name": "Graham",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 2
+    }
+},
+{
+    "model": "team.team",
+    "pk": 20,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.714Z",
+        "updated": "2022-03-09T01:32:58.714Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": 10,
+        "name": "Henry",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 3
+    }
+},
+{
+    "model": "team.team",
+    "pk": 21,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.861Z",
+        "updated": "2022-03-09T01:32:58.861Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": 11,
+        "name": "Graham",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 4
+    }
+},
+{
+    "model": "team.team",
+    "pk": 22,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.908Z",
+        "updated": "2022-03-09T01:32:58.908Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": 11,
+        "name": "Henry",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 5
+    }
+},
+{
+    "model": "team.team",
+    "pk": 23,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.996Z",
+        "updated": "2022-03-09T01:32:58.996Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": 12,
+        "name": "Graham",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 6
+    }
+},
+{
+    "model": "team.team",
+    "pk": 24,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.040Z",
+        "updated": "2022-03-09T01:32:59.040Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": 12,
+        "name": "Henry",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 7
+    }
+},
+{
+    "model": "team.team",
+    "pk": 25,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.211Z",
+        "updated": "2022-03-09T01:32:59.211Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": 13,
+        "name": "Graham",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 8
+    }
+},
+{
+    "model": "team.team",
+    "pk": 26,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.253Z",
+        "updated": "2022-03-09T01:32:59.253Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": 13,
+        "name": "Henry",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 9
+    }
+},
+{
+    "model": "team.team",
+    "pk": 27,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.341Z",
+        "updated": "2022-03-09T01:32:59.341Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": 14,
+        "name": "Graham",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 10
+    }
+},
+{
+    "model": "team.team",
+    "pk": 28,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.384Z",
+        "updated": "2022-03-09T01:32:59.384Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": 14,
+        "name": "Henry",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 11
+    }
+},
+{
+    "model": "team.team",
+    "pk": 29,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.512Z",
+        "updated": "2022-03-09T01:32:59.512Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": 15,
+        "name": "Graham",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 12
+    }
+},
+{
+    "model": "team.team",
+    "pk": 30,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.567Z",
+        "updated": "2022-03-09T01:32:59.567Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": 15,
+        "name": "Henry",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 13
+    }
+},
+{
+    "model": "team.team",
+    "pk": 31,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.652Z",
+        "updated": "2022-03-09T01:32:59.652Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": 16,
+        "name": "Graham",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 14
+    }
+},
+{
+    "model": "team.team",
+    "pk": 32,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.694Z",
+        "updated": "2022-03-09T01:32:59.694Z",
+        "hockey_canada_id": null,
+        "hockey_canada_system_id": null,
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": 16,
+        "name": "Henry",
+        "number": 0,
+        "status": 19,
+        "status_reason": 38,
+        "jersey_home": "",
+        "jersey_away": "",
+        "submitted": false,
+        "submitted_date": null,
+        "approved": false,
+        "active": true,
+        "draft_start_position": 1,
+        "weight": 15
+    }
+},
+{
+    "model": "team.stafftype",
+    "pk": 21,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:56.728Z",
+        "updated": "2022-03-09T01:32:56.728Z",
+        "team_can_edit": true,
+        "team_can_vote": false,
+        "name": "Coach",
+        "weight": 0,
+        "required": false
+    }
+},
+{
+    "model": "team.stafftype",
+    "pk": 22,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:56.745Z",
+        "updated": "2022-03-09T01:32:56.745Z",
+        "team_can_edit": true,
+        "team_can_vote": false,
+        "name": "Convenor",
+        "weight": 1,
+        "required": false
+    }
+},
+{
+    "model": "team.stafftype",
+    "pk": 23,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:56.762Z",
+        "updated": "2022-03-09T01:32:56.762Z",
+        "team_can_edit": true,
+        "team_can_vote": false,
+        "name": "VP",
+        "weight": 2,
+        "required": false
+    }
+},
+{
+    "model": "team.stafftype",
+    "pk": 24,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:56.779Z",
+        "updated": "2022-03-09T01:32:56.779Z",
+        "team_can_edit": true,
+        "team_can_vote": false,
+        "name": "Admin",
+        "weight": 3,
+        "required": false
+    }
+},
+{
+    "model": "team.staffstatus",
+    "pk": 1,
+    "fields": {
+        "old_sk_id": 9,
+        "inserted": "2014-09-24T20:52:56Z",
+        "updated": "2022-03-09T01:32:53.220Z",
+        "name": "NEW",
+        "weight": 0,
+        "include_in_roster_export": true
+    }
+},
+{
+    "model": "team.staffstatus",
+    "pk": 2,
+    "fields": {
+        "old_sk_id": 1,
+        "inserted": "2012-07-03T09:54:05.640Z",
+        "updated": "2022-03-09T01:32:53.255Z",
+        "name": "INPROGRESS",
+        "weight": 1,
+        "include_in_roster_export": true
+    }
+},
+{
+    "model": "team.staffstatus",
+    "pk": 3,
+    "fields": {
+        "old_sk_id": 6,
+        "inserted": "2012-10-01T21:21:22Z",
+        "updated": "2022-03-09T01:32:53.288Z",
+        "name": "TRANSFER REQUIRED",
+        "weight": 2,
+        "include_in_roster_export": true
+    }
+},
+{
+    "model": "team.staffstatus",
+    "pk": 4,
+    "fields": {
+        "old_sk_id": 7,
+        "inserted": "2013-09-08T22:15:50Z",
+        "updated": "2022-03-09T01:32:53.327Z",
+        "name": "AWAITING CERTIFICATIONS",
+        "weight": 3,
+        "include_in_roster_export": true
+    }
+},
+{
+    "model": "team.staffstatus",
+    "pk": 5,
+    "fields": {
+        "old_sk_id": 8,
+        "inserted": "2013-09-08T22:17:40Z",
+        "updated": "2022-03-09T01:32:53.362Z",
+        "name": "CHECK CERTIFICATIONS",
+        "weight": 4,
+        "include_in_roster_export": true
+    }
+},
+{
+    "model": "team.staffstatus",
+    "pk": 6,
+    "fields": {
+        "old_sk_id": 10,
+        "inserted": "2014-10-06T19:11:42Z",
+        "updated": "2022-03-09T01:32:53.398Z",
+        "name": "DECLARATION REQUIRED",
+        "weight": 5,
+        "include_in_roster_export": true
+    }
+},
+{
+    "model": "team.staffstatus",
+    "pk": 7,
+    "fields": {
+        "old_sk_id": 11,
+        "inserted": "2015-03-05T20:32:35Z",
+        "updated": "2022-03-09T01:32:53.435Z",
+        "name": "PC REQUIRED",
+        "weight": 6,
+        "include_in_roster_export": true
+    }
+},
+{
+    "model": "team.staffstatus",
+    "pk": 8,
+    "fields": {
+        "old_sk_id": 2,
+        "inserted": "2012-07-03T09:54:05.640Z",
+        "updated": "2022-03-09T01:32:53.469Z",
+        "name": "READY TO SUBMIT",
+        "weight": 7,
+        "include_in_roster_export": true
+    }
+},
+{
+    "model": "team.staffstatus",
+    "pk": 9,
+    "fields": {
+        "old_sk_id": 3,
+        "inserted": "2012-07-03T09:54:05.640Z",
+        "updated": "2022-03-09T01:32:53.505Z",
+        "name": "SUBMITTED",
+        "weight": 8,
+        "include_in_roster_export": true
+    }
+},
+{
+    "model": "team.staffstatus",
+    "pk": 10,
+    "fields": {
+        "old_sk_id": 4,
+        "inserted": "2012-07-03T09:54:05.640Z",
+        "updated": "2022-03-09T01:32:53.542Z",
+        "name": "APPROVED",
+        "weight": 9,
+        "include_in_roster_export": true
+    }
+},
+{
+    "model": "team.staffstatus",
+    "pk": 11,
+    "fields": {
+        "old_sk_id": 5,
+        "inserted": "2012-07-03T09:54:05.640Z",
+        "updated": "2022-03-09T01:32:53.578Z",
+        "name": "REJECTED",
+        "weight": 10,
+        "include_in_roster_export": true
+    }
+},
+{
+    "model": "team.staffstatusreason",
+    "pk": 1,
+    "fields": {
+        "old_sk_id": 1,
+        "inserted": "2012-07-21T21:38:29.157Z",
+        "updated": "2022-03-09T01:32:53.618Z",
+        "name": "OK",
+        "weight": 0
+    }
+},
+{
+    "model": "team.staffstatusreason",
+    "pk": 2,
+    "fields": {
+        "old_sk_id": 2,
+        "inserted": "2012-07-21T21:38:29.157Z",
+        "updated": "2022-03-09T01:32:53.655Z",
+        "name": "CERTIFICATIONS REQUIRED",
+        "weight": 1
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 1,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:56.831Z",
+        "updated": "2022-03-09T01:32:56.831Z",
+        "season": 1,
+        "league": null,
+        "division": null,
+        "subdivision": null,
+        "team": null,
+        "user": 1,
+        "type": 24,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 2,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:56.876Z",
+        "updated": "2022-03-09T01:32:56.876Z",
+        "season": 1,
+        "league": 1,
+        "division": null,
+        "subdivision": null,
+        "team": null,
+        "user": 2,
+        "type": 23,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 3,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:56.909Z",
+        "updated": "2022-03-09T01:32:56.909Z",
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": null,
+        "team": null,
+        "user": 3,
+        "type": 23,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 4,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:56.932Z",
+        "updated": "2022-03-09T01:32:56.932Z",
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": 1,
+        "team": null,
+        "user": 4,
+        "type": 22,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 5,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:56.979Z",
+        "updated": "2022-03-09T01:32:56.979Z",
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": 1,
+        "team": 1,
+        "user": 5,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 6,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.023Z",
+        "updated": "2022-03-09T01:32:57.023Z",
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": 1,
+        "team": 2,
+        "user": 6,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 7,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.075Z",
+        "updated": "2022-03-09T01:32:57.075Z",
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": 2,
+        "team": null,
+        "user": 7,
+        "type": 22,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 8,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.126Z",
+        "updated": "2022-03-09T01:32:57.126Z",
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": 2,
+        "team": 3,
+        "user": 8,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 9,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.178Z",
+        "updated": "2022-03-09T01:32:57.178Z",
+        "season": 1,
+        "league": 1,
+        "division": 1,
+        "subdivision": 2,
+        "team": 4,
+        "user": 9,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 10,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.227Z",
+        "updated": "2022-03-09T01:32:57.227Z",
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": null,
+        "team": null,
+        "user": 10,
+        "type": 23,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 11,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.277Z",
+        "updated": "2022-03-09T01:32:57.277Z",
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": 3,
+        "team": null,
+        "user": 11,
+        "type": 22,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 12,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.327Z",
+        "updated": "2022-03-09T01:32:57.327Z",
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": 3,
+        "team": 5,
+        "user": 12,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 13,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.378Z",
+        "updated": "2022-03-09T01:32:57.379Z",
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": 3,
+        "team": 6,
+        "user": 13,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 14,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.429Z",
+        "updated": "2022-03-09T01:32:57.429Z",
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": 4,
+        "team": null,
+        "user": 14,
+        "type": 22,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 15,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.484Z",
+        "updated": "2022-03-09T01:32:57.484Z",
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": 4,
+        "team": 7,
+        "user": 15,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 16,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.543Z",
+        "updated": "2022-03-09T01:32:57.543Z",
+        "season": 1,
+        "league": 1,
+        "division": 2,
+        "subdivision": 4,
+        "team": 8,
+        "user": 16,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 17,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.594Z",
+        "updated": "2022-03-09T01:32:57.594Z",
+        "season": 1,
+        "league": 2,
+        "division": null,
+        "subdivision": null,
+        "team": null,
+        "user": 17,
+        "type": 23,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 18,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.644Z",
+        "updated": "2022-03-09T01:32:57.644Z",
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": null,
+        "team": null,
+        "user": 18,
+        "type": 23,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 19,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.695Z",
+        "updated": "2022-03-09T01:32:57.695Z",
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": 5,
+        "team": null,
+        "user": 19,
+        "type": 22,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 20,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.745Z",
+        "updated": "2022-03-09T01:32:57.745Z",
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": 5,
+        "team": 9,
+        "user": 20,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 21,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.795Z",
+        "updated": "2022-03-09T01:32:57.795Z",
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": 5,
+        "team": 10,
+        "user": 21,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 22,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.848Z",
+        "updated": "2022-03-09T01:32:57.848Z",
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": 6,
+        "team": null,
+        "user": 22,
+        "type": 22,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 23,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.897Z",
+        "updated": "2022-03-09T01:32:57.897Z",
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": 6,
+        "team": 11,
+        "user": 23,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 24,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.948Z",
+        "updated": "2022-03-09T01:32:57.948Z",
+        "season": 1,
+        "league": 2,
+        "division": 3,
+        "subdivision": 6,
+        "team": 12,
+        "user": 24,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 25,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:57.997Z",
+        "updated": "2022-03-09T01:32:57.997Z",
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": null,
+        "team": null,
+        "user": 25,
+        "type": 23,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 26,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.045Z",
+        "updated": "2022-03-09T01:32:58.045Z",
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": 7,
+        "team": null,
+        "user": 26,
+        "type": 22,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 27,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.094Z",
+        "updated": "2022-03-09T01:32:58.094Z",
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": 7,
+        "team": 13,
+        "user": 27,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 28,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.143Z",
+        "updated": "2022-03-09T01:32:58.143Z",
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": 7,
+        "team": 14,
+        "user": 28,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 29,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.194Z",
+        "updated": "2022-03-09T01:32:58.194Z",
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": 8,
+        "team": null,
+        "user": 29,
+        "type": 22,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 30,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.245Z",
+        "updated": "2022-03-09T01:32:58.245Z",
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": 8,
+        "team": 15,
+        "user": 30,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 31,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.295Z",
+        "updated": "2022-03-09T01:32:58.295Z",
+        "season": 1,
+        "league": 2,
+        "division": 4,
+        "subdivision": 8,
+        "team": 16,
+        "user": 31,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 32,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.345Z",
+        "updated": "2022-03-09T01:32:58.345Z",
+        "season": 2,
+        "league": null,
+        "division": null,
+        "subdivision": null,
+        "team": null,
+        "user": 32,
+        "type": 24,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 33,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.394Z",
+        "updated": "2022-03-09T01:32:58.394Z",
+        "season": 2,
+        "league": 3,
+        "division": null,
+        "subdivision": null,
+        "team": null,
+        "user": 33,
+        "type": 23,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 34,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.443Z",
+        "updated": "2022-03-09T01:32:58.443Z",
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": null,
+        "team": null,
+        "user": 34,
+        "type": 23,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 35,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.496Z",
+        "updated": "2022-03-09T01:32:58.496Z",
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": 9,
+        "team": null,
+        "user": 35,
+        "type": 22,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 36,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.546Z",
+        "updated": "2022-03-09T01:32:58.546Z",
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": 9,
+        "team": 17,
+        "user": 36,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 37,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.595Z",
+        "updated": "2022-03-09T01:32:58.595Z",
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": 9,
+        "team": 18,
+        "user": 37,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 38,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.647Z",
+        "updated": "2022-03-09T01:32:58.647Z",
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": 10,
+        "team": null,
+        "user": 38,
+        "type": 22,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 39,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.698Z",
+        "updated": "2022-03-09T01:32:58.698Z",
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": 10,
+        "team": 19,
+        "user": 39,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 40,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.747Z",
+        "updated": "2022-03-09T01:32:58.747Z",
+        "season": 2,
+        "league": 3,
+        "division": 5,
+        "subdivision": 10,
+        "team": 20,
+        "user": 40,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 41,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.798Z",
+        "updated": "2022-03-09T01:32:58.798Z",
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": null,
+        "team": null,
+        "user": 41,
+        "type": 23,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 42,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.845Z",
+        "updated": "2022-03-09T01:32:58.845Z",
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": 11,
+        "team": null,
+        "user": 42,
+        "type": 22,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 43,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.894Z",
+        "updated": "2022-03-09T01:32:58.894Z",
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": 11,
+        "team": 21,
+        "user": 43,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 44,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.938Z",
+        "updated": "2022-03-09T01:32:58.938Z",
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": 11,
+        "team": 22,
+        "user": 44,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 45,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:58.982Z",
+        "updated": "2022-03-09T01:32:58.982Z",
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": 12,
+        "team": null,
+        "user": 45,
+        "type": 22,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 46,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.025Z",
+        "updated": "2022-03-09T01:32:59.025Z",
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": 12,
+        "team": 23,
+        "user": 46,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 47,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.070Z",
+        "updated": "2022-03-09T01:32:59.070Z",
+        "season": 2,
+        "league": 3,
+        "division": 6,
+        "subdivision": 12,
+        "team": 24,
+        "user": 47,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 48,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.113Z",
+        "updated": "2022-03-09T01:32:59.113Z",
+        "season": 2,
+        "league": 4,
+        "division": null,
+        "subdivision": null,
+        "team": null,
+        "user": 48,
+        "type": 23,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 49,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.155Z",
+        "updated": "2022-03-09T01:32:59.155Z",
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": null,
+        "team": null,
+        "user": 49,
+        "type": 23,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 50,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.197Z",
+        "updated": "2022-03-09T01:32:59.197Z",
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": 13,
+        "team": null,
+        "user": 50,
+        "type": 22,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 51,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.239Z",
+        "updated": "2022-03-09T01:32:59.239Z",
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": 13,
+        "team": 25,
+        "user": 51,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 52,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.282Z",
+        "updated": "2022-03-09T01:32:59.282Z",
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": 13,
+        "team": 26,
+        "user": 52,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 53,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.327Z",
+        "updated": "2022-03-09T01:32:59.327Z",
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": 14,
+        "team": null,
+        "user": 53,
+        "type": 22,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 54,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.370Z",
+        "updated": "2022-03-09T01:32:59.370Z",
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": 14,
+        "team": 27,
+        "user": 54,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 55,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.413Z",
+        "updated": "2022-03-09T01:32:59.413Z",
+        "season": 2,
+        "league": 4,
+        "division": 7,
+        "subdivision": 14,
+        "team": 28,
+        "user": 55,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 56,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.456Z",
+        "updated": "2022-03-09T01:32:59.456Z",
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": null,
+        "team": null,
+        "user": 56,
+        "type": 23,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 57,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.498Z",
+        "updated": "2022-03-09T01:32:59.498Z",
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": 15,
+        "team": null,
+        "user": 57,
+        "type": 22,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 58,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.550Z",
+        "updated": "2022-03-09T01:32:59.550Z",
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": 15,
+        "team": 29,
+        "user": 58,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 59,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.596Z",
+        "updated": "2022-03-09T01:32:59.596Z",
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": 15,
+        "team": 30,
+        "user": 59,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 60,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.638Z",
+        "updated": "2022-03-09T01:32:59.638Z",
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": 16,
+        "team": null,
+        "user": 60,
+        "type": 22,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 61,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.680Z",
+        "updated": "2022-03-09T01:32:59.680Z",
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": 16,
+        "team": 31,
+        "user": 61,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.staff",
+    "pk": 62,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-09T01:32:59.724Z",
+        "updated": "2022-03-09T01:32:59.724Z",
+        "season": 2,
+        "league": 4,
+        "division": 8,
+        "subdivision": 16,
+        "team": 32,
+        "user": 62,
+        "type": 21,
+        "status": 10,
+        "importer": false,
+        "affiliate": false,
+        "tryout": false,
+        "registration_date": null,
+        "release_date": null
+    }
+},
+{
+    "model": "team.teamstatus",
+    "pk": 1,
+    "fields": {
+        "old_sk_id": 22,
+        "inserted": "2012-09-26T19:56:39Z",
+        "updated": "2022-03-09T01:32:54.434Z",
+        "name": "ENTERED IN HCR",
+        "weight": 0,
+        "include_in_roster_export": true,
+        "ClrChgdStfPlyrSts": false
+    }
+},
+{
+    "model": "team.teamstatus",
+    "pk": 2,
+    "fields": {
+        "old_sk_id": 23,
+        "inserted": "2012-09-26T19:57:22Z",
+        "updated": "2022-03-09T01:32:54.471Z",
+        "name": "HCR ISSUES",
+        "weight": 1,
+        "include_in_roster_export": true,
+        "ClrChgdStfPlyrSts": false
+    }
+},
+{
+    "model": "team.teamstatus",
+    "pk": 3,
+    "fields": {
+        "old_sk_id": 24,
+        "inserted": "2012-10-01T19:57:48Z",
+        "updated": "2022-03-09T01:32:54.508Z",
+        "name": "PLAYERS READY FOR HC",
+        "weight": 2,
+        "include_in_roster_export": true,
+        "ClrChgdStfPlyrSts": false
+    }
+},
+{
+    "model": "team.teamstatus",
+    "pk": 4,
+    "fields": {
+        "old_sk_id": 25,
+        "inserted": "2012-11-01T12:23:20Z",
+        "updated": "2022-03-09T01:32:54.544Z",
+        "name": "WAITING FOR STAFF",
+        "weight": 3,
+        "include_in_roster_export": true,
+        "ClrChgdStfPlyrSts": false
+    }
+},
+{
+    "model": "team.teamstatus",
+    "pk": 5,
+    "fields": {
+        "old_sk_id": 26,
+        "inserted": "2012-11-01T14:46:14Z",
+        "updated": "2022-03-09T01:32:54.580Z",
+        "name": "APPROVAL NOT REQUIRED",
+        "weight": 4,
+        "include_in_roster_export": true,
+        "ClrChgdStfPlyrSts": false
+    }
+},
+{
+    "model": "team.teamstatus",
+    "pk": 6,
+    "fields": {
+        "old_sk_id": 27,
+        "inserted": "2012-11-06T18:49:49Z",
+        "updated": "2022-03-09T01:32:54.617Z",
+        "name": "RESUBMITTED FOR APPROVAL",
+        "weight": 5,
+        "include_in_roster_export": true,
+        "ClrChgdStfPlyrSts": false
+    }
+},
+{
+    "model": "team.teamstatus",
+    "pk": 7,
+    "fields": {
+        "old_sk_id": 29,
+        "inserted": "2013-09-08T21:46:52Z",
+        "updated": "2022-03-09T01:32:54.652Z",
+        "name": "WAITING ON COACH",
+        "weight": 6,
+        "include_in_roster_export": true,
+        "ClrChgdStfPlyrSts": false
+    }
+},
+{
+    "model": "team.teamstatus",
+    "pk": 8,
+    "fields": {
+        "old_sk_id": 30,
+        "inserted": "2013-10-30T14:15:26Z",
+        "updated": "2022-03-09T01:32:54.689Z",
+        "name": "SUBMIT WHEN BALANCED",
+        "weight": 7,
+        "include_in_roster_export": true,
+        "ClrChgdStfPlyrSts": false
+    }
+},
+{
+    "model": "team.teamstatus",
+    "pk": 9,
+    "fields": {
+        "old_sk_id": 31,
+        "inserted": "2013-11-21T19:09:25Z",
+        "updated": "2022-03-09T01:32:54.728Z",
+        "name": "APPROVED PLAYERS",
+        "weight": 8,
+        "include_in_roster_export": true,
+        "ClrChgdStfPlyrSts": false
+    }
+},
+{
+    "model": "team.teamstatus",
+    "pk": 10,
+    "fields": {
+        "old_sk_id": 32,
+        "inserted": "2014-10-06T19:22:36Z",
+        "updated": "2022-03-09T01:32:54.765Z",
+        "name": "IN DRAFT PROCESS",
+        "weight": 9,
+        "include_in_roster_export": false,
+        "ClrChgdStfPlyrSts": false
+    }
+},
+{
+    "model": "team.teamstatus",
+    "pk": 11,
+    "fields": {
+        "old_sk_id": 33,
+        "inserted": "2014-10-06T19:27:52Z",
+        "updated": "2022-03-09T01:32:54.801Z",
+        "name": "WAITING FOR A COACH",
+        "weight": 10,
+        "include_in_roster_export": true,
+        "ClrChgdStfPlyrSts": false
+    }
+},
+{
+    "model": "team.teamstatus",
+    "pk": 12,
+    "fields": {
+        "old_sk_id": 34,
+        "inserted": "2014-10-21T18:42:05Z",
+        "updated": "2022-03-09T01:32:54.839Z",
+        "name": "PLAYER ISSUES",
+        "weight": 11,
+        "include_in_roster_export": true,
+        "ClrChgdStfPlyrSts": false
+    }
+},
+{
+    "model": "team.teamstatus",
+    "pk": 13,
+    "fields": {
+        "old_sk_id": 35,
+        "inserted": "2014-11-28T14:53:58Z",
+        "updated": "2022-03-09T01:32:54.876Z",
+        "name": "PLAYERS SUBMITTED",
+        "weight": 12,
+        "include_in_roster_export": true,
+        "ClrChgdStfPlyrSts": false
+    }
+},
+{
+    "model": "team.teamstatus",
+    "pk": 14,
+    "fields": {
+        "old_sk_id": 38,
+        "inserted": "2018-06-18T17:49:11Z",
+        "updated": "2022-03-09T01:32:54.913Z",
+        "name": "STAFF READY NEED PLAYERS",
+        "weight": 13,
+        "include_in_roster_export": false,
+        "ClrChgdStfPlyrSts": false
+    }
+},
+{
+    "model": "team.teamstatus",
+    "pk": 15,
+    "fields": {
+        "old_sk_id": 16,
+        "inserted": "2012-07-21T20:43:33.150Z",
+        "updated": "2022-03-09T01:32:54.951Z",
+        "name": "INPROGRESS",
+        "weight": 14,
+        "include_in_roster_export": true,
+        "ClrChgdStfPlyrSts": false
+    }
+},
+{
+    "model": "team.teamstatus",
+    "pk": 16,
+    "fields": {
+        "old_sk_id": 21,
+        "inserted": "2012-09-15T04:21:49.637Z",
+        "updated": "2022-03-09T01:32:54.996Z",
+        "name": "DRAFTMODE",
+        "weight": 15,
+        "include_in_roster_export": true,
+        "ClrChgdStfPlyrSts": false
+    }
+},
+{
+    "model": "team.teamstatus",
+    "pk": 17,
+    "fields": {
+        "old_sk_id": 17,
+        "inserted": "2012-07-21T20:43:33.150Z",
+        "updated": "2022-03-09T01:32:55.031Z",
+        "name": "READY TO SUBMIT",
+        "weight": 16,
+        "include_in_roster_export": true,
+        "ClrChgdStfPlyrSts": false
+    }
+},
+{
+    "model": "team.teamstatus",
+    "pk": 18,
+    "fields": {
+        "old_sk_id": 18,
+        "inserted": "2012-07-21T20:43:33Z",
+        "updated": "2022-03-09T01:32:55.067Z",
+        "name": "SUBMITTED",
+        "weight": 17,
+        "include_in_roster_export": true,
+        "ClrChgdStfPlyrSts": true
+    }
+},
+{
+    "model": "team.teamstatus",
+    "pk": 19,
+    "fields": {
+        "old_sk_id": 19,
+        "inserted": "2012-07-21T20:43:33Z",
+        "updated": "2022-03-09T01:32:55.104Z",
+        "name": "APPROVED",
+        "weight": 18,
+        "include_in_roster_export": true,
+        "ClrChgdStfPlyrSts": false
+    }
+},
+{
+    "model": "team.teamstatus",
+    "pk": 20,
+    "fields": {
+        "old_sk_id": 20,
+        "inserted": "2012-07-21T20:43:33.150Z",
+        "updated": "2022-03-09T01:32:55.141Z",
+        "name": "REJECTED",
+        "weight": 19,
+        "include_in_roster_export": true,
+        "ClrChgdStfPlyrSts": false
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 1,
+    "fields": {
+        "old_sk_id": 6,
+        "inserted": "2012-09-26T20:00:05Z",
+        "updated": "2022-03-09T01:32:55.185Z",
+        "name": "STAFF NOT IN HCR",
+        "status": 2,
+        "weight": 0
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 2,
+    "fields": {
+        "old_sk_id": 7,
+        "inserted": "2012-09-26T20:00:26Z",
+        "updated": "2022-03-09T01:32:55.221Z",
+        "name": "STAFF NOT QUALIFIED",
+        "status": 2,
+        "weight": 1
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 3,
+    "fields": {
+        "old_sk_id": 8,
+        "inserted": "2012-09-26T20:01:18Z",
+        "updated": "2022-03-09T01:32:55.260Z",
+        "name": "STAFF NEEDS CONVERSION",
+        "status": 2,
+        "weight": 2
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 4,
+    "fields": {
+        "old_sk_id": 9,
+        "inserted": "2012-09-26T20:03:00Z",
+        "updated": "2022-03-09T01:32:55.298Z",
+        "name": "STAFF NAME NOT MATCHING",
+        "status": 2,
+        "weight": 3
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 5,
+    "fields": {
+        "old_sk_id": 10,
+        "inserted": "2012-09-26T20:05:01Z",
+        "updated": "2022-03-09T01:32:55.337Z",
+        "name": "STAFF MERGE REQUIRED",
+        "status": 2,
+        "weight": 4
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 6,
+    "fields": {
+        "old_sk_id": 12,
+        "inserted": "2012-09-26T20:08:06Z",
+        "updated": "2022-03-09T01:32:55.373Z",
+        "name": "STAFF NOT IN SK IS IN HCR",
+        "status": 2,
+        "weight": 5
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 7,
+    "fields": {
+        "old_sk_id": 13,
+        "inserted": "2012-10-01T20:31:39Z",
+        "updated": "2022-03-09T01:32:55.411Z",
+        "name": "N/A",
+        "status": 16,
+        "weight": 6
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 8,
+    "fields": {
+        "old_sk_id": 14,
+        "inserted": "2012-10-01T20:39:29Z",
+        "updated": "2022-03-09T01:32:55.449Z",
+        "name": "N/A",
+        "status": 1,
+        "weight": 7
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 9,
+    "fields": {
+        "old_sk_id": 15,
+        "inserted": "2012-10-01T20:39:56Z",
+        "updated": "2022-03-09T01:32:55.484Z",
+        "name": "N/A",
+        "status": 3,
+        "weight": 8
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 10,
+    "fields": {
+        "old_sk_id": 16,
+        "inserted": "2012-11-01T12:26:18Z",
+        "updated": "2022-03-09T01:32:55.521Z",
+        "name": "PLAYERS IN HCR",
+        "status": 4,
+        "weight": 9
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 11,
+    "fields": {
+        "old_sk_id": 17,
+        "inserted": "2012-11-01T14:46:51Z",
+        "updated": "2022-03-09T01:32:55.561Z",
+        "name": "NO ROSTER NEEDED",
+        "status": 5,
+        "weight": 10
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 12,
+    "fields": {
+        "old_sk_id": 18,
+        "inserted": "2012-11-06T18:50:36Z",
+        "updated": "2022-03-09T01:32:55.598Z",
+        "name": "ROSTER UPDATED",
+        "status": 6,
+        "weight": 11
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 13,
+    "fields": {
+        "old_sk_id": 19,
+        "inserted": "2013-09-08T17:55:34Z",
+        "updated": "2022-03-09T01:32:55.636Z",
+        "name": "MISSING STAFF",
+        "status": 20,
+        "weight": 12
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 14,
+    "fields": {
+        "old_sk_id": 20,
+        "inserted": "2013-09-08T21:48:13Z",
+        "updated": "2022-03-09T01:32:55.670Z",
+        "name": "REQUIRES PLYRS AND STF",
+        "status": 7,
+        "weight": 13
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 15,
+    "fields": {
+        "old_sk_id": 21,
+        "inserted": "2013-09-08T21:49:20Z",
+        "updated": "2022-03-09T01:32:55.706Z",
+        "name": "REQUIRES BENCH STAFF",
+        "status": 7,
+        "weight": 14
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 16,
+    "fields": {
+        "old_sk_id": 22,
+        "inserted": "2013-09-08T21:50:23Z",
+        "updated": "2022-03-09T01:32:55.745Z",
+        "name": "REQUIRE STF CERTIFICTN",
+        "status": 7,
+        "weight": 15
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 17,
+    "fields": {
+        "old_sk_id": 23,
+        "inserted": "2013-10-31T19:01:32Z",
+        "updated": "2022-03-09T01:32:55.785Z",
+        "name": "REJECTED",
+        "status": 20,
+        "weight": 16
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 18,
+    "fields": {
+        "old_sk_id": 24,
+        "inserted": "2013-11-21T19:15:27Z",
+        "updated": "2022-03-09T01:32:55.823Z",
+        "name": "MISSING STAFF",
+        "status": 9,
+        "weight": 17
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 19,
+    "fields": {
+        "old_sk_id": 25,
+        "inserted": "2013-11-21T19:59:41Z",
+        "updated": "2022-03-09T01:32:55.862Z",
+        "name": "PLAYERS OK-MISSING STAFF",
+        "status": 19,
+        "weight": 18
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 20,
+    "fields": {
+        "old_sk_id": 26,
+        "inserted": "2013-11-27T14:35:40Z",
+        "updated": "2022-03-09T01:32:55.899Z",
+        "name": "STAFF CHGS REQU'D",
+        "status": 19,
+        "weight": 19
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 21,
+    "fields": {
+        "old_sk_id": 27,
+        "inserted": "2014-10-06T19:23:33Z",
+        "updated": "2022-03-09T01:32:55.937Z",
+        "name": "IN PROGRESS",
+        "status": 10,
+        "weight": 20
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 22,
+    "fields": {
+        "old_sk_id": 28,
+        "inserted": "2014-10-06T19:28:10Z",
+        "updated": "2022-03-09T01:32:55.976Z",
+        "name": "IN PROGRESS",
+        "status": 11,
+        "weight": 21
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 23,
+    "fields": {
+        "old_sk_id": 31,
+        "inserted": "2014-11-28T15:01:31Z",
+        "updated": "2022-03-09T01:32:56.012Z",
+        "name": "STAFF WILL BE REJECTED",
+        "status": 17,
+        "weight": 22
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 24,
+    "fields": {
+        "old_sk_id": 34,
+        "inserted": "2014-12-01T21:17:34Z",
+        "updated": "2022-03-09T01:32:56.061Z",
+        "name": "REQUIRES DECLARATIONS",
+        "status": 7,
+        "weight": 23
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 25,
+    "fields": {
+        "old_sk_id": 35,
+        "inserted": "2014-12-02T21:28:40Z",
+        "updated": "2022-03-09T01:32:56.098Z",
+        "name": "STAFF WILL BE REJECTED",
+        "status": 18,
+        "weight": 24
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 26,
+    "fields": {
+        "old_sk_id": 36,
+        "inserted": "2015-06-10T15:26:36Z",
+        "updated": "2022-03-09T01:32:56.135Z",
+        "name": "WAITING ON PLAYERS",
+        "status": 17,
+        "weight": 25
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 27,
+    "fields": {
+        "old_sk_id": 37,
+        "inserted": "2015-07-07T13:20:41Z",
+        "updated": "2022-03-09T01:32:56.174Z",
+        "name": "MISSING PLAYER(S)",
+        "status": 19,
+        "weight": 26
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 28,
+    "fields": {
+        "old_sk_id": 38,
+        "inserted": "2015-10-19T16:16:01Z",
+        "updated": "2022-03-09T01:32:56.213Z",
+        "name": "STAFF REJECTED",
+        "status": 9,
+        "weight": 27
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 29,
+    "fields": {
+        "old_sk_id": 39,
+        "inserted": "2015-10-19T16:29:48Z",
+        "updated": "2022-03-09T01:32:56.252Z",
+        "name": "NO GOALIE",
+        "status": 20,
+        "weight": 28
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 30,
+    "fields": {
+        "old_sk_id": 40,
+        "inserted": "2015-10-28T19:33:43Z",
+        "updated": "2022-03-09T01:32:56.290Z",
+        "name": "NO GOALIE",
+        "status": 19,
+        "weight": 29
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 31,
+    "fields": {
+        "old_sk_id": 41,
+        "inserted": "2015-11-17T16:02:55Z",
+        "updated": "2022-03-09T01:32:56.328Z",
+        "name": "ON-ICE VOLUNTEER(S)",
+        "status": 19,
+        "weight": 30
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 32,
+    "fields": {
+        "old_sk_id": 42,
+        "inserted": "2015-11-24T17:59:55Z",
+        "updated": "2022-03-09T01:32:56.364Z",
+        "name": "TEAM & ON-ICE VOL'S",
+        "status": 19,
+        "weight": 31
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 33,
+    "fields": {
+        "old_sk_id": 43,
+        "inserted": "2015-12-09T19:40:16Z",
+        "updated": "2022-03-09T01:32:56.401Z",
+        "name": "PLAYERS ONLY",
+        "status": 18,
+        "weight": 32
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 34,
+    "fields": {
+        "old_sk_id": 44,
+        "inserted": "2021-04-26T13:14:48Z",
+        "updated": "2022-03-09T01:32:56.438Z",
+        "name": "REQUIRES POLICE CLEARANCE",
+        "status": 7,
+        "weight": 33
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 35,
+    "fields": {
+        "old_sk_id": 1,
+        "inserted": "2012-07-21T20:43:42.760Z",
+        "updated": "2022-03-09T01:32:56.477Z",
+        "name": "N/A",
+        "status": 15,
+        "weight": 34
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 36,
+    "fields": {
+        "old_sk_id": 2,
+        "inserted": "2012-07-21T20:43:42.760Z",
+        "updated": "2022-03-09T01:32:56.514Z",
+        "name": "N/A",
+        "status": 17,
+        "weight": 35
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 37,
+    "fields": {
+        "old_sk_id": 3,
+        "inserted": "2012-07-21T20:43:42.760Z",
+        "updated": "2022-03-09T01:32:56.551Z",
+        "name": "N/A",
+        "status": 18,
+        "weight": 36
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 38,
+    "fields": {
+        "old_sk_id": 4,
+        "inserted": "2012-07-21T20:43:42.760Z",
+        "updated": "2022-03-09T01:32:56.587Z",
+        "name": "N/A",
+        "status": 19,
+        "weight": 37
+    }
+},
+{
+    "model": "team.teamstatusreason",
+    "pk": 39,
+    "fields": {
+        "old_sk_id": 5,
+        "inserted": "2012-07-21T20:43:42.760Z",
+        "updated": "2022-03-09T01:32:56.626Z",
+        "name": "CERTIFICATIONS REQUIRED",
+        "status": 20,
+        "weight": 38
+    }
+}
+]

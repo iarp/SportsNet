@@ -9,8 +9,7 @@ from django.utils.translation import gettext_lazy as _
 from loguru import logger
 from positions.fields import PositionField
 
-from .model_helpers import _BaseModel, _BaseModelWithCommonIDs, _BasePermissions
-from .perms import add_override_permission, has_perm
+from .model_helpers import _BaseModelWithCommonIDs, _BasePermissions
 
 
 class User(AbstractUser):
@@ -179,86 +178,12 @@ class SubDivision(_BaseModelWithCommonIDs):
     name = models.CharField(max_length=255)
 
     weight = PositionField(collection="season")
+    body_checking = models.BooleanField(default=False)
 
     @cached_property
     def staff(self):
         return self.staff_direct.filter(
             team_id__isnull=True,
-        )
-
-
-class Team(_BaseModelWithCommonIDs):
-    season = models.ForeignKey(Season, on_delete=models.PROTECT, related_name="teams")
-    league = models.ForeignKey(League, on_delete=models.PROTECT, related_name="teams")
-    division = models.ForeignKey(
-        Division, on_delete=models.PROTECT, related_name="teams"
-    )
-    subdivision = models.ForeignKey(
-        SubDivision, on_delete=models.PROTECT, related_name="teams"
-    )
-    name = models.CharField(max_length=255)
-
-    weight = PositionField(collection=["season"])
-
-    def can_edit(self, target_user):
-        return has_perm(target_user, self, "team_can_edit")
-
-    def can_vote(self, target_user):
-        return has_perm(target_user, self, "team_can_vote")
-
-    @cached_property
-    def staff(self):
-        return self.staff_direct.all()
-
-
-class TeamStaffType(_BasePermissions):
-    name = models.CharField(max_length=255)
-
-
-class TeamStaff(_BaseModel):
-
-    season = models.ForeignKey(
-        Season, on_delete=models.CASCADE, related_name="staff_direct"
-    )
-    league = models.ForeignKey(
-        League,
-        on_delete=models.CASCADE,
-        related_name="staff_direct",
-        null=True,
-        blank=True,
-    )
-    division = models.ForeignKey(
-        Division,
-        on_delete=models.CASCADE,
-        related_name="staff_direct",
-        null=True,
-        blank=True,
-    )
-    subdivision = models.ForeignKey(
-        SubDivision,
-        on_delete=models.CASCADE,
-        related_name="staff_direct",
-        null=True,
-        blank=True,
-    )
-    team = models.ForeignKey(
-        Team,
-        on_delete=models.CASCADE,
-        related_name="staff_direct",
-        null=True,
-        blank=True,
-    )
-
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-
-    type = models.ForeignKey(TeamStaffType, on_delete=models.PROTECT)
-
-    def __str__(self):
-        return str(self.user)
-
-    def permissions_add_override(self, obj, permission_name, value, assigned_by=None):
-        return add_override_permission(
-            self, obj, permission_name, value, assigned_by=assigned_by
         )
 
 
@@ -281,7 +206,7 @@ class PermissionOverrides(_BasePermissions):
         blank=True,
     )
     team = models.ForeignKey(
-        Team, on_delete=models.CASCADE, related_name="+", null=True, blank=True
+        "team.Team", on_delete=models.CASCADE, related_name="+", null=True, blank=True
     )
 
     user = models.ForeignKey(

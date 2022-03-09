@@ -2,7 +2,9 @@ django
 django-allauth
 django-crispy-forms
 django-environ
+django-model-utils
 django-positions
+django-sekizai
 
 loguru
 psycopg2-binary

@@ -5,6 +5,10 @@ class _BaseModel(models.Model):
     class Meta:
         abstract = True
 
+    old_sk_id = models.PositiveIntegerField(
+        null=True, blank=True, unique=True, help_text="The old primary id for the entry"
+    )
+
     inserted = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 

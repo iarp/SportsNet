@@ -4,10 +4,11 @@ from loguru import logger
 
 
 def has_perm(user, obj, permission_name):
-    from core.models import PermissionOverrides, TeamStaff
+    from core.models import PermissionOverrides
+    from team.models import Staff
 
-    # Allow us to pass User or TeamStaff object.
-    if isinstance(user, TeamStaff):
+    # Allow us to pass User or Staff object.
+    if isinstance(user, Staff):
         user = user.user
 
     if user.is_superuser:
@@ -24,7 +25,7 @@ def has_perm(user, obj, permission_name):
         "season": obj.season,
     }
 
-    if TeamStaff.objects.filter(
+    if Staff.objects.filter(
         *args, **kwargs, **{f"type__{permission_name}": True}
     ).exists():
         return True
@@ -38,15 +39,8 @@ def has_perm(user, obj, permission_name):
 
 def add_override_permission(user, obj, permission_name, value, assigned_by=None):
 
-    from core.models import (
-        Division,
-        League,
-        PermissionOverrides,
-        Season,
-        SubDivision,
-        Team,
-        TeamStaff,
-    )
+    from core.models import Division, League, PermissionOverrides, Season, SubDivision
+    from team.models import Staff, Team
 
     if not isinstance(obj, (Season, League, Division, SubDivision, Team)):
         raise ValueError(
@@ -58,9 +52,9 @@ def add_override_permission(user, obj, permission_name, value, assigned_by=None)
             "Parameter permission_name value must be an attribute of PermissionOverrides model."
         )
 
-    if isinstance(user, TeamStaff):
+    if isinstance(user, Staff):
         user = user.user
-    if isinstance(assigned_by, TeamStaff):
+    if isinstance(assigned_by, Staff):
         assigned_by = assigned_by.user
 
     data = {}
