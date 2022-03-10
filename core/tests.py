@@ -317,6 +317,14 @@ class SeasonTests(TestCase):
             self.season2.save,
         )
 
+    def test_name_uniqueness(self):
+        self.assertRaises(
+            IntegrityError,
+            Season.objects.create,
+            name=self.season1.name,
+            start=timezone.now() + timezone.timedelta(days=5 * 365),
+            end=timezone.now() + timezone.timedelta(days=6 * 365),
+        )
 
 class CoreUserTests(FixtureBasedTestCase):
     def test_user_username_always_matches_email(self):

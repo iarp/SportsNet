@@ -3,6 +3,7 @@ from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.validators import UnicodeUsernameValidator
 from django.db import models
 from django.db.models import F, Q
+from django.db.models.functions import Lower
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from loguru import logger
@@ -52,7 +53,8 @@ class Season(_BaseModelWithCommonIDs):
             models.CheckConstraint(
                 check=Q(end__gt=F("start")),
                 name="check_season_end_is_after_start_date",
-            )
+            ),
+            models.UniqueConstraint(Lower("name"), name="season_name_unique"),
         ]
 
     name = models.CharField(max_length=50)
@@ -63,19 +65,22 @@ class Season(_BaseModelWithCommonIDs):
     mbs_id = models.PositiveIntegerField(default=0)
     gsi_id = models.PositiveIntegerField(default=0)
 
-    def get_next_season(self):
-        """Next season is based on the first season with a start greater than current seasons end"""
+    def get_next_season(self, season=None):
+        if not season:
+            season = self
         return (
-            Season.objects.filter(start__gt=self.end)
-            .exclude(pk=self.pk)
+            Season.objects.filter(start__gt=season.end)
+            .exclude(pk=season.pk)
             .order_by("start")
             .first()
         )
 
-    def get_previous_season(self):
+    def get_previous_season(self, season=None):
+        if not season:
+            season = self
         return (
-            Season.objects.filter(start__lt=self.end)
-            .exclude(pk=self.pk)
+            Season.objects.filter(start__lt=season.end)
+            .exclude(pk=season.pk)
             .order_by("-start")
             .first()
         )
