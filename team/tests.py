@@ -410,6 +410,34 @@ class TeamSignalsTests(TestCase):
         self.assertIs(False, self.team.players_has_changed_flag)
         self.assertIs(False, self.team.staff_has_changed_flag)
 
+    def test_staff_creation_updates_team_staff_changed_flag_status(self):
+
+        self.assertIs(False, self.team.staff_has_changed_flag)
+
+        self.create_staff(team=self.team)
+
+        self.assertIs(True, self.team.staff_has_changed_flag)
+
+    def test_staff_changes_updates_team_staff_changed_flag_status(self):
+
+        self.assertIs(False, self.team.staff_has_changed_flag)
+
+        self.create_staff(team=self.team)
+
+        self.team.staff_has_changed_flag = False
+        self.team.save()
+
+        staff = self.team.staff.first()
+        staff.first_name = "test"
+        staff.save()
+
+        self.assertIs(True, self.team.staff_has_changed_flag)
+
+        self.team.staff_has_changed_flag = False
+        self.team.save()
+
+        self.assertIs(False, self.team.staff_has_changed_flag)
+
 
 class StaffManagerTests(FixtureBasedTestCase):
     def test_staff_objects_head_coach_raises_on_all_but_team_model(self):
