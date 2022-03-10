@@ -119,7 +119,6 @@ from team.models import (
     StaffType,
     Team,
     TeamStatus,
-    TeamStatusReason,
 )
 
 User = get_user_model()
@@ -181,19 +180,19 @@ if RESET_DB_MIGRATIONS:
             )
             item.save(update_fields=["inserted"])
 
-    with open("cache/SKTables/TeamStatusReason.json", "r") as f:
-        for _id, data in json.load(f).items():
-            item, _ = TeamStatusReason.objects.get_or_create(
-                old_sk_id=_id,
-                name=data["Name"],
-                weight=data["weight"],
-                status=TeamStatus.objects.get(old_sk_id=data["TeamStatusId"]),
-            )
-            item.inserted = timezone.make_aware(
-                datetime.datetime.fromisoformat(data["InsertDateTime"]),
-                timezone.get_current_timezone(),
-            )
-            item.save(update_fields=["inserted"])
+    # with open("cache/SKTables/TeamStatusReason.json", "r") as f:
+    #     for _id, data in json.load(f).items():
+    #         item, _ = TeamStatusReason.objects.get_or_create(
+    #             old_sk_id=_id,
+    #             name=data["Name"],
+    #             weight=data["weight"],
+    #             status=TeamStatus.objects.get(old_sk_id=data["TeamStatusId"]),
+    #         )
+    #         item.inserted = timezone.make_aware(
+    #             datetime.datetime.fromisoformat(data["InsertDateTime"]),
+    #             timezone.get_current_timezone(),
+    #         )
+    #         item.save(update_fields=["inserted"])
 
 
 """
@@ -238,7 +237,6 @@ type_admin, _ = StaffType.objects.get_or_create(name="Admin")
 
 staff_status_approved, _ = StaffStatus.objects.get_or_create(name="APPROVED")
 team_status_approved, _ = TeamStatus.objects.get_or_create(name="APPROVED")
-team_status_reason, _ = TeamStatusReason.objects.get_or_create(old_sk_id=4)
 
 
 def generate_email_address(data):
@@ -347,7 +345,6 @@ for s in range(current_year, current_year + 2):
                         subdivision=subdivision,
                         name=team,
                         status=team_status_approved,
-                        status_reason=team_status_reason,
                     )
 
                     coach_user = create_user(

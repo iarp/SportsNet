@@ -4,15 +4,7 @@ from core.models import Division, League, PermissionOverrides, Season, SubDivisi
 from core.perms import add_override_permission
 from core.test_helpers import FixtureBasedTestCase
 
-from .models import (
-    Staff,
-    StaffStatus,
-    StaffType,
-    Team,
-    TeamStatus,
-    TeamStatusLog,
-    TeamStatusReason,
-)
+from .models import Staff, StaffStatus, StaffType, Team, TeamStatus, TeamStatusLog
 
 
 class StaffAccessTests(FixtureBasedTestCase):
@@ -274,9 +266,6 @@ class TeamSignalsTests(TestCase):
         self.team_status_clear_flag_true = TeamStatus.objects.create(
             name="CLEAR FLAG", clear_changed_staff_players_flag=True
         )
-        self.team_status_reason = TeamStatusReason.objects.create(
-            name="N/A", status=self.team_status_approved
-        )
 
         self.team = Team.objects.create(
             season=self.season,
@@ -285,7 +274,6 @@ class TeamSignalsTests(TestCase):
             subdivision=self.subdivision,
             name="Team 1",
             status=self.team_status_approved,
-            status_reason=self.team_status_reason,
         )
         self.stafftype = StaffType.objects.create(name="staff type")
         self.staffstatus = StaffStatus.objects.create(name="staff status")
@@ -347,14 +335,10 @@ class TeamSignalsTests(TestCase):
 
     def test_teamstatuslog_entry_is_create(self):
         team_status = TeamStatus.objects.create(name="REJECTED")
-        team_status_reason = TeamStatusReason.objects.create(
-            name="N/A", status=team_status
-        )
 
         self.assertEqual(0, TeamStatusLog.objects.count())
 
         self.team.status = team_status
-        self.team.status_reason = team_status_reason
         self.team.save()
 
         self.assertEqual(1, TeamStatusLog.objects.count())
@@ -362,10 +346,7 @@ class TeamSignalsTests(TestCase):
         log = TeamStatusLog.objects.first()
 
         self.assertEqual(self.team_status_approved, log.old_status)
-        self.assertEqual(self.team_status_reason, log.old_status_reason)
-
         self.assertEqual(team_status, log.new_status)
-        self.assertEqual(team_status_reason, log.new_status_reason)
 
     def test_team_staff_changed_flag_gets_cleared_on_status_change(self):
         self.assertIs(False, self.team.staff_has_changed_flag)

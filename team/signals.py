@@ -48,9 +48,7 @@ def log_teamstatus_changes(instance: Team, **kwargs):
         TeamStatusLog.objects.create(
             team=instance,
             old_status=original_instance.status,
-            old_status_reason=original_instance.status_reason,
             new_status=instance.status,
-            new_status_reason=instance.status_reason,
         )
 
 

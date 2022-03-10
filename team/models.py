@@ -24,7 +24,6 @@ class Team(_BaseModelWithCommonIDs):
     number = models.PositiveIntegerField(default=0)
 
     status = models.ForeignKey("team.TeamStatus", on_delete=models.PROTECT)
-    status_reason = models.ForeignKey("team.TeamStatusReason", on_delete=models.PROTECT)
 
     # NOTE: These were on the original table, unknown
     # RegStatus = models.BooleanField(default=False)
@@ -240,6 +239,7 @@ class Staff(_BaseModel):
 
 
 class TeamStatus(_BaseModel):
+    # TODO: TeamStatusReason display was built like TeamStatus - TeamStatusReason
     class Meta:
         ordering = ["weight"]
         verbose_name = "Team Status"
@@ -261,19 +261,6 @@ class TeamStatus(_BaseModel):
     clear_changed_staff_players_flag = models.BooleanField(default=False)
 
 
-class TeamStatusReason(_BaseModel):
-    class Meta:
-        ordering = ["weight"]
-        verbose_name = "Team Status Reason"
-        verbose_name_plural = "Team Status Reasons"
-
-    name = models.CharField(max_length=255)
-    status = models.ForeignKey(
-        TeamStatus, on_delete=models.CASCADE, related_name="reasons"
-    )
-    weight = PositionField(default=0)
-
-
 class TeamStatusLog(_BaseModel):
     class Meta:
         ordering = ["inserted"]
@@ -285,23 +272,9 @@ class TeamStatusLog(_BaseModel):
     old_status = models.ForeignKey(
         TeamStatus, on_delete=models.DO_NOTHING, null=True, blank=True, related_name="+"
     )
-    old_status_reason = models.ForeignKey(
-        TeamStatusReason,
-        on_delete=models.DO_NOTHING,
-        null=True,
-        blank=True,
-        related_name="+",
-    )
 
     new_status = models.ForeignKey(
         TeamStatus, on_delete=models.DO_NOTHING, null=True, blank=True, related_name="+"
-    )
-    new_status_reason = models.ForeignKey(
-        TeamStatusReason,
-        on_delete=models.DO_NOTHING,
-        null=True,
-        blank=True,
-        related_name="+",
     )
 
     # NOTE: Was in the table, all entries False. Unknown usage.
