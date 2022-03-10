@@ -6,8 +6,8 @@ import uuid
 from django.contrib.auth import get_user_model
 from django.db.utils import IntegrityError
 from django.test import TestCase
-from django.utils import timezone
 from django.urls import reverse
+from django.utils import timezone
 
 from team.models import Staff, StaffType, Team
 

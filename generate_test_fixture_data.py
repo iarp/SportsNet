@@ -103,6 +103,7 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "sportsnet.settings")
 django.setup()
 
 from django.contrib.auth import get_user_model
+from django.contrib.auth.hashers import make_password
 from django.core.management import call_command
 from django.utils import timezone
 from django.utils.text import slugify
@@ -244,9 +245,14 @@ def generate_email_address(data):
     return f"{slugify(data)}@domain.com"
 
 
+PASSWORD = make_password("12345")
+
+
 def create_user(data):
     data = generate_email_address(data)
-    return User.objects.create_user(username=data, email=data, password="12345")
+    return User.objects.create(
+        username=data, email=data, password=PASSWORD, is_active=True
+    )
 
 
 current_year = timezone.now().year
