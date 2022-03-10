@@ -271,6 +271,9 @@ class TeamSignalsTests(TestCase):
         )
 
         self.team_status_approved = TeamStatus.objects.create(name="APPROVED")
+        self.team_status_clear_flag_true = TeamStatus.objects.create(
+            name="CLEAR FLAG", clear_changed_staff_players_flag=True
+        )
         self.team_status_reason = TeamStatusReason.objects.create(
             name="N/A", status=self.team_status_approved
         )
@@ -363,6 +366,49 @@ class TeamSignalsTests(TestCase):
 
         self.assertEqual(team_status, log.new_status)
         self.assertEqual(team_status_reason, log.new_status_reason)
+
+    def test_team_staff_changed_flag_gets_cleared_on_status_change(self):
+        self.assertIs(False, self.team.staff_has_changed_flag)
+
+        self.team.staff_has_changed_flag = True
+        self.team.save()
+
+        self.assertIs(True, self.team.staff_has_changed_flag)
+
+        self.team.status = self.team_status_clear_flag_true
+        self.team.save()
+
+        self.assertIs(False, self.team.staff_has_changed_flag)
+
+    def test_team_players_changed_flag_gets_cleared_on_status_change(self):
+        self.assertIs(False, self.team.players_has_changed_flag)
+
+        self.team.players_has_changed_flag = True
+        self.team.save()
+
+        self.assertIs(True, self.team.players_has_changed_flag)
+
+        self.team.status = self.team_status_clear_flag_true
+        self.team.save()
+
+        self.assertIs(False, self.team.players_has_changed_flag)
+
+    def test_team_staff_and_players_changed_flag_gets_cleared_on_status_change(self):
+        self.assertIs(False, self.team.players_has_changed_flag)
+        self.assertIs(False, self.team.staff_has_changed_flag)
+
+        self.team.players_has_changed_flag = True
+        self.team.staff_has_changed_flag = True
+        self.team.save()
+
+        self.assertIs(True, self.team.players_has_changed_flag)
+        self.assertIs(True, self.team.staff_has_changed_flag)
+
+        self.team.status = self.team_status_clear_flag_true
+        self.team.save()
+
+        self.assertIs(False, self.team.players_has_changed_flag)
+        self.assertIs(False, self.team.staff_has_changed_flag)
 
 
 class StaffManagerTests(FixtureBasedTestCase):

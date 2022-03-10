@@ -1,4 +1,4 @@
-from django.db.models.signals import pre_save
+from django.db.models.signals import pre_save, post_save
 from django.dispatch import receiver
 
 from .models import Staff, Team, TeamStatusLog
@@ -52,3 +52,19 @@ def log_teamstatus_changes(instance: Team, **kwargs):
             new_status=instance.status,
             new_status_reason=instance.status_reason,
         )
+
+
+@receiver(pre_save, sender=Team)
+def clear_players_or_staff_has_changed_flags_on_status_change(instance, **kwargs):
+    if not instance.pk or kwargs.get("raw"):
+        return
+    if not any([instance.staff_has_changed_flag, instance.players_has_changed_flag]):
+        return
+
+    original_instance = Team.objects.get(pk=instance.pk)
+
+    if instance.status_id != original_instance.status_id:
+
+        if instance.status.clear_changed_staff_players_flag:
+            instance.players_has_changed_flag = False
+            instance.staff_has_changed_flag = False

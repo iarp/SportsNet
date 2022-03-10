@@ -65,7 +65,7 @@ if DUMP_SK_DATA:
             row["weight"] = weight
             output[getattr(item, f"{table}Id")] = row
 
-        with open(f"cache/HCC_Sports_Keeper/{table}.json", "w") as f:
+        with open(f"cache/SKTables/{table}.json", "w") as f:
             json.dump(output, f, indent=4)
     exit()
 
@@ -125,7 +125,7 @@ from team.models import (
 User = get_user_model()
 
 if RESET_DB_MIGRATIONS:
-    with open("cache/HCC_Sports_Keeper/TeamStaffStatus.json", "r") as f:
+    with open("cache/SKTables/TeamStaffStatus.json", "r") as f:
         for _id, data in json.load(f).items():
             item, _ = StaffStatus.objects.get_or_create(
                 old_sk_id=_id,
@@ -139,7 +139,7 @@ if RESET_DB_MIGRATIONS:
             )
             item.save(update_fields=["inserted"])
 
-    with open("cache/HCC_Sports_Keeper/TeamStaffStatusReason.json", "r") as f:
+    with open("cache/SKTables/TeamStaffStatusReason.json", "r") as f:
         for _id, data in json.load(f).items():
             item, _ = StaffStatusReason.objects.get_or_create(
                 old_sk_id=_id,
@@ -152,7 +152,7 @@ if RESET_DB_MIGRATIONS:
             )
             item.save(update_fields=["inserted"])
 
-    with open("cache/HCC_Sports_Keeper/TeamStaffType.json", "r") as f:
+    with open("cache/SKTables/TeamStaffType.json", "r") as f:
         for _id, data in json.load(f).items():
             item, _ = StaffType.objects.get_or_create(
                 old_sk_id=_id,
@@ -166,7 +166,7 @@ if RESET_DB_MIGRATIONS:
             )
             item.save(update_fields=["inserted"])
 
-    with open("cache/HCC_Sports_Keeper/TeamStatus.json", "r") as f:
+    with open("cache/SKTables/TeamStatus.json", "r") as f:
         for _id, data in json.load(f).items():
             item, _ = TeamStatus.objects.get_or_create(
                 old_sk_id=_id,
@@ -181,7 +181,7 @@ if RESET_DB_MIGRATIONS:
             )
             item.save(update_fields=["inserted"])
 
-    with open("cache/HCC_Sports_Keeper/TeamStatusReason.json", "r") as f:
+    with open("cache/SKTables/TeamStatusReason.json", "r") as f:
         for _id, data in json.load(f).items():
             item, _ = TeamStatusReason.objects.get_or_create(
                 old_sk_id=_id,
