@@ -75,6 +75,9 @@ def set_staff_has_changed_flag_on_associated_team(instance: Staff, **kwargs):
     if kwargs.get("raw") or not instance.team_id:
         return
 
+    if not instance.type.change_causes_staff_flag_on_team_to_enable:
+        return
+
     instance.team.staff_has_changed_flag = True
     instance.team.save()
 

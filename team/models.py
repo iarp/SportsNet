@@ -86,7 +86,15 @@ class StaffType(_BasePermissions):
     required = models.BooleanField(default=False)
 
     web_access = models.BooleanField(
-        default=False, help_text="Can a member at this level login to the website?"
+        default=False,
+        help_text="Can a Staff record assigned with this StaffType be allowed to login?",
+    )
+
+    change_causes_staff_flag_on_team_to_enable = models.BooleanField(
+        default=True,
+        verbose_name="Change causes team.staff_has_changed_flag set to True",
+        help_text="Does changing a Staff record assigned with this "
+        "StaffType cause the team.staff_has_changed_flag to be True?",
     )
 
     # WebAccess bit,
