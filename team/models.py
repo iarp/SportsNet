@@ -48,9 +48,6 @@ class Team(_BaseModelWithCommonIDs):
 
     weight = PositionField(collection=["season"])
 
-    def __str__(self):
-        return self.get_full_team_name()
-
     def get_full_team_name(self, separator=" / "):
         return separator.join(
             [
@@ -244,7 +241,9 @@ class _StaffObjectsManagerWithDetails(models.Manager):
 
 class _StaffManagerCustomQuerySet(models.QuerySet):
     def emails(self):
-        return self.values_list("user__email", flat=True)
+        return self.filter(user__email__contains="@").values_list(
+            "user__email", flat=True
+        )
 
 
 class Staff(_BaseModel):

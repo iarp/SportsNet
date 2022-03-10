@@ -581,6 +581,25 @@ class StaffManagerTests(FixtureBasedTestCase):
             TypeError, error, SubDivision.objects.first().staff.managers
         )
 
+    def test_emails_returns_list_of_values(self):
+        team = Team.objects.first()
+        emails = team.staff.emails()
+        self.assertEqual(team.staff.count(), emails.count())
+        for email in emails:
+            self.assertIsInstance(email, str)
+            self.assertIn("@domain.com", email)
+
+    def test_emails_returns_list_of_values_without_blanks(self):
+        team = Team.objects.first()
+        staff = team.staff.first()
+        staff.user.email = "test"
+        staff.user.save()
+        emails = team.staff.emails()
+        self.assertEqual(team.staff.count() - 1, emails.count())
+        for email in emails:
+            self.assertIsInstance(email, str)
+            self.assertIn("@domain.com", email)
+
 
 class TeamTests(FixtureBasedTestCase):
     def test_team_is_approved_with_hcid_and_status_approved(self):
@@ -591,3 +610,18 @@ class TeamTests(FixtureBasedTestCase):
         self.assertFalse(team.is_approved)
         team.status.considered_approved = True
         self.assertTrue(team.is_approved)
+
+    def test_team_full_name_includes_parent_object_names(self):
+        team = Team.objects.first()
+        values = [
+            str(team.league),
+            str(team.division),
+            str(team.subdivision),
+            str(team.name),
+        ]
+
+        expected_base_output = " / ".join(values)
+        self.assertEqual(expected_base_output, team.get_full_team_name())
+
+        expected_custom_output = " * ".join(values)
+        self.assertEqual(expected_custom_output, team.get_full_team_name(" * "))
