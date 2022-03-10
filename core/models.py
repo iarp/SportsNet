@@ -121,6 +121,13 @@ class Season(_BaseModelWithCommonIDs):
 class League(_BaseModelWithCommonIDs):
     class Meta:
         ordering = ["season", "weight"]
+        constraints = [
+            models.UniqueConstraint(
+                Lower("name"),
+                "season",
+                name="season_league_name_unique",
+            ),
+        ]
 
     season = models.ForeignKey(Season, on_delete=models.CASCADE, related_name="leagues")
     name = models.CharField(max_length=255)

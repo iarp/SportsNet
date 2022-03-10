@@ -11,7 +11,7 @@ from django.utils import timezone
 
 from team.models import Staff, StaffType, Team
 
-from .models import PermissionOverrides, Season
+from .models import League, PermissionOverrides, Season
 from .perms import add_override_permission, has_perm
 from .test_helpers import FixtureBasedTestCase
 
@@ -325,6 +325,29 @@ class SeasonTests(TestCase):
             start=timezone.now() + timezone.timedelta(days=5 * 365),
             end=timezone.now() + timezone.timedelta(days=6 * 365),
         )
+
+
+class LeagueTests(FixtureBasedTestCase):
+    def test_league_season_name_uniqueness(self):
+        season = Season.objects.first()
+        self.assertRaises(
+            IntegrityError, League.objects.create, season=season, name="HL"
+        )
+
+    def test_league_season_name_uniqueness_case_insensitve(self):
+        season = Season.objects.first()
+        self.assertRaises(
+            IntegrityError, League.objects.create, season=season, name="Hl"
+        )
+
+    def test_league_creates_successfully_on_new_season(self):
+        season = Season.objects.create(
+            name="test",
+            start=timezone.now() + timezone.timedelta(days=5 * 365),
+            end=timezone.now() + timezone.timedelta(days=6 * 365),
+        )
+        League.objects.create(season=season, name="HL")
+
 
 class CoreUserTests(FixtureBasedTestCase):
     def test_user_username_always_matches_email(self):
