@@ -1,4 +1,42 @@
 # pragma: no cover
+"""
+1 Season
+    2 Leagues
+        4 Divisions
+            8 SubDivisions
+                16 Teams
+Season
+	League
+		Division
+			SubDivision
+				Team 1
+				Team 2
+			SubDivision
+				Team 1
+				Team 2
+		Division		
+			SubDivision	
+				Team 1
+				Team 2
+			SubDivision	
+				Team 1
+				Team 2
+	League			
+		Division		
+			SubDivision	
+				Team 1
+				Team 2
+			SubDivision	
+				Team 1
+				Team 2
+		Division		
+			SubDivision	
+				Team 1
+				Team 2
+			SubDivision	
+				Team 1
+				Team 2
+"""
 import datetime
 import glob
 import json
@@ -230,6 +268,7 @@ League.objects.all().delete()
 Season.objects.all().delete()
 User.objects.all().delete()
 
+type_manager, _ = StaffType.objects.get_or_create(name="Manager")
 type_coach, _ = StaffType.objects.get_or_create(name="Coach")
 type_convenor, _ = StaffType.objects.get_or_create(name="Convenor")
 type_vp, _ = StaffType.objects.get_or_create(name="VP")
@@ -364,6 +403,23 @@ for s in range(current_year, current_year + 2):
 
                     if VERBOSE:
                         print("\t\t\t\t", team, coach_user, sep=" - ")
+
+                    manager_user = create_user(
+                        f"{season} - {league} - {division} - {subdivision} - {team.name} - Manager"
+                    )
+
+                    Staff.objects.create(
+                        type=type_manager,
+                        season=season,
+                        league=league,
+                        division=division,
+                        subdivision=subdivision,
+                        team=team,
+                        user=manager_user,
+                        status=staff_status_approved,
+                    )
+                    if VERBOSE:
+                        print("\t\t\t\t", team, manager_user, sep=" - ")
 
 print("Seasons Generated:", Season.objects.count())
 print("Leagues Generated:", League.objects.count())

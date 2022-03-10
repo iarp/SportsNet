@@ -15,8 +15,8 @@ class StaffAccessTests(FixtureBasedTestCase):
     def test_seasonal_admins_can_edit_teams(self):
         season1 = Season.objects.first()
         season2 = Season.objects.exclude(pk=season1.pk).first()
-        user1_admin = Staff.objects.get(type__name="Admin", season=season1)
-        user2_admin = Staff.objects.get(type__name="Admin", season=season2)
+        user1_admin = season1.staff.own().first()
+        user2_admin = season2.staff.own().first()
 
         team1 = season1.teams.first()
         team2 = season2.teams.first()
@@ -50,27 +50,11 @@ class StaffAccessTests(FixtureBasedTestCase):
 
         self.assertIs(True, team1.can_edit(team1_coach))
 
-    def test_convenor_can_edit_own_divisions_teams(self):
-        team1 = Team.objects.first()
-        team2 = team1.subdivision.teams.first()
-
-        team1_convenor = Staff.objects.filter(
-            type__name="Convenor",
-            season=team1.season,
-            league=team1.league,
-            division=team1.division,
-            subdivision=team1.subdivision,
-            team__isnull=True,
-        ).first()
-
-        self.assertIs(True, team1.can_edit(team1_convenor))
-        self.assertIs(True, team2.can_edit(team1_convenor))
-
     def test_convenor_cannot_edit_other_divisions_teams(self):
         team1 = Team.objects.first()
         team2 = team1.subdivision.teams.first()
 
-        team1_convenor = (
+        convenor = (
             Staff.objects.filter(
                 type__name="Convenor",
                 season=team1.season,
@@ -82,7 +66,7 @@ class StaffAccessTests(FixtureBasedTestCase):
             .first()
         )
 
-        self.assertIs(False, team2.can_edit(team1_convenor))
+        self.assertIs(False, team2.can_edit(convenor))
 
     def test_coach_cannot_vote(self):
         team1 = Team.objects.first()
@@ -103,14 +87,14 @@ class StaffAccessTests(FixtureBasedTestCase):
 
     def test_convenor_can_edit_own_subdivison_teams(self):
         team1 = Team.objects.first()
-        team1_convenor = team1.subdivision.staff.first()
+        team1_convenor = team1.subdivision.staff.own().first()
 
         for team in team1.subdivision.teams.all():
             self.assertIs(True, team.can_edit(team1_convenor))
 
     def test_convenor_only_has_two_permissible_teams(self):
         team1 = Team.objects.first()
-        team1_convenor = team1.subdivision.staff.first()
+        team1_convenor = team1.subdivision.staff.own().first()
 
         i = 0
         for team in Team.objects.all():
@@ -120,14 +104,14 @@ class StaffAccessTests(FixtureBasedTestCase):
 
     def test_vp_can_edit_own_league_teams(self):
         team1 = Team.objects.first()
-        team1_vp = team1.league.staff.first()
+        team1_vp = team1.league.staff.own().first()
 
         for team in team1.league.teams.all():
             self.assertIs(True, team.can_edit(team1_vp))
 
     def test_vp_only_has_league_permissible_teams(self):
         team1 = Team.objects.first()
-        team1_vp = team1.league.staff.first()
+        team1_vp = team1.league.staff.own().first()
 
         for team in team1.league.teams.all():
             self.assertIs(True, team.can_edit(team1_vp))
@@ -137,6 +121,14 @@ class StaffAccessTests(FixtureBasedTestCase):
             i += team.can_edit(team1_vp)
 
         self.assertEqual(team1.league.teams.count(), i)
+
+    def test_division_can_vote_with_division_permissions(self):
+        division = Division.objects.first()
+
+        division_staff = division.staff.own().first()
+
+        for team in division.teams.all():
+            self.assertIs(True, team.can_edit(division_staff))
 
 
 class StaffAccessExtraPermissionsTests(FixtureBasedTestCase):
@@ -459,40 +451,6 @@ class StaffManagerTests(FixtureBasedTestCase):
             SubDivision.objects.first().staff.head_coach,
         )
 
-    def test_staff_emails_returns_correctly(self):
-        base_data = {
-            Season: 31,
-            League: 15,
-            Division: 7,
-            SubDivision: 3,
-            Team: 1,
-        }
-        for model, count in base_data.items():
-            obj = model.objects.first()
-            self.assertEqual(count, obj.staff.emails().count())
-
-    def test_confirm_staff_relationships_return_correct_counts(self):
-        base_data = {
-            Season: 31,
-            League: 15,
-            Division: 7,
-            SubDivision: 3,
-            Team: 1,
-        }
-        for model, count in base_data.items():
-            obj = model.objects.first()
-
-            # Should return user assigned to that object PLUS all
-            # staff members assigned to related items below it.
-            self.assertEqual(
-                count, obj.staff.count(), f"{model} mismatch on staff all counter"
-            )
-
-            # Should only return the specific objects assigned users and no others
-            self.assertEqual(
-                1, obj.staff.own().count(), f"{model} mismatch on staff own counter"
-            )
-
     def test_season_staff_returns_all_staff_entries(self):
         season = Season.objects.first()
         self.assertEqual(
@@ -551,6 +509,76 @@ class StaffManagerTests(FixtureBasedTestCase):
                 team=team,
             ).count(),
             team.staff.count(),
+        )
+
+    def test_season_staff_vps_returns_correct_number(self):
+        self.assertEqual(2, Season.objects.first().staff.vps().count())
+
+    def test_incorrect_model_staff_vps_raises_typeerror(self):
+        error = "vps is available on the Season instance."
+        self.assertRaisesMessage(TypeError, error, League.objects.first().staff.vps)
+        self.assertRaisesMessage(TypeError, error, Division.objects.first().staff.vps)
+        self.assertRaisesMessage(
+            TypeError, error, SubDivision.objects.first().staff.vps
+        )
+        self.assertRaisesMessage(TypeError, error, Team.objects.first().staff.vps)
+
+    def test_staff_senior_convenors_returns_correct_number(self):
+        self.assertEqual(4, Season.objects.first().staff.senior_convenors().count())
+        self.assertEqual(2, League.objects.first().staff.senior_convenors().count())
+
+    def test_incorrect_model_staff_senior_convenors_raises_typeerror(self):
+        self.assertRaisesMessage(
+            TypeError,
+            "senior_convenors is available on the Season or League instance.",
+            Division.objects.first().staff.senior_convenors,
+        )
+        self.assertRaisesMessage(
+            TypeError,
+            "senior_convenors is available on the Season or League instance.",
+            SubDivision.objects.first().staff.senior_convenors,
+        )
+        self.assertRaisesMessage(
+            TypeError,
+            "senior_convenors is available on the Season or League instance.",
+            Team.objects.first().staff.senior_convenors,
+        )
+
+    def test_staff_convenors_returns_correct_number(self):
+        self.assertEqual(8, Season.objects.first().staff.convenors().count())
+        self.assertEqual(4, League.objects.first().staff.convenors().count())
+        self.assertEqual(2, Division.objects.first().staff.convenors().count())
+
+    def test_incorrect_model_staff_convenors_raises_typeerror(self):
+        error = "convenors is available on the Season, League, or Division instance."
+        self.assertRaisesMessage(
+            TypeError, error, SubDivision.objects.first().staff.convenors
+        )
+        self.assertRaisesMessage(TypeError, error, Team.objects.first().staff.convenors)
+
+    def test_staff_coaches_returns_correct_number(self):
+        self.assertEqual(16, Season.objects.first().staff.coaches().count())
+        self.assertEqual(8, League.objects.first().staff.coaches().count())
+        self.assertEqual(4, Division.objects.first().staff.coaches().count())
+        self.assertEqual(2, SubDivision.objects.first().staff.coaches().count())
+        self.assertEqual(1, Team.objects.first().staff.coaches().count())
+
+    def test_staff_managers_returns_correct_number(self):
+        self.assertEqual(1, Team.objects.first().staff.managers().count())
+
+    def test_incorrect_model_staff_managers_raises_typeerror(self):
+        error = "managers is available on the Team instance."
+        self.assertRaisesMessage(
+            TypeError, error, Season.objects.first().staff.managers
+        )
+        self.assertRaisesMessage(
+            TypeError, error, League.objects.first().staff.managers
+        )
+        self.assertRaisesMessage(
+            TypeError, error, Division.objects.first().staff.managers
+        )
+        self.assertRaisesMessage(
+            TypeError, error, SubDivision.objects.first().staff.managers
         )
 
 
