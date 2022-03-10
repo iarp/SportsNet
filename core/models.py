@@ -151,6 +151,10 @@ class Division(_BaseModelWithCommonIDs):
     age_to = models.PositiveIntegerField(default=0)
     weight = PositionField(collection=["season"])
 
+    player_rating_factor = models.PositiveIntegerField(default=100)
+
+    assign_first_slot_as_goalie = models.BooleanField(default=True)
+
 
 class SubDivision(_BaseModelWithCommonIDs):
     season = models.ForeignKey(
@@ -166,6 +170,10 @@ class SubDivision(_BaseModelWithCommonIDs):
 
     weight = PositionField(collection="season")
     body_checking = models.BooleanField(default=False)
+
+    player_rating_factor = models.PositiveIntegerField(default=100)
+    default_number_of_teams = models.PositiveIntegerField(default=4)
+    inactive = models.BooleanField(default=False)
 
 
 class PermissionOverrides(_BasePermissions):

@@ -26,6 +26,8 @@ class Team(_BaseModelWithCommonIDs):
 
     status = models.ForeignKey("team.TeamStatus", on_delete=models.PROTECT)
 
+    old_teamseason_id = models.PositiveIntegerField(null=True, blank=True)
+
     # NOTE: These were on the original table, unknown
     # RegStatus = models.BooleanField(default=False)
     # ApprovalRequired = models.BooleanField(default=False)  # all records are false in current table
