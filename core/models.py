@@ -138,6 +138,14 @@ class League(_BaseModelWithCommonIDs):
 class Division(_BaseModelWithCommonIDs):
     class Meta:
         ordering = ["league", "weight"]
+        constraints = [
+            models.UniqueConstraint(
+                Lower("name"),
+                "season",
+                "league",
+                name="division_season_league_name_unique",
+            ),
+        ]
 
     season = models.ForeignKey(
         Season, on_delete=models.CASCADE, related_name="divisions"
@@ -157,6 +165,18 @@ class Division(_BaseModelWithCommonIDs):
 
 
 class SubDivision(_BaseModelWithCommonIDs):
+    class Meta:
+        ordering = ["weight"]
+        constraints = [
+            models.UniqueConstraint(
+                Lower("name"),
+                "season",
+                "league",
+                "division",
+                name="subdivision_season_league_division_name_unique",
+            ),
+        ]
+
     season = models.ForeignKey(
         Season, on_delete=models.CASCADE, related_name="subdivisions"
     )

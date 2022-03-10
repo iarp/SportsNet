@@ -9,7 +9,7 @@ from django.test import TestCase
 from django.urls import reverse
 from django.utils import timezone
 
-from team.models import Staff, StaffType, Team
+from team.models import Division, Staff, StaffType, SubDivision, Team
 
 from .models import League, PermissionOverrides, Season
 from .perms import add_override_permission, has_perm
@@ -328,25 +328,102 @@ class SeasonTests(TestCase):
 
 
 class LeagueTests(FixtureBasedTestCase):
-    def test_league_season_name_uniqueness(self):
+    def test_league_uniqueness(self):
         season = Season.objects.first()
         self.assertRaises(
             IntegrityError, League.objects.create, season=season, name="HL"
         )
 
-    def test_league_season_name_uniqueness_case_insensitve(self):
+    def test_league_uniqueness_case_insensitve(self):
         season = Season.objects.first()
         self.assertRaises(
             IntegrityError, League.objects.create, season=season, name="Hl"
         )
 
-    def test_league_creates_successfully_on_new_season(self):
+    def test_league_creates_successfully_on_new_objects(self):
         season = Season.objects.create(
             name="test",
             start=timezone.now() + timezone.timedelta(days=5 * 365),
             end=timezone.now() + timezone.timedelta(days=6 * 365),
         )
         League.objects.create(season=season, name="HL")
+
+
+class DivisionTests(FixtureBasedTestCase):
+    def test_division_uniqueness(self):
+        season = Season.objects.first()
+        league = season.leagues.first()
+        division = league.divisions.first()
+        self.assertRaises(
+            IntegrityError,
+            Division.objects.create,
+            season=season,
+            league=league,
+            name=division.name,
+        )
+
+    def test_division_uniqueness_case_insensitve(self):
+        season = Season.objects.first()
+        league = season.leagues.first()
+        division = league.divisions.first()
+        self.assertRaises(
+            IntegrityError,
+            Division.objects.create,
+            season=season,
+            league=league,
+            name=division.name.lower(),
+        )
+
+    def test_division_creates_successfully_on_new_objects(self):
+        season = Season.objects.create(
+            name="test",
+            start=timezone.now() + timezone.timedelta(days=5 * 365),
+            end=timezone.now() + timezone.timedelta(days=6 * 365),
+        )
+        league = League.objects.create(season=season, name="HL")
+        Division.objects.create(season=season, league=league, name="test")
+
+
+class SubDivisionTests(FixtureBasedTestCase):
+    def test_subdivision_uniqueness(self):
+        season = Season.objects.first()
+        league = season.leagues.first()
+        division = league.divisions.first()
+        subdivision = division.subdivisions.first()
+        self.assertRaises(
+            IntegrityError,
+            SubDivision.objects.create,
+            season=season,
+            league=league,
+            division=division,
+            name=subdivision.name,
+        )
+
+    def test_subdivision_uniqueness_case_insensitve(self):
+        season = Season.objects.first()
+        league = season.leagues.first()
+        division = league.divisions.first()
+        subdivision = division.subdivisions.first()
+        self.assertRaises(
+            IntegrityError,
+            SubDivision.objects.create,
+            season=season,
+            league=league,
+            division=division,
+            name=subdivision.name.lower(),
+        )
+
+    def test_subdivision_creates_successfully_on_new_objects(self):
+        season = Season.objects.create(
+            name="test",
+            start=timezone.now() + timezone.timedelta(days=5 * 365),
+            end=timezone.now() + timezone.timedelta(days=6 * 365),
+        )
+        league = League.objects.create(season=season, name="HL")
+        division = Division.objects.create(season=season, league=league, name="test")
+        SubDivision.objects.create(
+            season=season, league=league, division=division, name="test"
+        )
 
 
 class CoreUserTests(FixtureBasedTestCase):
