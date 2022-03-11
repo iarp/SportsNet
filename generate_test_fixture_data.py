@@ -140,6 +140,7 @@ if RESET_DB_MIGRATIONS:
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "sportsnet.settings")
 django.setup()
 
+from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.contrib.auth.hashers import make_password
 from django.core.management import call_command
@@ -160,6 +161,7 @@ from team.models import (
 )
 
 User = get_user_model()
+settings.INSERTED_UPDATED_SKIP_DEFAULTS = True
 
 if RESET_DB_MIGRATIONS:
     with open("cache/SKTables/TeamStaffStatus.json", "r") as f:
@@ -174,7 +176,11 @@ if RESET_DB_MIGRATIONS:
                 datetime.datetime.fromisoformat(data["InsertDateTime"]),
                 timezone.get_current_timezone(),
             )
-            item.save(update_fields=["inserted"])
+            item.updated = timezone.make_aware(
+                datetime.datetime.fromisoformat(data["UpdateDateTime"]),
+                timezone.get_current_timezone(),
+            )
+            item.save(update_fields=["inserted", "updated"])
 
     with open("cache/SKTables/TeamStaffStatusReason.json", "r") as f:
         for _id, data in json.load(f).items():
@@ -187,7 +193,11 @@ if RESET_DB_MIGRATIONS:
                 datetime.datetime.fromisoformat(data["InsertDateTime"]),
                 timezone.get_current_timezone(),
             )
-            item.save(update_fields=["inserted"])
+            item.updated = timezone.make_aware(
+                datetime.datetime.fromisoformat(data["UpdateDateTime"]),
+                timezone.get_current_timezone(),
+            )
+            item.save(update_fields=["inserted", "updated"])
 
     with open("cache/SKTables/TeamStaffType.json", "r") as f:
         for _id, data in json.load(f).items():
@@ -201,7 +211,11 @@ if RESET_DB_MIGRATIONS:
                 datetime.datetime.fromisoformat(data["InsertDateTime"]),
                 timezone.get_current_timezone(),
             )
-            item.save(update_fields=["inserted"])
+            item.updated = timezone.make_aware(
+                datetime.datetime.fromisoformat(data["UpdateDateTime"]),
+                timezone.get_current_timezone(),
+            )
+            item.save(update_fields=["inserted", "updated"])
 
     with open("cache/SKTables/TeamStatus.json", "r") as f:
         for _id, data in json.load(f).items():
@@ -216,7 +230,11 @@ if RESET_DB_MIGRATIONS:
                 datetime.datetime.fromisoformat(data["InsertDateTime"]),
                 timezone.get_current_timezone(),
             )
-            item.save(update_fields=["inserted"])
+            item.updated = timezone.make_aware(
+                datetime.datetime.fromisoformat(data["UpdateDateTime"]),
+                timezone.get_current_timezone(),
+            )
+            item.save(update_fields=["inserted", "updated"])
 
     # with open("cache/SKTables/TeamStatusReason.json", "r") as f:
     #     for _id, data in json.load(f).items():
@@ -230,7 +248,11 @@ if RESET_DB_MIGRATIONS:
     #             datetime.datetime.fromisoformat(data["InsertDateTime"]),
     #             timezone.get_current_timezone(),
     #         )
-    #         item.save(update_fields=["inserted"])
+    #         item.updated = timezone.make_aware(
+    #             datetime.datetime.fromisoformat(data["UpdateDateTime"]),
+    #             timezone.get_current_timezone(),
+    #         )
+    #         item.save(update_fields=["inserted", "updated"])
 
 
 """
@@ -268,14 +290,28 @@ League.objects.all().delete()
 Season.objects.all().delete()
 User.objects.all().delete()
 
-type_manager, _ = StaffType.objects.get_or_create(name="Manager")
-type_coach, _ = StaffType.objects.get_or_create(name="Coach")
-type_convenor, _ = StaffType.objects.get_or_create(name="Convenor")
-type_vp, _ = StaffType.objects.get_or_create(name="VP")
-type_admin, _ = StaffType.objects.get_or_create(name="Admin")
+timestamp = timezone.datetime(2022, 1, 1, 0, 0, 0)
 
-staff_status_approved, _ = StaffStatus.objects.get_or_create(name="APPROVED")
-team_status_approved, _ = TeamStatus.objects.get_or_create(name="APPROVED")
+type_manager = StaffType.objects.create(
+    name="Manager", inserted=timestamp, updated=timestamp
+)
+type_coach = StaffType.objects.create(
+    name="Coach", inserted=timestamp, updated=timestamp
+)
+type_convenor = StaffType.objects.create(
+    name="Convenor", inserted=timestamp, updated=timestamp
+)
+type_vp = StaffType.objects.create(name="VP", inserted=timestamp, updated=timestamp)
+type_admin = StaffType.objects.create(
+    name="Admin", inserted=timestamp, updated=timestamp
+)
+
+staff_status_approved = StaffStatus.objects.create(
+    name="APPROVED", inserted=timestamp, updated=timestamp
+)
+team_status_approved = TeamStatus.objects.create(
+    name="APPROVED", inserted=timestamp, updated=timestamp
+)
 
 
 def generate_email_address(data):
@@ -288,7 +324,12 @@ PASSWORD = make_password("12345")
 def create_user(data):
     data = generate_email_address(data)
     return User.objects.create(
-        username=data, email=data, password=PASSWORD, is_active=True
+        username=data,
+        email=data,
+        is_active=True,
+        inserted=timestamp,
+        updated=timestamp,
+        date_joined=timestamp,
     )
 
 
@@ -298,6 +339,8 @@ for s in range(current_year, current_year + 2):
         name=f"{s}-{s+1}",
         start=timezone.datetime(s, 9, 1),
         end=timezone.datetime(s + 1, 8, 31),
+        inserted=timestamp,
+        updated=timestamp,
     )
 
     admin_user = create_user(f"{season} Admin")
@@ -306,13 +349,17 @@ for s in range(current_year, current_year + 2):
         type=type_admin,
         user=admin_user,
         status=staff_status_approved,
+        inserted=timestamp,
+        updated=timestamp,
     )
 
     if VERBOSE:
         print(season)
 
     for league in ["HL", "REP"]:
-        league = League.objects.create(name=league, season=season)
+        league = League.objects.create(
+            name=league, season=season, inserted=timestamp, updated=timestamp
+        )
 
         if VERBOSE:
             print("\t", league)
@@ -325,6 +372,8 @@ for s in range(current_year, current_year + 2):
             league=league,
             user=vp_user,
             status=staff_status_approved,
+            inserted=timestamp,
+            updated=timestamp,
         )
 
         subdivision_listing = ["Blue", "White"]
@@ -334,7 +383,11 @@ for s in range(current_year, current_year + 2):
         for division in ["U10", "U11"]:
 
             division = Division.objects.create(
-                name=division, league=league, season=season
+                name=division,
+                league=league,
+                season=season,
+                inserted=timestamp,
+                updated=timestamp,
             )
 
             division_user = create_user(f"{season} {league} {division} Division")
@@ -346,6 +399,8 @@ for s in range(current_year, current_year + 2):
                 division=division,
                 user=division_user,
                 status=staff_status_approved,
+                inserted=timestamp,
+                updated=timestamp,
             )
 
             if VERBOSE:
@@ -357,6 +412,8 @@ for s in range(current_year, current_year + 2):
                     division=division,
                     season=season,
                     league=league,
+                    inserted=timestamp,
+                    updated=timestamp,
                 )
 
                 subdivision_user = create_user(
@@ -374,6 +431,8 @@ for s in range(current_year, current_year + 2):
                     subdivision=subdivision,
                     user=subdivision_user,
                     status=staff_status_approved,
+                    inserted=timestamp,
+                    updated=timestamp,
                 )
 
                 for team in ["Graham", "Henry"]:
@@ -384,6 +443,8 @@ for s in range(current_year, current_year + 2):
                         subdivision=subdivision,
                         name=team,
                         status=team_status_approved,
+                        inserted=timestamp,
+                        updated=timestamp,
                     )
 
                     coach_user = create_user(
@@ -399,6 +460,8 @@ for s in range(current_year, current_year + 2):
                         team=team,
                         user=coach_user,
                         status=staff_status_approved,
+                        inserted=timestamp,
+                        updated=timestamp,
                     )
 
                     if VERBOSE:
@@ -417,6 +480,8 @@ for s in range(current_year, current_year + 2):
                         team=team,
                         user=manager_user,
                         status=staff_status_approved,
+                        inserted=timestamp,
+                        updated=timestamp,
                     )
                     if VERBOSE:
                         print("\t\t\t\t", team, manager_user, sep=" - ")

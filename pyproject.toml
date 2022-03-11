@@ -14,5 +14,5 @@ omit = [
 ]
 
 [tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = "sportsnet.settings"
+DJANGO_SETTINGS_MODULE = "sportsnet.settings_test"
 python_files = "tests.py test_*.py *_tests.py"

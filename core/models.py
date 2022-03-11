@@ -10,7 +10,7 @@ from iarp_django_utils.models import BaseSetting
 from loguru import logger
 from positions.fields import PositionField
 
-from .model_helpers import _BaseModelWithCommonIDs, _BasePermissions
+from .model_helpers import _BaseModel, _BaseModelWithCommonIDs, _BasePermissions
 
 
 class _UserManager(BaseUserManager):
@@ -42,7 +42,7 @@ class _UserManager(BaseUserManager):
         return self._create_user(email, password, **extra_fields)
 
 
-class User(AbstractUser):
+class User(_BaseModel, AbstractUser):
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
     username_validator = UnicodeUsernameValidator()
@@ -73,8 +73,9 @@ class User(AbstractUser):
             "unique": gettext_lazy("A user with that email address already exists."),
         },
     )
-    inserted = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.get_username()
 
 
 class Season(_BaseModelWithCommonIDs):

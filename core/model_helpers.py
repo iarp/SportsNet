@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.db import models
+from django.utils import timezone
 from django.utils.translation import gettext_lazy
 
 
@@ -14,7 +15,7 @@ class _BaseModel(models.Model):
         help_text=gettext_lazy("The old primary id for the entry"),
     )
 
-    inserted = models.DateTimeField(auto_now_add=True)
+    inserted = models.DateTimeField(default=timezone.now)
     inserted_by = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.SET_NULL,
@@ -23,7 +24,7 @@ class _BaseModel(models.Model):
         related_name="+",
     )
 
-    updated = models.DateTimeField(auto_now=True)
+    updated = models.DateTimeField(default=timezone.now)
     updated_by = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.SET_NULL,
@@ -34,6 +35,16 @@ class _BaseModel(models.Model):
 
     def __str__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+
+        if not getattr(settings, "INSERTED_UPDATED_SKIP_DEFAULTS", False):
+            self.updated = timezone.now()
+
+            if update_fields := kwargs.get("update_fields"):
+                kwargs["update_fields"] = set(update_fields).union({"updated"})
+
+        super().save(*args, **kwargs)
 
 
 class _BaseModelWithCommonIDs(_BaseModel):

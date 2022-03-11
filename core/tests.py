@@ -439,6 +439,7 @@ class CoreUserTests(FixtureBasedTestCase):
 
         user = User.objects.all().first()
         user.is_staff = True
+        user.set_password("12345")
         user.save()
 
         response = self.client.post(
@@ -452,6 +453,7 @@ class CoreUserTests(FixtureBasedTestCase):
 
         user = User.objects.all().first()
         user.is_superuser = True
+        user.set_password("12345")
         user.save()
 
         response = self.client.post(
@@ -466,6 +468,8 @@ class CoreUserTests(FixtureBasedTestCase):
         StaffType.objects.filter(name="Coach").update(web_access=True)
 
         user = User.objects.filter(staff_assignments__type__web_access=True).first()
+        user.set_password("12345")
+        user.save()
 
         response = self.client.post(
             reverse("account_login"),
@@ -477,6 +481,8 @@ class CoreUserTests(FixtureBasedTestCase):
     def test_user_cannot_login_with_web_access_false_on_staff_type(self):
 
         user = User.objects.all().first()
+        user.set_password("12345")
+        user.save()
 
         self.assertIs(
             False, user.staff_assignments.filter(type__web_access=True).exists()
