@@ -32,7 +32,7 @@ class _BaseModel(models.Model):
         related_name="+",
     )
 
-    def __str__(self):  # pragma: no cover
+    def __str__(self):
         return self.name
 
 

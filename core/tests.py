@@ -435,6 +435,32 @@ class CoreUserTests(FixtureBasedTestCase):
         user.save()
         self.assertEqual(user.email, user.username)
 
+    def test_user_can_login_with_is_staff_true(self):
+
+        user = User.objects.all().first()
+        user.is_staff = True
+        user.save()
+
+        response = self.client.post(
+            reverse("account_login"),
+            {"login": user.email, "password": "12345"},
+            follow=True,
+        )
+        self.assertEqual(user.pk, response.context["user"].pk)
+
+    def test_user_can_login_with_is_superuser_true(self):
+
+        user = User.objects.all().first()
+        user.is_superuser = True
+        user.save()
+
+        response = self.client.post(
+            reverse("account_login"),
+            {"login": user.email, "password": "12345"},
+            follow=True,
+        )
+        self.assertEqual(user.pk, response.context["user"].pk)
+
     def test_user_can_login_with_web_access_true_on_staff_type(self):
 
         StaffType.objects.filter(name="Coach").update(web_access=True)
@@ -473,3 +499,24 @@ class CoreUserTests(FixtureBasedTestCase):
             follow=True,
         )
         self.assertIsNone(response.context["user"].pk)
+
+    def test_user_manager_create_user(self):
+        user = User.objects.create_user(email="test@domain.com", password="12345")
+        self.assertIsNotNone(user.pk)
+        self.assertIs(False, user.is_staff)
+        self.assertIs(False, user.is_superuser)
+
+    def test_user_manager_create_superuser(self):
+        user = User.objects.create_superuser(email="test@domain.com", password="12345")
+        self.assertIsNotNone(user.pk)
+        self.assertIs(True, user.is_staff)
+        self.assertIs(True, user.is_superuser)
+
+    def test_user_manager_create_user_raises_valueerror_without_email(self):
+        self.assertRaisesMessage(
+            ValueError,
+            "email is required for User objects",
+            User.objects.create_user,
+            email="",
+            password="12345",
+        )
