@@ -21,7 +21,7 @@ class _BaseModel(models.Model):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        related_name="+",
+        related_name="%(class)s_inserted",
     )
 
     updated = models.DateTimeField(default=timezone.now)
@@ -30,7 +30,7 @@ class _BaseModel(models.Model):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        related_name="+",
+        related_name="%(class)s_updated",
     )
 
     def __str__(self):
