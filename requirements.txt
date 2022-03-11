@@ -6,6 +6,10 @@ django-model-utils
 django-positions
 django-sekizai
 
+-e git+https://github.com/iarp/Python-Utils.git#egg=iarp_utils
+-e git+https://github.com/iarp/iarp-django-utils.git#egg=iarp_django_utils
+-e git+https://github.com/iarp/django-templated-emailer.git#egg=django_templated_emailer
+
 loguru
 psycopg2-binary
 requests

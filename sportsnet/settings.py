@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     # 'allauth.socialaccount.providers.facebook',
     # 'allauth.socialaccount.providers.microsoft',
     # 'allauth.socialaccount.providers.linkedin,'
+    "iarp_django_utils",
+    "django_templated_emailer",
 ]
 
 MIDDLEWARE = [

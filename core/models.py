@@ -6,6 +6,7 @@ from django.db.models import F, Q
 from django.db.models.functions import Lower
 from django.utils import timezone
 from django.utils.translation import gettext, gettext_lazy
+from iarp_django_utils.models import BaseSetting
 from loguru import logger
 from positions.fields import PositionField
 
@@ -265,3 +266,7 @@ class PermissionOverrides(_BasePermissions):
     )
 
     assigned_on = models.DateTimeField(null=True, blank=True)
+
+
+class Setting(BaseSetting):
+    pass
