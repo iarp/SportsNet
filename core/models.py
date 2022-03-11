@@ -1,45 +1,72 @@
 from django.conf import settings
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.contrib.auth.validators import UnicodeUsernameValidator
 from django.db import models
 from django.db.models import F, Q
 from django.db.models.functions import Lower
 from django.utils import timezone
-from django.utils.translation import gettext_lazy as _
+from django.utils.translation import gettext, gettext_lazy
 from loguru import logger
 from positions.fields import PositionField
 
 from .model_helpers import _BaseModelWithCommonIDs, _BasePermissions
 
 
+class _UserManager(BaseUserManager):
+    """Define a model manager for User model with no username field."""
+
+    use_in_migrations = True
+
+    def _create_user(self, email, password, **extra_fields):
+        """Create and save a User with the given email and password."""
+        if not email:
+            raise ValueError(gettext("The given email must be set"))
+        email = self.normalize_email(email)
+        user = self.model(email=email, **extra_fields)
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+
+    def create_user(self, email, password=None, **extra_fields):
+        extra_fields.setdefault("is_staff", False)
+        extra_fields.setdefault("is_superuser", False)
+        return self._create_user(email, password, **extra_fields)
+
+    def create_superuser(self, email, password, **extra_fields):
+        extra_fields["is_staff"] = True
+        extra_fields["is_superuser"] = True
+        return self._create_user(email, password, **extra_fields)
+
+
 class User(AbstractUser):
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
     username_validator = UnicodeUsernameValidator()
+    objects = _UserManager()
 
     username = models.CharField(
-        _("username"),
+        gettext_lazy("username"),
         max_length=500,
         unique=True,
-        help_text=_(
+        help_text=gettext_lazy(
             "Required. 500 characters or fewer. Letters, digits and @/./+/-/_ only."
         ),
         validators=[username_validator],
         error_messages={
-            "unique": _("A user with that username already exists."),
+            "unique": gettext_lazy("A user with that username already exists."),
         },
     )
 
     email = models.EmailField(
-        _("email address"),
+        gettext_lazy("email address"),
         unique=True,
         max_length=500,
-        help_text=_(
+        help_text=gettext_lazy(
             "Required. 500 characters or fewer. Letters, digits and @/./+/-/_ only."
         ),
         validators=[username_validator],
         error_messages={
-            "unique": _("A user with that email address already exists."),
+            "unique": gettext_lazy("A user with that email address already exists."),
         },
     )
     inserted = models.DateTimeField(auto_now_add=True)
@@ -94,7 +121,7 @@ class Season(_BaseModelWithCommonIDs):
                 start__lte=based_on_date, end__gte=based_on_date
             ).get()
         except cls.DoesNotExist:
-            logger.critical("No season is set as current!")
+            logger.critical(gettext("No season is set as current!"))
             raise
 
     def save(self, *args, **kwargs):
@@ -112,7 +139,9 @@ class Season(_BaseModelWithCommonIDs):
 
             if season.start <= start <= season.end:
                 raise ValueError(
-                    "Season start and end dates cannot be between another seasons dates."
+                    gettext(
+                        "Season start and end dates cannot be between another seasons dates."
+                    )
                 )
 
         return super().save(*args, **kwargs)

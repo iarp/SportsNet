@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.db.models import Q
+from django.utils.translation import gettext, gettext_lazy
 from positions.fields import PositionField
 
 from core.model_helpers import _BaseModel, _BaseModelWithCommonIDs, _BasePermissions
@@ -76,8 +77,8 @@ class Team(_BaseModelWithCommonIDs):
 class StaffType(_BasePermissions):
     class Meta:
         ordering = ["weight"]
-        verbose_name = "Team Staff Type"
-        verbose_name_plural = "Team Staff Types"
+        verbose_name = gettext_lazy("Staff Type")
+        verbose_name_plural = gettext_lazy("Staff Types")
 
     name = models.CharField(max_length=255)
     weight = PositionField()
@@ -86,14 +87,20 @@ class StaffType(_BasePermissions):
 
     web_access = models.BooleanField(
         default=False,
-        help_text="Can a Staff record assigned with this StaffType be allowed to login?",
+        help_text=gettext_lazy(
+            "Can a Staff record assigned with this StaffType be allowed to login?"
+        ),
     )
 
     change_causes_staff_flag_on_team_to_enable = models.BooleanField(
         default=True,
-        verbose_name="Change causes team.staff_has_changed_flag set to True",
-        help_text="Does changing a Staff record assigned with this "
-        "StaffType cause the team.staff_has_changed_flag to be True?",
+        verbose_name=gettext_lazy(
+            "Change causes team.staff_has_changed_flag set to True"
+        ),
+        help_text=gettext_lazy(
+            "Does changing a Staff record assigned with this "
+            "StaffType cause the team.staff_has_changed_flag to be True?"
+        ),
     )
 
     # WebAccess bit,
@@ -117,8 +124,8 @@ class StaffType(_BasePermissions):
 class StaffStatus(_BaseModel):
     class Meta:
         ordering = ["weight"]
-        verbose_name = "Team Staff Status"
-        verbose_name_plural = "Team Staff Statuses"
+        verbose_name = gettext_lazy("Staff Status")
+        verbose_name_plural = gettext_lazy("Staff Statuses")
 
     name = models.CharField(max_length=255)
     weight = PositionField()
@@ -128,8 +135,8 @@ class StaffStatus(_BaseModel):
 class StaffStatusReason(_BaseModel):
     class Meta:
         ordering = ["weight"]
-        verbose_name = "Team Staff Status Reason"
-        verbose_name_plural = "Team Staff Status Reasons"
+        verbose_name = gettext_lazy("Team Staff Status Reason")
+        verbose_name_plural = gettext_lazy("Team Staff Status Reasons")
 
     name = models.CharField(max_length=255)
     weight = PositionField(default=0)
@@ -139,7 +146,7 @@ class _StaffObjectsManagerWithDetails(models.Manager):
     def head_coach(self, *args, **kwargs):
         if isinstance(self.instance, Team):
             return self.filter(*args, type__name="Coach", **kwargs).first()
-        raise TypeError("head_coach is available on the Team instance.")
+        raise TypeError(gettext_lazy("head_coach is available on the Team instance."))
 
     def own(self, *args, **kwargs):
         extras = {}
@@ -174,7 +181,7 @@ class _StaffObjectsManagerWithDetails(models.Manager):
                 subdivision_id__isnull=True,
                 team_id__isnull=True,
             ).exclude(league_id__isnull=True)
-        raise TypeError("vps is available on the Season instance.")
+        raise TypeError(gettext("vps is available on the Season instance."))
 
     def senior_convenors(self):
         if isinstance(self.instance, Season):
@@ -188,7 +195,7 @@ class _StaffObjectsManagerWithDetails(models.Manager):
                 team_id__isnull=True,
             ).exclude(Q(league_id__isnull=True) | Q(division_id__isnull=True))
         raise TypeError(
-            "senior_convenors is available on the Season or League instance."
+            gettext("senior_convenors is available on the Season or League instance.")
         )
 
     def convenors(self):
@@ -207,7 +214,9 @@ class _StaffObjectsManagerWithDetails(models.Manager):
                 subdivision_id__isnull=True,
             )
         raise TypeError(
-            "convenors is available on the Season, League, or Division instance."
+            gettext(
+                "convenors is available on the Season, League, or Division instance."
+            )
         )
 
     def coaches(self):
@@ -230,13 +239,13 @@ class _StaffObjectsManagerWithDetails(models.Manager):
         # elif isinstance(self.instance, SubDivision):
         #     return qs.exclude(team_id__isnull=True)
         # raise TypeError(
-        #     "coaches is available on the Season, League, Division, or SubDivision instance."
+        #     gettext("coaches is available on the Season, League, Division, or SubDivision instance.")
         # )
 
     def managers(self):
         if isinstance(self.instance, Team):
             return self.filter(type__name="Manager")
-        raise TypeError("managers is available on the Team instance.")
+        raise TypeError(gettext("managers is available on the Team instance."))
 
 
 class _StaffManagerCustomQuerySet(models.QuerySet):
@@ -248,8 +257,8 @@ class _StaffManagerCustomQuerySet(models.QuerySet):
 
 class Staff(_BaseModel):
     class Meta:
-        verbose_name = "Team Staff"
-        verbose_name_plural = "Team Staff"
+        verbose_name = gettext_lazy("Team Staff")
+        verbose_name_plural = gettext_lazy("Team Staff")
 
     objects = _StaffObjectsManagerWithDetails.from_queryset(
         _StaffManagerCustomQuerySet
@@ -319,8 +328,8 @@ class TeamStatus(_BaseModel):
     # TODO: TeamStatusReason display was built like TeamStatus - TeamStatusReason
     class Meta:
         ordering = ["weight"]
-        verbose_name = "Team Status"
-        verbose_name_plural = "Team Statuses"
+        verbose_name = gettext_lazy("Team Status")
+        verbose_name_plural = gettext_lazy("Team Statuses")
 
     name = models.CharField(max_length=255)
     weight = PositionField(default=0)
@@ -330,8 +339,10 @@ class TeamStatus(_BaseModel):
     # NOTE: Used in Team.is_approved mainly for roster downloader
     considered_approved = models.BooleanField(
         default=False,
-        help_text="If a team is assigned this status, are they "
-        "technically considered approved in hockey canada?",
+        help_text=gettext_lazy(
+            "If a team is assigned this status, are they "
+            "technically considered approved in hockey canada?"
+        ),
     )
 
     # NOTE: Was in the table, all entries False. Unknown usage.
@@ -341,8 +352,8 @@ class TeamStatus(_BaseModel):
 class TeamStatusLog(_BaseModel):
     class Meta:
         ordering = ["inserted"]
-        verbose_name = "Team Status Log"
-        verbose_name_plural = "Team Status Logs"
+        verbose_name = gettext_lazy("Team Status Log")
+        verbose_name_plural = gettext_lazy("Team Status Logs")
 
     team = models.ForeignKey("team.Team", on_delete=models.CASCADE)
 
@@ -361,16 +372,16 @@ class TeamStatusLog(_BaseModel):
 class TeamNote(_BaseModel):
     class Meta:
         ordering = ["inserted"]
-        verbose_name = "Team Note"
-        verbose_name_plural = "Team Notes"
+        verbose_name = gettext_lazy("Team Note")
+        verbose_name_plural = gettext_lazy("Team Notes")
 
     team = models.ForeignKey(
         "team.Team", on_delete=models.CASCADE, related_name="notes"
     )
 
     class NoteTypes(models.TextChoices):
-        ROSTER = "ROSTER", "Roster"
-        PLAYER = "PLAYER", "Player"
+        ROSTER = "ROSTER", gettext_lazy("Roster")
+        PLAYER = "PLAYER", gettext_lazy("Player")
 
     type = models.CharField(
         max_length=255, default=NoteTypes.ROSTER, choices=NoteTypes.choices

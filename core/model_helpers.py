@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.db import models
+from django.utils.translation import gettext, gettext_lazy
 
 
 class _BaseModel(models.Model):
@@ -7,7 +8,10 @@ class _BaseModel(models.Model):
         abstract = True
 
     old_sk_id = models.PositiveIntegerField(
-        null=True, blank=True, unique=True, help_text="The old primary id for the entry"
+        null=True,
+        blank=True,
+        unique=True,
+        help_text=gettext_lazy("The old primary id for the entry"),
     )
 
     inserted = models.DateTimeField(auto_now_add=True)
@@ -43,7 +47,9 @@ class _BaseModelWithCommonIDs(_BaseModel):
         max_length=255,
         null=True,
         blank=True,
-        help_text="*_id value for api, not meant to be editable or seen by users. Backend only.",
+        help_text=gettext_lazy(
+            "*_id value for api, not meant to be editable or seen by users. Backend only."
+        ),
         unique=True,
     )
 

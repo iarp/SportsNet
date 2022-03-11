@@ -1,5 +1,6 @@
 from django.db.models import Q
 from django.utils import timezone
+from django.utils.translation import gettext
 from loguru import logger
 
 
@@ -44,12 +45,16 @@ def add_override_permission(user, obj, permission_name, value, assigned_by=None)
 
     if not isinstance(obj, (Season, League, Division, SubDivision, Team)):
         raise ValueError(
-            "Parameter obj must be of type Season, League, Division, SubDivision, or Team."
+            gettext(
+                "Parameter obj must be of type Season, League, Division, SubDivision, or Team."
+            )
         )
 
     if permission_name not in PermissionOverrides.PERMISSION_TYPES:
         raise ValueError(
-            "Parameter permission_name value must be an attribute of PermissionOverrides model."
+            gettext(
+                "Parameter permission_name value must be an attribute of PermissionOverrides model."
+            )
         )
 
     if isinstance(user, Staff):
