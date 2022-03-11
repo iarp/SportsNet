@@ -11,8 +11,11 @@ omit = [
     ".venv/*", 
     "**/tests.py",
     "*migrations*",
+    ".tox/*",
+    "src/*"
 ]
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "sportsnet.settings_test"
 python_files = "tests.py test_*.py *_tests.py"
+norecursedirs="src"
