@@ -26,6 +26,9 @@ class Team(_BaseModelWithCommonIDs):
     number = models.PositiveIntegerField(default=0)
 
     status = models.ForeignKey("team.TeamStatus", on_delete=models.PROTECT)
+    status_reason = models.ForeignKey(
+        "team.TeamStatusReason", on_delete=models.SET_NULL, null=True, blank=True
+    )
 
     old_teamseason_id = models.PositiveIntegerField(null=True, blank=True)
 
@@ -325,7 +328,6 @@ class Staff(_BaseModel):
 
 
 class TeamStatus(_BaseModel):
-    # TODO: TeamStatusReason display was built like TeamStatus - TeamStatusReason
     class Meta:
         ordering = ["weight"]
         verbose_name = gettext_lazy("Team Status")
@@ -349,6 +351,28 @@ class TeamStatus(_BaseModel):
     clear_changed_staff_players_flag = models.BooleanField(default=False)
 
 
+class TeamStatusReason(_BaseModel):
+    class Meta:
+        ordering = ["weight", "name"]
+        verbose_name = gettext_lazy("Team Status Reason")
+        verbose_name_plural = gettext_lazy("Team Status Reasons")
+
+        constraints = [
+            models.constraints.UniqueConstraint(
+                "status", "default", name="teamstatusreason_status_default_uniqueness"
+            )
+        ]
+
+    status = models.ForeignKey(
+        TeamStatus, on_delete=models.CASCADE, related_name="reasons"
+    )
+
+    name = models.CharField(max_length=255)
+    weight = PositionField()
+
+    default = models.BooleanField(default=None, null=True, blank=True)
+
+
 class TeamStatusLog(_BaseModel):
     class Meta:
         ordering = ["inserted"]
@@ -358,15 +382,26 @@ class TeamStatusLog(_BaseModel):
     team = models.ForeignKey("team.Team", on_delete=models.CASCADE)
 
     old_status = models.ForeignKey(
-        TeamStatus, on_delete=models.DO_NOTHING, null=True, blank=True, related_name="+"
+        TeamStatus, on_delete=models.SET_NULL, null=True, blank=True, related_name="+"
+    )
+    old_status_reason = models.ForeignKey(
+        TeamStatusReason,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="+",
     )
 
     new_status = models.ForeignKey(
-        TeamStatus, on_delete=models.DO_NOTHING, null=True, blank=True, related_name="+"
+        TeamStatus, on_delete=models.SET_NULL, null=True, blank=True, related_name="+"
     )
-
-    # NOTE: Was in the table, all entries False. Unknown usage.
-    # ChgdStfPlyrSts = models.BooleanField(default=False)
+    new_status_reason = models.ForeignKey(
+        TeamStatusReason,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="+",
+    )
 
 
 class TeamNote(_BaseModel):

@@ -158,6 +158,7 @@ from team.models import (
     StaffType,
     Team,
     TeamStatus,
+    TeamStatusReason,
 )
 
 User = get_user_model()
@@ -236,23 +237,23 @@ if RESET_DB_MIGRATIONS:
             )
             item.save(update_fields=["inserted", "updated"])
 
-    # with open("cache/SKTables/TeamStatusReason.json", "r") as f:
-    #     for _id, data in json.load(f).items():
-    #         item, _ = TeamStatusReason.objects.get_or_create(
-    #             old_sk_id=_id,
-    #             name=data["Name"],
-    #             weight=data["weight"],
-    #             status=TeamStatus.objects.get(old_sk_id=data["TeamStatusId"]),
-    #         )
-    #         item.inserted = timezone.make_aware(
-    #             datetime.datetime.fromisoformat(data["InsertDateTime"]),
-    #             timezone.get_current_timezone(),
-    #         )
-    #         item.updated = timezone.make_aware(
-    #             datetime.datetime.fromisoformat(data["UpdateDateTime"]),
-    #             timezone.get_current_timezone(),
-    #         )
-    #         item.save(update_fields=["inserted", "updated"])
+    with open("cache/SKTables/TeamStatusReason.json", "r") as f:
+        for _id, data in json.load(f).items():
+            item, _ = TeamStatusReason.objects.get_or_create(
+                old_sk_id=_id,
+                name=data["Name"],
+                weight=data["weight"],
+                status=TeamStatus.objects.get(old_sk_id=data["TeamStatusId"]),
+            )
+            item.inserted = timezone.make_aware(
+                datetime.datetime.fromisoformat(data["InsertDateTime"]),
+                timezone.get_current_timezone(),
+            )
+            item.updated = timezone.make_aware(
+                datetime.datetime.fromisoformat(data["UpdateDateTime"]),
+                timezone.get_current_timezone(),
+            )
+            item.save(update_fields=["inserted", "updated"])
 
 
 """
@@ -311,6 +312,9 @@ staff_status_approved = StaffStatus.objects.create(
 )
 team_status_approved = TeamStatus.objects.create(
     name="APPROVED", inserted=timestamp, updated=timestamp
+)
+team_status_reason_approved = TeamStatusReason.objects.create(
+    name="APPROVED", status=team_status_approved, inserted=timestamp, updated=timestamp
 )
 
 
@@ -443,6 +447,7 @@ for s in range(current_year, current_year + 2):
                         subdivision=subdivision,
                         name=team,
                         status=team_status_approved,
+                        status_reason=team_status_reason_approved,
                         inserted=timestamp,
                         updated=timestamp,
                     )

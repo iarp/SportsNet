@@ -1,10 +1,19 @@
+from django.db.utils import IntegrityError
 from django.test import TestCase
 
 from core.models import Division, League, PermissionOverrides, Season, SubDivision, User
 from core.perms import add_override_permission
 from core.test_helpers import FixtureBasedTestCase
 
-from .models import Staff, StaffStatus, StaffType, Team, TeamStatus, TeamStatusLog
+from .models import (
+    Staff,
+    StaffStatus,
+    StaffType,
+    Team,
+    TeamStatus,
+    TeamStatusLog,
+    TeamStatusReason,
+)
 
 
 class StaffAccessTests(FixtureBasedTestCase):
@@ -259,6 +268,15 @@ class TeamSignalsTests(TestCase):
             name="CLEAR FLAG", clear_changed_staff_players_flag=True
         )
 
+        self.team_status_approved_reason = self.team_status_approved.reasons.create(
+            name="APPROVED", default=True
+        )
+        self.team_status_clear_flag_true_reason = (
+            self.team_status_clear_flag_true.reasons.create(
+                name="APPROVED", default=True
+            )
+        )
+
         self.team = Team.objects.create(
             season=self.season,
             league=self.league,
@@ -266,6 +284,7 @@ class TeamSignalsTests(TestCase):
             subdivision=self.subdivision,
             name="Team 1",
             status=self.team_status_approved,
+            status_reason=self.team_status_approved_reason,
         )
         self.stafftype = StaffType.objects.create(name="staff type")
         self.staffstatus = StaffStatus.objects.create(name="staff status")
@@ -327,10 +346,14 @@ class TeamSignalsTests(TestCase):
 
     def test_teamstatuslog_entry_is_create(self):
         team_status = TeamStatus.objects.create(name="REJECTED")
+        team_status_reason = TeamStatusReason.objects.create(
+            name="REJECTED", status=team_status
+        )
 
         self.assertEqual(0, TeamStatusLog.objects.count())
 
         self.team.status = team_status
+        self.team.status_reason = team_status_reason
         self.team.save()
 
         self.assertEqual(1, TeamStatusLog.objects.count())
@@ -338,7 +361,9 @@ class TeamSignalsTests(TestCase):
         log = TeamStatusLog.objects.first()
 
         self.assertEqual(self.team_status_approved, log.old_status)
+        self.assertEqual(self.team_status_approved_reason, log.old_status_reason)
         self.assertEqual(team_status, log.new_status)
+        self.assertEqual(team_status_reason, log.new_status_reason)
 
     def test_team_staff_changed_flag_gets_cleared_on_status_change(self):
         self.assertIs(False, self.team.staff_has_changed_flag)
@@ -429,6 +454,55 @@ class TeamSignalsTests(TestCase):
         staff.save()
 
         self.assertIs(False, self.team.staff_has_changed_flag)
+
+    def test_change_team_status_reason_set_to_none_if_reason_is_not_assigned(self):
+        self.team.status = TeamStatus.objects.create(name="new status")
+        self.team.save()
+
+        self.assertIsNone(self.team.status_reason)
+
+    def test_change_team_status_reason_does_not_change_if_reason_is_assigned(self):
+        new_status = TeamStatus.objects.create(name="new status")
+        new_status_reason = new_status.reasons.create(name="new status reason")
+
+        self.assertEqual(self.team.status_reason, self.team_status_approved_reason)
+
+        self.team.status = new_status
+        self.team.status_reason = new_status_reason
+        self.team.save()
+
+        self.assertEqual(self.team.status_reason, new_status_reason)
+
+    def test_new_team_with_status_gets_default_statusreason(self):
+
+        status = TeamStatus.objects.create(name="test")
+        reason = status.reasons.create(name="test", default=True)
+
+        team = Team.objects.create(
+            season=self.season,
+            league=self.league,
+            division=self.division,
+            subdivision=self.subdivision,
+            name="Team 2",
+            status=status,
+        )
+
+        self.assertEqual(reason, team.status_reason)
+
+    def test_new_team_with_status_without_default_reason_stays_none(self):
+
+        status = TeamStatus.objects.create(name="test")
+
+        team = Team.objects.create(
+            season=self.season,
+            league=self.league,
+            division=self.division,
+            subdivision=self.subdivision,
+            name="Team 2",
+            status=status,
+        )
+
+        self.assertIsNone(team.status_reason)
 
 
 class StaffManagerTests(FixtureBasedTestCase):
@@ -625,3 +699,13 @@ class TeamTests(FixtureBasedTestCase):
 
         expected_custom_output = " * ".join(values)
         self.assertEqual(expected_custom_output, team.get_full_team_name(" * "))
+
+
+class TeamStatusTests(TestCase):
+    def test_teamstatusreason_uniqueness(self):
+        status = TeamStatus.objects.create(name="test")
+        status.reasons.create(name="test1", default=True)
+
+        self.assertRaises(
+            IntegrityError, status.reasons.create, name="test2", default=True
+        )
