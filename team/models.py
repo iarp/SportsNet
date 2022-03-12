@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.db.models import Q
+from django.db.models.functions import Lower
 from django.utils.translation import gettext, gettext_lazy
 from positions.fields import PositionField
 
@@ -332,6 +333,12 @@ class TeamStatus(_BaseModel):
         ordering = ["weight"]
         verbose_name = gettext_lazy("Team Status")
         verbose_name_plural = gettext_lazy("Team Statuses")
+
+        constraints = [
+            models.constraints.UniqueConstraint(
+                Lower("name"), name="teamstatus_name_uniqueness"
+            )
+        ]
 
     name = models.CharField(max_length=255)
     weight = PositionField(default=0)

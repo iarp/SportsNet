@@ -678,7 +678,7 @@ class StaffManagerTests(FixtureBasedTestCase):
 class TeamTests(FixtureBasedTestCase):
     def test_team_is_approved_with_hcid_and_status_approved(self):
         team = Team.objects.first()
-        self.assertEqual("APPROVED", team.status.name)
+        self.assertEqual("Fixture Approved", team.status.name)
         self.assertFalse(team.is_approved)
         team.hockey_canada_id = 12345
         self.assertFalse(team.is_approved)
@@ -702,6 +702,10 @@ class TeamTests(FixtureBasedTestCase):
 
 
 class TeamStatusTests(TestCase):
+    def test_teamstatus_uniqueness(self):
+        TeamStatus.objects.create(name="test")
+        self.assertRaises(IntegrityError, TeamStatus.objects.create, name="test")
+
     def test_teamstatusreason_uniqueness(self):
         status = TeamStatus.objects.create(name="test")
         status.reasons.create(name="test1", default=True)

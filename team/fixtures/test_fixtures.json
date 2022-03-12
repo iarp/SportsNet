@@ -3892,7 +3892,7 @@
         "inserted_by": null,
         "updated": "2022-01-01T05:00:00Z",
         "updated_by": null,
-        "name": "APPROVED",
+        "name": "Fixture Approved",
         "weight": 0,
         "include_in_roster_export": true,
         "considered_approved": false,
@@ -4494,7 +4494,7 @@
         "updated": "2022-01-01T05:00:00Z",
         "updated_by": null,
         "status": 21,
-        "name": "APPROVED",
+        "name": "Fixture Approved Reason",
         "weight": 39,
         "default": null
     }

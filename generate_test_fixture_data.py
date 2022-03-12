@@ -311,10 +311,13 @@ staff_status_approved = StaffStatus.objects.create(
     name="APPROVED", inserted=timestamp, updated=timestamp
 )
 team_status_approved = TeamStatus.objects.create(
-    name="APPROVED", inserted=timestamp, updated=timestamp
+    name="Fixture Approved", inserted=timestamp, updated=timestamp
 )
 team_status_reason_approved = TeamStatusReason.objects.create(
-    name="APPROVED", status=team_status_approved, inserted=timestamp, updated=timestamp
+    name="Fixture Approved Reason",
+    status=team_status_approved,
+    inserted=timestamp,
+    updated=timestamp,
 )
 
 
