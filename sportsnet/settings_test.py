@@ -1,6 +1,6 @@
-from .settings import *
-
 from django.contrib.auth.hashers import PBKDF2PasswordHasher
+
+from .settings import *
 
 
 class MyPBKDF2PasswordHasher(PBKDF2PasswordHasher):

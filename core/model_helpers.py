@@ -78,5 +78,22 @@ class _BasePermissions(_BaseModel):
         "team_can_vote",
     ]
 
+    # WebAccess bit,
+    # EditEvalAsgndAllowed bit,
+    # EditEvalAvailAllowed bit,
+    # EditCoachEvalAllowed bit,
+    # MultipleSeasonsAllowed bit,
+    # AllowAssignUnAssignPlayers bit,
+    # AllowAssignUnAssignStaff bit,
+    # AdminPower bit,
+    # TeamStaffTypeChangeUnRestricted bit,
+    # TravelPermitViewAllowed bit,
+    # TravelPermitUpdateAllowed bit,
+    # MemberViewAllowed bit,
+    # StaffTeamViewAllowed bit,
+    # StaffSeasonViewAllowed bit,
+    # PlayerTeamViewAllowed bit,
+    # PlayerSeasonViewAllowed bit,
+
     team_can_edit = models.BooleanField(default=True)
     team_can_vote = models.BooleanField(default=False)

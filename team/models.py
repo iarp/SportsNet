@@ -72,10 +72,110 @@ class Team(_BaseModelWithCommonIDs):
     @property
     def is_approved(self):
         return self.hockey_canada_id and self.status.considered_approved
-        # return self.hockey_canada_id and self.status.lower() in [
-        #     "approved",
-        #     "resubmitted",
-        # ]
+
+
+class TeamStatus(_BaseModel):
+    class Meta:
+        ordering = ["weight"]
+        verbose_name = gettext_lazy("Team Status")
+        verbose_name_plural = gettext_lazy("Team Statuses")
+
+        constraints = [
+            models.constraints.UniqueConstraint(
+                Lower("name"), name="teamstatus_name_uniqueness"
+            )
+        ]
+
+    name = models.CharField(max_length=255)
+    weight = PositionField(default=0)
+
+    include_in_roster_export = models.BooleanField(default=True)
+
+    # NOTE: Used in Team.is_approved mainly for roster downloader
+    considered_approved = models.BooleanField(
+        default=False,
+        help_text=gettext_lazy(
+            "If a team is assigned this status, are they "
+            "technically considered approved in hockey canada?"
+        ),
+    )
+
+    # NOTE: Was in the table, all entries False. Unknown usage.
+    clear_changed_staff_players_flag = models.BooleanField(default=False)
+
+
+class TeamStatusReason(_BaseModel):
+    class Meta:
+        ordering = ["weight", "name"]
+        verbose_name = gettext_lazy("Team Status Reason")
+        verbose_name_plural = gettext_lazy("Team Status Reasons")
+
+        constraints = [
+            models.constraints.UniqueConstraint(
+                "status", "default", name="teamstatusreason_status_default_uniqueness"
+            )
+        ]
+
+    status = models.ForeignKey(
+        TeamStatus, on_delete=models.CASCADE, related_name="reasons"
+    )
+
+    name = models.CharField(max_length=255)
+    weight = PositionField()
+
+    default = models.BooleanField(default=None, null=True, blank=True)
+
+
+class TeamStatusLog(_BaseModel):
+    class Meta:
+        ordering = ["inserted"]
+        verbose_name = gettext_lazy("Team Status Log")
+        verbose_name_plural = gettext_lazy("Team Status Logs")
+
+    team = models.ForeignKey("team.Team", on_delete=models.CASCADE)
+
+    old_status = models.ForeignKey(
+        TeamStatus, on_delete=models.SET_NULL, null=True, blank=True, related_name="+"
+    )
+    old_status_reason = models.ForeignKey(
+        TeamStatusReason,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="+",
+    )
+
+    new_status = models.ForeignKey(
+        TeamStatus, on_delete=models.SET_NULL, null=True, blank=True, related_name="+"
+    )
+    new_status_reason = models.ForeignKey(
+        TeamStatusReason,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="+",
+    )
+
+
+class TeamNote(_BaseModel):
+    class Meta:
+        ordering = ["inserted"]
+        verbose_name = gettext_lazy("Team Note")
+        verbose_name_plural = gettext_lazy("Team Notes")
+
+    team = models.ForeignKey(
+        "team.Team", on_delete=models.CASCADE, related_name="notes"
+    )
+
+    class NoteTypes(models.TextChoices):
+        ROSTER = "ROSTER", gettext_lazy("Roster")
+        PLAYER = "PLAYER", gettext_lazy("Player")
+
+    type = models.CharField(
+        max_length=255, default=NoteTypes.ROSTER, choices=NoteTypes.choices
+    )
+
+    note = models.TextField()
 
 
 class StaffType(_BasePermissions):
@@ -106,23 +206,6 @@ class StaffType(_BasePermissions):
             "StaffType cause the team.staff_has_changed_flag to be True?"
         ),
     )
-
-    # WebAccess bit,
-    # EditEvalAsgndAllowed bit,
-    # EditEvalAvailAllowed bit,
-    # EditCoachEvalAllowed bit,
-    # MultipleSeasonsAllowed bit,
-    # AllowAssignUnAssignPlayers bit,
-    # AllowAssignUnAssignStaff bit,
-    # AdminPower bit,
-    # TeamStaffTypeChangeUnRestricted bit,
-    # TravelPermitViewAllowed bit,
-    # TravelPermitUpdateAllowed bit,
-    # MemberViewAllowed bit,
-    # StaffTeamViewAllowed bit,
-    # StaffSeasonViewAllowed bit,
-    # PlayerTeamViewAllowed bit,
-    # PlayerSeasonViewAllowed bit,
 
 
 class StaffStatus(_BaseModel):
@@ -326,107 +409,3 @@ class Staff(_BaseModel):
         return add_override_permission(
             self, obj, permission_name, value, assigned_by=assigned_by
         )
-
-
-class TeamStatus(_BaseModel):
-    class Meta:
-        ordering = ["weight"]
-        verbose_name = gettext_lazy("Team Status")
-        verbose_name_plural = gettext_lazy("Team Statuses")
-
-        constraints = [
-            models.constraints.UniqueConstraint(
-                Lower("name"), name="teamstatus_name_uniqueness"
-            )
-        ]
-
-    name = models.CharField(max_length=255)
-    weight = PositionField(default=0)
-
-    include_in_roster_export = models.BooleanField(default=True)
-
-    # NOTE: Used in Team.is_approved mainly for roster downloader
-    considered_approved = models.BooleanField(
-        default=False,
-        help_text=gettext_lazy(
-            "If a team is assigned this status, are they "
-            "technically considered approved in hockey canada?"
-        ),
-    )
-
-    # NOTE: Was in the table, all entries False. Unknown usage.
-    clear_changed_staff_players_flag = models.BooleanField(default=False)
-
-
-class TeamStatusReason(_BaseModel):
-    class Meta:
-        ordering = ["weight", "name"]
-        verbose_name = gettext_lazy("Team Status Reason")
-        verbose_name_plural = gettext_lazy("Team Status Reasons")
-
-        constraints = [
-            models.constraints.UniqueConstraint(
-                "status", "default", name="teamstatusreason_status_default_uniqueness"
-            )
-        ]
-
-    status = models.ForeignKey(
-        TeamStatus, on_delete=models.CASCADE, related_name="reasons"
-    )
-
-    name = models.CharField(max_length=255)
-    weight = PositionField()
-
-    default = models.BooleanField(default=None, null=True, blank=True)
-
-
-class TeamStatusLog(_BaseModel):
-    class Meta:
-        ordering = ["inserted"]
-        verbose_name = gettext_lazy("Team Status Log")
-        verbose_name_plural = gettext_lazy("Team Status Logs")
-
-    team = models.ForeignKey("team.Team", on_delete=models.CASCADE)
-
-    old_status = models.ForeignKey(
-        TeamStatus, on_delete=models.SET_NULL, null=True, blank=True, related_name="+"
-    )
-    old_status_reason = models.ForeignKey(
-        TeamStatusReason,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name="+",
-    )
-
-    new_status = models.ForeignKey(
-        TeamStatus, on_delete=models.SET_NULL, null=True, blank=True, related_name="+"
-    )
-    new_status_reason = models.ForeignKey(
-        TeamStatusReason,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name="+",
-    )
-
-
-class TeamNote(_BaseModel):
-    class Meta:
-        ordering = ["inserted"]
-        verbose_name = gettext_lazy("Team Note")
-        verbose_name_plural = gettext_lazy("Team Notes")
-
-    team = models.ForeignKey(
-        "team.Team", on_delete=models.CASCADE, related_name="notes"
-    )
-
-    class NoteTypes(models.TextChoices):
-        ROSTER = "ROSTER", gettext_lazy("Roster")
-        PLAYER = "PLAYER", gettext_lazy("Player")
-
-    type = models.CharField(
-        max_length=255, default=NoteTypes.ROSTER, choices=NoteTypes.choices
-    )
-
-    note = models.TextField()
