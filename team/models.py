@@ -348,33 +348,22 @@ class Staff(_BaseModel):
 
         if not self.pk:
             if self.team_id:
-                if not all(
-                    [
-                        self.season_id,
-                        self.league_id,
-                        self.division_id,
-                        self.subdivision_id,
-                    ]
-                ):
-                    self.season = self.team.season
-                    self.league = self.team.league
-                    self.division = self.team.division
-                    self.subdivision = self.team.subdivision
+                self.season = self.team.season
+                self.league = self.team.league
+                self.division = self.team.division
+                self.subdivision = self.team.subdivision
 
             elif self.subdivision_id:
-                if not all([self.season_id, self.league_id, self.division_id]):
-                    self.season = self.subdivision.season
-                    self.league = self.subdivision.league
-                    self.division = self.subdivision.division
+                self.season = self.subdivision.season
+                self.league = self.subdivision.league
+                self.division = self.subdivision.division
 
             elif self.division_id:
-                if not all([self.season_id, self.league_id]):
-                    self.season = self.division.season
-                    self.league = self.division.league
+                self.season = self.division.season
+                self.league = self.division.league
 
             elif self.league_id:
-                if not self.season_id:
-                    self.season = self.league.season
+                self.season = self.league.season
 
         # TODO: Add same same to Player model whenever that is in place.
         if self.team_id and self.type.change_causes_staff_flag_on_team_to_enable:

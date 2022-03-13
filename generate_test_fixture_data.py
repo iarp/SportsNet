@@ -445,7 +445,6 @@ for s in range(current_year, current_year + 2):
         create_staff(
             name=f"{season} {league} VP",
             _type=type_vp,
-            season=season,
             league=league,
             status=staff_status_approved,
         )
@@ -467,8 +466,6 @@ for s in range(current_year, current_year + 2):
             division_user = create_staff(
                 name=f"{season} {league} {division} Division",
                 _type=type_senior_convenor,
-                season=season,
-                league=league,
                 division=division,
                 status=staff_status_approved,
             )
@@ -489,9 +486,6 @@ for s in range(current_year, current_year + 2):
                 subdivision_user = create_staff(
                     name=f"{season} - {league} - {division} - {subdivision} - SubDivision",
                     _type=type_convenor,
-                    season=season,
-                    league=league,
-                    division=division,
                     subdivision=subdivision,
                     status=staff_status_approved,
                 )
@@ -515,10 +509,6 @@ for s in range(current_year, current_year + 2):
                     coach_user = create_staff(
                         name=f"{season} - {league} - {division} - {subdivision} - {team.name} - Coach",
                         _type=type_coach,
-                        season=season,
-                        league=league,
-                        division=division,
-                        subdivision=subdivision,
                         team=team,
                         status=staff_status_approved,
                     )
@@ -529,10 +519,6 @@ for s in range(current_year, current_year + 2):
                     manager = create_staff(
                         name=f"{season} - {league} - {division} - {subdivision} - {team.name} - Manager",
                         _type=type_manager,
-                        season=season,
-                        league=league,
-                        division=division,
-                        subdivision=subdivision,
                         team=team,
                         status=staff_status_approved,
                     )
