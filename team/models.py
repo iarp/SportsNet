@@ -1,13 +1,13 @@
 from django.conf import settings
 from django.db import models
-from django.db.models import Q
 from django.db.models.functions import Lower
-from django.utils.translation import gettext, gettext_lazy
+from django.utils.translation import gettext_lazy
 from positions.fields import PositionField
 
 from core.model_helpers import _BaseModel, _BaseModelWithCommonIDs, _BasePermissions
-from core.models import Division, League, Season, SubDivision
 from core.perms import add_override_permission, has_perm
+
+from . import managers
 
 
 class Team(_BaseModelWithCommonIDs):
@@ -229,126 +229,13 @@ class StaffStatusReason(_BaseModel):
     weight = PositionField(default=0)
 
 
-class _StaffObjectsManagerWithDetails(models.Manager):
-    def head_coach(self, *args, **kwargs):
-        if isinstance(self.instance, Team):
-            return self.filter(*args, type__name="Coach", **kwargs).first()
-        raise TypeError(gettext_lazy("head_coach is available on the Team instance."))
-
-    def own(self, *args, **kwargs):
-        extras = {}
-        if isinstance(self.instance, Season):
-            extras = {
-                "league_id__isnull": True,
-                "division_id__isnull": True,
-                "subdivision_id__isnull": True,
-                "team_id__isnull": True,
-            }
-        elif isinstance(self.instance, League):
-            extras = {
-                "division_id__isnull": True,
-                "subdivision_id__isnull": True,
-                "team_id__isnull": True,
-            }
-        elif isinstance(self.instance, Division):
-            extras = {
-                "subdivision_id__isnull": True,
-                "team_id__isnull": True,
-            }
-        elif isinstance(self.instance, SubDivision):
-            extras = {
-                "team_id__isnull": True,
-            }
-        return self.filter(*args, **extras, **kwargs)
-
-    def vps(self):
-        if isinstance(self.instance, Season):
-            return self.filter(
-                division_id__isnull=True,
-                subdivision_id__isnull=True,
-                team_id__isnull=True,
-            ).exclude(league_id__isnull=True)
-        raise TypeError(gettext("vps is available on the Season instance."))
-
-    def senior_convenors(self):
-        if isinstance(self.instance, Season):
-            return self.filter(
-                subdivision_id__isnull=True,
-                team_id__isnull=True,
-            ).exclude(Q(league_id__isnull=True) | Q(division_id__isnull=True))
-        elif isinstance(self.instance, League):
-            return self.filter(
-                subdivision_id__isnull=True,
-                team_id__isnull=True,
-            ).exclude(Q(league_id__isnull=True) | Q(division_id__isnull=True))
-        raise TypeError(
-            gettext("senior_convenors is available on the Season or League instance.")
-        )
-
-    def convenors(self):
-        if isinstance(self.instance, Season):
-            return self.filter(team_id__isnull=True).exclude(
-                Q(league_id__isnull=True)
-                | Q(division_id__isnull=True)
-                | Q(subdivision_id__isnull=True)
-            )
-        elif isinstance(self.instance, League):
-            return self.filter(team_id__isnull=True).exclude(
-                Q(division_id__isnull=True) | Q(subdivision_id__isnull=True)
-            )
-        elif isinstance(self.instance, Division):
-            return self.filter(team_id__isnull=True).exclude(
-                subdivision_id__isnull=True,
-            )
-        raise TypeError(
-            gettext(
-                "convenors is available on the Season, League, or Division instance."
-            )
-        )
-
-    def coaches(self):
-        return self.filter(type__name="Coach")
-        # if isinstance(self.instance, Season):
-        #     return qs.exclude(
-        #         Q(league_id__isnull=True)
-        #         | Q(division_id__isnull=True)
-        #         | Q(subdivision_id__isnull=True)
-        #         | Q(team_id__isnull=True)
-        #     )
-        # elif isinstance(self.instance, League):
-        #     return qs.exclude(
-        #         Q(division_id__isnull=True)
-        #         | Q(subdivision_id__isnull=True)
-        #         | Q(team_id__isnull=True)
-        #     )
-        # elif isinstance(self.instance, Division):
-        #     return qs.exclude(Q(subdivision_id__isnull=True) | Q(team_id__isnull=True))
-        # elif isinstance(self.instance, SubDivision):
-        #     return qs.exclude(team_id__isnull=True)
-        # raise TypeError(
-        #     gettext("coaches is available on the Season, League, Division, or SubDivision instance.")
-        # )
-
-    def managers(self):
-        if isinstance(self.instance, Team):
-            return self.filter(type__name="Manager")
-        raise TypeError(gettext("managers is available on the Team instance."))
-
-
-class _StaffManagerCustomQuerySet(models.QuerySet):
-    def emails(self):
-        return self.filter(user__email__contains="@").values_list(
-            "user__email", flat=True
-        )
-
-
 class Staff(_BaseModel):
     class Meta:
         verbose_name = gettext_lazy("Team Staff")
         verbose_name_plural = gettext_lazy("Team Staff")
 
-    objects = _StaffObjectsManagerWithDetails.from_queryset(
-        _StaffManagerCustomQuerySet
+    objects = managers._StaffObjectsManagerWithDetails.from_queryset(
+        managers._StaffManagerCustomQuerySet
     )()
 
     season = models.ForeignKey(

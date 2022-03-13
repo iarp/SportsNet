@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.contrib.auth.models import AbstractUser, BaseUserManager
+from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.validators import UnicodeUsernameValidator
 from django.db import models
 from django.db.models import F, Q
@@ -10,43 +10,15 @@ from iarp_django_utils.models import BaseSetting
 from loguru import logger
 from positions.fields import PositionField
 
+from . import managers
 from .model_helpers import _BaseModel, _BaseModelWithCommonIDs, _BasePermissions
-
-
-class _UserManager(BaseUserManager):
-    """Define a model manager for User model with no username field."""
-
-    use_in_migrations = True
-
-    @staticmethod
-    def normalize_email(email):
-        return email.lower()
-
-    def _create_user(self, email, password, **extra_fields):
-        if not email:
-            raise ValueError(gettext("email is required for User objects"))
-        email = self.normalize_email(email)
-        user = self.model(email=email, **extra_fields)
-        user.set_password(password)
-        user.save(using=self._db)
-        return user
-
-    def create_user(self, email, password=None, **extra_fields):
-        extra_fields.setdefault("is_staff", False)
-        extra_fields.setdefault("is_superuser", False)
-        return self._create_user(email, password, **extra_fields)
-
-    def create_superuser(self, email, password, **extra_fields):
-        extra_fields["is_staff"] = True
-        extra_fields["is_superuser"] = True
-        return self._create_user(email, password, **extra_fields)
 
 
 class User(_BaseModel, AbstractUser):
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
     username_validator = UnicodeUsernameValidator()
-    objects = _UserManager()
+    objects = managers._UserManager()
 
     username = models.CharField(
         gettext_lazy("username"),

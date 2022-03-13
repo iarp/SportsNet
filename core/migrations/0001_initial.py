@@ -122,9 +122,6 @@ class Migration(migrations.Migration):
             options={
                 "abstract": False,
             },
-            managers=[
-                ("objects", core.models._UserManager()),
-            ],
         ),
         migrations.CreateModel(
             name="Division",

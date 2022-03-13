@@ -9,9 +9,9 @@ from django.test import TestCase
 from django.urls import reverse
 from django.utils import timezone
 
-from team.models import Division, Staff, StaffType, SubDivision, Team
+from team.models import Staff, StaffType, Team
 
-from .models import League, PermissionOverrides, Season
+from .models import Division, League, PermissionOverrides, Season, SubDivision
 from .perms import add_override_permission, has_perm
 from .test_helpers import FixtureBasedTestCase
 
