@@ -2786,9 +2786,9 @@
     "pk": 1,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-13T16:40:06.028Z",
+        "inserted": "2022-01-01T05:00:00Z",
         "inserted_by": null,
-        "updated": "2022-03-13T16:40:06.028Z",
+        "updated": "2022-01-01T05:00:00Z",
         "updated_by": null,
         "name": "Male"
     }
@@ -2798,9 +2798,9 @@
     "pk": 2,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-13T16:40:06.031Z",
+        "inserted": "2022-01-01T05:00:00Z",
         "inserted_by": null,
-        "updated": "2022-03-13T16:40:06.031Z",
+        "updated": "2022-01-01T05:00:00Z",
         "updated_by": null,
         "name": "Female"
     }
@@ -2810,9 +2810,9 @@
     "pk": 1,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-13T16:40:06.033Z",
+        "inserted": "2022-01-01T05:00:00Z",
         "inserted_by": null,
-        "updated": "2022-03-13T16:40:06.033Z",
+        "updated": "2022-01-01T05:00:00Z",
         "updated_by": null,
         "name": "Approved",
         "weight": 0,
@@ -2824,9 +2824,9 @@
     "pk": 2,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-13T16:40:06.037Z",
+        "inserted": "2022-01-01T05:00:00Z",
         "inserted_by": null,
-        "updated": "2022-03-13T16:40:06.037Z",
+        "updated": "2022-01-01T05:00:00Z",
         "updated_by": null,
         "name": "Denied",
         "weight": 1,

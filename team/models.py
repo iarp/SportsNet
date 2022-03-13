@@ -73,6 +73,46 @@ class Team(_BaseModelWithCommonIDs):
     def is_approved(self):
         return self.hockey_canada_id and self.status.considered_approved
 
+    def save(self, *args, **kwargs):
+
+        # Reset status_reason on status change.
+        if self.pk:
+            original_instance = Team.objects.get(pk=self.pk)
+
+            if self.status_id != original_instance.status_id:
+
+                if any([self.staff_has_changed_flag, self.players_has_changed_flag]):
+
+                    if self.status.clear_changed_staff_players_flag:
+                        self.players_has_changed_flag = False
+                        self.staff_has_changed_flag = False
+
+                # status has changed, now we need to ensure the
+                # status_reason is a reason of the newly assigned status.
+                if not self.status.reasons.filter(pk=self.status_reason.pk).exists():
+                    self.status_reason = None
+
+            if (self.status_id != original_instance.status_id) or (
+                self.status_reason_id != original_instance.status_reason_id
+            ):
+                TeamStatusLog.objects.create(
+                    team=self,
+                    old_status=original_instance.status,
+                    old_status_reason=original_instance.status_reason,
+                    new_status=self.status,
+                    new_status_reason=self.status_reason,
+                )
+
+        # On new objects or those without a status_reason,
+        # assign the default reason for the specific status.
+        if not self.status_reason_id or (not self.status_reason_id and not self.pk):
+            try:
+                self.status_reason = self.status.reasons.get(default=True)
+            except TeamStatusReason.DoesNotExist:
+                self.status_reason = None
+
+        return super().save(*args, **kwargs)
+
 
 class TeamStatus(_BaseModel):
     class Meta:
@@ -303,3 +343,42 @@ class Staff(_BaseModel):
         return add_override_permission(
             self, obj, permission_name, value, assigned_by=assigned_by
         )
+
+    def save(self, *args, **kwargs):
+
+        if not self.pk:
+            if self.team_id:
+                if not all(
+                    [
+                        self.season_id,
+                        self.league_id,
+                        self.division_id,
+                        self.subdivision_id,
+                    ]
+                ):
+                    self.season = self.team.season
+                    self.league = self.team.league
+                    self.division = self.team.division
+                    self.subdivision = self.team.subdivision
+
+            elif self.subdivision_id:
+                if not all([self.season_id, self.league_id, self.division_id]):
+                    self.season = self.subdivision.season
+                    self.league = self.subdivision.league
+                    self.division = self.subdivision.division
+
+            elif self.division_id:
+                if not all([self.season_id, self.league_id]):
+                    self.season = self.division.season
+                    self.league = self.division.league
+
+            elif self.league_id:
+                if not self.season_id:
+                    self.season = self.league.season
+
+        # TODO: Add same same to Player model whenever that is in place.
+        if self.team_id and self.type.change_causes_staff_flag_on_team_to_enable:
+            self.team.staff_has_changed_flag = True
+            self.team.save()
+
+        return super().save(*args, **kwargs)

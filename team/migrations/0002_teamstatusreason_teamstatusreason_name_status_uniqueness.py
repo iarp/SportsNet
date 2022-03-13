@@ -8,12 +8,16 @@ import django.db.models.functions.text
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('team', '0001_initial'),
+        ("team", "0001_initial"),
     ]
 
     operations = [
         migrations.AddConstraint(
-            model_name='teamstatusreason',
-            constraint=models.UniqueConstraint(django.db.models.functions.text.Lower('name'), django.db.models.expressions.F('status'), name='teamstatusreason_name_status_uniqueness'),
+            model_name="teamstatusreason",
+            constraint=models.UniqueConstraint(
+                django.db.models.functions.text.Lower("name"),
+                django.db.models.expressions.F("status"),
+                name="teamstatusreason_name_status_uniqueness",
+            ),
         ),
     ]

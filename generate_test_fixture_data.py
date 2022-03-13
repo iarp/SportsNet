@@ -337,12 +337,28 @@ team_status_reason_approved = TeamStatusReason.objects.create(
 )
 
 GENDERS = {
-    "male": Gender.objects.create(name="Male"),
-    "female": Gender.objects.create(name="Female"),
+    "male": Gender.objects.create(
+        name="Male",
+        inserted=timestamp,
+        updated=timestamp,
+    ),
+    "female": Gender.objects.create(
+        name="Female",
+        inserted=timestamp,
+        updated=timestamp,
+    ),
 }
 MEMBER_STATUS = {
-    "approved": MemberStatus.objects.create(name="Approved"),
-    "denied": MemberStatus.objects.create(name="Denied"),
+    "approved": MemberStatus.objects.create(
+        name="Approved",
+        inserted=timestamp,
+        updated=timestamp,
+    ),
+    "denied": MemberStatus.objects.create(
+        name="Denied",
+        inserted=timestamp,
+        updated=timestamp,
+    ),
 }
 
 

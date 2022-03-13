@@ -5,5 +5,5 @@ class TeamConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
     name = "team"
 
-    def ready(self) -> None:
-        from . import signals  # noqa
+    # def ready(self) -> None:
+    #     from . import signals  # noqa
