@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     # 'allauth.socialaccount.providers.linkedin,'
     "iarp_django_utils",
     "django_templated_emailer",
+    "phonenumber_field",
 ]
 
 MIDDLEWARE = [
@@ -209,3 +210,5 @@ CRISPY_TEMPLATE_PACK = "bootstrap4"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
+
+PHONENUMBER_DEFAULT_REGION = "CA"

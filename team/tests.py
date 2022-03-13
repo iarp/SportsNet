@@ -1,7 +1,18 @@
 from django.db.utils import IntegrityError
 from django.test import TestCase
+from django.utils import timezone
 
-from core.models import Division, League, PermissionOverrides, Season, SubDivision, User
+from core.models import (
+    Division,
+    Gender,
+    League,
+    Member,
+    MemberStatus,
+    PermissionOverrides,
+    Season,
+    SubDivision,
+    User,
+)
 from core.perms import add_override_permission
 from core.test_helpers import FixtureBasedTestCase
 
@@ -292,10 +303,29 @@ class TeamSignalsTests(TestCase):
         return super().setUp()
 
     def create_staff(self, *args, **kwargs):
+        user = User.objects.create_user("test@domain.com", "12345")
+
+        member = Member.objects.create(
+            first_name=user.username,
+            last_name="Hockey",
+            address1="123 Fake Street",
+            city="Toronto",
+            province="Ontario",
+            postal_code="1S34R6",
+            date_of_birth=timezone.make_aware(
+                timezone.datetime(2012, 1, 15, 0, 0, 0),
+                timezone.get_current_timezone(),
+            ).date(),
+            email=user.email,
+            gender=Gender.objects.create(name="test"),
+            status=MemberStatus.objects.create(name="test"),
+        )
+
         return Staff.objects.create(
             user=self.user,
             type=self.stafftype,
             status=self.staffstatus,
+            member=member,
             *args,
             **kwargs,
         )

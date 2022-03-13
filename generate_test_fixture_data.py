@@ -150,7 +150,15 @@ from django.utils.text import slugify
 call_command("makemigrations")
 call_command("migrate")
 
-from core.models import Division, League, Season, SubDivision
+from core.models import (
+    Division,
+    Gender,
+    League,
+    Member,
+    MemberStatus,
+    Season,
+    SubDivision,
+)
 from team.models import (
     Staff,
     StaffStatus,
@@ -290,8 +298,13 @@ Division.objects.all().delete()
 League.objects.all().delete()
 Season.objects.all().delete()
 User.objects.all().delete()
+Member.objects.all().delete()
+MemberStatus.objects.all().delete()
+Gender.objects.all().delete()
 
-timestamp = timezone.datetime(2022, 1, 1, 0, 0, 0)
+timestamp = timezone.make_aware(
+    timezone.datetime(2022, 1, 1, 0, 0, 0), timezone.get_current_timezone()
+)
 
 type_manager = StaffType.objects.create(
     name="Manager", inserted=timestamp, updated=timestamp
@@ -301,6 +314,9 @@ type_coach = StaffType.objects.create(
 )
 type_convenor = StaffType.objects.create(
     name="Convenor", inserted=timestamp, updated=timestamp
+)
+type_senior_convenor = StaffType.objects.create(
+    name="Senior Convenor", inserted=timestamp, updated=timestamp
 )
 type_vp = StaffType.objects.create(name="VP", inserted=timestamp, updated=timestamp)
 type_admin = StaffType.objects.create(
@@ -319,6 +335,15 @@ team_status_reason_approved = TeamStatusReason.objects.create(
     inserted=timestamp,
     updated=timestamp,
 )
+
+GENDERS = {
+    "male": Gender.objects.create(name="Male"),
+    "female": Gender.objects.create(name="Female"),
+}
+MEMBER_STATUS = {
+    "approved": MemberStatus.objects.create(name="Approved"),
+    "denied": MemberStatus.objects.create(name="Denied"),
+}
 
 
 def generate_email_address(data):
@@ -340,6 +365,39 @@ def create_user(data):
     )
 
 
+def create_staff(name, _type, *args, **kwargs):
+
+    user = create_user(name)
+
+    member = Member.objects.create(
+        first_name=name,
+        last_name="Hockey",
+        address1="123 Fake Street",
+        city="Toronto",
+        province="Ontario",
+        postal_code="1S34R6",
+        date_of_birth=timezone.make_aware(
+            timezone.datetime(2012, 1, 15, 0, 0, 0),
+            timezone.get_current_timezone(),
+        ).date(),
+        email=user.email,
+        gender=GENDERS["male"],
+        status=MEMBER_STATUS["approved"],
+        inserted=timestamp,
+        updated=timestamp,
+    )
+
+    return Staff.objects.create(
+        type=_type,
+        user=user,
+        member=member,
+        inserted=timestamp,
+        updated=timestamp,
+        *args,
+        **kwargs,
+    )
+
+
 current_year = timezone.now().year
 for s in range(current_year, current_year + 2):
     season = Season.objects.create(
@@ -350,14 +408,11 @@ for s in range(current_year, current_year + 2):
         updated=timestamp,
     )
 
-    admin_user = create_user(f"{season} Admin")
-    Staff.objects.create(
+    create_staff(
+        name=f"{season} Admin",
         season=season,
-        type=type_admin,
-        user=admin_user,
+        _type=type_admin,
         status=staff_status_approved,
-        inserted=timestamp,
-        updated=timestamp,
     )
 
     if VERBOSE:
@@ -371,16 +426,12 @@ for s in range(current_year, current_year + 2):
         if VERBOSE:
             print("\t", league)
 
-        vp_user = create_user(f"{season} {league} VP")
-
-        Staff.objects.create(
-            type=type_vp,
+        create_staff(
+            name=f"{season} {league} VP",
+            _type=type_vp,
             season=season,
             league=league,
-            user=vp_user,
             status=staff_status_approved,
-            inserted=timestamp,
-            updated=timestamp,
         )
 
         subdivision_listing = ["Blue", "White"]
@@ -397,17 +448,13 @@ for s in range(current_year, current_year + 2):
                 updated=timestamp,
             )
 
-            division_user = create_user(f"{season} {league} {division} Division")
-
-            Staff.objects.create(
-                type=type_vp,
+            division_user = create_staff(
+                name=f"{season} {league} {division} Division",
+                _type=type_senior_convenor,
                 season=season,
                 league=league,
                 division=division,
-                user=division_user,
                 status=staff_status_approved,
-                inserted=timestamp,
-                updated=timestamp,
             )
 
             if VERBOSE:
@@ -423,24 +470,18 @@ for s in range(current_year, current_year + 2):
                     updated=timestamp,
                 )
 
-                subdivision_user = create_user(
-                    f"{season} - {league} - {division} - {subdivision} - SubDivision"
-                )
-
-                if VERBOSE:
-                    print("\t\t\t", subdivision, subdivision_user, sep=" / ")
-
-                Staff.objects.create(
-                    type=type_convenor,
+                subdivision_user = create_staff(
+                    name=f"{season} - {league} - {division} - {subdivision} - SubDivision",
+                    _type=type_convenor,
                     season=season,
                     league=league,
                     division=division,
                     subdivision=subdivision,
-                    user=subdivision_user,
                     status=staff_status_approved,
-                    inserted=timestamp,
-                    updated=timestamp,
                 )
+
+                if VERBOSE:
+                    print("\t\t\t", subdivision, subdivision_user, sep=" / ")
 
                 for team in ["Graham", "Henry"]:
                     team = Team.objects.create(
@@ -455,44 +496,33 @@ for s in range(current_year, current_year + 2):
                         updated=timestamp,
                     )
 
-                    coach_user = create_user(
-                        f"{season} - {league} - {division} - {subdivision} - {team.name} - Coach"
-                    )
-
-                    Staff.objects.create(
-                        type=type_coach,
+                    coach_user = create_staff(
+                        name=f"{season} - {league} - {division} - {subdivision} - {team.name} - Coach",
+                        _type=type_coach,
                         season=season,
                         league=league,
                         division=division,
                         subdivision=subdivision,
                         team=team,
-                        user=coach_user,
                         status=staff_status_approved,
-                        inserted=timestamp,
-                        updated=timestamp,
                     )
 
                     if VERBOSE:
                         print("\t\t\t\t", team, coach_user, sep=" - ")
 
-                    manager_user = create_user(
-                        f"{season} - {league} - {division} - {subdivision} - {team.name} - Manager"
-                    )
-
-                    Staff.objects.create(
-                        type=type_manager,
+                    manager = create_staff(
+                        name=f"{season} - {league} - {division} - {subdivision} - {team.name} - Manager",
+                        _type=type_manager,
                         season=season,
                         league=league,
                         division=division,
                         subdivision=subdivision,
                         team=team,
-                        user=manager_user,
                         status=staff_status_approved,
-                        inserted=timestamp,
-                        updated=timestamp,
                     )
                     if VERBOSE:
-                        print("\t\t\t\t", team, manager_user, sep=" - ")
+                        print("\t\t\t\t", team, manager.user, sep=" - ")
+
 
 print("Seasons Generated:", Season.objects.count())
 print("Leagues Generated:", League.objects.count())
@@ -500,6 +530,9 @@ print("Divisions Generated:", Division.objects.count())
 print("SubDivisions Generated:", SubDivision.objects.count())
 print("Teams Generated:", Team.objects.count())
 print("Users Generated:", User.objects.count())
+print("Gender Generated:", Gender.objects.count())
+print("MemberStatus Generated:", MemberStatus.objects.count())
+print("Member Generated:", Member.objects.count())
 
 for app in ["core", "team"]:
     os.makedirs(f"{app}/fixtures/", exist_ok=True)

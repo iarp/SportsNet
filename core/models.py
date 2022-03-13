@@ -8,6 +8,7 @@ from django.utils import timezone
 from django.utils.translation import gettext, gettext_lazy
 from iarp_django_utils.models import BaseSetting
 from loguru import logger
+from phonenumber_field.modelfields import PhoneNumberField
 from positions.fields import PositionField
 
 from . import managers
@@ -243,3 +244,74 @@ class PermissionOverrides(_BasePermissions):
 
 class Setting(BaseSetting):
     pass
+
+
+class Gender(_BaseModel):
+    class Meta:
+        verbose_name = gettext_lazy("Gender")
+        verbose_name_plural = gettext_lazy("Genders")
+        constraints = [
+            models.UniqueConstraint(Lower("name"), name="gender_name_unique"),
+        ]
+
+    name = models.CharField(max_length=255)
+
+
+class MemberStatus(_BaseModel):
+    class Meta:
+        verbose_name = gettext_lazy("Member Status")
+        verbose_name_plural = gettext_lazy("Member Statuses")
+        ordering = ["weight"]
+        constraints = [
+            models.UniqueConstraint(Lower("name"), name="memberstatus_name_unique"),
+        ]
+
+    name = models.CharField(max_length=255)
+
+    weight = PositionField()
+
+    default = models.BooleanField(null=True, blank=True, default=None, unique=True)
+
+    def save(self, *args, **kwargs):
+        if self.default is False:
+            self.default = None
+        return super().save(*args, **kwargs)
+
+
+class Member(_BaseModelWithCommonIDs):
+    # TODO: Do we need any UniqueContraint's?
+    # Previously was Person table.
+    class Meta:
+        verbose_name = gettext_lazy("Member")
+        verbose_name_plural = gettext_lazy("Members")
+
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+
+    date_of_birth = models.DateField(null=True)
+
+    status = models.ForeignKey(MemberStatus, on_delete=models.PROTECT, blank=True)
+
+    comments = models.TextField(blank=True)
+
+    address1 = models.CharField(max_length=255, blank=True)
+    address2 = models.CharField(max_length=255, blank=True)
+    city = models.CharField(max_length=255, blank=True)
+    province = models.CharField(max_length=255, blank=True)
+    postal_code = models.CharField(max_length=10, blank=True)
+
+    phone_home = PhoneNumberField(blank=True)
+    phone_work = PhoneNumberField(blank=True)
+    phone_cell = PhoneNumberField(blank=True)
+    phone_fax = PhoneNumberField(blank=True)
+
+    email = models.EmailField(blank=True)
+
+    sportsmanager_id = models.IntegerField(null=True, blank=True)
+    gender = models.ForeignKey(Gender, on_delete=models.PROTECT)
+
+    def __str__(self):
+        return self.full_name()
+
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"

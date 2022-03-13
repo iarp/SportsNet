@@ -11,7 +11,16 @@ from django.utils import timezone
 
 from team.models import Staff, StaffType, Team
 
-from .models import Division, League, PermissionOverrides, Season, SubDivision
+from .models import (
+    Division,
+    Gender,
+    League,
+    Member,
+    MemberStatus,
+    PermissionOverrides,
+    Season,
+    SubDivision,
+)
 from .perms import add_override_permission, has_perm
 from .test_helpers import FixtureBasedTestCase
 
@@ -525,4 +534,48 @@ class CoreUserTests(FixtureBasedTestCase):
             User.objects.create_user,
             email="",
             password="12345",
+        )
+
+
+class MemberTests(TestCase):
+    def test_gender_uniqueness(self):
+        Gender.objects.create(name="Male")
+        self.assertRaises(IntegrityError, Gender.objects.create, name="Male")
+
+    def test_gender_uniqueness_case_insensitive(self):
+        Gender.objects.create(name="Male")
+        self.assertRaises(IntegrityError, Gender.objects.create, name="male")
+
+    def test_memberstatus_uniqueness(self):
+        MemberStatus.objects.create(name="Test")
+        self.assertRaises(IntegrityError, MemberStatus.objects.create, name="Test")
+
+    def test_memberstatus_uniqueness_case_insensitive(self):
+        MemberStatus.objects.create(name="Test")
+        self.assertRaises(IntegrityError, MemberStatus.objects.create, name="test")
+
+    def test_memberstatus_default_uniqueness(self):
+        MemberStatus.objects.create(name="test", default=True)
+        self.assertRaises(
+            IntegrityError, MemberStatus.objects.create, name="another", default=True
+        )
+
+    def test_new_member_gets_default_status_assigned(self):
+        ms = MemberStatus.objects.create(name="test status", default=True)
+
+        member = Member.objects.create(
+            first_name="test",
+            last_name="blah",
+            gender=Gender.objects.create(name="test"),
+        )
+
+        self.assertEqual(ms, member.status)
+
+    def test_new_member_without_a_default_status_existing_raises(self):
+        self.assertRaises(
+            IntegrityError,
+            Member.objects.create,
+            first_name="test",
+            last_name="blah",
+            gender=Gender.objects.create(name="test"),
         )

@@ -3,6 +3,7 @@ django-allauth
 django-crispy-forms
 django-environ
 django-model-utils
+django-phonenumber-field[phonenumbers]
 django-positions
 django-sekizai
 

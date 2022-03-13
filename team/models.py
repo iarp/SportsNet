@@ -125,6 +125,11 @@ class TeamStatusReason(_BaseModel):
 
     default = models.BooleanField(default=None, null=True, blank=True)
 
+    def save(self, *args, **kwargs):
+        if self.default is False:
+            self.default = None
+        return super().save(*args, **kwargs)
+
 
 class TeamStatusLog(_BaseModel):
     class Meta:
@@ -276,8 +281,7 @@ class Staff(_BaseModel):
         related_name="staff_assignments",
     )
 
-    # TODO: Where is persons being stored?
-    # person = models.ForeignKey()
+    member = models.ForeignKey("core.Member", on_delete=models.PROTECT)
 
     type = models.ForeignKey(StaffType, on_delete=models.PROTECT)
     status = models.ForeignKey(StaffStatus, on_delete=models.PROTECT)
