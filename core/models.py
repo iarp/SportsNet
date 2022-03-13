@@ -329,3 +329,19 @@ class Member(_BaseModelWithCommonIDs):
                 pass
 
         return super().save(*args, **kwargs)
+
+
+class Package(_BaseModel):
+    class Meta:
+        ordering = ["weight"]
+        verbose_name = gettext_lazy("Package")
+        verbose_name_plural = gettext_lazy("Package")
+
+        constraints = [
+            models.constraints.UniqueConstraint(
+                Lower("name"), name="package_name_uniqueness"
+            )
+        ]
+
+    name = models.CharField(max_length=255)
+    weight = PositionField()

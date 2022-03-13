@@ -67,6 +67,8 @@ if DUMP_SK_DATA:
     cursor = connection.cursor()
 
     tables = [
+        "PlayerPositionType",
+        "PlayerType",
         "TeamStatus",
         "TeamStatusReason",
         "TeamStaffStatus",
@@ -147,6 +149,10 @@ from django.core.management import call_command
 from django.utils import timezone
 from django.utils.text import slugify
 
+TIMESTAMP = timezone.make_aware(
+    timezone.datetime(2022, 1, 1, 0, 0, 0), timezone.get_current_timezone()
+)
+
 call_command("makemigrations")
 call_command("migrate")
 
@@ -160,6 +166,9 @@ from core.models import (
     SubDivision,
 )
 from team.models import (
+    PlayerPosition,
+    PlayerStatus,
+    PlayerType,
     Staff,
     StaffStatus,
     StaffStatusReason,
@@ -263,16 +272,55 @@ if RESET_DB_MIGRATIONS:
             )
             item.save(update_fields=["inserted", "updated"])
 
+    with open("cache/SKTables/PlayerPositionType.json", "r") as f:
+        for _id, data in json.load(f).items():
+            item, _ = PlayerPosition.objects.get_or_create(
+                old_sk_id=_id,
+                name=data["Description"],
+                weight=data["weight"],
+            )
+            item.inserted = timezone.make_aware(
+                datetime.datetime.fromisoformat(data["InsertDateTime"]),
+                timezone.get_current_timezone(),
+            )
+            item.updated = timezone.make_aware(
+                datetime.datetime.fromisoformat(data["UpdateDateTime"]),
+                timezone.get_current_timezone(),
+            )
+            item.save(update_fields=["inserted", "updated"])
 
-"""
-2 Seasons
-    2 Leagues
-        2 Divisions
-            2 SubDivisions
-                2 Teams
+    with open("cache/SKTables/PlayerType.json", "r") as f:
+        for _id, data in json.load(f).items():
+            item, _ = PlayerType.objects.get_or_create(
+                old_sk_id=_id,
+                name=data["Name"],
+                weight=data["weight"],
+            )
+            item.inserted = timezone.make_aware(
+                datetime.datetime.fromisoformat(data["InsertDateTime"]),
+                timezone.get_current_timezone(),
+            )
+            item.updated = timezone.make_aware(
+                datetime.datetime.fromisoformat(data["UpdateDateTime"]),
+                timezone.get_current_timezone(),
+            )
+            item.save(update_fields=["inserted", "updated"])
 
-48 teams total.
-"""
+    ps, _ = PlayerStatus.objects.get_or_create(
+        name="Pending", defaults={"inserted": TIMESTAMP, "updated": TIMESTAMP}
+    )
+    ps.reasons.get_or_create(name="Waiting On Registration", default=True)
+
+    ps, _ = PlayerStatus.objects.get_or_create(
+        name="Approved", defaults={"inserted": TIMESTAMP, "updated": TIMESTAMP}
+    )
+    ps.reasons.get_or_create(name="N/A")
+
+    ps, _ = PlayerStatus.objects.get_or_create(
+        name="Confirmed", defaults={"inserted": TIMESTAMP, "updated": TIMESTAMP}
+    )
+    ps.reasons.get_or_create(name="", default=True)
+
 
 if (
     Season.objects.count() > 2
@@ -302,62 +350,58 @@ Member.objects.all().delete()
 MemberStatus.objects.all().delete()
 Gender.objects.all().delete()
 
-timestamp = timezone.make_aware(
-    timezone.datetime(2022, 1, 1, 0, 0, 0), timezone.get_current_timezone()
-)
-
 type_manager = StaffType.objects.create(
-    name="Manager", inserted=timestamp, updated=timestamp
+    name="Manager", inserted=TIMESTAMP, updated=TIMESTAMP
 )
 type_coach = StaffType.objects.create(
-    name="Coach", inserted=timestamp, updated=timestamp
+    name="Coach", inserted=TIMESTAMP, updated=TIMESTAMP
 )
 type_convenor = StaffType.objects.create(
-    name="Convenor", inserted=timestamp, updated=timestamp
+    name="Convenor", inserted=TIMESTAMP, updated=TIMESTAMP
 )
 type_senior_convenor = StaffType.objects.create(
-    name="Senior Convenor", inserted=timestamp, updated=timestamp
+    name="Senior Convenor", inserted=TIMESTAMP, updated=TIMESTAMP
 )
-type_vp = StaffType.objects.create(name="VP", inserted=timestamp, updated=timestamp)
+type_vp = StaffType.objects.create(name="VP", inserted=TIMESTAMP, updated=TIMESTAMP)
 type_admin = StaffType.objects.create(
-    name="Admin", inserted=timestamp, updated=timestamp
+    name="Admin", inserted=TIMESTAMP, updated=TIMESTAMP
 )
 
 staff_status_approved = StaffStatus.objects.create(
-    name="APPROVED", inserted=timestamp, updated=timestamp
+    name="APPROVED", inserted=TIMESTAMP, updated=TIMESTAMP
 )
 team_status_approved = TeamStatus.objects.create(
-    name="Fixture Approved", inserted=timestamp, updated=timestamp
+    name="Fixture Approved", inserted=TIMESTAMP, updated=TIMESTAMP
 )
 team_status_reason_approved = TeamStatusReason.objects.create(
     name="Fixture Approved Reason",
     status=team_status_approved,
-    inserted=timestamp,
-    updated=timestamp,
+    inserted=TIMESTAMP,
+    updated=TIMESTAMP,
 )
 
 GENDERS = {
     "male": Gender.objects.create(
         name="Male",
-        inserted=timestamp,
-        updated=timestamp,
+        inserted=TIMESTAMP,
+        updated=TIMESTAMP,
     ),
     "female": Gender.objects.create(
         name="Female",
-        inserted=timestamp,
-        updated=timestamp,
+        inserted=TIMESTAMP,
+        updated=TIMESTAMP,
     ),
 }
 MEMBER_STATUS = {
     "approved": MemberStatus.objects.create(
         name="Approved",
-        inserted=timestamp,
-        updated=timestamp,
+        inserted=TIMESTAMP,
+        updated=TIMESTAMP,
     ),
     "denied": MemberStatus.objects.create(
         name="Denied",
-        inserted=timestamp,
-        updated=timestamp,
+        inserted=TIMESTAMP,
+        updated=TIMESTAMP,
     ),
 }
 
@@ -375,9 +419,9 @@ def create_user(data):
         username=data,
         email=data,
         is_active=True,
-        inserted=timestamp,
-        updated=timestamp,
-        date_joined=timestamp,
+        inserted=TIMESTAMP,
+        updated=TIMESTAMP,
+        date_joined=TIMESTAMP,
     )
 
 
@@ -399,16 +443,16 @@ def create_staff(name, _type, *args, **kwargs):
         email=user.email,
         gender=GENDERS["male"],
         status=MEMBER_STATUS["approved"],
-        inserted=timestamp,
-        updated=timestamp,
+        inserted=TIMESTAMP,
+        updated=TIMESTAMP,
     )
 
     return Staff.objects.create(
         type=_type,
         user=user,
         member=member,
-        inserted=timestamp,
-        updated=timestamp,
+        inserted=TIMESTAMP,
+        updated=TIMESTAMP,
         *args,
         **kwargs,
     )
@@ -420,8 +464,8 @@ for s in range(current_year, current_year + 2):
         name=f"{s}-{s+1}",
         start=timezone.datetime(s, 9, 1),
         end=timezone.datetime(s + 1, 8, 31),
-        inserted=timestamp,
-        updated=timestamp,
+        inserted=TIMESTAMP,
+        updated=TIMESTAMP,
     )
 
     create_staff(
@@ -436,7 +480,7 @@ for s in range(current_year, current_year + 2):
 
     for league in ["HL", "REP"]:
         league = League.objects.create(
-            name=league, season=season, inserted=timestamp, updated=timestamp
+            name=league, season=season, inserted=TIMESTAMP, updated=TIMESTAMP
         )
 
         if VERBOSE:
@@ -459,8 +503,8 @@ for s in range(current_year, current_year + 2):
                 name=division,
                 league=league,
                 season=season,
-                inserted=timestamp,
-                updated=timestamp,
+                inserted=TIMESTAMP,
+                updated=TIMESTAMP,
             )
 
             division_user = create_staff(
@@ -479,8 +523,8 @@ for s in range(current_year, current_year + 2):
                     division=division,
                     season=season,
                     league=league,
-                    inserted=timestamp,
-                    updated=timestamp,
+                    inserted=TIMESTAMP,
+                    updated=TIMESTAMP,
                 )
 
                 subdivision_user = create_staff(
@@ -502,8 +546,8 @@ for s in range(current_year, current_year + 2):
                         name=team,
                         status=team_status_approved,
                         status_reason=team_status_reason_approved,
-                        inserted=timestamp,
-                        updated=timestamp,
+                        inserted=TIMESTAMP,
+                        updated=TIMESTAMP,
                     )
 
                     coach_user = create_staff(

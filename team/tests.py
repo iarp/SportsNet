@@ -17,6 +17,11 @@ from core.perms import add_override_permission
 from core.test_helpers import FixtureBasedTestCase
 
 from .models import (
+    Player,
+    PlayerPosition,
+    PlayerStatus,
+    PlayerStatusLog,
+    PlayerType,
     Staff,
     StaffStatus,
     StaffType,
@@ -768,3 +773,180 @@ class TeamStatusTests(TestCase):
         )
         tsr.refresh_from_db()
         self.assertIsNone(tsr.default)
+
+
+class PlayerPositionTests(TestCase):
+    def test_name_uniqueness(self):
+        PlayerPosition.objects.create(name="test")
+        self.assertRaises(IntegrityError, PlayerPosition.objects.create, name="test")
+
+    def test_name_uniqueness_case_insensitive(self):
+        PlayerPosition.objects.create(name="test")
+        self.assertRaises(IntegrityError, PlayerPosition.objects.create, name="Test")
+
+
+class PlayerTypeTests(TestCase):
+    def test_name_uniqueness(self):
+        PlayerType.objects.create(name="test")
+        self.assertRaises(IntegrityError, PlayerType.objects.create, name="test")
+
+    def test_name_uniqueness_case_insensitive(self):
+        PlayerType.objects.create(name="test")
+        self.assertRaises(IntegrityError, PlayerType.objects.create, name="Test")
+
+    def test_default_unique(self):
+        PlayerType.objects.create(name="test", default=True)
+        self.assertRaises(
+            IntegrityError, PlayerType.objects.create, name="test 2", default=True
+        )
+
+    def test_default_is_always_none_due_to_unique_constraint(self):
+        pt = PlayerType.objects.create(
+            name="test",
+            default=False,
+        )
+        self.assertIsNone(pt.default)
+
+
+class PlayerStatusTests(TestCase):
+    def test_uniqueness(self):
+        PlayerStatus.objects.create(name="test")
+        self.assertRaises(IntegrityError, PlayerStatus.objects.create, name="test")
+
+    def test_uniqueness_case_insensitive(self):
+        PlayerStatus.objects.create(name="test")
+        self.assertRaises(IntegrityError, PlayerStatus.objects.create, name="Test")
+
+    def test_default_unique(self):
+        PlayerStatus.objects.create(name="test", default=True)
+        self.assertRaises(
+            IntegrityError, PlayerStatus.objects.create, name="test 2", default=True
+        )
+
+    def test_default_is_always_none_due_to_unique_constraint(self):
+        pt = PlayerStatus.objects.create(
+            name="test",
+            default=False,
+        )
+        self.assertIsNone(pt.default)
+
+
+class PlayerStatusReasonTests(TestCase):
+    def test_uniqueness_case_insensitive(self):
+        ps = PlayerStatus.objects.create(name="test")
+        ps.reasons.create(name="test")
+        self.assertRaises(IntegrityError, ps.reasons.create, name="Test")
+
+    def test_uniqueness(self):
+        ps = PlayerStatus.objects.create(name="test")
+        ps2 = PlayerStatus.objects.create(name="test 2")
+
+        ps.reasons.create(name="test")
+        ps2.reasons.create(name="test")
+
+        self.assertRaises(IntegrityError, ps.reasons.create, name="Test")
+
+    def test_uniqueness_with_default(self):
+        ps = PlayerStatus.objects.create(name="test")
+
+        ps.reasons.create(name="test1", default=True)
+
+        self.assertRaises(
+            IntegrityError, ps.reasons.create, name="test 2", default=True
+        )
+
+    def test_default_is_always_none_due_to_unique_constraint(self):
+        ps = PlayerStatus.objects.create(name="test")
+        reason = ps.reasons.create(name="test1", default=False)
+        self.assertIsNone(reason.default)
+
+
+class PlayerTests(FixtureBasedTestCase):
+    def test_can_create_using_only_team_object(self):
+        member = Member.objects.first()
+        status = PlayerStatus.objects.filter(reasons__default=True).first()
+        pos = PlayerPosition.objects.first()
+        ptype = PlayerType.objects.first()
+
+        team = Team.objects.first()
+
+        player = Player.objects.create(
+            team=team,
+            member=member,
+            status=status,
+            position=pos,
+            type=ptype,
+        )
+        self.assertEqual(str(player.member), str(player))
+
+    def test_editing_player_status_changes_reason(self):
+        member = Member.objects.first()
+        status = PlayerStatus.objects.filter(reasons__default=True).first()
+        new_status = (
+            PlayerStatus.objects.filter(reasons__default=True)
+            .exclude(pk=status.pk)
+            .first()
+        )
+        pos = PlayerPosition.objects.first()
+        ptype = PlayerType.objects.first()
+
+        self.assertIs(True, new_status.reasons.filter(default=True).exists())
+
+        team = Team.objects.first()
+
+        player = Player.objects.create(
+            team=team,
+            member=member,
+            status=status,
+            position=pos,
+            type=ptype,
+        )
+
+        player.status = new_status
+        player.save()
+
+        self.assertEqual(1, PlayerStatusLog.objects.count())
+
+        self.assertEqual(player.status_reason, new_status.reasons.first())
+
+    def test_editing_player_status_fails_due_to_non_default_non_assigned_reason(self):
+        member = Member.objects.first()
+        status = PlayerStatus.objects.filter(reasons__default=True).first()
+        new_status = PlayerStatus.objects.exclude(
+            pk=status.pk, reasons__default=True
+        ).first()
+        pos = PlayerPosition.objects.first()
+        ptype = PlayerType.objects.first()
+
+        self.assertIs(False, new_status.reasons.filter(default=True).exists())
+
+        team = Team.objects.first()
+
+        player = Player.objects.create(
+            team=team,
+            member=member,
+            status=status,
+            position=pos,
+            type=ptype,
+        )
+
+        player.status = new_status
+        self.assertRaises(IntegrityError, player.save)
+
+    def test_new_player_fails_due_to_non_default_non_assigned_reason(self):
+        member = Member.objects.first()
+        status = PlayerStatus.objects.exclude(reasons__default=True).first()
+        pos = PlayerPosition.objects.first()
+        ptype = PlayerType.objects.first()
+
+        team = Team.objects.first()
+
+        self.assertRaises(
+            IntegrityError,
+            Player.objects.create,
+            team=team,
+            member=member,
+            status=status,
+            position=pos,
+            type=ptype,
+        )

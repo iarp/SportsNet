@@ -4610,5 +4610,314 @@
         "registration_date": null,
         "release_date": null
     }
+},
+{
+    "model": "team.playerposition",
+    "pk": 1,
+    "fields": {
+        "old_sk_id": 1,
+        "inserted": "2015-11-10T07:20:20.013Z",
+        "inserted_by": null,
+        "updated": "2015-11-10T07:20:20.013Z",
+        "updated_by": null,
+        "name": "Forward",
+        "weight": 0,
+        "left_wing": false,
+        "centre": false,
+        "right_wing": false,
+        "left_defence": false,
+        "right_defence": false,
+        "goaltender": false,
+        "forward": false,
+        "defence": false
+    }
+},
+{
+    "model": "team.playerposition",
+    "pk": 2,
+    "fields": {
+        "old_sk_id": 2,
+        "inserted": "2015-11-10T07:20:20.013Z",
+        "inserted_by": null,
+        "updated": "2015-11-10T07:20:20.013Z",
+        "updated_by": null,
+        "name": "Defense",
+        "weight": 1,
+        "left_wing": false,
+        "centre": false,
+        "right_wing": false,
+        "left_defence": false,
+        "right_defence": false,
+        "goaltender": false,
+        "forward": false,
+        "defence": false
+    }
+},
+{
+    "model": "team.playerposition",
+    "pk": 3,
+    "fields": {
+        "old_sk_id": 3,
+        "inserted": "2015-11-10T07:20:20.013Z",
+        "inserted_by": null,
+        "updated": "2015-11-10T07:20:20.013Z",
+        "updated_by": null,
+        "name": "Left Wing",
+        "weight": 2,
+        "left_wing": false,
+        "centre": false,
+        "right_wing": false,
+        "left_defence": false,
+        "right_defence": false,
+        "goaltender": false,
+        "forward": false,
+        "defence": false
+    }
+},
+{
+    "model": "team.playerposition",
+    "pk": 4,
+    "fields": {
+        "old_sk_id": 4,
+        "inserted": "2015-11-10T07:20:20.013Z",
+        "inserted_by": null,
+        "updated": "2015-11-10T07:20:20.013Z",
+        "updated_by": null,
+        "name": "Centre",
+        "weight": 3,
+        "left_wing": false,
+        "centre": false,
+        "right_wing": false,
+        "left_defence": false,
+        "right_defence": false,
+        "goaltender": false,
+        "forward": false,
+        "defence": false
+    }
+},
+{
+    "model": "team.playerposition",
+    "pk": 5,
+    "fields": {
+        "old_sk_id": 5,
+        "inserted": "2015-11-10T07:20:20.013Z",
+        "inserted_by": null,
+        "updated": "2015-11-10T07:20:20.013Z",
+        "updated_by": null,
+        "name": "Right Wing",
+        "weight": 4,
+        "left_wing": false,
+        "centre": false,
+        "right_wing": false,
+        "left_defence": false,
+        "right_defence": false,
+        "goaltender": false,
+        "forward": false,
+        "defence": false
+    }
+},
+{
+    "model": "team.playerposition",
+    "pk": 6,
+    "fields": {
+        "old_sk_id": 6,
+        "inserted": "2015-11-10T07:20:20.013Z",
+        "inserted_by": null,
+        "updated": "2015-11-10T07:20:20.013Z",
+        "updated_by": null,
+        "name": "Wing",
+        "weight": 5,
+        "left_wing": false,
+        "centre": false,
+        "right_wing": false,
+        "left_defence": false,
+        "right_defence": false,
+        "goaltender": false,
+        "forward": false,
+        "defence": false
+    }
+},
+{
+    "model": "team.playerposition",
+    "pk": 7,
+    "fields": {
+        "old_sk_id": 7,
+        "inserted": "2015-11-10T07:20:20.013Z",
+        "inserted_by": null,
+        "updated": "2015-11-10T07:20:20.013Z",
+        "updated_by": null,
+        "name": "Left Defenceman",
+        "weight": 6,
+        "left_wing": false,
+        "centre": false,
+        "right_wing": false,
+        "left_defence": false,
+        "right_defence": false,
+        "goaltender": false,
+        "forward": false,
+        "defence": false
+    }
+},
+{
+    "model": "team.playerposition",
+    "pk": 8,
+    "fields": {
+        "old_sk_id": 8,
+        "inserted": "2015-11-10T07:20:20.013Z",
+        "inserted_by": null,
+        "updated": "2015-11-10T07:20:20.013Z",
+        "updated_by": null,
+        "name": "Right Defenceman",
+        "weight": 7,
+        "left_wing": false,
+        "centre": false,
+        "right_wing": false,
+        "left_defence": false,
+        "right_defence": false,
+        "goaltender": false,
+        "forward": false,
+        "defence": false
+    }
+},
+{
+    "model": "team.playerposition",
+    "pk": 9,
+    "fields": {
+        "old_sk_id": 9,
+        "inserted": "2015-11-10T07:20:20.013Z",
+        "inserted_by": null,
+        "updated": "2015-11-10T07:20:20.013Z",
+        "updated_by": null,
+        "name": "Goalie",
+        "weight": 8,
+        "left_wing": false,
+        "centre": false,
+        "right_wing": false,
+        "left_defence": false,
+        "right_defence": false,
+        "goaltender": false,
+        "forward": false,
+        "defence": false
+    }
+},
+{
+    "model": "team.playertype",
+    "pk": 1,
+    "fields": {
+        "old_sk_id": 1,
+        "inserted": "2012-04-18T03:59:28.967Z",
+        "inserted_by": null,
+        "updated": "2012-04-18T03:59:28.967Z",
+        "updated_by": null,
+        "name": "Player",
+        "weight": 0,
+        "default": null,
+        "change_causes_player_flag_on_team_to_enable": true
+    }
+},
+{
+    "model": "team.playertype",
+    "pk": 2,
+    "fields": {
+        "old_sk_id": 2,
+        "inserted": "2012-04-18T03:59:28.967Z",
+        "inserted_by": null,
+        "updated": "2012-04-18T03:59:28.967Z",
+        "updated_by": null,
+        "name": "Goaltender",
+        "weight": 1,
+        "default": null,
+        "change_causes_player_flag_on_team_to_enable": true
+    }
+},
+{
+    "model": "team.playerstatus",
+    "pk": 1,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-01-01T05:00:00Z",
+        "inserted_by": null,
+        "updated": "2022-01-01T05:00:00Z",
+        "updated_by": null,
+        "name": "Pending",
+        "weight": 0,
+        "include_in_roster_export": true,
+        "default": null
+    }
+},
+{
+    "model": "team.playerstatus",
+    "pk": 2,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-01-01T05:00:00Z",
+        "inserted_by": null,
+        "updated": "2022-01-01T05:00:00Z",
+        "updated_by": null,
+        "name": "Approved",
+        "weight": 1,
+        "include_in_roster_export": true,
+        "default": null
+    }
+},
+{
+    "model": "team.playerstatus",
+    "pk": 3,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-01-01T05:00:00Z",
+        "inserted_by": null,
+        "updated": "2022-01-01T05:00:00Z",
+        "updated_by": null,
+        "name": "Confirmed",
+        "weight": 2,
+        "include_in_roster_export": true,
+        "default": null
+    }
+},
+{
+    "model": "team.playerstatusreason",
+    "pk": 1,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-13T22:37:29.338Z",
+        "inserted_by": null,
+        "updated": "2022-03-13T22:37:29.338Z",
+        "updated_by": null,
+        "status": 1,
+        "name": "Waiting On Registration",
+        "weight": 0,
+        "default": true
+    }
+},
+{
+    "model": "team.playerstatusreason",
+    "pk": 2,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-13T22:37:29.352Z",
+        "inserted_by": null,
+        "updated": "2022-03-13T22:37:29.352Z",
+        "updated_by": null,
+        "status": 2,
+        "name": "N/A",
+        "weight": 1,
+        "default": null
+    }
+},
+{
+    "model": "team.playerstatusreason",
+    "pk": 3,
+    "fields": {
+        "old_sk_id": null,
+        "inserted": "2022-03-13T22:37:29.367Z",
+        "inserted_by": null,
+        "updated": "2022-03-13T22:37:29.367Z",
+        "updated_by": null,
+        "status": 3,
+        "name": "",
+        "weight": 2,
+        "default": true
+    }
 }
 ]
