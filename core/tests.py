@@ -560,6 +560,13 @@ class MemberTests(TestCase):
             IntegrityError, MemberStatus.objects.create, name="another", default=True
         )
 
+    def test_memberstatus_default_is_always_none_due_to_unique_constraint(self):
+        ms = MemberStatus.objects.create(
+            name="test",
+            default=False,
+        )
+        self.assertIsNone(ms.default)
+
     def test_new_member_gets_default_status_assigned(self):
         ms = MemberStatus.objects.create(name="test status", default=True)
 
@@ -570,6 +577,29 @@ class MemberTests(TestCase):
         )
 
         self.assertEqual(ms, member.status)
+
+    def test_new_member_does_not_get_default_status_with_existing_assigned(self):
+        MemberStatus.objects.create(name="test status", default=True)
+        ms = MemberStatus.objects.create(name="test status 2")
+
+        member = Member.objects.create(
+            first_name="test",
+            last_name="blah",
+            gender=Gender.objects.create(name="test"),
+            status=ms,
+        )
+
+        self.assertEqual(ms, member.status)
+
+    def test_member_str_contains_first_and_last_name(self):
+        MemberStatus.objects.create(name="test status", default=True)
+        member = Member.objects.create(
+            first_name="test",
+            last_name="blah",
+            gender=Gender.objects.create(name="test"),
+        )
+        self.assertIn(member.first_name, str(member))
+        self.assertIn(member.last_name, str(member))
 
     def test_new_member_without_a_default_status_existing_raises(self):
         self.assertRaises(

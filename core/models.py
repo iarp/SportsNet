@@ -50,6 +50,10 @@ class User(_BaseModel, AbstractUser):
     def __str__(self):
         return self.get_username()
 
+    def save(self, *args, **kwargs):
+        self.username = self.email
+        return super().save(*args, **kwargs)
+
 
 class Season(_BaseModelWithCommonIDs):
     class Meta:
@@ -315,3 +319,13 @@ class Member(_BaseModelWithCommonIDs):
 
     def full_name(self):
         return f"{self.first_name} {self.last_name}"
+
+    def save(self, *args, **kwargs):
+
+        if not self.status_id or (not self.pk and not self.status_id):
+            try:
+                self.status = MemberStatus.objects.get(default=True)
+            except MemberStatus.DoesNotExist:
+                pass
+
+        return super().save(*args, **kwargs)
