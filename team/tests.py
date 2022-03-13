@@ -732,14 +732,39 @@ class TeamTests(FixtureBasedTestCase):
 
 
 class TeamStatusTests(TestCase):
+    def setUp(self) -> None:
+        self.team_status = TeamStatus.objects.create(name="test")
+        self.team_status2 = TeamStatus.objects.create(name="test 2")
+        return super().setUp()
+
     def test_teamstatus_uniqueness(self):
-        TeamStatus.objects.create(name="test")
         self.assertRaises(IntegrityError, TeamStatus.objects.create, name="test")
 
+    def test_teamstatus_uniqueness_case_insensitive(self):
+        self.assertRaises(IntegrityError, TeamStatus.objects.create, name="Test")
+
     def test_teamstatusreason_uniqueness(self):
-        status = TeamStatus.objects.create(name="test")
-        status.reasons.create(name="test1", default=True)
+        self.team_status.reasons.create(name="test1", default=True)
+        self.team_status.reasons.create(name="test3")
+        self.team_status.reasons.create(name="test4")
+
+        self.team_status2.reasons.create(name="test1")
 
         self.assertRaises(
-            IntegrityError, status.reasons.create, name="test2", default=True
+            IntegrityError, self.team_status.reasons.create, name="test2", default=True
         )
+
+    def test_teamstatusreason_uniqueness_is_limited_to_specific_stats(self):
+        self.team_status.reasons.create(name="test1")
+        self.team_status2.reasons.create(name="test1")
+
+    def test_teamstatusreason_uniqueness_case_insensitive(self):
+        self.team_status.reasons.create(name="test1")
+        self.assertRaises(IntegrityError, self.team_status.reasons.create, name="test1")
+
+    def test_teamstatusreason_default_is_always_none_due_to_unique_constraint(self):
+        tsr = TeamStatusReason.objects.create(
+            name="test", default=False, status=self.team_status
+        )
+        tsr.refresh_from_db()
+        self.assertIsNone(tsr.default)

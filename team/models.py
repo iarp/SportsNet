@@ -113,7 +113,10 @@ class TeamStatusReason(_BaseModel):
         constraints = [
             models.constraints.UniqueConstraint(
                 "status", "default", name="teamstatusreason_status_default_uniqueness"
-            )
+            ),
+            models.constraints.UniqueConstraint(
+                Lower("name"), "status", name="teamstatusreason_name_status_uniqueness"
+            ),
         ]
 
     status = models.ForeignKey(
