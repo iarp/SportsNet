@@ -51,6 +51,9 @@ class Team(_BaseModelWithCommonIDs):
 
     draft_start_position = models.PositiveIntegerField(default=1)
 
+    registration_status = models.BooleanField(default=False)
+    approval_required = models.BooleanField(default=False)
+
     weight = PositionField(collection=["season"])
 
     def get_full_team_name(self, separator=" / "):
@@ -137,6 +140,7 @@ class TeamStatus(_BaseModel):
     include_in_roster_export = models.BooleanField(default=True)
 
     # NOTE: Used in Team.is_approved mainly for roster downloader
+    # supposedly no longer needed as HCR roster displays approval status.
     considered_approved = models.BooleanField(
         default=False,
         help_text=gettext_lazy(
@@ -286,8 +290,8 @@ class Staff(_BaseModel):
         verbose_name = gettext_lazy("Team Staff")
         verbose_name_plural = gettext_lazy("Team Staff")
 
-    objects = managers._StaffObjectsManagerWithDetails.from_queryset(
-        managers._StaffManagerCustomQuerySet
+    objects = managers.StaffObjectsManagerWithDetails.from_queryset(
+        managers.StaffManagerCustomQuerySet
     )()
 
     season = models.ForeignKey(
@@ -492,13 +496,6 @@ class PlayerStatusReason(_BaseModel):
         return super().save(*args, **kwargs)
 
 
-# class PlayerTeams(_BaseModel):
-#     player = models.ForeignKey("team.Player", on_delete=models.CASCADE)
-#     team = models.ForeignKey("team.Team", on_delete=models.CASCADE)
-
-#     affiliate = models.BooleanField(default=False)
-
-
 class Player(_BaseModelWithCommonIDs):
     class Meta:
         verbose_name = gettext_lazy("Player")
@@ -532,8 +529,6 @@ class Player(_BaseModelWithCommonIDs):
         "core.SubDivision", on_delete=models.CASCADE, related_name="players"
     )
     team = models.ForeignKey(Team, on_delete=models.CASCADE, related_name="players")
-
-    # teams = models.ManyToManyField(Team, related_name="players", through="PlayerTeams")
 
     member = models.ForeignKey(
         "core.Member", on_delete=models.PROTECT, related_name="players"

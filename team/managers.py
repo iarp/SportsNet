@@ -3,7 +3,7 @@ from django.db.models import Q
 from django.utils.translation import gettext, gettext_lazy
 
 
-class _StaffObjectsManagerWithDetails(models.Manager):
+class StaffObjectsManagerWithDetails(models.Manager):
     def head_coach(self, *args, **kwargs):
         if self.instance.__class__.__name__ == "Team":
             return self.filter(*args, type__name="Coach", **kwargs).first()
@@ -111,7 +111,7 @@ class _StaffObjectsManagerWithDetails(models.Manager):
         raise TypeError(gettext("managers is available on the Team instance."))
 
 
-class _StaffManagerCustomQuerySet(models.QuerySet):
+class StaffManagerCustomQuerySet(models.QuerySet):
     def emails(self):
         return self.filter(user__email__contains="@").values_list(
             "user__email", flat=True
