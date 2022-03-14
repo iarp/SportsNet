@@ -307,12 +307,22 @@ if RESET_DB_MIGRATIONS:
             item.save(update_fields=["inserted", "updated"])
 
     ps, _ = PlayerStatus.objects.get_or_create(
-        name="Pending", defaults={"inserted": TIMESTAMP, "updated": TIMESTAMP}
+        name="Pending",
+        defaults={
+            "inserted": TIMESTAMP,
+            "updated": TIMESTAMP,
+            "change_causes_player_flag_on_team_to_enable": True,
+        },
     )
     ps.reasons.get_or_create(name="Waiting On Registration", default=True)
 
     ps, _ = PlayerStatus.objects.get_or_create(
-        name="Approved", defaults={"inserted": TIMESTAMP, "updated": TIMESTAMP}
+        name="Approved",
+        defaults={
+            "inserted": TIMESTAMP,
+            "updated": TIMESTAMP,
+            "change_causes_player_flag_on_team_to_enable": False,
+        },
     )
     ps.reasons.get_or_create(name="N/A")
 

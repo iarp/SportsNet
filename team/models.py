@@ -145,7 +145,6 @@ class TeamStatus(_BaseModel):
         ),
     )
 
-    # NOTE: Was in the table, all entries False. Unknown usage.
     clear_changed_staff_players_flag = models.BooleanField(default=False)
 
 
@@ -420,17 +419,6 @@ class PlayerType(_BaseModel):
 
     default = models.BooleanField(default=None, null=True, blank=True, unique=True)
 
-    change_causes_player_flag_on_team_to_enable = models.BooleanField(
-        default=True,
-        verbose_name=gettext_lazy(
-            "Change causes team.player_has_changed_flag set to True"
-        ),
-        help_text=gettext_lazy(
-            "Does changing a Player record assigned with this "
-            "PlayerType cause the team.player_has_changed_flag to be True?"
-        ),
-    )
-
     def save(self, *args, **kwargs):
         if self.default is False:
             self.default = None
@@ -453,6 +441,17 @@ class PlayerStatus(_BaseModel):
     weight = PositionField()
     include_in_roster_export = models.BooleanField(default=True)
     default = models.BooleanField(default=None, null=True, blank=True, unique=True)
+
+    change_causes_player_flag_on_team_to_enable = models.BooleanField(
+        default=True,
+        verbose_name=gettext_lazy(
+            "Change causes team.player_has_changed_flag set to True"
+        ),
+        help_text=gettext_lazy(
+            "Does changing a Player record assigned with this "
+            "PlayerType cause the team.player_has_changed_flag to be True?"
+        ),
+    )
 
     def save(self, *args, **kwargs):
         if self.default is False:
@@ -597,8 +596,6 @@ class Player(_BaseModelWithCommonIDs):
 
     def save(self, *args, **kwargs):
 
-        # TODO: Need to figure out what actions cause team.players_change = True
-
         if not self.pk and self.team_id:
             self.season = self.team.season
             self.league = self.team.league
@@ -625,8 +622,7 @@ class Player(_BaseModelWithCommonIDs):
             if (self.status_id != original_instance.status_id) or (
                 self.status_reason_id != original_instance.status_reason_id
             ):
-                PlayerStatusLog.objects.create(
-                    player=self,
+                self.status_log.create(
                     old_status_id=original_instance.status_id,
                     old_status_reason_id=original_instance.status_reason_id,
                     new_status_id=self.status_id,
@@ -642,6 +638,11 @@ class Player(_BaseModelWithCommonIDs):
                 except PlayerStatusReason.DoesNotExist:
                     self.status_reason = None
 
+        # TODO: Does any change to a player cause this to become true?
+        if self.status.change_causes_player_flag_on_team_to_enable:
+            self.team.players_has_changed_flag = True
+            self.team.save()
+
         return super().save(*args, **kwargs)
 
 
@@ -651,7 +652,9 @@ class PlayerStatusLog(_BaseModel):
         verbose_name = gettext_lazy("Player Status Log")
         verbose_name_plural = gettext_lazy("Player Status Logs")
 
-    player = models.ForeignKey(Player, on_delete=models.CASCADE)
+    player = models.ForeignKey(
+        Player, on_delete=models.CASCADE, related_name="status_log"
+    )
 
     old_status = models.ForeignKey(
         PlayerStatus, on_delete=models.SET_NULL, null=True, blank=True, related_name="+"

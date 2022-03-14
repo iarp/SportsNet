@@ -879,6 +879,51 @@ class PlayerTests(FixtureBasedTestCase):
         )
         self.assertEqual(str(player.member), str(player))
 
+    def test_adding_player_with_flag_changing_status_causes_team_player_changed_flag_setting_to_true(
+        self,
+    ):
+        member = Member.objects.first()
+        status = PlayerStatus.objects.filter(
+            reasons__default=True, change_causes_player_flag_on_team_to_enable=True
+        ).first()
+        pos = PlayerPosition.objects.first()
+        ptype = PlayerType.objects.first()
+
+        team = Team.objects.first()
+
+        player = Player.objects.create(
+            team=team,
+            member=member,
+            status=status,
+            position=pos,
+            type=ptype,
+        )
+        self.assertIs(True, player.team.players_has_changed_flag)
+
+    def test_adding_player_without_flag_changing_status_keeps_team_player_changed_flag_setting_as_false(
+        self,
+    ):
+        member = Member.objects.first()
+        status = PlayerStatus.objects.filter(
+            change_causes_player_flag_on_team_to_enable=False
+        ).first()
+        status_reason = status.reasons.first()
+
+        pos = PlayerPosition.objects.first()
+        ptype = PlayerType.objects.first()
+
+        team = Team.objects.first()
+
+        player = Player.objects.create(
+            team=team,
+            member=member,
+            status=status,
+            status_reason=status_reason,
+            position=pos,
+            type=ptype,
+        )
+        self.assertIs(False, player.team.players_has_changed_flag)
+
     def test_editing_player_status_changes_reason(self):
         member = Member.objects.first()
         status = PlayerStatus.objects.filter(reasons__default=True).first()

@@ -4811,8 +4811,7 @@
         "updated_by": null,
         "name": "Player",
         "weight": 0,
-        "default": null,
-        "change_causes_player_flag_on_team_to_enable": true
+        "default": null
     }
 },
 {
@@ -4826,8 +4825,7 @@
         "updated_by": null,
         "name": "Goaltender",
         "weight": 1,
-        "default": null,
-        "change_causes_player_flag_on_team_to_enable": true
+        "default": null
     }
 },
 {
@@ -4842,7 +4840,8 @@
         "name": "Pending",
         "weight": 0,
         "include_in_roster_export": true,
-        "default": null
+        "default": null,
+        "change_causes_player_flag_on_team_to_enable": true
     }
 },
 {
@@ -4857,7 +4856,8 @@
         "name": "Approved",
         "weight": 1,
         "include_in_roster_export": true,
-        "default": null
+        "default": null,
+        "change_causes_player_flag_on_team_to_enable": false
     }
 },
 {
@@ -4872,7 +4872,8 @@
         "name": "Confirmed",
         "weight": 2,
         "include_in_roster_export": true,
-        "default": null
+        "default": null,
+        "change_causes_player_flag_on_team_to_enable": true
     }
 },
 {
@@ -4880,9 +4881,9 @@
     "pk": 1,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-13T22:37:29.338Z",
+        "inserted": "2022-03-14T00:10:00.926Z",
         "inserted_by": null,
-        "updated": "2022-03-13T22:37:29.338Z",
+        "updated": "2022-03-14T00:10:00.926Z",
         "updated_by": null,
         "status": 1,
         "name": "Waiting On Registration",
@@ -4895,9 +4896,9 @@
     "pk": 2,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-13T22:37:29.352Z",
+        "inserted": "2022-03-14T00:10:00.944Z",
         "inserted_by": null,
-        "updated": "2022-03-13T22:37:29.352Z",
+        "updated": "2022-03-14T00:10:00.944Z",
         "updated_by": null,
         "status": 2,
         "name": "N/A",
@@ -4910,9 +4911,9 @@
     "pk": 3,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-13T22:37:29.367Z",
+        "inserted": "2022-03-14T00:10:00.963Z",
         "inserted_by": null,
-        "updated": "2022-03-13T22:37:29.367Z",
+        "updated": "2022-03-14T00:10:00.963Z",
         "updated_by": null,
         "status": 3,
         "name": "",
