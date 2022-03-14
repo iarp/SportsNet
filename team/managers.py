@@ -82,7 +82,7 @@ class _StaffObjectsManagerWithDetails(models.Manager):
         )
 
     def coaches(self):
-        return self.filter(type__name="Coach")
+
         # if isinstance(self.instance, Season):
         #     return qs.exclude(
         #         Q(league_id__isnull=True)
@@ -103,6 +103,7 @@ class _StaffObjectsManagerWithDetails(models.Manager):
         # raise TypeError(
         #     gettext("coaches is available on the Season, League, Division, or SubDivision instance.")
         # )
+        return self.filter(type__name="Coach")
 
     def managers(self):
         if self.instance.__class__.__name__ == "Team":
@@ -115,3 +116,15 @@ class _StaffManagerCustomQuerySet(models.QuerySet):
         return self.filter(user__email__contains="@").values_list(
             "user__email", flat=True
         )
+
+
+class PlayerObjectsManager(models.Manager):
+    def primary(self):
+        return self.exclude(affiliate=True)
+
+    def affiliates(self):
+        return self.filter(affiliate=True)
+
+
+class PlayerManagerCustomQuerySet(models.QuerySet):
+    pass

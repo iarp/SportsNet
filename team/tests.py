@@ -879,6 +879,80 @@ class PlayerTests(FixtureBasedTestCase):
         )
         self.assertEqual(str(player.member), str(player))
 
+    def test_players_counts_on_parent_object(self):
+        member = Member.objects.first()
+        status = PlayerStatus.objects.filter(reasons__default=True).first()
+        pos = PlayerPosition.objects.first()
+        ptype = PlayerType.objects.first()
+
+        team = Team.objects.first()
+
+        self.assertEqual(0, team.season.players.count())
+        self.assertEqual(0, team.league.players.count())
+        self.assertEqual(0, team.division.players.count())
+        self.assertEqual(0, team.subdivision.players.count())
+        self.assertEqual(0, team.players.count())
+
+        Player.objects.create(
+            team=team,
+            member=member,
+            status=status,
+            position=pos,
+            type=ptype,
+        )
+        self.assertEqual(1, team.season.players.count())
+        self.assertEqual(1, team.league.players.count())
+        self.assertEqual(1, team.division.players.count())
+        self.assertEqual(1, team.subdivision.players.count())
+        self.assertEqual(1, team.players.count())
+        self.assertEqual(0, team.players.affiliates().count())
+        self.assertEqual(1, team.players.primary().count())
+
+    def test_player_can_be_on_team_once(self):
+        member = Member.objects.first()
+        status = PlayerStatus.objects.filter(reasons__default=True).first()
+        pos = PlayerPosition.objects.first()
+        ptype = PlayerType.objects.first()
+
+        team = Team.objects.first()
+
+        Player.objects.create(
+            team=team,
+            member=member,
+            status=status,
+            position=pos,
+            type=ptype,
+        )
+        self.assertRaises(
+            IntegrityError,
+            Player.objects.create,
+            team=team,
+            member=member,
+            status=status,
+            position=pos,
+            type=ptype,
+        )
+
+    def test_player_marked_as_affiliate_returns_in_team_players_affiliates_count(self):
+        member = Member.objects.first()
+        status = PlayerStatus.objects.filter(reasons__default=True).first()
+        pos = PlayerPosition.objects.first()
+        ptype = PlayerType.objects.first()
+
+        team = Team.objects.first()
+
+        Player.objects.create(
+            team=team,
+            member=member,
+            status=status,
+            position=pos,
+            type=ptype,
+            affiliate=True,
+        )
+        self.assertEqual(1, team.players.count())
+        self.assertEqual(1, team.players.affiliates().count())
+        self.assertEqual(0, team.players.primary().count())
+
     def test_adding_player_with_flag_changing_status_causes_team_player_changed_flag_setting_to_true(
         self,
     ):

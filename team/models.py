@@ -511,6 +511,10 @@ class Player(_BaseModelWithCommonIDs):
             )
         ]
 
+    objects = managers.PlayerObjectsManager.from_queryset(
+        managers.PlayerManagerCustomQuerySet
+    )()
+
     # Value is stored in member, do not remove this
     hockey_canada_id = None
     old_playerseasonid = models.IntegerField(default=0, blank=True)
