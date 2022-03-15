@@ -331,6 +331,45 @@ class Member(_BaseModelWithCommonIDs):
         return super().save(*args, **kwargs)
 
 
+class MemberDocument(_BaseModel):
+    member = models.ForeignKey(
+        Member, on_delete=models.CASCADE, related_name="documents"
+    )
+    document_category = models.ForeignKey(
+        "qualifications.DocumentCategory", on_delete=models.PROTECT, related_name="+"
+    )
+    document_type = models.ForeignKey(
+        "qualifications.DocumentType", on_delete=models.PROTECT, related_name="+"
+    )
+    document_level = models.ForeignKey(
+        "qualifications.DocumentLevel", on_delete=models.PROTECT, related_name="+"
+    )
+
+    effective_date = models.DateField()
+    expiry_date = models.DateField(null=True, blank=True)
+    document_date = models.DateField(null=True, blank=True)
+    name = models.CharField(max_length=255, blank=True)
+
+    note_for_person = models.TextField(blank=True)
+    note_for_internal = models.TextField(blank=True)
+
+    season_year = models.IntegerField()
+    DocCatg = models.TextField(max_length=255, blank=True)
+    DocType = models.TextField(max_length=255, blank=True)
+    DocNote = models.TextField(max_length=255, blank=True)
+    DocRef = models.TextField(max_length=255, blank=True)
+
+    attained = models.BooleanField()
+    passed = models.BooleanField()
+    certified = models.BooleanField()
+    certified_date = models.DateField(null=True, blank=True)
+    FacilityCode = models.TextField(max_length=255, blank=True)
+    FacilityAddress = models.TextField(max_length=255, blank=True)
+    FacilityCity = models.TextField(max_length=255, blank=True)
+    FacilityProvince = models.TextField(max_length=255, blank=True)
+    FacilityPostal = models.TextField(max_length=255, blank=True)
+
+
 class Package(_BaseModel):
     class Meta:
         ordering = ["weight"]

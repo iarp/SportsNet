@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "core",
     "team",
+    "qualifications",
     "crispy_forms",
     "allauth",
     "allauth.account",
