@@ -50,6 +50,13 @@ INSTALLED_APPS = [
     "reversion",
 ]
 
+if env.bool("DJANGO_LOAD_EXTRA_EXTENSIONS", False):  # pragma: no cover
+    INSTALLED_APPS.extend(
+        [
+            "django_extensions",
+        ]
+    )
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
