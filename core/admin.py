@@ -1,7 +1,11 @@
+from django.apps import apps
 from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin
+from django.contrib.admin.sites import AlreadyRegistered
+from reversion.admin import VersionAdmin
 
-from .models import Division, League, PermissionOverrides, Season, SubDivision, User
-
-admin.site.register((Season, League, Division, SubDivision, PermissionOverrides))
-admin.site.register(User, UserAdmin)
+app_models = apps.get_app_config("core").get_models()
+for model in app_models:
+    try:
+        admin.site.register(model, VersionAdmin)
+    except AlreadyRegistered:  # pragma: no cover
+        pass

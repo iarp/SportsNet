@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "iarp_django_utils",
     "django_templated_emailer",
     "phonenumber_field",
+    "reversion",
 ]
 
 MIDDLEWARE = [
