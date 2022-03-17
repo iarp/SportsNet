@@ -28,6 +28,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 0
     }
 },
@@ -60,6 +63,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 1
     }
 },
@@ -92,6 +98,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 2
     }
 },
@@ -124,6 +133,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 3
     }
 },
@@ -156,6 +168,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 4
     }
 },
@@ -188,6 +203,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 5
     }
 },
@@ -220,6 +238,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 6
     }
 },
@@ -252,6 +273,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 7
     }
 },
@@ -284,6 +308,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 8
     }
 },
@@ -316,6 +343,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 9
     }
 },
@@ -348,6 +378,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 10
     }
 },
@@ -380,6 +413,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 11
     }
 },
@@ -412,6 +448,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 12
     }
 },
@@ -444,6 +483,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 13
     }
 },
@@ -476,6 +518,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 14
     }
 },
@@ -508,6 +553,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 15
     }
 },
@@ -540,6 +588,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 0
     }
 },
@@ -572,6 +623,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 1
     }
 },
@@ -604,6 +658,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 2
     }
 },
@@ -636,6 +693,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 3
     }
 },
@@ -668,6 +728,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 4
     }
 },
@@ -700,6 +763,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 5
     }
 },
@@ -732,6 +798,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 6
     }
 },
@@ -764,6 +833,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 7
     }
 },
@@ -796,6 +868,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 8
     }
 },
@@ -828,6 +903,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 9
     }
 },
@@ -860,6 +938,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 10
     }
 },
@@ -892,6 +973,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 11
     }
 },
@@ -924,6 +1008,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 12
     }
 },
@@ -956,6 +1043,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 13
     }
 },
@@ -988,6 +1078,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 14
     }
 },
@@ -1020,6 +1113,9 @@
         "approved": false,
         "active": true,
         "draft_start_position": 1,
+        "registration_status": false,
+        "approval_required": false,
+        "comments": "",
         "weight": 15
     }
 },
@@ -1970,6 +2066,7 @@
         "updated_by": null,
         "team_can_edit": true,
         "team_can_vote": false,
+        "team_can_access": true,
         "name": "Manager",
         "weight": 0,
         "required": false,
@@ -1988,6 +2085,7 @@
         "updated_by": null,
         "team_can_edit": true,
         "team_can_vote": false,
+        "team_can_access": true,
         "name": "Coach",
         "weight": 1,
         "required": false,
@@ -2006,6 +2104,7 @@
         "updated_by": null,
         "team_can_edit": true,
         "team_can_vote": false,
+        "team_can_access": true,
         "name": "Convenor",
         "weight": 2,
         "required": false,
@@ -2024,6 +2123,7 @@
         "updated_by": null,
         "team_can_edit": true,
         "team_can_vote": false,
+        "team_can_access": true,
         "name": "Senior Convenor",
         "weight": 3,
         "required": false,
@@ -2042,6 +2142,7 @@
         "updated_by": null,
         "team_can_edit": true,
         "team_can_vote": false,
+        "team_can_access": true,
         "name": "VP",
         "weight": 4,
         "required": false,
@@ -2060,6 +2161,7 @@
         "updated_by": null,
         "team_can_edit": true,
         "team_can_vote": false,
+        "team_can_access": true,
         "name": "Admin",
         "weight": 5,
         "required": false,
@@ -4881,9 +4983,9 @@
     "pk": 1,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-14T00:10:00.926Z",
+        "inserted": "2022-03-17T23:22:01.201Z",
         "inserted_by": null,
-        "updated": "2022-03-14T00:10:00.926Z",
+        "updated": "2022-03-17T23:22:01.201Z",
         "updated_by": null,
         "status": 1,
         "name": "Waiting On Registration",
@@ -4896,9 +4998,9 @@
     "pk": 2,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-14T00:10:00.944Z",
+        "inserted": "2022-03-17T23:22:01.221Z",
         "inserted_by": null,
-        "updated": "2022-03-14T00:10:00.944Z",
+        "updated": "2022-03-17T23:22:01.221Z",
         "updated_by": null,
         "status": 2,
         "name": "N/A",
@@ -4911,9 +5013,9 @@
     "pk": 3,
     "fields": {
         "old_sk_id": null,
-        "inserted": "2022-03-14T00:10:00.963Z",
+        "inserted": "2022-03-17T23:22:01.241Z",
         "inserted_by": null,
-        "updated": "2022-03-14T00:10:00.963Z",
+        "updated": "2022-03-17T23:22:01.241Z",
         "updated_by": null,
         "status": 3,
         "name": "",

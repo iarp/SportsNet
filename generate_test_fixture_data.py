@@ -596,3 +596,8 @@ if WRITE_FIXTURES:
         os.makedirs(f"{app}/fixtures/", exist_ok=True)
         with open(f"{app}/fixtures/test_fixtures.json", "w") as f:
             call_command("dumpdata", app, "--indent", "4", stdout=f)
+
+try:
+    from generate_test_fixture_data_local_extras import *
+except ImportError:
+    pass
