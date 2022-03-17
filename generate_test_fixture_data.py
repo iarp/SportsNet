@@ -56,6 +56,7 @@ RESET_DB_MIGRATIONS = True
 DELETE_MIGRATION_FILES = False
 USING_POSTGRES_INSTEAD_OF_SQLITE = True
 VERBOSE = True
+WRITE_FIXTURES = True
 
 
 if DUMP_SK_DATA:
@@ -468,7 +469,7 @@ def create_staff(name, _type, *args, **kwargs):
     )
 
 
-current_year = timezone.now().year
+current_year = timezone.now().year - 1
 for s in range(current_year, current_year + 2):
     season = Season.objects.create(
         name=f"{s}-{s+1}",
@@ -590,7 +591,8 @@ print("Gender Generated:", Gender.objects.count())
 print("MemberStatus Generated:", MemberStatus.objects.count())
 print("Member Generated:", Member.objects.count())
 
-for app in ["core", "team"]:
-    os.makedirs(f"{app}/fixtures/", exist_ok=True)
-    with open(f"{app}/fixtures/test_fixtures.json", "w") as f:
-        call_command("dumpdata", app, "--indent", "4", stdout=f)
+if WRITE_FIXTURES:
+    for app in ["core", "team"]:
+        os.makedirs(f"{app}/fixtures/", exist_ok=True)
+        with open(f"{app}/fixtures/test_fixtures.json", "w") as f:
+            call_command("dumpdata", app, "--indent", "4", stdout=f)
