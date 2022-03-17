@@ -33,11 +33,6 @@ class Team(_BaseModelWithCommonIDs):
 
     old_teamseason_id = models.PositiveIntegerField(null=True, blank=True)
 
-    # NOTE: These were on the original table, unknown
-    # RegStatus = models.BooleanField(default=False)
-    # ApprovalRequired = models.BooleanField(default=False)  # all records are false in current table
-    # Comments = models.TextField(blank=True)
-
     players_has_changed_flag = models.BooleanField(default=False)
     staff_has_changed_flag = models.BooleanField(default=False)
 
@@ -51,8 +46,10 @@ class Team(_BaseModelWithCommonIDs):
 
     draft_start_position = models.PositiveIntegerField(default=1)
 
+    # NOTE: These were on the original table, unknown
     registration_status = models.BooleanField(default=False)
     approval_required = models.BooleanField(default=False)
+    comments = models.TextField(blank=True)
 
     weight = PositionField(collection=["season"])
 
