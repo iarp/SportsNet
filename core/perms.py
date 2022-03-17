@@ -3,6 +3,8 @@ from django.utils import timezone
 from django.utils.translation import gettext
 from loguru import logger
 
+from .model_helpers import _BasePermissions
+
 
 def has_perm(user, obj, permission_name):
     from core.models import PermissionOverrides
@@ -50,7 +52,7 @@ def add_override_permission(user, obj, permission_name, value, assigned_by=None)
             )
         )
 
-    if permission_name not in PermissionOverrides.PERMISSION_TYPES:
+    if not hasattr(_BasePermissions, permission_name):
         raise ValueError(
             gettext(
                 "Parameter permission_name value must be an attribute of PermissionOverrides model."

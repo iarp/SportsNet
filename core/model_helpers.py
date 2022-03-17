@@ -69,14 +69,7 @@ class _BasePermissions(_BaseModel):
     class Meta:
         abstract = True
 
-    # NOTE: Add permissions here??
-
-    # Used in PermissionOverrides.add_override for deleting rows where the
-    # row entries matches the defaults listed below
-    PERMISSION_TYPES = [
-        "team_can_edit",
-        "team_can_vote",
-    ]
+    # NOTE: Add permissions here
 
     # WebAccess bit,
     # EditEvalAsgndAllowed bit,
@@ -97,3 +90,4 @@ class _BasePermissions(_BaseModel):
 
     team_can_edit = models.BooleanField(default=True)
     team_can_vote = models.BooleanField(default=False)
+    team_can_access = models.BooleanField(default=True)

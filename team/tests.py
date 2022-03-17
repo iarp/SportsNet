@@ -155,6 +155,15 @@ class StaffAccessTests(FixtureBasedTestCase):
         for team in division.teams.all():
             self.assertIs(True, team.can_edit(division_staff))
 
+    def test_coach_can_access_own_team(self):
+        team1 = Team.objects.first()
+        team2 = Team.objects.exclude(pk=team1.pk).last()
+
+        team1_coach = team1.staff.first()
+
+        self.assertIs(True, team1.can_access(team1_coach))
+        self.assertIs(False, team2.can_access(team1_coach))
+
 
 class StaffAccessExtraPermissionsTests(FixtureBasedTestCase):
     def test_coach1_with_extra_permissions_stafftype_can_edit_team2(self):
@@ -730,10 +739,10 @@ class TeamTests(FixtureBasedTestCase):
         ]
 
         expected_base_output = " / ".join(values)
-        self.assertEqual(expected_base_output, team.get_full_team_name())
+        self.assertEqual(expected_base_output, team.get_full_name())
 
         expected_custom_output = " * ".join(values)
-        self.assertEqual(expected_custom_output, team.get_full_team_name(" * "))
+        self.assertEqual(expected_custom_output, team.get_full_name(" * "))
 
 
 class TeamStatusTests(TestCase):

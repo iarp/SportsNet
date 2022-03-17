@@ -3,9 +3,9 @@ from django.test import TestCase
 
 from .models import (
     DocumentCategory,
-    DocumentLevel,
     DocumentEquivilent,
     DocumentEquivilentDtl,
+    DocumentLevel,
     DocumentType,
 )
 

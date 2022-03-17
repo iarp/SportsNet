@@ -56,7 +56,7 @@ class Team(_BaseModelWithCommonIDs):
 
     weight = PositionField(collection=["season"])
 
-    def get_full_team_name(self, separator=" / "):
+    def get_full_name(self, separator=" / "):
         return separator.join(
             [
                 str(self.league),
@@ -71,6 +71,9 @@ class Team(_BaseModelWithCommonIDs):
 
     def can_vote(self, target_user):
         return has_perm(target_user, self, "team_can_vote")
+
+    def can_access(self, target_user):
+        return has_perm(target_user, self, "team_can_access")
 
     @property
     def is_approved(self):
