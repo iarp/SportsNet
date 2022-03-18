@@ -335,6 +335,32 @@ class SeasonTests(TestCase):
             end=timezone.now() + timezone.timedelta(days=6 * 365),
         )
 
+    def test_template_context_adding_season_returns_none_when_current_season_does_not_exist(
+        self,
+    ):
+        u = User.objects.create(email="test@domain.com")
+        self.season1.start = self.season1.start.replace(
+            year=self.season1.start.year - 6
+        )
+        self.season1.end = self.season1.end.replace(year=self.season1.end.year - 6)
+        self.season1.save()
+
+        self.client.force_login(u)
+
+        resp = self.client.get(reverse("core:index"))
+        self.assertEqual(200, resp.status_code)
+        self.assertIsNone(resp.context["season"])
+
+
+    def test_template_context_adding_season_returns_current_season(self):
+        u = User.objects.create(email="test@domain.com")
+
+        self.client.force_login(u)
+
+        resp = self.client.get(reverse("core:index"))
+        self.assertEqual(200, resp.status_code)
+        self.assertEqual(self.season1, resp.context["season"])
+
 
 class LeagueTests(FixtureBasedTestCase):
     def test_league_uniqueness(self):

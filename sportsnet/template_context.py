@@ -20,5 +20,5 @@ def add_django_settings(request):
 def sys_app_name(request):
     try:
         return {"sys_app_name": resolve(request.path).app_name}
-    except:  # noqa
+    except:  # pragma: no cover
         return {"sys_app_name": "unknown"}
