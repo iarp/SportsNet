@@ -315,7 +315,9 @@ if RESET_DB_MIGRATIONS:
             "change_causes_player_flag_on_team_to_enable": True,
         },
     )
-    ps.reasons.get_or_create(name="Waiting On Registration", default=True)
+    ps.reasons.get_or_create(
+        name="Waiting On Registration", default=True, inserted=TIMESTAMP
+    )
 
     ps, _ = PlayerStatus.objects.get_or_create(
         name="Approved",
@@ -325,12 +327,12 @@ if RESET_DB_MIGRATIONS:
             "change_causes_player_flag_on_team_to_enable": False,
         },
     )
-    ps.reasons.get_or_create(name="N/A")
+    ps.reasons.get_or_create(name="N/A", inserted=TIMESTAMP)
 
     ps, _ = PlayerStatus.objects.get_or_create(
         name="Confirmed", defaults={"inserted": TIMESTAMP, "updated": TIMESTAMP}
     )
-    ps.reasons.get_or_create(name="", default=True)
+    ps.reasons.get_or_create(name="", default=True, inserted=TIMESTAMP)
 
 
 if (
