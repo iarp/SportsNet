@@ -351,7 +351,6 @@ class SeasonTests(TestCase):
         self.assertEqual(200, resp.status_code)
         self.assertIsNone(resp.context["season"])
 
-
     def test_template_context_adding_season_returns_current_season(self):
         u = User.objects.create(email="test@domain.com")
 

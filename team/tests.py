@@ -16,6 +16,7 @@ from core.models import (
 from core.perms import add_override_permission
 from core.test_helpers import FixtureBasedTestCase
 
+from . import helpers
 from .models import (
     Player,
     PlayerPosition,
@@ -163,6 +164,90 @@ class StaffAccessTests(FixtureBasedTestCase):
 
         self.assertIs(True, team1.can_access(team1_coach))
         self.assertIs(False, team2.can_access(team1_coach))
+
+    def test_helper_permissiable_teams_for_coach(self):
+        season = Season.get_current()
+        team1 = Team.objects.filter(season=season).first()
+
+        allowed_teams = helpers.permissable_teams(team1.staff.first())
+
+        self.assertEqual(1, len(allowed_teams))
+        self.assertIn(team1, allowed_teams)
+
+    def test_helper_permissiable_teams_for_convenor(self):
+        season = Season.get_current()
+        team1 = Team.objects.filter(season=season).first()
+
+        convenor = team1.subdivision.staff.first()
+
+        allowed_teams = helpers.permissable_teams(convenor)
+
+        self.assertEqual(team1.subdivision.teams.count(), len(allowed_teams))
+        for team in team1.subdivision.teams.all():
+            self.assertIn(team, allowed_teams)
+
+    def test_helper_permissiable_teams_for_senior_convenor(self):
+        season = Season.get_current()
+        team1 = Team.objects.filter(season=season).first()
+
+        number_of_teams = team1.division.teams.count()
+
+        senior_convenor = team1.division.staff.first()
+
+        allowed_teams = helpers.permissable_teams(senior_convenor)
+
+        self.assertEqual(number_of_teams, len(allowed_teams))
+
+        for team in team1.division.teams.all():
+            self.assertIn(team, allowed_teams)
+
+    def test_helper_permissiable_teams_for_vp(self):
+        season = Season.get_current()
+        team1 = Team.objects.filter(season=season).first()
+
+        number_of_teams = team1.league.teams.count()
+
+        vp = team1.league.staff.first()
+
+        allowed_teams = helpers.permissable_teams(vp)
+
+        self.assertEqual(number_of_teams, len(allowed_teams))
+
+        for team in team1.league.teams.all():
+            self.assertIn(team, allowed_teams)
+
+    def test_helper_permissiable_teams_for_admin(self):
+        season = Season.get_current()
+        team1 = Team.objects.filter(season=season).first()
+
+        number_of_teams = team1.season.teams.count()
+
+        admin = team1.season.staff.first()
+
+        allowed_teams = helpers.permissable_teams(admin)
+
+        self.assertEqual(number_of_teams, len(allowed_teams))
+
+        for team in team1.season.teams.all():
+            self.assertIn(team, allowed_teams)
+
+    def test_helper_permissiable_teams_for_coach_with_extra_permissions_assigned(self):
+        season = Season.get_current()
+        team1 = Team.objects.filter(season=season).first()
+
+        team2 = Team.objects.filter(season=season).exclude(pk=team1.pk).last()
+        coach2 = team2.staff.first()
+
+        allowed_teams = helpers.permissable_teams(coach2)
+        self.assertEqual(1, len(allowed_teams))
+        self.assertIn(team2, allowed_teams)
+
+        coach2.permissions_add_override(team1, "team_can_access", True)
+
+        allowed_teams = helpers.permissable_teams(coach2)
+        self.assertEqual(2, len(allowed_teams))
+        self.assertIn(team1, allowed_teams)
+        self.assertIn(team2, allowed_teams)
 
 
 class StaffAccessExtraPermissionsTests(FixtureBasedTestCase):
