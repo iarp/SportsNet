@@ -1,0 +1,19 @@
+{% extends 'team/base.html' %}
+
+{% block content %}
+
+{{team.get_full_name}}
+
+<h1>Staff</h1>
+<ul>
+    {% for staff in team.staff.all %}
+    <li>{{ staff }}
+        <ul>
+            <li>{{staff.member}}</li>
+            <li>{{staff.type}}</li>
+            <li>{{staff.status}}</li>
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}
