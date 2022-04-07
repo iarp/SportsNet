@@ -1,0 +1,64 @@
+{% extends 'events/base.html' %}
+{% load request_posted_tools %}
+
+{% block content %}
+    <div class="portlet box red-sunglo">
+        <div class="portlet-title">
+            <div class="caption">Tournament Merging</div>
+        </div>
+        <div class="portlet-body form">
+
+            <form method="post" class="form-horizontal">{% csrf_token %}
+
+                <div class="form-body">
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <strong>(internal id) - sanction number - association name - tournament name - source - count of permits using this tournament</strong>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Keep</label>
+                        <div class="col-md-10">
+                            <select name="keep_tournament_id" class="form-control">
+                                <option value="0">Select Tournament To Keep</option>
+                                {% for tid, item in needs_merging.items %}
+                                    <option value="{{ item.id }}" {% only_when_posted "keep_tournament_id" item.id "selected" %}>
+                                        ({{ item.id }}) - {{ item.sanction_number }} - {{ item.association }} -
+                                        {{ item.name }} - {{ item.source }} - {{ item.travelpermit_set.count }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Merge</label>
+                        <div class="col-md-10">
+                            <select name="merge_tournament_id" class="form-control">
+                                <option value="0">Select Tournament To Merge</option>
+                                {% for tid, item in needs_merging.items %}
+                                    <option value="{{ item.id }}" {% only_when_posted "merge_tournament_id" item.id "selected" %}>
+                                        ({{ item.id }}) - {{ item.sanction_number }} - {{ item.association }} -
+                                        {{ item.name }} - {{ item.source }} - {{ item.travelpermit_set.count }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <div class="row">
+                        <div class="col-md-offset-2 col-md-10">
+                            <button type="submit" class="btn btn-primary">Merge</button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

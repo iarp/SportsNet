@@ -1,0 +1,94 @@
+{% extends 'events/base.html' %}
+
+{% block site_title %}{{ event_type|title }} Listing{% endblock %}
+{% block page_title %}{{ event_type|title }} Listing{% endblock %}
+
+{% block content %}
+
+    <div class="portlet box blue-hoki">
+        <div class="portlet-title">
+            <div class="caption">
+                Information
+            </div>
+        </div>
+        <div class="portlet-body">
+
+            <h2>Use the search box to find the {{ event_type }} and click on its name to continue</h2>
+            <h2><a href="{% if event_type == 'tournament' %}{% url 'events:tournament-new' %}{% else %}{% url 'events:exhibition-new' %}{% endif %}">
+                Can't find the {{ event_type }}? Click here to continue
+            </a></h2>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet light bordered">
+                <div class="portlet-title">
+                    <div class="caption font-dark">
+                        <i class="icon-settings font-dark"></i>
+                        <span class="caption-subject bold">{{ event_type|title }} Listing</span>
+                    </div>
+                    <div class="tools"> </div>
+                </div>
+                <div class="portlet-body">
+                    <table class="table table-striped table-bordered table-hover dt-responsive" width="100%"
+                           id="sample_1">
+                        <thead>
+                            <tr>
+                            {% if event_type == 'tournament' %}
+                                <th class="all">Start Date</th>
+                                <th class="all">Name</th>
+                                <th class="desktop">Association</th>
+                                <th class="desktop">Sanction</th>
+                                <th class="min-tablet">Location</th>
+                                <th class="none">Verified</th>
+                                <th class="none">Division</th>
+                                <th class="none">Website</th>
+                            {% else %}
+                                <th class="all">Start Date</th>
+                                <th class="all">Other Team</th>
+                                <th class="all">Destination</th>
+                                <th class="desktop max-tablet">Arena</th>
+                            {% endif %}
+                                <th>Teams</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        {% for event in events %}
+                            <tr>
+
+                                {% if event_type == 'tournament' %}
+                                    <td>{{ event.start_date|date:"Y-m-d" }}</td>
+                                    <td><a href="{% url 'events:tournament-details' event_id=event.id %}">{{ event.name }}</a></td>
+                                    <td>{{ event.association.name }}</td>
+                                    <td>{{ event.sanction_number }}</td>
+                                    <td>{{ event.location }}</td>
+                                    <td>{{ event.verified|yesno:"Verified,Unverified" }}</td>
+                                    <td>{{ event.divisions }}</td>
+                                    <td>
+                                        {% if event.website %}
+                                            <a href="{{ event.website }}" target="_blank">{{ event.website }}</a>
+                                        {% endif %}
+                                    </td>
+                                {% else %}
+                                    <td><a href="{% url 'events:exhibition-details' event_id=event.id %}">{{ event.start_date|date:"Y-m-d" }}</a></td>
+                                    <td>{{ event.other_team }}</td>
+                                    <td>{{ event.destination }}</td>
+                                    <td>{{ event.get_arena }}</td>
+                                {% endif %}
+
+                                <td>{% if event.travelpermit_set.exists %}{{ event.travelpermit_set.count }}{% endif %}</td>
+                            </tr>
+                        {% endfor %}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

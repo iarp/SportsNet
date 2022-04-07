@@ -1,6 +1,10 @@
-{% extends 'core/root.html' %}
+{% extends 'root.html' %}
 
 {% block content %}
     hello world!
-    <a href="{% url 'team:index' %}">Team</a>
+    <ul>
+        <li><a href="{% url 'team:index' %}">Team</a></li>
+        <li><a href="{% url 'events:tournaments-list' %}">Tournaments</a></li>
+        <li><a href="{% url 'events:exhibitions-list' %}">Exhibitions</a></li>
+    </ul>
 {% endblock %}

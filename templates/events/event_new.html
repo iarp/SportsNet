@@ -1,0 +1,200 @@
+{% extends 'events/base.html' %}
+{% load static %}
+
+{% block site_title %}New {{ event_type|title }}{% endblock %}
+{% block page_title %}{% endblock %}
+
+{% block content %}
+
+    <div class="portlet light bordered">
+        <div class="portlet-title">
+            <div class="caption font-green">
+                <i class="fa fa-save font-green"></i>
+                <span class="caption-subject bold uppercase"> New {{ event_type|title }}</span>
+            </div>
+        </div>
+        <div class="portlet-body form">
+            <h3>Please supply the information below to add your <strong>{{ event_type|title }}</strong></h3>
+            <form id="new_tournament" action="" role="form" method="post">
+                {% csrf_token %}
+                <div class="form-body">
+
+                {% if event_type == 'tournament' %}
+                    {{ form.name }}
+                    {{ form.association }}
+                    <div id="association_other">
+                        {{ form.association_other }}
+                    </div>
+                    {{ form.sanction_number }}
+                    {{ form.location }}
+                    {{ form.start_date }}
+                    {{ form.end_date }}
+                    {{ form.website }}
+                {% else %}
+
+                    {{ form.other_team }}
+                    {{ form.other_team_association }}
+                    <div id="other_team_association_other">
+                        {{ form.other_team_association_other }}
+                    </div>
+                    {{ form.destination }}
+
+                    {{ form.rink }}
+
+                    <div id="other_arena">
+                        {{ form.arena }}
+                    </div>
+
+                    {{ form.start_date }}
+                    {{ form.end_datetime }}
+
+                    <div class="form-group">
+                        {{ form.required_referee_or_timekeeper }}
+                        <label class="control-label " for="id_required_referee_or_timekeeper">
+                            <strong>Hosting an Exhibition? Do you need to request Referees and/or a Timekeeper?</strong>
+                        </label>
+                    </div>
+
+                    <div id="timekeeper-info">
+                        {{ form.referee_requirements }}
+
+                        {{ form.cell_phone }}
+                        {{ form.contact_name }}
+
+                        <div class="form-group">
+                            {{ form.timekeeper_needed }}
+                            <label class="control-label " for="id_timekeeper_needed">
+                                <strong>Timekeeper Needed?</strong> -
+                                <small>* If you are providing your own Timekeeper, you are responsible for ensuring they
+                                    are knowledgeable on how to properly fill out a gamesheet</small>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.req_ack }}
+                            <label for="id_req_ack"><strong>Please acknowledge that all Referees, Linesmen, and
+                                Timekeepers must be paid in <u>EXACT CASH</u> prior to the start of the game. You will be
+                                advised of the cost when your Officials and Timekeeper are confirmed</strong></label>
+                            <span class="help-block">{{ form.req_ack.errors }}</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="id_timekeeper_notes">Other Notes</label>
+                            <div class=" ">
+                                {{ form.timekeeper_notes_inline }}
+                            </div>
+                        </div>
+                    </div>
+
+                {% endif %}
+
+                </div>
+
+                <div class="form-actions noborder">
+                    <button class="btn btn-primary" type="submit" id="submit_new_tournament">{% if editing %}Save{% else %}Add New {{ event_type|title }}{% endif %}</button>
+
+                {% if form.instance.pk and request.user.is_staff %}
+                    <input class="btn btn-warning" type="submit" name="delete" value="Delete">
+                {% endif %}
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block footer %}
+
+        <script type="text/javascript">
+
+            {% if event_type == 'exhibition' %}
+
+                $("#id_start_date").datetimepicker({
+                    autoclose: true,
+                    showMeridian: true,
+                    format: "yyyy-mm-dd HH:ii P"
+                }).on('changeDate', function(ev) {
+                    var copiedDate = new Date(ev.date.getTime());
+                    copiedDate.setHours(copiedDate.getHours() + 6);
+                    console.log(copiedDate.toTimeString());
+
+                    $('#id_end_datetime').datetimepicker('setDate', copiedDate);
+                });
+                $("#id_end_datetime").datetimepicker({
+                    autoclose: true,
+                    defaultTime: false,
+                    showMeridian: true,
+                    format: "yyyy-mm-dd HH:ii P"
+                });
+
+                $(document).ready(function () {
+
+                    if (!$('#id_required_referee_or_timekeeper').is(':checked')) {
+                        $('#timekeeper-info').hide();
+                    }
+
+                    if ($('#id_other_team_association :selected').text() !== "Other (Supply Below)") {
+                        $('#other_team_association_other').hide();
+                    }
+
+                    if ($('#id_rink :selected').text() !== "Other (Supply Below)") {
+                        $('#other_arena').hide();
+                    }
+
+                    $("#id_required_referee_or_timekeeper").change(function () {
+                        if (this.checked) {
+                            $('#timekeeper-info').show();
+                        } else {
+                            $('#timekeeper-info').hide();
+                        }
+                    });
+
+                    $('#id_other_team_association').change(function() {
+                        if ($('#id_other_team_association :selected').val() === "7") {
+                            $('#other_team_association_other').show();
+                        } else {
+                            $('#other_team_association_other').hide();
+                        }
+                    });
+
+                    $('#id_rink').change(function() {
+                        if ($('#id_rink :selected').text() === "Other (Supply Below)") {
+                            $('#other_arena').show();
+                        } else {
+                            $('#other_arena').hide();
+                        }
+                    })
+                });
+
+            {% else %}
+                $("#id_start_date").datepicker({
+                    autoclose: true,
+                    format: "yyyy-mm-dd"
+                });
+                $("#id_end_date").datepicker({
+                    autoclose: true,
+                    format: "yyyy-mm-dd"
+                });
+
+
+                $(document).ready(function () {
+
+                    $('#association_other').hide();
+
+                    if ($('#id_association :selected').text() === "Other (Supply Below)") {
+                        $('#association_other').show();
+                    }
+
+                    $('#id_association').change(function () {
+                        if ($('#id_association :selected').text() === "Other (Supply Below)") {
+                            $('#association_other').show();
+                        }
+                    })
+                });
+
+            {% endif %}
+
+        </script>
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends 'events/base.html' %}
+
+{% block site_title %}Tournament Verification{% endblock %}
+{% block page_title %}Tournament Verification{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet light bordered">
+                <div class="portlet-title">
+                    <div class="caption font-dark">
+                        <i class="icon-settings font-dark"></i>
+                        <span class="caption-subject bold">Tournament Verification</span>
+                    </div>
+                    <div class="tools"> </div>
+                </div>
+                <div class="portlet-body">
+                    <p>
+                        This page shows tournaments that have been manually added to the system by a coach. We require
+                        that someone else verify the tournament exists and that the information provided is correct
+                        (proper sanction number, location, start/end times...etc).
+                    </p>
+                    <p>
+                        Once that information has been verified, you can click on "Verify data is correct" and any
+                        travel permits waiting for verification will be queued for submission to the OMHA
+                    </p>
+                    <table class="table table-striped table-bordered table-hover dt-responsive" width="100%" id="sample_1">
+                        <thead>
+                            <tr>
+                                <th class="all">Start Date</th>
+                                <th class="all">Name</th>
+                                <th class="desktop">Association</th>
+                                <th class="desktop">Sanction</th>
+                                <th class="min-tablet">Location</th>
+                                <th class="all">Verified</th>
+                                <th class="all">Errors</th>
+                                <th class="none">Division</th>
+                                <th class="none">Website</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        {% for event in tournaments %}
+                            <tr>
+                                <td>{{ event.start_date|date:"Y-m-d" }}</td>
+                                <td><a href="{% url 'events:tournament-details' event_id=event.id %}">{{ event.name }}</a></td>
+                                <td>{{ event.association.name }}{% if event.association_other %} - {{ event.association_other }}{% endif %}</td>
+                                <td>{{ event.sanction_number }}</td>
+                                <td>{{ event.location }}</td>
+                                <td><a class="btn btn-primary btn-sm"
+                                            href="{% url 'events:tournament-verify' event_id=event.id %}?next={% url 'events:tournament-needs-verification' %}"
+                                            hx-post="{% url 'events:tournament-verify' event_id=event.id %}"
+                                            hx-swap="outerHTML">Data Is Correct</a></td>
+                                <td><a href="{% url 'events:tournament-edit' event_id=event.id %}">Edit Errors</a></td>
+                                <td>{{ event.divisions }}</td>
+                                <td>
+                                    {% if event.source != 'tournament_listing_url' %}
+                                        <a href="{{ event.website }}" target="_blank">{{ event.website }}</a>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

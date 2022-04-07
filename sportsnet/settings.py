@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "django_templated_emailer",
     "phonenumber_field",
     "reversion",
+    "events",
 ]
 
 if env.bool("DJANGO_LOAD_EXTRA_EXTENSIONS", False):  # pragma: no cover

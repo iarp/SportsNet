@@ -1,5 +1,6 @@
 django
 django-allauth
+django-bootstrap-form
 django-crispy-forms
 django-environ
 django-model-utils
@@ -16,3 +17,5 @@ loguru
 psycopg2-binary
 requests
 sentry-sdk
+selenium
+pytz
